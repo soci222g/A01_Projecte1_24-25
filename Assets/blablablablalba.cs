@@ -26,5 +26,11 @@ public class blablablablalba : MonoBehaviour
         Debug.Log(waza);
 
         
+=======
+    void Resta()
+    {
+        int caca = 14 - 5;
+        Debug.Log(caca);
+>>>>>>> origin/main
     }
 }
