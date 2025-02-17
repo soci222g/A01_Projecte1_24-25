@@ -15,4 +15,16 @@ public class blablablablalba : MonoBehaviour
     {
         
     }
+
+
+    void wazaaaaaaaaaaaa()
+    {
+        int waza = 5;
+
+        waza += 1;
+
+        Debug.Log(waza);
+
+        
+    }
 }
