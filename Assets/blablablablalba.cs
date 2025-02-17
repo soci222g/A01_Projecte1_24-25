@@ -15,4 +15,11 @@ public class blablablablalba : MonoBehaviour
     {
         
     }
+
+    void Multiplicar()
+    {
+        int a = 5; int b = 5;
+        int c = a * b;
+        Debug.Log(c);
+    }
 }
