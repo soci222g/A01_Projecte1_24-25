@@ -13,7 +13,7 @@ public class blablablablalba : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
@@ -24,13 +24,14 @@ public class blablablablalba : MonoBehaviour
         waza += 1;
 
         Debug.Log(waza);
+    }
 
-        
-=======
+
     void Resta()
     {
         int caca = 14 - 5;
         Debug.Log(caca);
->>>>>>> origin/main
     }
+    
 }
+
