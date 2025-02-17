@@ -15,4 +15,10 @@ public class blablablablalba : MonoBehaviour
     {
         
     }
+
+    void Resta()
+    {
+        int caca = 14 - 5;
+        Debug.Log(caca);
+    }
 }
