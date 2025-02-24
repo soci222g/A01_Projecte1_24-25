@@ -51,4 +51,14 @@ public class gameManager : MonoBehaviour
             default: return heartStatus[2];
         }
     }
+
+    public int GetHP()
+    {
+        return hp;
+    }
+
+    public void SetHP(int numberModifier)
+    {
+        hp += numberModifier;
+    }
 }
