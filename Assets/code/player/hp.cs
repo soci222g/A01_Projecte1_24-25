@@ -9,6 +9,12 @@ public class hp : MonoBehaviour
     private int maxHealthPoints = 6;
     [SerializeField]
     private int healthPoints;
+
+    [SerializeField]
+    Sprite[] fullHP;
+
+    [SerializeField]
+    SpriteRenderer spriteHP;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +38,8 @@ public class hp : MonoBehaviour
     private int Damage()
     {
         int ataque = 1;
+
+        
 
         return ataque;
     }
