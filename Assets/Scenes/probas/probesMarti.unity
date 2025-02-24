@@ -595,8 +595,11 @@ MonoBehaviour:
   countCooldown: 0
   atackDuration: 3
   atackDurationCounter: 0
+  atackDelay: 0
+  atackDelayCounter: 0
   onCooldown: 0
   hitbox: {fileID: 913796646}
+  animator: {fileID: 355034168}
 --- !u!212 &913796646
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -638,7 +641,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 416572653, guid: c184bf8f5f79768499fd1b52360f1ee0, type: 3}
+  m_Sprite: {fileID: -310560193, guid: c184bf8f5f79768499fd1b52360f1ee0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -685,7 +688,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 1.6}
+    oldSize: {x: 1.8, y: 0.3}
     newSize: {x: 1.6, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

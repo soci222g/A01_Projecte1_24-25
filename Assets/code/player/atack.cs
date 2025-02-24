@@ -23,6 +23,7 @@ public class atack : MonoBehaviour
     bool onCooldown;
     [SerializeField]
     SpriteRenderer hitbox;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +53,7 @@ public class atack : MonoBehaviour
             {
                 hitbox.enabled = true;
                 atackDelayCounter++;
+                animator.SetBool("IsAtack", true);
             }
            
 
