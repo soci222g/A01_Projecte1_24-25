@@ -15,9 +15,9 @@ public class spikes : MonoBehaviour
         if (collision.gameObject.tag == "spikes")
         {
             Debug.Log("me muero");
-            //quitar vida aqui
+            this.gameObject.GetComponent<hp>().setHP(1);
             Debug.Log("me muero");
-            collision.transform.position = resPown.position;
+            this.transform.position = resPown.position;
         }
     }
 }
