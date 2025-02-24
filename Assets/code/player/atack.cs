@@ -16,6 +16,10 @@ public class atack : MonoBehaviour
     [SerializeField]
     int atackDurationCounter;
     [SerializeField]
+    int atackDelay;
+    [SerializeField]
+    int atackDelayCounter;
+    [SerializeField]
     bool onCooldown;
     [SerializeField]
     SpriteRenderer hitbox;
@@ -47,7 +51,9 @@ public class atack : MonoBehaviour
             else
             {
                 hitbox.enabled = true;
+                atackDelayCounter++;
             }
+           
 
         }
 
@@ -62,6 +68,7 @@ public class atack : MonoBehaviour
             Debug.Log("atacked");
             onCooldown = true;
             atackDurationCounter = 0;
+            atackDelayCounter = 0;
         }
     }
 
