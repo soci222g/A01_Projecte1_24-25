@@ -5,8 +5,15 @@ using UnityEngine;
 public class EnemyHP : MonoBehaviour
 {
 
+    public GameObject dropHeal;
+
+
     [SerializeField]
-    public int HP;
+    private int HP;
+    
+   
+    private int dropChance = 100;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,5 +37,19 @@ public class EnemyHP : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        int randNum = Random.Range(1,100);
+        if(randNum < dropChance)
+        {
+            GameObject clone = Instantiate(dropHeal,transform.position - new Vector3(0,0,0.3f),transform.rotation);
+        }
+    }
+    public int getHP() { return HP; } 
+    public void setHP(int hp)
+    {
+        HP -= hp;
     }
 }

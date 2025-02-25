@@ -26,7 +26,7 @@ public class hp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             healthPoints -= Damage();
         }

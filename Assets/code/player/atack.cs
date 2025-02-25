@@ -83,7 +83,7 @@ public class atack : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out EnemyHP enemyHp) && collision.gameObject.tag == "Enemy")
         {
-            enemyHp.HP -= 1;
+            enemyHp.setHP(1);
         }
     }
 
