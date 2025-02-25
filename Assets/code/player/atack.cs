@@ -25,6 +25,8 @@ public class atack : MonoBehaviour
     SpriteRenderer hitbox;
     [SerializeField]
     private Animator animator;
+    [SerializeField]
+    SpriteRenderer playerSR;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,16 @@ public class atack : MonoBehaviour
 
     private void FixedUpdate() // usamos FixedUpdate para que el tiempo del ataque sea consistente
     {
+
+        if (playerSR.flipX == true)
+        {
+            latHitbox.offset = new Vector2(-1.3f, 0);
+        }
+        else
+        {
+            latHitbox.offset = new Vector2(1.3f, 0);
+        }
+
         if (onCooldown) // Cooldown del ataque
         {
             countCooldown++;
@@ -59,13 +71,15 @@ public class atack : MonoBehaviour
             }
 
 
+            
+
         }
 
     }
 
     private void Update()
     {
-
+    
         if (Input.GetKeyDown("v") && !onCooldown) //si input de ataque y no esta en cooldown
         {
             latHitbox.enabled = true;

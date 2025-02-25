@@ -242,7 +242,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877038667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.737, y: -0.054, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.6861, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -262,15 +262,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   latHitbox: {fileID: 877038671}
-  atackCooldown: 20
+  atackCooldown: 30
   countCooldown: 0
-  atackDuration: 15
+  atackDuration: 26
   atackDurationCounter: 0
-  atackDelay: 7
+  atackDelay: 8
   atackDelayCounter: 0
   onCooldown: 0
   hitbox: {fileID: 877038670}
-  animator: {fileID: 0}
+  animator: {fileID: 1646219958}
+  playerSR: {fileID: 1646219955}
 --- !u!212 &877038670
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -355,7 +356,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0026156902, y: -0.09416449}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -366,7 +367,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6120687, y: 1.428971}
+  m_Size: {x: 1.6120687, y: 1.441726}
   m_EdgeRadius: 0
 --- !u!1 &1129016678
 GameObject:
@@ -641,7 +642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646219952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.41, y: -3.86, z: 0}
+  m_LocalPosition: {x: 3.15, y: -3.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -662,6 +663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1646219958}
+  speed: 5
 --- !u!95 &1646219958
 Animator:
   serializedVersion: 5
@@ -714,6 +716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d982233c401c104983cf65a4307eca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropHeal: {fileID: 73896145160197108, guid: 09a4d25576e3bb24baa358253cb97620, type: 3}
   HP: 5
 --- !u!61 &2055363498
 BoxCollider2D:
