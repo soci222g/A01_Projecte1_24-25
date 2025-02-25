@@ -48,14 +48,15 @@ public class atack : MonoBehaviour
             {
                 latHitbox.enabled = false;
                 hitbox.enabled = false;
+                animator.SetBool("IsAtack", false);
             }
             else
             {
                 hitbox.enabled = true;
                 atackDelayCounter++;
-                animator.SetBool("IsAtack", true);
+
             }
-           
+
 
         }
 
@@ -71,6 +72,7 @@ public class atack : MonoBehaviour
             onCooldown = true;
             atackDurationCounter = 0;
             atackDelayCounter = 0;
+            animator.SetBool("IsAtack", true);
         }
     }
 
