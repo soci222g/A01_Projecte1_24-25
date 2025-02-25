@@ -6,7 +6,8 @@ public class movement : MonoBehaviour
 {
     [SerializeField]
     public Animator animator;
-    float speed = 5f;
+    [SerializeField]
+    private float speed = 5f;
     SpriteRenderer sr;
     // Update is called once per frame
     
