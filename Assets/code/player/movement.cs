@@ -5,13 +5,28 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
     [SerializeField]
+    public Animator animator;
     float speed = 5f;
-
+    SpriteRenderer sr;
     // Update is called once per frame
+    
+    void Start()
+    {
+        sr = GetComponent<SpriteRenderer>();
+    }
+    
     void FixedUpdate()
     {
         float horizontal = Input.GetAxis("Horizontal");
-        transform.position += new Vector3(horizontal * speed * Time.deltaTime, 0, 0); 
-
+        transform.position += new Vector3(horizontal * speed * Time.deltaTime, 0, 0);
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
+        if (horizontal > 0)
+        {
+            sr.flipX = false;
+        }
+        else if(horizontal < 0)
+        {
+            sr.flipX = true;
+        }
     }
 }
