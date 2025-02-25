@@ -13,8 +13,8 @@ public class hp : MonoBehaviour
     [SerializeField]
     Sprite[] fullHP;
 
-    [SerializeField]
-    SpriteRenderer spriteHP;
+   // [SerializeField]
+  //  SpriteRenderer spriteHP;
     [SerializeField]
     private gameManager gameManager;
     // Start is called before the first frame update
@@ -59,6 +59,6 @@ public class hp : MonoBehaviour
     public void setHP(int perderVida)
     {
         healthPoints -= perderVida;
-       // gameManager.SetHP(healthPoints);
+        gameManager.SetHP(healthPoints);
     }
 }
