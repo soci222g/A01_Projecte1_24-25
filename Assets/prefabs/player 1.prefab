@@ -14,9 +14,11 @@ GameObject:
   - component: {fileID: 6593259996938224116}
   - component: {fileID: 1972126328520612047}
   - component: {fileID: 4249218732943082540}
+  - component: {fileID: 2143393496348403294}
+  - component: {fileID: 7828868525473434805}
   m_Layer: 0
   m_Name: player 1
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,7 +37,7 @@ Transform:
   m_Children:
   - {fileID: 2192502247566313487}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5942129647239024083
 SpriteRenderer:
@@ -185,6 +187,36 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2143393496348403294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2273493742070094891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9909e92c3b263074fabd23a803628703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoints: 6
+  healthPoints: 0
+  fullHP: []
+  spriteHP: {fileID: 0}
+  gameManager: {fileID: 0}
+--- !u!114 &7828868525473434805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2273493742070094891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb6185c6b9fc4b4fbb4f84f8492c188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resPown: {fileID: 0}
 --- !u!1 &4132098854947343486
 GameObject:
   m_ObjectHideFlags: 0

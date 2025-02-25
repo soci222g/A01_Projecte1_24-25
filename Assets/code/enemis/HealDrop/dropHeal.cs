@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class dropHeal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private Animator animator;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.tag == "player")
+        {
+            if (collision.gameObject.GetComponent<hp>().getHP() < 6) //canviar 6 per getmaxHP
+            collision.gameObject.GetComponent<hp>().setHP(-1);
+            animator.SetBool("IsGot", true);
+            
+            Destroy(this.gameObject,0.3f);
+
+        }
     }
 }
