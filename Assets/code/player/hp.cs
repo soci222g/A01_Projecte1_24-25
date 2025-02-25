@@ -59,6 +59,6 @@ public class hp : MonoBehaviour
     public void setHP(int perderVida)
     {
         healthPoints -= perderVida;
-        gameManager.SetHP(healthPoints);
+       // gameManager.SetHP(healthPoints);
     }
 }

@@ -270,6 +270,7 @@ MonoBehaviour:
   atackDelayCounter: 0
   onCooldown: 0
   hitbox: {fileID: 877038670}
+  animator: {fileID: 0}
 --- !u!212 &877038670
 SpriteRenderer:
   m_ObjectHideFlags: 0
