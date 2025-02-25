@@ -13,14 +13,18 @@ public class hp : MonoBehaviour
     [SerializeField]
     Sprite[] fullHP;
 
+   // [SerializeField]
+  //  SpriteRenderer spriteHP;
     [SerializeField]
-    SpriteRenderer spriteHP;
-    [SerializeField]
-    private gameManager gameManager;
+    private hpUI hpUI;
+    private void Awake()
+    {
+        healthPoints = maxHealthPoints;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        healthPoints = maxHealthPoints;
+        
     }
 
     // Update is called once per frame
@@ -59,6 +63,6 @@ public class hp : MonoBehaviour
     public void setHP(int perderVida)
     {
         healthPoints -= perderVida;
-       // gameManager.SetHP(healthPoints);
+        hpUI.SetHP(healthPoints);
     }
 }
