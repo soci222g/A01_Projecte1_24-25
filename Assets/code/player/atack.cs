@@ -23,7 +23,8 @@ public class atack : MonoBehaviour
     bool onCooldown;
     [SerializeField]
     SpriteRenderer hitbox;
-    public Animator animator;
+    [SerializeField]
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
