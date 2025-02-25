@@ -19,9 +19,24 @@ public class Fleep : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        fleep = Input.GetButton("Jump");
+        ActivateGravity();
+    }
+
+    private void ActivateGravity()
+    {
+        if (Input.GetButtonUp("Jump"))
+        {
+            Debug.Log("flipeo");
+            
+            fleep = true;
+        }
+        else
+            fleep = false;
 
         if (fleep == true)
-        rb.gravityScale *= -1;
+        {
+            rb.gravityScale *= -1;
+            sr.flipY = !sr.flipY;
+        }
     }
 }
