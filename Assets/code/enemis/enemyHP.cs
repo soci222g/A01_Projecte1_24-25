@@ -44,7 +44,7 @@ public class EnemyHP : MonoBehaviour
         int randNum = Random.Range(1,100);
         if(randNum < dropChance)
         {
-            GameObject clone = Instantiate(dropHeal,transform.position - new Vector3(0,0,0.3f),transform.rotation);
+            GameObject clone = Instantiate(dropHeal,transform.position - new Vector3(0,0.5f,0),transform.rotation);
         }
     }
     public int getHP() { return HP; } 
