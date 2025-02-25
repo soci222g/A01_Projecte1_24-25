@@ -8,7 +8,10 @@ public class gameManager : MonoBehaviour
     public Image[] playerHearts;
     public Sprite[] heartStatus;
     public int currentHearts;
-    public int hp;
+    [SerializeField]
+    private GameObject player;
+    [SerializeField]
+    private int hp;
 
     static int minHearts = 0;
     static int maxHearts = 3;
@@ -16,8 +19,9 @@ public class gameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHearts = Mathf.Clamp(currentHearts, minHearts, maxHearts);
-        hp = Mathf.Clamp(hp, 1, currentHearts * 2);
+        currentHearts = maxHearts;
+        hp = player.GetComponent<hp>().getHP();
+        
     }
 
     // Update is called once per frame
@@ -59,6 +63,6 @@ public class gameManager : MonoBehaviour
 
     public void SetHP(int numberModifier)
     {
-        hp += numberModifier;
+        hp = numberModifier;
     }
 }
