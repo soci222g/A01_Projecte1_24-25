@@ -20,15 +20,14 @@ public class movement : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         transform.position += new Vector3(horizontal * speed * Time.deltaTime, 0, 0);
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
         if (horizontal > 0)
         {
-           
             sr.flipX = false;
         }
         else if(horizontal < 0)
         {
             sr.flipX = true;
         }
-        animator.SetFloat("Speed", Mathf.Abs(horizontal));
     }
 }
