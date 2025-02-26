@@ -163,6 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2182073263094218293}
+  - component: {fileID: 7298098943528611513}
   - component: {fileID: 3252725902039710837}
   - component: {fileID: 1409228932536560166}
   - component: {fileID: 5100497281371963983}
@@ -193,6 +194,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7298098943528611513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5121319973530832289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859f7da0f31d57640b20a79b398c76fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InvFrames: 0.5
+  currentTimeInv: 0
 --- !u!212 &3252725902039710837
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -357,8 +372,7 @@ MonoBehaviour:
   maxHealthPoints: 6
   healthPoints: 0
   fullHP: []
-  spriteHP: {fileID: 0}
-  gameManager: {fileID: 0}
+  hpUI: {fileID: 0}
 --- !u!114 &-8281634634580875070
 MonoBehaviour:
   m_ObjectHideFlags: 0
