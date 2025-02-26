@@ -24,7 +24,7 @@ public class Fleep : MonoBehaviour
 
     private void ActivateGravity()
     {
-        if (Input.GetButtonUp("Jump"))
+        if (Input.GetKeyDown("space") && GetComponent<GroundDetector>().GetGroundDetect())
         {
             Debug.Log("flipeo");
             
