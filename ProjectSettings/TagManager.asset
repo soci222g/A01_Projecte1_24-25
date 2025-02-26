@@ -7,6 +7,8 @@ TagManager:
   - spikes
   - player
   - enemy
+  - Enemy
+  - bomb
   layers:
   - Default
   - TransparentFX
