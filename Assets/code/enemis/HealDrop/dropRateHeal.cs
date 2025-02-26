@@ -1,12 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class uiHP : MonoBehaviour
+public class dropRateHeal : MonoBehaviour
 {
-    public int changeSprite;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -18,13 +15,4 @@ public class uiHP : MonoBehaviour
     {
         
     }
-
-    //public int SpriteChanger(int vida)
-    //{
-    //    if (vida % 3)
-    //    {
-
-    //    }
-    //}
-
 }
