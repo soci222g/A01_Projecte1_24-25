@@ -8,14 +8,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8446553022102925007}
-  - component: {fileID: 6224098330157740678}
-  - component: {fileID: 8865926697453217567}
-  - component: {fileID: 7869842721471591991}
-  - component: {fileID: 4950825975832349152}
-  - component: {fileID: 1002157991936892527}
-  - component: {fileID: 6170343046445161996}
-  - component: {fileID: 5138362921750728181}
   - component: {fileID: 4933408334937618117}
   - component: {fileID: 3169499023096039314}
   - component: {fileID: 6823997886136384176}
@@ -393,21 +385,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb6185c6b9fc4b4fbb4f84f8492c188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 6
-  healthPoints: 0
-  fullHP: []
-  spriteHP: {fileID: 0}
---- !u!114 &5138362921750728181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8234006354296031927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57f142f427512884b877a1bc14151d0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fleep: 0
   resPown: {fileID: 0}
