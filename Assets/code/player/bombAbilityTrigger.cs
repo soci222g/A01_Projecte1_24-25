@@ -20,7 +20,7 @@ public class bombAbilityTrigger : MonoBehaviour
     {
         if (Input.GetKeyDown("x") /*&& cooldown < 0*/)
         {
-            animator.SetBool("Bomboclat", true);
+            animator.SetTrigger("Bomb2");
             if (sr.flipX)
             {
                 GameObject clone = Instantiate(bombExploat, transform.position - new Vector3(1.5f, 0.28f, 0), transform.rotation);
@@ -29,7 +29,6 @@ public class bombAbilityTrigger : MonoBehaviour
             {
                 GameObject clone = Instantiate(bombExploat, transform.position - new Vector3(-1.5f, 0.28f, 0), transform.rotation);
             }
-            animator.SetBool("Bomboclat", false);
         }
     }
 
