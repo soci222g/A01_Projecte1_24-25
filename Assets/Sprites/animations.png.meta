@@ -534,6 +534,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: rangedAtack1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 96
+        width: 25
+        height: 15
+      alignment: 9
+      pivot: {x: 0.23730439, y: 0.48337352}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353327abe04a6204fb10c94e929a0888
+      internalID: -1755019589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedAtack2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 97
+        width: 27
+        height: 14
+      alignment: 9
+      pivot: {x: 0.22289474, y: 0.4406199}
+      border: {x: 0, y: 0, z: 0, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664c471c1162bed419419f1387da15c6
+      internalID: -1251361598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedAtack3
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 96
+        width: 29
+        height: 14
+      alignment: 9
+      pivot: {x: 0.23627235, y: 0.49999946}
+      border: {x: 1, y: 1, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ba71c18589d8e4b88309c797c128b8
+      internalID: 1114535105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rangedAtack4
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 97
+        width: 28
+        height: 14
+      alignment: 9
+      pivot: {x: 0.21200834, y: 0.43468204}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5830b381236efc40afba565dae66c1b
+      internalID: -352763293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -564,6 +648,10 @@ TextureImporter:
       animations_7: 978171749
       animations_8: -1698257175
       animations_9: 1894391433
+      rangedAtack1: -1755019589
+      rangedAtack2: -1251361598
+      rangedAtack3: 1114535105
+      rangedAtack4: -352763293
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

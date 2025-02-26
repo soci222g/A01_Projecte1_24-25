@@ -11,14 +11,23 @@ public class proj : MonoBehaviour
     SpriteRenderer sr;
     [SerializeField]
     float speed;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        if (playerSr.flipX)
+
+        player = GameObject.Find("player");
+
+        if (player.TryGetComponent(out SpriteRenderer playerSr))
         {
-            speed = -speed;
-            sr.flipX = true;
+            if (playerSr.flipX)
+            {
+                speed = -speed;
+                sr.flipX = false;
+            }
         }
+
+        
     }
 
     private void FixedUpdate()
@@ -26,19 +35,15 @@ public class proj : MonoBehaviour
         transform.position += new Vector3 (speed * Time.deltaTime, 0, 0);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.gameObject.TryGetComponent(out EnemyHP enemyHp) && collision.gameObject.tag == "Enemy")
         {
-            enemyHp.setHP(1);
+            enemyHp.setHP(3);
         }
+
+        Destroy(gameObject);
 
     }
 }
