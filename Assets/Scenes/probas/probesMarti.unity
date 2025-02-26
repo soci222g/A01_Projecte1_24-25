@@ -468,17 +468,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5597509372517511245, guid: e3ff7566d219ac742ac0ecb56f8e53f7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597509372517511245, guid: e3ff7566d219ac742ac0ecb56f8e53f7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597509372517511245, guid: e3ff7566d219ac742ac0ecb56f8e53f7, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160912741789851813, guid: e3ff7566d219ac742ac0ecb56f8e53f7, type: 3}
+      propertyPath: currentTimeBomb
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6396065954059262128, guid: e3ff7566d219ac742ac0ecb56f8e53f7, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6396065954059262128, guid: e3ff7566d219ac742ac0ecb56f8e53f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.0669746
+      value: -6.9
       objectReference: {fileID: 0}
     - target: {fileID: 6396065954059262128, guid: e3ff7566d219ac742ac0ecb56f8e53f7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1693764
+      value: -4.17
       objectReference: {fileID: 0}
     - target: {fileID: 6396065954059262128, guid: e3ff7566d219ac742ac0ecb56f8e53f7, type: 3}
       propertyPath: m_LocalPosition.z
