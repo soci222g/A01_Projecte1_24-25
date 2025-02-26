@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 650167750993376912}
   - component: {fileID: -4442595126761444244}
   - component: {fileID: -8281634634580875070}
+  - component: {fileID: 8806391841633633003}
   m_Layer: 0
   m_Name: player
   m_TagString: player
@@ -357,8 +358,7 @@ MonoBehaviour:
   maxHealthPoints: 6
   healthPoints: 0
   fullHP: []
-  spriteHP: {fileID: 0}
-  gameManager: {fileID: 0}
+  hpUI: {fileID: 0}
 --- !u!114 &-8281634634580875070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,3 +372,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resPown: {fileID: 0}
+--- !u!114 &8806391841633633003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5121319973530832289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edca05a2525c5c847bb7e9aac420a444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  proj: {fileID: 0}
+  sr: {fileID: 3252725902039710837}
