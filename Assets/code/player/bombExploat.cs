@@ -38,23 +38,15 @@ public class bombExploat : MonoBehaviour
 
 
     }
-    /*
+
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.TryGetComponent(out EnemyHP enemyHp) && collision.gameObject.tag == "Enemy")
         {
             enemyHp.setHP(2);
         }
         //if?
     }
-
-    
-    private void OnTriggerEnter2D(Collider2D collision) //aixo fer pel player i enemics
-    {
-
-        if (collision.gameObject.tag == "bomb")
-        {
-            
-        }
-    }*/
 }

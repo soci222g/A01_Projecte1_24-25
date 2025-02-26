@@ -168,7 +168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 467061605135967066, guid: 09a4d25576e3bb24baa358253cb97620, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 467061605135967066, guid: 09a4d25576e3bb24baa358253cb97620, type: 3}
       propertyPath: m_LocalScale.x
@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 416662163}
   - component: {fileID: 416662162}
   - component: {fileID: 416662165}
+  - component: {fileID: 416662166}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -352,7 +353,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &416662165
 MonoBehaviour:
@@ -368,6 +369,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropHeal: {fileID: 73896145160197108, guid: 09a4d25576e3bb24baa358253cb97620, type: 3}
   HP: 5
+--- !u!50 &416662166
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416662160}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 4
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &798532640
 GameObject:
   m_ObjectHideFlags: 0
