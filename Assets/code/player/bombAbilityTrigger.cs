@@ -8,22 +8,19 @@ public class bombAbilityTrigger : MonoBehaviour
     [SerializeField]
     private Animator animator;
     [SerializeField]
-    private int bombCooldown = 500; 
+    private float cooldown = 0.0f;
     SpriteRenderer sr;
-    private bool onCooldown;
-    private float countCooldown;
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        onCooldown = false;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown("x") && !onCooldown)
+        if (Input.GetKeyDown("x") /*&& cooldown < 0*/)
         {
-            //animator.SetTrigger("Bomb2");
+            animator.SetBool("Bomboclat", true);
             if (sr.flipX)
             {
                 GameObject clone = Instantiate(bombExploat, transform.position - new Vector3(1.5f, 0.28f, 0), transform.rotation);
@@ -32,20 +29,12 @@ public class bombAbilityTrigger : MonoBehaviour
             {
                 GameObject clone = Instantiate(bombExploat, transform.position - new Vector3(-1.5f, 0.28f, 0), transform.rotation);
             }
-            onCooldown = true;
+            animator.SetBool("Bomboclat", false);
         }
     }
 
     private void FixedUpdate()
     {
-        if (onCooldown)
-        {
-            countCooldown++;
-            if(countCooldown == bombCooldown)
-            {
-                countCooldown = 0;
-                onCooldown = false;
-            }
-        }
+        //cooldown
     }
 }

@@ -52,4 +52,14 @@ public class EnemyHP : MonoBehaviour
     {
         HP -= hp;
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("atacked");
+        if (collision.gameObject.tag == "bomb")
+        {
+            setHP(2);
+        }
+    }
 }
