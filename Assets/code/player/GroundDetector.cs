@@ -6,8 +6,8 @@ public class GroundDetector : MonoBehaviour
 {
     [SerializeField]
     private bool groundDet;
-
-    private float DistansToGroudn = 1.5f;
+    [SerializeField]
+    private float DistansToGroudn = 0.85f;
     public LayerMask groundeMask;
     public List<Vector3> rays;
 
@@ -26,6 +26,7 @@ public class GroundDetector : MonoBehaviour
 
    private void GetectGround() {
         int count = 0;
+    
         for (int i = 0; i < rays.Count; i++)
         {
             RaycastHit2D hit;
@@ -43,7 +44,7 @@ public class GroundDetector : MonoBehaviour
             if(hit.collider != null)
             {
                 count++;
-                Debug.DrawRay(transform.position + rays[i], transform.up * -1 * hit.distance, Color.green);
+                Debug.Log(hit.collider.name);
 
             }
 

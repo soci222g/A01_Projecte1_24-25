@@ -18,14 +18,14 @@ public class Fleep : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         ActivateGravity();
     }
 
     private void ActivateGravity()
     {
-        if (Input.GetKeyDown("q") && GetComponent<GroundDetector>().GetGroundDetect())
+        if (Input.GetKeyDown("space") && GetComponent<GroundDetector>().GetGroundDetect())
         {
             Debug.Log("flipeo");
             
