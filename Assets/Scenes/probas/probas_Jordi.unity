@@ -890,7 +890,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1281105139
+=======
+--- !u!1 &1178819767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8234006354296031927, guid: 4e6b478abf0712d4e808158603fd3dcd, type: 3}
+  m_PrefabInstance: {fileID: 8152729229532336927}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1178819776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178819767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efc3e8ef47843744ac425f22a8083ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundDet: 0
+  groundeMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  rays:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0.3, y: -0.1, z: 0}
+  - {x: -0.3, y: -0.1, z: 0}
+--- !u!1 &1401872842
+>>>>>>> featureFleep
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
