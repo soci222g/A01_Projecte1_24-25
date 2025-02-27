@@ -10,10 +10,12 @@ public class GroundDetector : MonoBehaviour
     private float DistansToGroudn = 1.5f;
     public LayerMask groundeMask;
     public List<Vector3> rays;
+
+    private Fleep fleepSC;
     // Start is called before the first frame update
     void Start()
     {
-        
+        fleepSC = GetComponent<Fleep>();
     }
 
     // Update is called once per frame
@@ -26,12 +28,23 @@ public class GroundDetector : MonoBehaviour
         int count = 0;
         for (int i = 0; i < rays.Count; i++)
         {
+            RaycastHit2D hit;
             Debug.DrawRay(transform.position + rays[i], transform.up * -1 * DistansToGroudn, Color.blue);
-            RaycastHit2D hit = Physics2D.Raycast(transform.position + rays[i], transform.up * -1, DistansToGroudn, groundeMask);
-            if(hit.collider == null)
+                if (fleepSC.GetFleepControler())
+                {
+                     hit = Physics2D.Raycast(transform.position + rays[i], transform.up * -1, DistansToGroudn, groundeMask);
+                    Debug.DrawRay(transform.position + rays[i], transform.up * -1 * DistansToGroudn, Color.blue);
+                }
+                else
+                {
+                    hit = Physics2D.Raycast(transform.position + rays[i], transform.up * 1, DistansToGroudn, groundeMask);
+                    Debug.DrawRay(transform.position + rays[i], transform.up * 1 * DistansToGroudn, Color.blue);
+                }
+            if(hit.collider != null)
             {
                 count++;
-                
+                Debug.DrawRay(transform.position + rays[i], transform.up * -1 * hit.distance, Color.green);
+
             }
 
 

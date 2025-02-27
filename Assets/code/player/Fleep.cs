@@ -8,6 +8,7 @@ public class Fleep : MonoBehaviour
     Rigidbody2D rb;
     [SerializeField]
     private bool fleep;
+    private bool fleepControler = true;
     // Update is called once per frame
 
     void Start()
@@ -24,11 +25,12 @@ public class Fleep : MonoBehaviour
 
     private void ActivateGravity()
     {
-        if (Input.GetKeyDown("space") && GetComponent<GroundDetector>().GetGroundDetect())
+        if (Input.GetKeyDown("q") && GetComponent<GroundDetector>().GetGroundDetect())
         {
             Debug.Log("flipeo");
             
             fleep = true;
+            fleepControler = !fleepControler;
         }
         else
             fleep = false;
@@ -38,5 +40,10 @@ public class Fleep : MonoBehaviour
             rb.gravityScale *= -1;
             sr.flipY = !sr.flipY;
         }
+    }
+
+    public bool GetFleepControler()
+    {
+        return fleepControler;
     }
 }

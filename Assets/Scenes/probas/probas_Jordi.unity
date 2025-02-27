@@ -396,7 +396,7 @@ MonoBehaviour:
   groundDet: 0
   groundeMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   rays:
   - {x: 0, y: 0, z: 0}
   - {x: 0.3, y: -0.1, z: 0}
