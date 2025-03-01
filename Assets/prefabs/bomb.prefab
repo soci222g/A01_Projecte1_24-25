@@ -156,5 +156,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTimeBomb: 1
-  timerBomb: 0
   animator: {fileID: 7150283264130671870}
