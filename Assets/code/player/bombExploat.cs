@@ -5,7 +5,7 @@ using UnityEngine;
 public class bombExploat : MonoBehaviour
 {
     [SerializeField]
-    private float currentTimeBomb = 1f;
+    private float currentTimeBomb = 0.6f;
     private float timeAnim = 1.27f;
     [SerializeField]
     private Animator animator;
