@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6164479285552575636}
   - component: {fileID: 3987444804056837905}
   - component: {fileID: 9167311104941621419}
-  - component: {fileID: 7539596494828686788}
+  - component: {fileID: 6110573148030064707}
   m_Layer: 0
   m_Name: Bichin
   m_TagString: Untagged
@@ -121,7 +121,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.046442986, y: -0.052776217}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.4615385}
@@ -132,7 +132,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.7093115, y: 1.1139967}
   m_EdgeRadius: 0
 --- !u!50 &3987444804056837905
 Rigidbody2D:
@@ -182,7 +182,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7539596494828686788
+--- !u!114 &6110573148030064707
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,13 +191,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2385691535766396712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8825b92a59505f44db38352e6e9c3ca5, type: 3}
+  m_Script: {fileID: 11500000, guid: 30989c388ddd894428d4c7bcefa5b7a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 6
-  controladorSuelo: {fileID: 9083545083072166235}
-  distancia: 1.31
-  moviendoDerecha: 0
+  player: {fileID: 0}
+  detectionRadius: 5
+  speed: 5
+  velocidad: 2
+  controladorSuelo: {fileID: 0}
+  distancia: 0.5
+  moviendoDerecha: 1
 --- !u!1 &5589494780105348027
 GameObject:
   m_ObjectHideFlags: 0
