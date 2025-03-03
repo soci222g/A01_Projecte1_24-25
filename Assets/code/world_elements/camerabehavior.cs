@@ -27,12 +27,12 @@ public class camerabehavior : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   /* void Update()
     {
         if (currentRoom)
         
 
-    }
+    }*/
 
     public void setCurrenteRoom(int num)
     {
