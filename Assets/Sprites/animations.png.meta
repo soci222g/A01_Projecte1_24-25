@@ -534,6 +534,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: animations_19
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 96
+        width: 25
+        height: 15
+      alignment: 9
+      pivot: {x: 0.24, y: 0.4666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2463e8852adf6942b8014c50b558734
+      internalID: -449957562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animations_20
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 97
+        width: 27
+        height: 13
+      alignment: 9
+      pivot: {x: 0.22222222, y: 0.4615385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06fe29b1be726542adda44ed6b8251a
+      internalID: -216553639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animations_21
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 97
+        width: 28
+        height: 13
+      alignment: 9
+      pivot: {x: 0.21428573, y: 0.4615385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbcf3bdd5c3c03a4298aeed6ee8811b2
+      internalID: 2087336264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animations_22
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 97
+        width: 28
+        height: 14
+      alignment: 9
+      pivot: {x: 0.21428573, y: 0.42857146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cbd7a86fb181fc49832e171774cf921
+      internalID: 1842875205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -556,7 +640,11 @@ TextureImporter:
       animations_16: -700763218
       animations_17: -644005333
       animations_18: -645983883
+      animations_19: -449957562
       animations_2: -1963063342
+      animations_20: -216553639
+      animations_21: 2087336264
+      animations_22: 1842875205
       animations_3: 607527087
       animations_4: 1055082896
       animations_5: 1437975162
