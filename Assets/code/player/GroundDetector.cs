@@ -44,7 +44,10 @@ public class GroundDetector : MonoBehaviour
             if(hit.collider != null)
             {
                 count++;
+<<<<<<< HEAD
                // Debug.Log(hit.collider.name);
+=======
+>>>>>>> origin/feature/CameraLevel
 
             }
 
