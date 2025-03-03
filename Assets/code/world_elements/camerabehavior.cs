@@ -7,16 +7,21 @@ public class camerabehavior : MonoBehaviour
     [SerializeField]
     private Camera camera;
 
-    [SerializeField]
+    
     private int ROOM_COUNTER;
 
     public List<Transform> cameraPosition;
+
+    private int roomToGo;
 
     private int currentRoom;
     
     // Start is called before the first frame update
     void Start()
     {
+
+        ROOM_COUNTER = cameraPosition.Count;
+        roomToGo = 0;
         currentRoom = 0;
         camera.transform.position = cameraPosition[0].position;
     }
@@ -24,8 +29,8 @@ public class camerabehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (currentRoom)
         
-
 
     }
 
