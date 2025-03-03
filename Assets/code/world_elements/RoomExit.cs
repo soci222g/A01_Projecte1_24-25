@@ -16,12 +16,14 @@ public class RoomExit : MonoBehaviour
         {
             if (DirectionRoom) {
                 Debug.Log("cambiar escena: alante");
+                cam.setCurrenteRoom(1);
                 DirectionRoom = false;
             }
             else
             {
                 Debug.Log("cambiar escena: atras");
                 DirectionRoom = true;
+                cam.setCurrenteRoom(-1);
             }
         }
     }

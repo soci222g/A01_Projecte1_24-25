@@ -22,15 +22,32 @@ public class bombAbilityTrigger : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("x") && !onCooldown)
+        if (Input.GetKeyDown("x") && !onCooldown && GetComponent<GroundDetector>().GetGroundDetect())
         {
-            if (sr.flipX)
+            if (sr.flipY)
             {
-                GameObject clone = Instantiate(bombExploat, transform.position - new Vector3(1.5f, 0.28f, 0), transform.rotation);
+                if (sr.flipX)
+                {
+                    GameObject clone = Instantiate(bombExploat, transform.position - new Vector3(1.5f, -0.28f, 0), transform.rotation);
+                    clone.GetComponent<SpriteRenderer>().flipY = true;
+
+                }
+                else
+                {
+                    GameObject clone = Instantiate(bombExploat, transform.position - new Vector3(-1.5f, -0.28f, 0), transform.rotation);
+                    clone.GetComponent<SpriteRenderer>().flipY = true;
+                }
             }
             else
             {
-                GameObject clone = Instantiate(bombExploat, transform.position - new Vector3(-1.5f, 0.28f, 0), transform.rotation);
+                if (sr.flipX)
+                {
+                    GameObject clone = Instantiate(bombExploat, transform.position - new Vector3(1.5f, 0.28f, 0), transform.rotation);
+                }
+                else
+                {
+                    GameObject clone = Instantiate(bombExploat, transform.position - new Vector3(-1.5f, 0.28f, 0), transform.rotation);
+                }
             }
             onCooldown = true;
         }

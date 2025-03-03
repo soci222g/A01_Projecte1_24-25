@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class camerabehavior : MonoBehaviour
@@ -7,8 +8,9 @@ public class camerabehavior : MonoBehaviour
     [SerializeField]
     private Camera camera;
 
-    
-    private int ROOM_COUNTER;
+    [SerializeField]
+    private int speed;
+
 
     public List<Transform> cameraPosition;
 
@@ -20,22 +22,32 @@ public class camerabehavior : MonoBehaviour
     void Start()
     {
 
-        ROOM_COUNTER = cameraPosition.Count;
         roomToGo = 0;
         currentRoom = 0;
         camera.transform.position = cameraPosition[0].position;
     }
 
     // Update is called once per frame
-    //void Update()
-    //{
-    //    if (currentRoom)
-        
+   /* void Update()
+    {
+        if (currentRoom != roomToGo)
+        {
+            Vector3 dir = cameraPosition[roomToGo].position - camera.transform.position;
+            float distence = dir.magnitude;
+            dir.Normalize();
 
-    //}
+            camera.transform.position += dir * speed * Time.deltaTime;
+            if (distence < 0.1f)
+            {
+                currentRoom = roomToGo;
+            }
+        }
+       
+
+    }*/
 
     public void setCurrenteRoom(int num)
     {
-        currentRoom += num;
+        roomToGo += num;
     }
 }
