@@ -44,7 +44,7 @@ public class GroundDetector : MonoBehaviour
             if(hit.collider != null)
             {
                 count++;
-                Debug.Log(hit.collider.name);
+               // Debug.Log(hit.collider.name);
 
             }
 
