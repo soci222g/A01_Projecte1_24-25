@@ -24,7 +24,9 @@ public class movement_bat : MonoBehaviour
         float distence = dir.magnitude;
         dir.Normalize();
 
-        transform.position += dir * speed * Time.deltaTime;  
+        transform.position += dir * speed * Time.deltaTime; 
+        
+
         if(distence < 0.1f)
         {
             NextPont++;
