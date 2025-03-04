@@ -11,10 +11,13 @@ public class enemyOnColide : MonoBehaviour
     // Update is called once per frame
     private hp HP;
 
-    private GameObject player;
+    private Collider2D coll;
 
+    private Collider2D enemy;
     private void Start()
     {
+
+        coll = GetComponent<Collider2D>();
         HP = GetComponent<hp>();
 
     }
@@ -25,7 +28,7 @@ public class enemyOnColide : MonoBehaviour
 
     private void invMoments()
     {
-        if (currentTimeInv > 0)
+        if (currentTimeInv > 0) //timer del invultenrabilitat
         {
             currentTimeInv -= Time.deltaTime;
             gameObject.tag = "Player";
@@ -35,16 +38,20 @@ public class enemyOnColide : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             gameObject.tag = "player";
-            player.GetComponent<Collider2D>().isTrigger = false;
+            enemy.GetComponent<Collider2D>().isTrigger = false;
+            Physics2D.IgnoreCollision(enemy, coll, false);
         }
     }
+    //trigger ebter del enemi, tru vida i trau collisions durant un temps
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "enemy" && gameObject.tag == "player")
         {
             currentTimeInv = InvFrames;
-            collision.gameObject.GetComponent<Collider2D>().isTrigger = true;
-            player = collision.gameObject;
+            // collision.gameObject.GetComponent<Collider2D>().isTrigger = true;
+            enemy = collision.gameObject.GetComponent<Collider2D>();
+
+            Physics2D.IgnoreCollision(enemy, coll);            
             HP.setHP(1);
             
 
