@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class enemyControllerBichin : MonoBehaviour
@@ -14,6 +15,11 @@ public class enemyControllerBichin : MonoBehaviour
     [SerializeField] private LayerMask capaSuelo; // Capa para detectar el suelo
     private bool moviendoDerecha = true; // Dirección inicial
     private float currentSpeed; // Velocidad actual
+    private bool onCooldown = false;
+    [SerializeField]
+    private float countCooldown;
+    [SerializeField]
+    private int collisionCooldown = 50;
 
     private Rigidbody2D rb;
 
@@ -27,14 +33,29 @@ public class enemyControllerBichin : MonoBehaviour
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        // Si el jugador está dentro del radio de detección, acelerar hacia él
-        if (distanceToPlayer < detectionRadius)
+        
+        if (onCooldown)
         {
-            PerseguirJugador();
+            countCooldown++;
+            if (countCooldown >= collisionCooldown)
+            {
+                countCooldown = 0;
+                onCooldown = false;
+                chaseSpeed = 5f;
+            }
         }
         else
         {
-            Patrullar();
+            // Si el jugador está dentro del radio de detección, acelerar hacia él
+            if (distanceToPlayer < detectionRadius)
+            {
+                PerseguirJugador();
+            }
+            else
+            {
+                Patrullar();
+            }
+
         }
     }
 
@@ -74,6 +95,15 @@ public class enemyControllerBichin : MonoBehaviour
     {
         moviendoDerecha = !moviendoDerecha;
         transform.localScale = new Vector3(moviendoDerecha ? 1 : -1, 1, 1);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "player")
+        {
+            onCooldown = true;
+            chaseSpeed = 0f;
+        }
     }
 
     void OnDrawGizmosSelected()

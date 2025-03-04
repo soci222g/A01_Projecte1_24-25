@@ -38,8 +38,10 @@ public class enemyOnColide : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             gameObject.tag = "player";
-            enemy.GetComponent<Collider2D>().isTrigger = false;
-            Physics2D.IgnoreCollision(enemy, coll, false);
+            if(enemy != null)
+            {
+                Physics2D.IgnoreCollision(enemy, coll, false);
+            }
         }
     }
     //trigger ebter del enemi, tru vida i trau collisions durant un temps

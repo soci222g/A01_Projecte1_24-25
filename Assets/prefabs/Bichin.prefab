@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3987444804056837905}
   - component: {fileID: 9167311104941621419}
   - component: {fileID: 6110573148030064707}
+  - component: {fileID: 4283673957522821156}
   m_Layer: 0
   m_Name: Bichin
   m_TagString: Untagged
@@ -204,6 +205,22 @@ MonoBehaviour:
   capaSuelo:
     serializedVersion: 2
     m_Bits: 0
+  countCooldown: 0
+  collisionCooldown: 50
+--- !u!114 &4283673957522821156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2385691535766396712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d982233c401c104983cf65a4307eca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropHeal: {fileID: 73896145160197108, guid: 09a4d25576e3bb24baa358253cb97620, type: 3}
+  HP: 3
 --- !u!1 &5589494780105348027
 GameObject:
   m_ObjectHideFlags: 0

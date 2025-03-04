@@ -36,17 +36,14 @@ public class EnemyHP : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject);
-    }
-
-    private void OnDestroy()
-    {
         int randNum = Random.Range(1, 100);
         if (randNum < dropChance)
         {
             GameObject clone = Instantiate(dropHeal, transform.position - new Vector3(0, 0.5f, 0), transform.rotation);
         }
+        Destroy(gameObject);
     }
+
     public int getHP() { return HP; }
     public void setHP(int hp)
     {
