@@ -25,7 +25,7 @@ public class enemyOnColide : MonoBehaviour
 
     private void invMoments()
     {
-        if (currentTimeInv > 0)
+        if (currentTimeInv > 0) //timer del invultenrabilitat
         {
             currentTimeInv -= Time.deltaTime;
             gameObject.tag = "Player";
@@ -38,6 +38,7 @@ public class enemyOnColide : MonoBehaviour
             player.GetComponent<Collider2D>().isTrigger = false;
         }
     }
+    //trigger ebter del enemi, tru vida i trau collisions durant un temps
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "enemy" && gameObject.tag == "player")
