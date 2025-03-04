@@ -11,6 +11,7 @@ public class enemyOnColide : MonoBehaviour
     // Update is called once per frame
     private hp HP;
 
+    private GameObject player;
 
     private void Start()
     {
@@ -34,6 +35,7 @@ public class enemyOnColide : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             gameObject.tag = "player";
+            player.GetComponent<Collider2D>().isTrigger = false;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -41,6 +43,8 @@ public class enemyOnColide : MonoBehaviour
         if(collision.gameObject.tag == "enemy" && gameObject.tag == "player")
         {
             currentTimeInv = InvFrames;
+            collision.gameObject.GetComponent<Collider2D>().isTrigger = true;
+            player = collision.gameObject;
             HP.setHP(1);
             
 
