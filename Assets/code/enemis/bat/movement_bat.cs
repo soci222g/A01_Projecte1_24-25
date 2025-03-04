@@ -10,6 +10,8 @@ public class movement_bat : MonoBehaviour
     private int NextPont;
     [SerializeField]
     private int speed;
+    [SerializeField] private bool moviendoDerecha;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -24,14 +26,22 @@ public class movement_bat : MonoBehaviour
         float distence = dir.magnitude;
         dir.Normalize();
 
-        transform.position += dir * speed * Time.deltaTime;  
-        if(distence < 0.1f)
+        transform.position += dir * speed * Time.deltaTime;
+
+        if (distence < 0.1f)
         {
             NextPont++;
+            Girar();
             if (NextPont >= points.Count)
             {
-                NextPont = 0;  
+                NextPont = 0;
             }
         }
+    }
+    private void Girar()
+    {
+        
+        spriteRenderer.flipX = !spriteRenderer.flipX;
+        
     }
 }

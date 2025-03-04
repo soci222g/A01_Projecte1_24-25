@@ -10,8 +10,8 @@ public class EnemyHP : MonoBehaviour
 
     [SerializeField]
     private int HP;
-    
-   
+
+
     private int dropChance = 100;
 
     // Start is called before the first frame update
@@ -41,13 +41,13 @@ public class EnemyHP : MonoBehaviour
 
     private void OnDestroy()
     {
-        int randNum = Random.Range(1,100);
-        if(randNum < dropChance)
+        int randNum = Random.Range(1, 100);
+        if (randNum < dropChance)
         {
-            GameObject clone = Instantiate(dropHeal,transform.position - new Vector3(0,0.5f,0),transform.rotation);
+            GameObject clone = Instantiate(dropHeal, transform.position - new Vector3(0, 0.5f, 0), transform.rotation);
         }
     }
-    public int getHP() { return HP; } 
+    public int getHP() { return HP; }
     public void setHP(int hp)
     {
         HP -= hp;
