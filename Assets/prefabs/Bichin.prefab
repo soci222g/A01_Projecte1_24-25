@@ -196,11 +196,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   detectionRadius: 5
-  speed: 5
-  velocidad: 2
+  patrolSpeed: 2
+  chaseSpeed: 5
+  acceleration: 5
   controladorSuelo: {fileID: 0}
-  distancia: 0.5
-  moviendoDerecha: 1
+  distanciaDeteccion: 0.5
+  capaSuelo:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &5589494780105348027
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +228,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5589494780105348027}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.24, y: 0, z: 0}
+  m_LocalPosition: {x: 1.24, y: -0.463, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
