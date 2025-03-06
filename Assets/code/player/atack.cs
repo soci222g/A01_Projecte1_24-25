@@ -10,17 +10,11 @@ public class atack : MonoBehaviour
     [SerializeField]
     private BoxCollider2D downHitbox;
     [SerializeField]
-    int atackCooldown = 5;
-    [SerializeField]
+    int atackCooldown;
     int countCooldown;
     [SerializeField]
     int atackDuration;
-    [SerializeField]
     int atackDurationCounter;
-    [SerializeField]
-    int atackDelay;
-    [SerializeField]
-    int atackDelayCounter;
     [SerializeField]
     bool onCooldown;
     [SerializeField]
@@ -83,11 +77,6 @@ public class atack : MonoBehaviour
                 downHitbox.enabled = false;
                 animator.SetBool("IsAtack", false);
             }
-            else
-            {
-                atackDelayCounter++;
-            }
-
 
             
 
@@ -114,7 +103,6 @@ public class atack : MonoBehaviour
 
             onCooldown = true;
             atackDurationCounter = 0;
-            atackDelayCounter = 0;
             Debug.Log("atacked");
 
         }
