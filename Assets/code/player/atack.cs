@@ -30,9 +30,9 @@ public class atack : MonoBehaviour
     GroundDetector gD;
     [SerializeField] private float bounce;
     [SerializeField]
-    int bounceDuration;
+    Transform playerTR;
     [SerializeField]
-    int bounceDurationCounter;
+    Rigidbody2D playerRB;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +45,7 @@ public class atack : MonoBehaviour
 
     private void FixedUpdate() // usamos FixedUpdate para que el tiempo del ataque sea consistente
     {
+
         // make latHitbox face the same way as player
         if (playerSR.flipX == true)
         {
@@ -67,16 +68,10 @@ public class atack : MonoBehaviour
         
         if (onCooldown) // Cooldown del ataque
         {
-            bounceDurationCounter++;
+
             countCooldown++;
             atackDurationCounter++;
-
-            //check if has to bounce, makes it bounce baby
-            if (bounceDurationCounter <= bounceDuration && gD.GetGroundDetect())
-            {
-                transform.position += new Vector3(0 , bounce * Time.deltaTime, 0);
-            }
-
+           
             if (countCooldown == atackCooldown)
             {
                 countCooldown = 0;
@@ -85,12 +80,12 @@ public class atack : MonoBehaviour
             if (atackDurationCounter >= atackDuration)
             {
                 latHitbox.enabled = false;
+                downHitbox.enabled = false;
                 animator.SetBool("IsAtack", false);
             }
             else
             {
                 atackDelayCounter++;
-
             }
 
 
@@ -103,6 +98,7 @@ public class atack : MonoBehaviour
     private void Update()
     {
     
+
         if (Input.GetKeyDown("v") && !onCooldown) //check input and cooldown
         {
             //check if on ground or air
@@ -114,7 +110,6 @@ public class atack : MonoBehaviour
             else
             {
                 downHitbox.enabled = true;
-                bounceDurationCounter = 0;
             }
 
             onCooldown = true;
@@ -134,7 +129,21 @@ public class atack : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out EnemyHP enemyHp) && collision.gameObject.tag == "Enemy")
         {
             enemyHp.setHP(1);
+            playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
 
+            if (!gD.GetGroundDetect())
+            {
+                if (!playerSR.flipY)
+                {
+                    Debug.Log("bouncing");
+                    playerRB.AddForce(transform.up * bounce);
+                }
+                else
+                {
+                    playerRB.AddForce(transform.up * -bounce);
+                }
+
+            }
         }
     }
 
