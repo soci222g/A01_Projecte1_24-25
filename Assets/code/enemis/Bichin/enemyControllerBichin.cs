@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class enemyControllerBichin : MonoBehaviour
@@ -13,19 +12,21 @@ public class enemyControllerBichin : MonoBehaviour
     [SerializeField] private Transform controladorSuelo; // Punto de detección del suelo
     [SerializeField] private float distanciaDeteccion = 0.5f; // Distancia de detección del suelo
     [SerializeField] private LayerMask capaSuelo; // Capa para detectar el suelo
+    [SerializeField] private Transform controladorPared; // Punto de detección de la pared
+    [SerializeField] private LayerMask capaPared; // Capa para detectar la pared
     private bool moviendoDerecha = true; // Dirección inicial
     private float currentSpeed; // Velocidad actual
     private bool onCooldown = false;
-    [SerializeField]
-    private float countCooldown;
-    [SerializeField]
-    private int collisionCooldown = 50;
+    [SerializeField] private float countCooldown;
+    [SerializeField] private int collisionCooldown = 50;
 
     private Rigidbody2D rb;
+    private Animator animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         currentSpeed = patrolSpeed; // Iniciar con velocidad de patrullaje
     }
 
@@ -33,7 +34,6 @@ public class enemyControllerBichin : MonoBehaviour
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        
         if (onCooldown)
         {
             countCooldown++;
@@ -42,11 +42,11 @@ public class enemyControllerBichin : MonoBehaviour
                 countCooldown = 0;
                 onCooldown = false;
                 chaseSpeed = 5f;
+                animator.SetBool("onColide", false);
             }
         }
         else
         {
-            // Si el jugador está dentro del radio de detección, acelerar hacia él
             if (distanceToPlayer < detectionRadius)
             {
                 PerseguirJugador();
@@ -55,19 +55,15 @@ public class enemyControllerBichin : MonoBehaviour
             {
                 Patrullar();
             }
-
         }
     }
 
     private void PerseguirJugador()
     {
         Vector2 direction = (player.position - transform.position).normalized;
-
-        // Acelerar gradualmente hacia chaseSpeed
         currentSpeed = Mathf.Lerp(currentSpeed, chaseSpeed, acceleration * Time.fixedDeltaTime);
         rb.velocity = new Vector2(direction.x * currentSpeed, rb.velocity.y);
 
-        // Voltear solo si cambia de dirección
         if ((direction.x > 0 && !moviendoDerecha) || (direction.x < 0 && moviendoDerecha))
         {
             Girar();
@@ -76,7 +72,6 @@ public class enemyControllerBichin : MonoBehaviour
 
     private void Patrullar()
     {
-        // Reducir gradualmente la velocidad al volver a patrullar
         currentSpeed = Mathf.Lerp(currentSpeed, patrolSpeed, acceleration * Time.fixedDeltaTime);
         rb.velocity = new Vector2((moviendoDerecha ? currentSpeed : -currentSpeed), rb.velocity.y);
 
@@ -84,8 +79,13 @@ public class enemyControllerBichin : MonoBehaviour
         RaycastHit2D informacionSuelo = Physics2D.Raycast(controladorSuelo.position, Vector2.down, distanciaDeteccion, capaSuelo);
         Debug.DrawRay(controladorSuelo.position, Vector2.down * distanciaDeteccion, Color.red);
 
-        // Si no hay suelo adelante, girar
-        if (informacionSuelo.collider == null)
+        // Detectar si hay pared adelante (dirección según el movimiento)
+        Vector2 direccionPared = moviendoDerecha ? Vector2.right : Vector2.left;
+        RaycastHit2D informacionPared = Physics2D.Raycast(controladorPared.position, direccionPared, distanciaDeteccion, capaPared);
+        Debug.DrawRay(controladorPared.position, direccionPared * distanciaDeteccion, Color.green);
+
+        // Si no hay suelo o hay una pared, girar
+        if (informacionSuelo.collider == null || informacionPared.collider != null)
         {
             Girar();
         }
@@ -99,10 +99,19 @@ public class enemyControllerBichin : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "player")
+        if (collision.gameObject.CompareTag("player"))
         {
             onCooldown = true;
             chaseSpeed = 0f;
+            animator.SetTrigger("onColide"); // Activar animación de colisión
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("player"))
+        {
+            animator.SetBool("onColide", false); // Volver a estado normal
         }
     }
 
@@ -115,6 +124,12 @@ public class enemyControllerBichin : MonoBehaviour
         {
             Gizmos.color = Color.blue;
             Gizmos.DrawLine(controladorSuelo.position, controladorSuelo.position + Vector3.down * distanciaDeteccion);
+        }
+
+        if (controladorPared != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine(controladorPared.position, controladorPared.position + (moviendoDerecha ? Vector3.right : Vector3.left) * distanciaDeteccion);
         }
     }
 }

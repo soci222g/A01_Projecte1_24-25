@@ -35,6 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9083545083072166235}
+  - {fileID: 6329116005098674059}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -200,9 +201,13 @@ MonoBehaviour:
   patrolSpeed: 2
   chaseSpeed: 5
   acceleration: 5
-  controladorSuelo: {fileID: 0}
+  controladorSuelo: {fileID: 9083545083072166235}
   distanciaDeteccion: 0.5
   capaSuelo:
+    serializedVersion: 2
+    m_Bits: 0
+  controladorPared: {fileID: 6329116005098674059}
+  capaPared:
     serializedVersion: 2
     m_Bits: 0
   countCooldown: 0
@@ -221,6 +226,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropHeal: {fileID: 73896145160197108, guid: 09a4d25576e3bb24baa358253cb97620, type: 3}
   HP: 3
+--- !u!1 &5214945169799791005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6329116005098674059}
+  m_Layer: 0
+  m_Name: controladorPared
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6329116005098674059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5214945169799791005}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.24, y: -0.115, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7754337580235051811}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5589494780105348027
 GameObject:
   m_ObjectHideFlags: 0

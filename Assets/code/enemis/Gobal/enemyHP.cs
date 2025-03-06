@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyHP : MonoBehaviour
@@ -14,16 +15,25 @@ public class EnemyHP : MonoBehaviour
 
     private int dropChance = 100;
 
+    private Animator animator;
+
+    private bool onCooldown = false;
+    [SerializeField] private float countCooldown;
+    [SerializeField] private int deathCooldown = 23;
+
+    private bool isDead = false;
+
     // Start is called before the first frame update
     void Start()
     {
         HP = 5;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (HP <= 0)
+        if (HP <= 0 && !isDead)
         {
             Die();
         }
@@ -36,13 +46,40 @@ public class EnemyHP : MonoBehaviour
 
     void Die()
     {
+        if (isDead) return; // Evitar múltiples llamadas
+        isDead = true;
+
+        Debug.Log("Enemy died, playing death animation.");
+
         int randNum = Random.Range(1, 100);
+
+        // Activar la animación de muerte
+        animator.SetBool("muere", true);
+
+        // Dropear ítem si aplica
         if (randNum < dropChance)
         {
-            GameObject clone = Instantiate(dropHeal, transform.position - new Vector3(0, 0.5f, 0), transform.rotation);
+            Debug.Log("Dropping heal item.");
+            Instantiate(dropHeal, transform.position - new Vector3(0, 0.5f, 0), transform.rotation);
         }
-        Destroy(gameObject);
+
+        // Esperar un frame para asegurar que la animación está activa antes de obtener su duración
+        StartCoroutine(DestroyAfterAnimation());
     }
+
+    IEnumerator DestroyAfterAnimation()
+    {
+        // Esperar un frame para que el Animator procese la transición
+        yield return null;
+
+        // Obtener la duración de la animación activa
+        float animDuration = animator.GetCurrentAnimatorStateInfo(0).length;
+
+        // Destruir el objeto después de que termine la animación
+        Destroy(gameObject, animDuration);
+    }
+
+
 
     public int getHP() { return HP; }
     public void setHP(int hp)
