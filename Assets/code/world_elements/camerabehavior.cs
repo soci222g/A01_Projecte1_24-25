@@ -37,9 +37,11 @@ public class camerabehavior : MonoBehaviour
             dir.Normalize();
 
             camera.transform.position += dir * speed * Time.deltaTime;
+           // Time.timeScale = 0;  pause time (para el pause menu)
             if (distence < 0.1f)
             {
                 currentRoom = roomToGo;
+                
             }
         }
        
