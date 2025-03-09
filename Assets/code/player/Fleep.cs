@@ -9,12 +9,14 @@ public class Fleep : MonoBehaviour
     [SerializeField]
     private bool fleep;
     private bool fleepControler = true;
+    actionState state;
     // Update is called once per frame
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        state = GetComponent<actionState>();
     }
 
     // Update is called once per frame
@@ -25,7 +27,7 @@ public class Fleep : MonoBehaviour
 
     private void ActivateGravity()
     {
-        if (Input.GetKeyDown("space") && GetComponent<GroundDetector>().GetGroundDetect())
+        if (Input.GetKeyDown("space") && GetComponent<GroundDetector>().GetGroundDetect() && state.getActionState())
         {
             Debug.Log("flipeo");
             

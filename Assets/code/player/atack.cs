@@ -6,39 +6,43 @@ public class atack : MonoBehaviour
 {
 
     [SerializeField]
-    private BoxCollider2D latHitbox; //prefab de la hitbox
+    private BoxCollider2D latHitbox;
     [SerializeField]
-    int atackCooldown = 5;
+    private BoxCollider2D downHitbox;
     [SerializeField]
+    int atackCooldown;
     int countCooldown;
     [SerializeField]
     int atackDuration;
-    [SerializeField]
     int atackDurationCounter;
     [SerializeField]
-    int atackDelay;
-    [SerializeField]
-    int atackDelayCounter;
-    [SerializeField]
     bool onCooldown;
-    [SerializeField]
-    SpriteRenderer hitbox;
     [SerializeField]
     private Animator animator;
     [SerializeField]
     SpriteRenderer playerSR;
+    GroundDetector gD;
+    [SerializeField] private float bounce;
+    [SerializeField]
+    Transform playerTR;
+    [SerializeField]
+    Rigidbody2D playerRB;
+    actionState state;
 
     // Start is called before the first frame update
     void Start()
     {
+        state = GetComponentInParent<actionState>();
+        gD = GetComponentInParent<GroundDetector>();
+        downHitbox.enabled = false;
         latHitbox.enabled = false;
         onCooldown = false;
-        hitbox.enabled = false;
     }
 
     private void FixedUpdate() // usamos FixedUpdate para que el tiempo del ataque sea consistente
     {
 
+        // make latHitbox face the same way as player
         if (playerSR.flipX == true)
         {
             latHitbox.offset = new Vector2(-1.3f, 0);
@@ -48,10 +52,22 @@ public class atack : MonoBehaviour
             latHitbox.offset = new Vector2(1.3f, 0);
         }
 
+        //make downHitbox be under player
+        if (playerSR.flipY == true)
+        {
+            downHitbox.offset = new Vector2(0, 1.6f);
+        }
+        else
+        {
+            downHitbox.offset = new Vector2(0, -1.6f);
+        }
+        
         if (onCooldown) // Cooldown del ataque
         {
+
             countCooldown++;
             atackDurationCounter++;
+           
             if (countCooldown == atackCooldown)
             {
                 countCooldown = 0;
@@ -60,16 +76,10 @@ public class atack : MonoBehaviour
             if (atackDurationCounter >= atackDuration)
             {
                 latHitbox.enabled = false;
-                hitbox.enabled = false;
+                downHitbox.enabled = false;
                 animator.SetBool("IsAtack", false);
+                state.endAction();
             }
-            else
-            {
-                hitbox.enabled = true;
-                atackDelayCounter++;
-
-            }
-
 
             
 
@@ -80,15 +90,29 @@ public class atack : MonoBehaviour
     private void Update()
     {
     
-        if (Input.GetKeyDown("v") && !onCooldown) //si input de ataque y no esta en cooldown
+
+        if (Input.GetKeyDown("v") && !onCooldown && state.getActionState()) //check input and cooldown
         {
-            latHitbox.enabled = true;
-            Debug.Log("atacked");
+            state.startAction();
+
+            //check if on ground or air
+            if (gD.GetGroundDetect())
+            {
+                latHitbox.enabled = true;
+                animator.SetBool("IsAtack", true);
+            }
+            else
+            {
+                downHitbox.enabled = true;
+            }
+
             onCooldown = true;
             atackDurationCounter = 0;
-            atackDelayCounter = 0;
-            animator.SetBool("IsAtack", true);
+            Debug.Log("atacked");
+
         }
+
+        
     }
 
 
@@ -98,6 +122,21 @@ public class atack : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out EnemyHP enemyHp) && collision.gameObject.tag == "Enemy")
         {
             enemyHp.setHP(1);
+            playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
+
+            if (!gD.GetGroundDetect())
+            {
+                if (!playerSR.flipY)
+                {
+                    Debug.Log("bouncing");
+                    playerRB.AddForce(transform.up * bounce);
+                }
+                else
+                {
+                    playerRB.AddForce(transform.up * -bounce);
+                }
+
+            }
         }
     }
 
