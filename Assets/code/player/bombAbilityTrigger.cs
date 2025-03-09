@@ -13,16 +13,18 @@ public class bombAbilityTrigger : MonoBehaviour
     private bool onCooldown;
     [SerializeField]
     private float countCooldown;
+    actionState state;
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         onCooldown = false;
+        state = GetComponent<actionState>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown("x") && !onCooldown && GetComponent<GroundDetector>().GetGroundDetect())
+        if (Input.GetKeyDown("x") && !onCooldown && GetComponent<GroundDetector>().GetGroundDetect() && state.getActionState())
         {
             if (sr.flipY)
             {
