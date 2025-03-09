@@ -27,10 +27,12 @@ public class atack : MonoBehaviour
     Transform playerTR;
     [SerializeField]
     Rigidbody2D playerRB;
+    actionState state;
 
     // Start is called before the first frame update
     void Start()
     {
+        state = GetComponentInParent<actionState>();
         gD = GetComponentInParent<GroundDetector>();
         downHitbox.enabled = false;
         latHitbox.enabled = false;
@@ -76,6 +78,7 @@ public class atack : MonoBehaviour
                 latHitbox.enabled = false;
                 downHitbox.enabled = false;
                 animator.SetBool("IsAtack", false);
+                state.endAction();
             }
 
             
@@ -88,8 +91,10 @@ public class atack : MonoBehaviour
     {
     
 
-        if (Input.GetKeyDown("v") && !onCooldown) //check input and cooldown
+        if (Input.GetKeyDown("v") && !onCooldown && state.getActionState()) //check input and cooldown
         {
+            state.startAction();
+
             //check if on ground or air
             if (gD.GetGroundDetect())
             {
