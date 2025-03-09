@@ -192,11 +192,7 @@ MonoBehaviour:
   latHitbox: {fileID: 3169499023096039314}
   downHitbox: {fileID: 4767236495405910450}
   atackCooldown: 30
-  countCooldown: 0
   atackDuration: 26
-  atackDurationCounter: 0
-  atackDelay: 8
-  atackDelayCounter: 0
   onCooldown: 0
   animator: {fileID: 650167750993376912}
   playerSR: {fileID: 3252725902039710837}
@@ -214,6 +210,7 @@ GameObject:
   - component: {fileID: 2182073263094218293}
   - component: {fileID: 7298098943528611513}
   - component: {fileID: 3252725902039710837}
+  - component: {fileID: 8543807098990344504}
   - component: {fileID: 1409228932536560166}
   - component: {fileID: 5100497281371963983}
   - component: {fileID: 6548420688412416596}
@@ -313,6 +310,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8543807098990344504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5121319973530832289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5c29893fecf4be42b1c902fe315b4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canAct: 0
 --- !u!50 &1409228932536560166
 Rigidbody2D:
   serializedVersion: 4
