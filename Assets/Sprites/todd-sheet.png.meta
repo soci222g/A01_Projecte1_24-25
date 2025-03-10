@@ -558,8 +558,8 @@ TextureImporter:
         y: 496
         width: 25
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.32, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -579,8 +579,8 @@ TextureImporter:
         y: 496
         width: 28
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.2857143, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -596,12 +596,12 @@ TextureImporter:
       name: todd-sheet_23
       rect:
         serializedVersion: 2
-        x: 176
+        x: 178
         y: 496
-        width: 31
+        width: 29
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.27586207, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -617,9 +617,9 @@ TextureImporter:
       name: todd-sheet_24
       rect:
         serializedVersion: 2
-        x: 224
+        x: 225
         y: 496
-        width: 17
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
