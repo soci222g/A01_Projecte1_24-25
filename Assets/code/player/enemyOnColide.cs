@@ -13,7 +13,7 @@ public class enemyOnColide : MonoBehaviour
 
     private Collider2D coll;
 
-    private LayerMask Mask = LayerMask.GetMask("enemy");
+
 
     private void Start()
     {
@@ -33,15 +33,17 @@ public class enemyOnColide : MonoBehaviour
         {
             currentTimeInv -= Time.deltaTime;
             gameObject.tag = "Player";
-            Physics2D.IgnoreLayerCollision(10, 10);
+            Physics2D.IgnoreLayerCollision(9, 10);
+            Debug.Log(Physics2D.GetIgnoreLayerCollision(9, 11));
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         }
         else
         {
             gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             gameObject.tag = "player";
-            coll.excludeLayers = LayerMask.GetMask("Nothing");
-          Physics2D.IgnoreLayerCollision(10, 10, false);
+
+          Physics2D.IgnoreLayerCollision(9, 10, false);
+            Debug.Log(Physics2D.GetIgnoreLayerCollision(9, 11));
         }
     }
     //trigger ebter del enemi, tru vida i trau collisions durant un temps
@@ -51,7 +53,7 @@ public class enemyOnColide : MonoBehaviour
         {
             currentTimeInv = InvFrames;
             // collision.gameObject.GetComponent<Collider2D>().isTrigger = true;
-            coll.excludeLayers = Mask;
+            Physics2D.IgnoreLayerCollision(9,10);
             HP.setHP(1);
 
 
