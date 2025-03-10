@@ -119,7 +119,7 @@ public class atack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out EnemyHP enemyHp) && collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.TryGetComponent(out EnemyHP enemyHp) && collision.gameObject.tag == "enemy")
         {
             enemyHp.setHP(1);
             playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
