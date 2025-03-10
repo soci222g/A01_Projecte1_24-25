@@ -10,19 +10,20 @@ public class rangedAtack : MonoBehaviour
     GameObject proj;
     [SerializeField]
     SpriteRenderer sr;
+    actionState state;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        state = GetComponent<actionState>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetKeyDown("c")) //si input de ataque y no esta en cooldown
+        if (Input.GetKeyDown("c") && state.getActionState()) //si input de ataque y no esta en cooldown
         {
             Debug.Log("pium");
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GroundDetector : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class GroundDetector : MonoBehaviour
 
     private Fleep fleepSC;
     // Start is called before the first frame update
+
+
+
     void Start()
     {
         fleepSC = GetComponent<Fleep>();
@@ -44,6 +48,7 @@ public class GroundDetector : MonoBehaviour
             if(hit.collider != null)
             {
                 count++;
+
 
             }
 
