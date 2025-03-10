@@ -13,7 +13,8 @@ public class enemyOnColide : MonoBehaviour
 
     private Collider2D coll;
 
-    private Collider2D enemy = null;
+
+
     private void Start()
     {
 
@@ -32,30 +33,29 @@ public class enemyOnColide : MonoBehaviour
         {
             currentTimeInv -= Time.deltaTime;
             gameObject.tag = "Player";
+            Physics2D.IgnoreLayerCollision(9, 10);
+            Debug.Log(Physics2D.GetIgnoreLayerCollision(9, 11));
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         }
         else
         {
             gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             gameObject.tag = "player";
-            if(enemy != null)
-            {
-                Physics2D.IgnoreCollision(enemy, coll, false);
-            }
+
+          Physics2D.IgnoreLayerCollision(9, 10, false);
+            Debug.Log(Physics2D.GetIgnoreLayerCollision(9, 11));
         }
     }
     //trigger ebter del enemi, tru vida i trau collisions durant un temps
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "enemy" && gameObject.tag == "player")
+        if (collision.gameObject.tag == "enemy" && gameObject.tag == "player")
         {
             currentTimeInv = InvFrames;
             // collision.gameObject.GetComponent<Collider2D>().isTrigger = true;
-            enemy = collision.gameObject.GetComponent<Collider2D>();
-
-            Physics2D.IgnoreCollision(enemy, coll);            
+            Physics2D.IgnoreLayerCollision(9,10);
             HP.setHP(1);
-            
+
 
         }
     }
