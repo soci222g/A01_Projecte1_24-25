@@ -13,7 +13,7 @@ public class enemyOnColide : MonoBehaviour
 
     private Collider2D coll;
 
-    private Collider2D enemy;
+    private Collider2D enemy = null;
     private void Start()
     {
 
