@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Fleep : MonoBehaviour
 {
@@ -10,15 +11,20 @@ public class Fleep : MonoBehaviour
     [SerializeField]
     private bool fleep;
     private bool fleepControler = true;
-
     [SerializeField]
+    private bool flying;
+   
     private int fleepTime = 1;
-
+    [SerializeField]
     private float curentfleepTime;
     // Update is called once per frame
 
+
+
+
     void Start()
     {
+        flying = false;
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -26,8 +32,17 @@ public class Fleep : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(curentfleepTime <= 0)
         ActivateGravity();
+        else
+            curentfleepTime -= Time.deltaTime;
 
+
+        if(flying && GetComponent<GroundDetector>().GetGroundDetect())
+        {
+            curentfleepTime = fleepTime;
+            flying = false;
+        }
     }
 
 
@@ -47,15 +62,13 @@ public class Fleep : MonoBehaviour
         {
             rb.gravityScale *= -1;
             sr.flipY = !sr.flipY;
+            flying = true;
         }
-    }
-
-    public void SetCurrentFleepTimer() {
-
-        curentfleepTime = fleepTime;
 
 
     }
+
+
 
     public bool GetFleepControler()
     {
