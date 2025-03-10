@@ -30,18 +30,25 @@ public class Fleep : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if(curentfleepTime <= 0)
-        ActivateGravity();
+
+
+        if (curentfleepTime <= 0)
+            ActivateGravity();
         else
+        {
             curentfleepTime -= Time.deltaTime;
+        }
 
-
-        if(flying && GetComponent<GroundDetector>().GetGroundDetect())
+        if(flying == true && GetComponent<GroundDetector>().GetGroundDetect() == true)
         {
             curentfleepTime = fleepTime;
             flying = false;
+        }
+        if (GetComponent<GroundDetector>().GetGroundDetect() == false)
+        {
+            flying = true;
         }
     }
 
@@ -50,19 +57,21 @@ public class Fleep : MonoBehaviour
     {
         if (Input.GetKeyDown("q") && GetComponent<GroundDetector>().GetGroundDetect())
         {
-            Debug.Log("flipeo");
-            
+
             fleep = true;
             fleepControler = !fleepControler;
+
         }
         else
+        {
             fleep = false;
 
+        }
         if (fleep == true)
         {
             rb.gravityScale *= -1;
             sr.flipY = !sr.flipY;
-            flying = true;
+            
         }
 
 
