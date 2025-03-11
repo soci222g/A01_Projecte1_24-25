@@ -34,7 +34,7 @@ public class enemyOnColide : MonoBehaviour
             currentTimeInv -= Time.deltaTime;
             gameObject.tag = "Player";
             Physics2D.IgnoreLayerCollision(9, 10);
-            Debug.Log(Physics2D.GetIgnoreLayerCollision(9, 11));
+            Debug.Log(Physics2D.GetIgnoreLayerCollision(9, 10));
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         }
         else
@@ -42,8 +42,8 @@ public class enemyOnColide : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             gameObject.tag = "player";
 
-          Physics2D.IgnoreLayerCollision(9, 10, false);
-            Debug.Log(Physics2D.GetIgnoreLayerCollision(9, 11));
+            Physics2D.IgnoreLayerCollision(9, 10, false);
+           Debug.Log(Physics2D.GetIgnoreLayerCollision(9, 11));
         }
     }
     //trigger ebter del enemi, tru vida i trau collisions durant un temps
