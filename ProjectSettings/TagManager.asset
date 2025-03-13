@@ -9,6 +9,7 @@ TagManager:
   - enemy
   - Enemy
   - bomb
+  - shild
   layers:
   - Default
   - TransparentFX

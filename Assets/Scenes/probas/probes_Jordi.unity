@@ -731,6 +731,14 @@ PrefabInstance:
       propertyPath: hpUI
       value: 
       objectReference: {fileID: 700028017}
+    - target: {fileID: 2012185245501956502, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012185245501956502, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2182073263094218293, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -786,6 +794,10 @@ PrefabInstance:
     - target: {fileID: 5121319973530832289, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851585239457268531, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: m_TagString
+      value: shild
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
