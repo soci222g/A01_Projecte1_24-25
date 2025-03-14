@@ -17,6 +17,8 @@ public class RoomExit : MonoBehaviour
             if (DirectionRoom) {
                 Debug.Log("cambiar escena: alante");
                 cam.setCurrenteRoom(1);
+                cam.SetSpawnPoint(1);
+                collision.gameObject.GetComponent<spikes>().SetSpawnPont(cam.GetSpawnPoint());
                 DirectionRoom = false;
             }
             else
@@ -24,6 +26,8 @@ public class RoomExit : MonoBehaviour
                 Debug.Log("cambiar escena: atras");
                 DirectionRoom = true;
                 cam.setCurrenteRoom(-1);
+                cam.SetSpawnPoint(-1);
+                collision.gameObject.GetComponent<spikes>().SetSpawnPont(cam.GetSpawnPoint());
             }
         }
     }

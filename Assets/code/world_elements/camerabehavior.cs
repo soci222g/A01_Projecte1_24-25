@@ -13,7 +13,9 @@ public class camerabehavior : MonoBehaviour
 
 
     public List<Transform> cameraPosition;
+    public List<Transform> SpawnPoints;
 
+    private int spawnPointNum;
     private int roomToGo;
 
     private int currentRoom;
@@ -21,7 +23,7 @@ public class camerabehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        spawnPointNum = 0;
         roomToGo = 0;
         currentRoom = 0;
         camera.transform.position = cameraPosition[0].position;
@@ -46,6 +48,16 @@ public class camerabehavior : MonoBehaviour
         }
        
 
+    }
+
+    public void SetSpawnPoint(int num)
+    {
+        spawnPointNum += num;
+    }
+
+    public Transform GetSpawnPoint()
+    {
+        return SpawnPoints[spawnPointNum];
     }
 
     public void setCurrenteRoom(int num)
