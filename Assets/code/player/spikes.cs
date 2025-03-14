@@ -20,4 +20,9 @@ public class spikes : MonoBehaviour
             this.transform.position = resPown.position;
         }
     }
+
+    public void SetSpawnPont(Transform newPoint)
+    {
+        resPown = newPoint;
+    }
 }
