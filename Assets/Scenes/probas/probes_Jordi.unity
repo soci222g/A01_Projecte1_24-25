@@ -790,55 +790,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5121319973530832289, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1103854786}
-    - targetCorrespondingSourceObject: {fileID: 5121319973530832289, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1103854787}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
 --- !u!1 &1103854785 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5121319973530832289, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
   m_PrefabInstance: {fileID: 1103854784}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1103854786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103854785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8efc3e8ef47843744ac425f22a8083ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundDet: 0
-  DistansToGroudn: 0.85
-  groundeMask:
-    serializedVersion: 2
-    m_Bits: 1
-  rays:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0.3, y: 0.1, z: 0}
-  - {x: -0.3, y: 0.1, z: 0}
---- !u!114 &1103854787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103854785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57f142f427512884b877a1bc14151d0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fleep: 0
-  flying: 0
-  curentfleepTime: 0
 --- !u!1 &1126611238
 GameObject:
   m_ObjectHideFlags: 0

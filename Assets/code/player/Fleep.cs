@@ -55,7 +55,7 @@ public class Fleep : MonoBehaviour
 
     private void ActivateGravity()
     {
-        if (Input.GetKeyDown("q") && GetComponent<GroundDetector>().GetGroundDetect())
+        if (Input.GetKeyDown("space") && GetComponent<GroundDetector>().GetGroundDetect())
         {
 
             fleep = true;
