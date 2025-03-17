@@ -83,4 +83,14 @@ public class Fleep : MonoBehaviour
     {
         return fleepControler;
     }
+
+    public float GetTimer()
+    {
+        return curentfleepTime;
+    }
+
+    public bool GetFlying()
+    {
+        return flying;
+    }
 }
