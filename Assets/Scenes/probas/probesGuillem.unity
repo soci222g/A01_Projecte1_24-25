@@ -1447,6 +1447,10 @@ PrefabInstance:
       propertyPath: hpUI
       value: 
       objectReference: {fileID: 456524249}
+    - target: {fileID: 1409228932536560166, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: m_GravityScale
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2182073263094218293, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
       propertyPath: m_RootOrder
       value: 6
