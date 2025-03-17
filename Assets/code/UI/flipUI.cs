@@ -1,38 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class flipUI : MonoBehaviour
 {
-    SpriteRenderer sr;
-    [SerializeField]
-    private Fleep fleep;
-    private Image Image;
+    [SerializeField] private Fleep fleep;  
+    [SerializeField] private Image imageUI;
+    [SerializeField] private Sprite spriteVacio;
+    [SerializeField] private Sprite spriteLleno;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Image = GetComponent<Image>();
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (fleep.GetFleepControler())
+        if (fleep == null || imageUI == null)
         {
-            CambioDeSprite();
-            Debug.Log("Flip");
+            Debug.LogWarning("Fleep o imageUI no están asignados en el Inspector.");
+            return;
         }
-        else 
-        {
-            Debug.Log("No Flip");
-        }
-    }
 
-    private void CambioDeSprite()
-    {
-        Image.sprite = Resources.Load<Sprite>("ui_2");
+        // Si el timer está activo (es decir, la habilidad está en cooldown)
+        if (fleep.GetTimer() > 0 || fleep.GetFlying())
+        {
+            imageUI.sprite = spriteVacio;  // Muestra el sprite vacío
+        }
+        else
+        {
+            imageUI.sprite = spriteLleno;  // Muestra el sprite lleno cuando el cooldown termina
+        }
     }
 }

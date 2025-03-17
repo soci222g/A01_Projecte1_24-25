@@ -737,6 +737,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fleep: {fileID: 243223462}
+  imageUI: {fileID: 646809294}
+  spriteVacio: {fileID: 1358709266, guid: 95e54b9b2a183f948affab1ee9a2a2fc, type: 3}
+  spriteLleno: {fileID: -417331805, guid: 95e54b9b2a183f948affab1ee9a2a2fc, type: 3}
 --- !u!1 &798532640
 GameObject:
   m_ObjectHideFlags: 0
