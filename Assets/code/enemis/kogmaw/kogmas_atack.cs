@@ -6,6 +6,7 @@ public class kogmas_atack : MonoBehaviour
 {
 
     [SerializeField] BoxCollider2D coll;
+    [SerializeField] hp hp;
 
     // Start is called before the first frame update
     void Start()
@@ -35,5 +36,9 @@ public class kogmas_atack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("hit");
+        if (collision.gameObject.tag == "player")
+        {
+            hp.setHP(1);
+        }
     }
 }
