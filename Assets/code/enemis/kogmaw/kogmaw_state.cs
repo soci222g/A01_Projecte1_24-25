@@ -8,6 +8,7 @@ public class kogmaw_state : MonoBehaviour
     [SerializeField] Transform player; // Referencia al jugador
     [SerializeField] float dist;
     [SerializeField] float distanceToPlayer;
+    Animator animator;
 
     private enum kogmawState
     {
@@ -23,6 +24,7 @@ public class kogmaw_state : MonoBehaviour
     void Start()
     {
         state = kogmawState.Idle;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,29 +36,48 @@ public class kogmaw_state : MonoBehaviour
 
         if (state == kogmawState.Idle) 
         {
-            Debug.Log("idle");
             if (distanceToPlayer <= 7.5f)
             {
                 state = kogmawState.Hiding;
+                animator.SetBool("hide", true);
             }
         }
         else if (state == kogmawState.Hiding)
         {
             Debug.Log("hiding");
+            
+
             if (distanceToPlayer >= 7.5f)
             {
                 state = kogmawState.Idle;
-            }else if (distanceToPlayer <= dist)
+                animator.SetBool("reveal", true);
+
+            }else if (distanceToPlayer <= 2.5f)
             {
+                animator.SetBool("atack", true);
                 state = kogmawState.Atacking;
             }
         }
         else if (state == kogmawState.Atacking)
         {
             Debug.Log("atacking");
-        }else
-        {
-            Debug.Log("recovering");
         }
+
+    }
+
+    void kogmaw_hiding()
+    {
+        animator.SetBool("hide", false);
+    }
+
+    void kogmaw_idle()
+    {
+        animator.SetBool("reveal", false);
+    }
+
+    void kogmaw_atack()
+    {
+        animator.SetBool("atack", false);
+        state = kogmawState.Hiding;
     }
 }
