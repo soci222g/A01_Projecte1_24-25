@@ -40,8 +40,9 @@ public class camerabehavior : MonoBehaviour
 
             camera.transform.position += dir * speed * Time.deltaTime;
            // Time.timeScale = 0;  pause time (para el pause menu)
-            if (distence < 0.1f)
+            if (distence < 1f)
             {
+                camera.transform.position = cameraPosition[roomToGo].position;
                 currentRoom = roomToGo;
                 
             }
