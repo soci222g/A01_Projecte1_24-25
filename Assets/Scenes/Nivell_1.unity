@@ -29718,6 +29718,7 @@ MonoBehaviour:
   - {fileID: 1046355032}
   - {fileID: 979851101}
   - {fileID: 1169239393}
+<<<<<<< Updated upstream
   SpawnPoints:
   - {fileID: 662481073}
   - {fileID: 472399034}
@@ -29729,6 +29730,9 @@ MonoBehaviour:
   - {fileID: 1054424253}
   - {fileID: 302459091}
   - {fileID: 2027328694}
+=======
+  SpawnPoints: []
+>>>>>>> Stashed changes
 --- !u!4 &2136018927
 Transform:
   m_ObjectHideFlags: 0
