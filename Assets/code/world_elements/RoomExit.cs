@@ -6,7 +6,7 @@ public class RoomExit : MonoBehaviour
 {
     [SerializeField]
     private camerabehavior cam;
-
+    [SerializeField]
     private bool DirectionRoom = true;
 
 
