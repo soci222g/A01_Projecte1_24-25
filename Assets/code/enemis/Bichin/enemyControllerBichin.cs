@@ -76,6 +76,14 @@ public class enemyControllerBichin : MonoBehaviour
         rb.velocity = new Vector2((moviendoDerecha ? currentSpeed : -currentSpeed), rb.velocity.y);
 
         // Detectar si hay suelo adelante
+        //if (/*condicion hacia arriba*/)
+        //{
+
+        //}
+        //else if (/*condicion hacia abajo*/)
+        //{
+
+        //}
         RaycastHit2D informacionSuelo = Physics2D.Raycast(controladorSuelo.position, Vector2.down, distanciaDeteccion, capaSuelo);
         Debug.DrawRay(controladorSuelo.position, Vector2.down * distanciaDeteccion, Color.red);
 
