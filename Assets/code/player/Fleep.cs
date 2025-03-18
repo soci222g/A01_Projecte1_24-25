@@ -34,22 +34,9 @@ public class Fleep : MonoBehaviour
     {
 
 
-        if (curentfleepTime <= 0)
+        if (GetComponent<GroundDetector>().GetGroundDetect() == true)
             ActivateGravity();
-        else
-        {
-            curentfleepTime -= Time.deltaTime;
-        }
-
-        if(flying == true && GetComponent<GroundDetector>().GetGroundDetect() == true)
-        {
-            curentfleepTime = fleepTime;
-            flying = false;
-        }
-        if (GetComponent<GroundDetector>().GetGroundDetect() == false)
-        {
-            flying = true;
-        }
+        
     }
 
 
