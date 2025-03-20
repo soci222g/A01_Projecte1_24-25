@@ -19,14 +19,14 @@ public class EnemyHP : MonoBehaviour
 
     private bool onCooldown = false;
     [SerializeField] private float countCooldown;
-    [SerializeField] private int deathCooldown = 23;
+    [SerializeField] private int deathCooldown;
 
     private bool isDead = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        HP = 5;
+        
         animator = GetComponent<Animator>();
     }
 
