@@ -23,14 +23,12 @@ public class kogmas_atack : MonoBehaviour
     void kogmaw_atack_hitbox_enabled()
     {
         coll.enabled = true;
-        Debug.Log("atacking");
     }
 
 
     void kogmaw_atack_hitbox_disable()
     {
         coll.enabled = false;
-        Debug.Log("finished atack");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

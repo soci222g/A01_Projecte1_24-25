@@ -9,6 +9,7 @@ TagManager:
   - enemy
   - Enemy
   - bomb
+  - atk
   layers:
   - Default
   - TransparentFX

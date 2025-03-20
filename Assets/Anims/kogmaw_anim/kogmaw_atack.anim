@@ -21,15 +21,15 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -644467355, guid: 61167b3a3e92955438a1fd2d842544dc, type: 3}
-    - time: 0.033333335
-      value: {fileID: 826225481, guid: 61167b3a3e92955438a1fd2d842544dc, type: 3}
+      value: {fileID: -479667120, guid: 74a0a535fe30185428fa4326a9f5a274, type: 3}
     - time: 0.083333336
-      value: {fileID: -411214203, guid: 61167b3a3e92955438a1fd2d842544dc, type: 3}
+      value: {fileID: 1486411239, guid: 74a0a535fe30185428fa4326a9f5a274, type: 3}
     - time: 0.16666667
-      value: {fileID: 1570024751, guid: 61167b3a3e92955438a1fd2d842544dc, type: 3}
+      value: {fileID: 239502998, guid: 74a0a535fe30185428fa4326a9f5a274, type: 3}
     - time: 0.25
-      value: {fileID: 604300806, guid: 61167b3a3e92955438a1fd2d842544dc, type: 3}
+      value: {fileID: -262013832, guid: 74a0a535fe30185428fa4326a9f5a274, type: 3}
+    - time: 0.45
+      value: {fileID: -1416456532, guid: 74a0a535fe30185428fa4326a9f5a274, type: 3}
     - time: 1
       value: {fileID: 1570024751, guid: 61167b3a3e92955438a1fd2d842544dc, type: 3}
     - time: 1.0833334
@@ -70,11 +70,11 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -644467355, guid: 61167b3a3e92955438a1fd2d842544dc, type: 3}
-    - {fileID: 826225481, guid: 61167b3a3e92955438a1fd2d842544dc, type: 3}
-    - {fileID: -411214203, guid: 61167b3a3e92955438a1fd2d842544dc, type: 3}
-    - {fileID: 1570024751, guid: 61167b3a3e92955438a1fd2d842544dc, type: 3}
-    - {fileID: 604300806, guid: 61167b3a3e92955438a1fd2d842544dc, type: 3}
+    - {fileID: -479667120, guid: 74a0a535fe30185428fa4326a9f5a274, type: 3}
+    - {fileID: 1486411239, guid: 74a0a535fe30185428fa4326a9f5a274, type: 3}
+    - {fileID: 239502998, guid: 74a0a535fe30185428fa4326a9f5a274, type: 3}
+    - {fileID: -262013832, guid: 74a0a535fe30185428fa4326a9f5a274, type: 3}
+    - {fileID: -1416456532, guid: 74a0a535fe30185428fa4326a9f5a274, type: 3}
     - {fileID: 1570024751, guid: 61167b3a3e92955438a1fd2d842544dc, type: 3}
     - {fileID: 454140622, guid: 61167b3a3e92955438a1fd2d842544dc, type: 3}
     - {fileID: -610230615, guid: 61167b3a3e92955438a1fd2d842544dc, type: 3}
@@ -123,8 +123,22 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 1.0666667
+    functionName: kogmaw_enable_hurtBox
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 1.1666666
     functionName: kogmaw_atack_hitbox_disable
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.5333333
+    functionName: kogmaw_disable_hurtBox
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

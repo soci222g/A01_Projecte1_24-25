@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class kogmaw_state : MonoBehaviour
@@ -8,6 +9,7 @@ public class kogmaw_state : MonoBehaviour
     [SerializeField] Transform player; // Referencia al jugador
     [SerializeField] float dist;
     [SerializeField] float distanceToPlayer;
+    [SerializeField] BoxCollider2D hurtBox;
     Animator animator;
 
     private enum kogmawState
@@ -25,6 +27,7 @@ public class kogmaw_state : MonoBehaviour
     {
         state = kogmawState.Idle;
         animator = GetComponent<Animator>();
+        hurtBox.enabled = true;
     }
 
     // Update is called once per frame
@@ -51,6 +54,7 @@ public class kogmaw_state : MonoBehaviour
             {
                 state = kogmawState.Idle;
                 animator.SetBool("reveal", true);
+                hurtBox.enabled = true;
 
             }else if (distanceToPlayer <= 2.5f)
             {
@@ -67,6 +71,7 @@ public class kogmaw_state : MonoBehaviour
 
     void kogmaw_hiding()
     {
+        hurtBox.enabled = false;
         animator.SetBool("hide", false);
     }
 
@@ -80,4 +85,21 @@ public class kogmaw_state : MonoBehaviour
         animator.SetBool("atack", false);
         state = kogmawState.Hiding;
     }
+
+    void kogmaw_damage()
+    {
+        animator.SetBool("damage", false) ;
+        state = kogmawState.Idle;
+    }
+
+    void kogmaw_enable_hurtBox()
+    {
+        hurtBox.enabled = true;
+    }
+
+    void kogmaw_disable_hurtBox()
+    {
+        hurtBox.enabled = false ;
+    }
 }
+
