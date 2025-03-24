@@ -1304,6 +1304,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5502761497187186011, guid: 188801015a014e84984c97087d9b0734, type: 3}
+      propertyPath: isFleep
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6110573148030064707, guid: 188801015a014e84984c97087d9b0734, type: 3}
       propertyPath: speed
       value: 3
@@ -1390,7 +1394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7754337580235051811, guid: 188801015a014e84984c97087d9b0734, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.097
+      value: -3.98
       objectReference: {fileID: 0}
     - target: {fileID: 7754337580235051811, guid: 188801015a014e84984c97087d9b0734, type: 3}
       propertyPath: m_LocalPosition.z
