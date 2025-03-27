@@ -104,6 +104,7 @@ public class atack : MonoBehaviour
             else
             {
                 downHitbox.enabled = true;
+                animator.SetBool("IsAirAtack", true);
             }
 
             onCooldown = true;
@@ -146,5 +147,7 @@ public class atack : MonoBehaviour
             }
         }
     }
+
+
 
 }

@@ -28,6 +28,8 @@ public class EnemyHP : MonoBehaviour
     {
         
         animator = GetComponent<Animator>();
+        Debug.Log(animator.gameObject.name);
+
     }
 
     // Update is called once per frame
@@ -74,6 +76,7 @@ public class EnemyHP : MonoBehaviour
 
         // Obtener la duración de la animación activa
         float animDuration = animator.GetCurrentAnimatorStateInfo(0).length;
+        Debug.Log(animator.GetCurrentAnimatorStateInfo(0).length);
 
         // Destruir el objeto después de que termine la animación
         Destroy(gameObject, animDuration);

@@ -101,5 +101,10 @@ public class kogmaw_state : MonoBehaviour
     {
         hurtBox.enabled = false ;
     }
+
+    void kogmaw_die()
+    {
+        animator.SetBool("muere", false);
+    }
 }
 
