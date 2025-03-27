@@ -34,28 +34,15 @@ public class Fleep : MonoBehaviour
     {
 
 
-        if (curentfleepTime <= 0)
+        if (GetComponent<GroundDetector>().GetGroundDetect() == true)
             ActivateGravity();
-        else
-        {
-            curentfleepTime -= Time.deltaTime;
-        }
-
-        if(flying == true && GetComponent<GroundDetector>().GetGroundDetect() == true)
-        {
-            curentfleepTime = fleepTime;
-            flying = false;
-        }
-        if (GetComponent<GroundDetector>().GetGroundDetect() == false)
-        {
-            flying = true;
-        }
+        
     }
 
 
     private void ActivateGravity()
     {
-        if (Input.GetKeyDown("q") && GetComponent<GroundDetector>().GetGroundDetect())
+        if (Input.GetKeyDown("space") && GetComponent<GroundDetector>().GetGroundDetect())
         {
 
             fleep = true;
@@ -82,5 +69,15 @@ public class Fleep : MonoBehaviour
     public bool GetFleepControler()
     {
         return fleepControler;
+    }
+
+    public float GetTimer()
+    {
+        return curentfleepTime;
+    }
+
+    public bool GetFlying()
+    {
+        return flying;
     }
 }

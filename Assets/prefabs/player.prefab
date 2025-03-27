@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4767236495405910450}
   - component: {fileID: 6823997886136384176}
   - component: {fileID: 4964667710907403912}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: atak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 2650182419913892900}
   - component: {fileID: -8281634634580875070}
   - component: {fileID: 4014026342063916676}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: player
   m_TagString: player
   m_Icon: {fileID: 0}
@@ -412,6 +412,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fleep: 0
+  flying: 0
+  curentfleepTime: 0
 --- !u!114 &2309332269842010108
 MonoBehaviour:
   m_ObjectHideFlags: 0

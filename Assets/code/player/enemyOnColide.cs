@@ -34,7 +34,7 @@ public class enemyOnColide : MonoBehaviour
             currentTimeInv -= Time.deltaTime;
             gameObject.tag = "Player";
             Physics2D.IgnoreLayerCollision(9, 10);
-          
+            Debug.Log("ignaorar Colision");
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         }
         else

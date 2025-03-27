@@ -129,8 +129,10 @@ public class atack : MonoBehaviour
 
             playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
 
-            if (!gD.GetGroundDetect())
+            Debug.Log(gD.GetGroundDetect());
+            if (gD.GetGroundDetect() == false)
             {
+                Debug.Log("is falling");
                 if (!playerSR.flipY)
                 {
                     Debug.Log("bouncing");
