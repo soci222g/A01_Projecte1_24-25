@@ -104,6 +104,7 @@ public class atack : MonoBehaviour
             else
             {
                 downHitbox.enabled = true;
+                animator.SetBool("IsAirAtack", true);
             }
 
             onCooldown = true;
@@ -122,6 +123,11 @@ public class atack : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out EnemyHP enemyHp) && collision.gameObject.tag == "enemy")
         {
             enemyHp.setHP(1);
+
+            Animator enemyAnim = collision.GetComponent<Animator>();
+
+            enemyAnim.SetBool("damage", true);
+
             playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
 
             Debug.Log(gD.GetGroundDetect());
@@ -141,5 +147,7 @@ public class atack : MonoBehaviour
             }
         }
     }
+
+
 
 }

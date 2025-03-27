@@ -108,7 +108,595 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: stonemaw_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 176
+        width: 18
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c6b8bd9631f904dba0e3ad7f4353e4
+      internalID: -642621588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 176
+        width: 18
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fed1c85796dca648be6432d436e3c27
+      internalID: 1984837232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 176
+        width: 18
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8745b248859b241bab6b173dad5b8f
+      internalID: -1974443895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_3
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 176
+        width: 18
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 743780a58425ceb49a75d5533c98d2a4
+      internalID: -1801817275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_4
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 144
+        width: 13
+        height: 5
+      alignment: 9
+      pivot: {x: 0.53846157, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0dd89ab706a244382b7972594b53c8
+      internalID: -858799002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_5
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 144
+        width: 14
+        height: 6
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702998856321d4b419765ccaccc1683a
+      internalID: -945697804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 144
+        width: 16
+        height: 5
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4810df8790df94f8d0da83ede8c26d
+      internalID: 1757732136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_7
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 144
+        width: 15
+        height: 2
+      alignment: 9
+      pivot: {x: 0.4666667, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2179a67bc5aa0944b8fce5714c227937
+      internalID: -934953099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_8
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 112
+        width: 18
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e6a1da69525b14dbad4e5e322ad02e
+      internalID: 1736092207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_9
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 112
+        width: 18
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97c19c886033dd4aa599a4b2e113dde
+      internalID: 809779689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_10
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 112
+        width: 23
+        height: 26
+      alignment: 9
+      pivot: {x: 0.65217394, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a660f111b74290145b02265ce5cd0397
+      internalID: -111452690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_11
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 112
+        width: 21
+        height: 26
+      alignment: 9
+      pivot: {x: 0.61904764, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55983e6ac9556f54a8f301429b7507ce
+      internalID: 477988030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_12
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 112
+        width: 20
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 011e14aa160c6c54cb5abacfa97349dd
+      internalID: 2130829015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_13
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 48
+        width: 33
+        height: 5
+      alignment: 9
+      pivot: {x: 0.5151515, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f5e3676ca6f1a469f0f716aecae0ac
+      internalID: 604300806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_14
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 48
+        width: 30
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cbd0dc87d08e5a44ab02cf120ddb8c7
+      internalID: 1570024751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_15
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 48
+        width: 18
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0986c84b5e7d3149996f22e365eab48
+      internalID: 454140622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_16
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 48
+        width: 16
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792043b031e79924a8db5f1a38e2575d
+      internalID: -610230615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_17
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 48
+        width: 18
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7ea70527c7dc344b87bce505b472dcf
+      internalID: -1842973374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_18
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 16
+        width: 18
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e4caaf1202f2840815b3b153cd5cf8
+      internalID: -2049663629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_19
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ece7590351b7f49a9600bd8eeafcc4
+      internalID: -2137440143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_20
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 16
+        width: 14
+        height: 22
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3bca81d1242e248ae4c12ef70f8c5a
+      internalID: -411214203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_21
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 16
+        width: 15
+        height: 23
+      alignment: 9
+      pivot: {x: 0.53333336, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3aa896ed0b667f4fbf36b1d513e69e9
+      internalID: 826225481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_22
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 15
+        width: 14
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e0046c8494334498f1e6c0dd9f78b1
+      internalID: -644467355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_23
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 80
+        width: 18
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd288fe0426d34f4f944cc353bb795ab
+      internalID: 332516280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_24
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 80
+        width: 18
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3525a138dddeeb74dae7c6d69b3349e1
+      internalID: 806469050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_25
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 80
+        width: 28
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be976d305ed39e64bb649dd94caa7799
+      internalID: 639027233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_26
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 80
+        width: 30
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c00871beb3df8542b7842fc214232f8
+      internalID: 719738184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonemaw_27
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 80
+        width: 30
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf1e431e5b87fb4282c02c9aa4a9ca9
+      internalID: 1028784572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +707,35 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      stonemaw_0: -642621588
+      stonemaw_1: 1984837232
+      stonemaw_10: 809779689
+      stonemaw_11: -111452690
+      stonemaw_12: 477988030
+      stonemaw_13: 2130829015
+      stonemaw_14: 604300806
+      stonemaw_15: 1570024751
+      stonemaw_16: 454140622
+      stonemaw_17: -610230615
+      stonemaw_18: -1842973374
+      stonemaw_19: -2049663629
+      stonemaw_2: -1974443895
+      stonemaw_20: -2137440143
+      stonemaw_21: -411214203
+      stonemaw_22: 826225481
+      stonemaw_23: -644467355
+      stonemaw_24: 332516280
+      stonemaw_25: 806469050
+      stonemaw_26: 639027233
+      stonemaw_27: 719738184
+      stonemaw_3: -1801817275
+      stonemaw_4: -858799002
+      stonemaw_5: -945697804
+      stonemaw_6: 1757732136
+      stonemaw_7: 674136018
+      stonemaw_8: -934953099
+      stonemaw_9: 1736092207
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
