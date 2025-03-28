@@ -9,14 +9,13 @@ public class Pause_menu : MonoBehaviour
     private GameObject Pause_Canva;
     [SerializeField]
     private GameObject HUD;
-    [SerializeField]
-    private GameObject Options_canva;
+
 
     private bool isPaused;
     void Start()
     {
         Pause_Canva.SetActive(false);
-        Options_canva.SetActive(false);
+      
     }
 
     // Update is called once per frame
@@ -27,7 +26,6 @@ public class Pause_menu : MonoBehaviour
             isPaused = true;
             Time.timeScale = 0;
             Pause_Canva.SetActive(true);
-            Options_canva.SetActive(true);
             HUD.SetActive(false);
 
         }
@@ -44,7 +42,7 @@ public class Pause_menu : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1;
         Pause_Canva.SetActive(false);
-        Options_canva.SetActive(false);
+        
         HUD.SetActive(true);
     }
 
