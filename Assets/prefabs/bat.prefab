@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropHeal: {fileID: 73896145160197108, guid: 09a4d25576e3bb24baa358253cb97620, type: 3}
-  HP: 2
+  HP: 100000000
   countCooldown: 0
   deathCooldown: 23
 --- !u!50 &4028713624222788403

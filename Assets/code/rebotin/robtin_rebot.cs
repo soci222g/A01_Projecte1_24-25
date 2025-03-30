@@ -60,14 +60,17 @@ public class robtin_rebot : MonoBehaviour
             animator.SetBool("bigRebot", true);
             float playerV = rb.velocity.y;
             rb.velocity = new Vector2(rb.velocity.x, 0);
+            Debug.Log("asdfasdfasdf");
 
             if (!sr.flipX)
             {
                 rb.AddForce(transform.up * bigBounce * -playerV);
+                Debug.Log("1234");
             }
             else
             {
                 rb.AddForce(transform.up * bigBounce * playerV);
+                Debug.Log("6789");
             }
             
             
