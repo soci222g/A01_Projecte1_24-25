@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 183021630}
   - component: {fileID: 183021629}
   - component: {fileID: 183021631}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34758,11 +34758,11 @@ PrefabInstance:
       objectReference: {fileID: 2048066416}
     - target: {fileID: 6110573148030064707, guid: 188801015a014e84984c97087d9b0734, type: 3}
       propertyPath: capaPared.m_Bits
-      value: 64
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6110573148030064707, guid: 188801015a014e84984c97087d9b0734, type: 3}
       propertyPath: capaSuelo.m_Bits
-      value: 128
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7754337580235051811, guid: 188801015a014e84984c97087d9b0734, type: 3}
       propertyPath: m_RootOrder
@@ -34770,11 +34770,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7754337580235051811, guid: 188801015a014e84984c97087d9b0734, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.871
+      value: 24.2
       objectReference: {fileID: 0}
     - target: {fileID: 7754337580235051811, guid: 188801015a014e84984c97087d9b0734, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.585
+      value: 7.04
       objectReference: {fileID: 0}
     - target: {fileID: 7754337580235051811, guid: 188801015a014e84984c97087d9b0734, type: 3}
       propertyPath: m_LocalPosition.z
