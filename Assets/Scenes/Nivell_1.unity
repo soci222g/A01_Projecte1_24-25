@@ -32227,7 +32227,7 @@ Transform:
   - {fileID: 1301286042}
   - {fileID: 1001948964}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &515957771
 GameObject:
@@ -32698,7 +32698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7726808603756107850, guid: 90257067aedee1f4f96ce4075d1a5e4a, type: 3}
       propertyPath: m_RootOrder
-      value: 33
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 7726808603756107850, guid: 90257067aedee1f4f96ce4075d1a5e4a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32771,7 +32771,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414642352885840923, guid: aa929df5c964d1e40b7bcf1b2639c940, type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 8414642352885840923, guid: aa929df5c964d1e40b7bcf1b2639c940, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34238,29 +34238,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2949264438091636354, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2949264438091636354, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
-      propertyPath: m_TagString
-      value: atk
-      objectReference: {fileID: 0}
-    - target: {fileID: 4964667710907403912, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
-      propertyPath: atackDuration
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 5121319973530832289, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
       propertyPath: m_Name
       value: player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5121319973530832289, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6548420688412416596, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
-      propertyPath: speed
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34660,7 +34640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3884623770901272519, guid: d4e4360eb2b87294586541c00663af3c, type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 3884623770901272519, guid: d4e4360eb2b87294586541c00663af3c, type: 3}
       propertyPath: m_AnchorMax.x
@@ -35767,7 +35747,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4531734026958302915, guid: 0f293193e3cd10040b3bf66890fa921c, type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 4531734026958302915, guid: 0f293193e3cd10040b3bf66890fa921c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35848,7 +35828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414642352885840923, guid: aa929df5c964d1e40b7bcf1b2639c940, type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 8414642352885840923, guid: aa929df5c964d1e40b7bcf1b2639c940, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36282,7 +36262,7 @@ Transform:
   - {fileID: 1233994871}
   - {fileID: 2076444681}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2113470530
 PrefabInstance:
@@ -36306,7 +36286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3884623770901272519, guid: d4e4360eb2b87294586541c00663af3c, type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3884623770901272519, guid: d4e4360eb2b87294586541c00663af3c, type: 3}
       propertyPath: m_AnchorMax.x
