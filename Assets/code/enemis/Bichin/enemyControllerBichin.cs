@@ -82,7 +82,7 @@ public class enemyControllerBichin : MonoBehaviour
         Debug.DrawRay(controladorPared.position, direccionPared * distanciaDeteccion, Color.green);
 
 
-        if (GetComponent<grabityBichin>().getIsFleep())
+        if (GetComponent<grabityEnemi>().getIsFleep())
         {
             RaycastHit2D informacionTecho = Physics2D.Raycast(controladorTecho.position, Vector2.up, distanciaDeteccion, capaSuelo);
             Debug.DrawRay(controladorTecho.position, Vector2.up * distanciaDeteccion, Color.red);

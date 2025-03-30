@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class grabityBichin : MonoBehaviour
+public class grabityEnemi : MonoBehaviour
 {
     [SerializeField] private bool isFleep;
     private Rigidbody2D rb;

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9167311104941621419}
   - component: {fileID: 6110573148030064707}
   - component: {fileID: 4283673957522821156}
-  - component: {fileID: 5502761497187186011}
+  - component: {fileID: 5345953190123094608}
   m_Layer: 0
   m_Name: Bichin
   m_TagString: Untagged
@@ -231,7 +231,7 @@ MonoBehaviour:
   HP: 3
   countCooldown: 0
   deathCooldown: 0
---- !u!114 &5502761497187186011
+--- !u!114 &5345953190123094608
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
