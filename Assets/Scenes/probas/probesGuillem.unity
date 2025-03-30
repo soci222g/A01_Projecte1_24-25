@@ -175,6 +175,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f142f427512884b877a1bc14151d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &243223471 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2309332269842010108, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+  m_PrefabInstance: {fileID: 1413093671}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243223445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efc3e8ef47843744ac425f22a8083ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &256796944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -737,6 +748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fleep: {fileID: 243223462}
+  detector: {fileID: 243223471}
   imageUI: {fileID: 646809294}
   spriteVacio: {fileID: 1358709266, guid: 95e54b9b2a183f948affab1ee9a2a2fc, type: 3}
   spriteLleno: {fileID: -417331805, guid: 95e54b9b2a183f948affab1ee9a2a2fc, type: 3}
