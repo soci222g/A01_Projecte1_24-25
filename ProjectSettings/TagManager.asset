@@ -41,8 +41,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - ColisionCamara
+  - Camara
   - 
   m_SortingLayers:
   - name: Default

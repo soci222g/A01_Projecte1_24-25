@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class hp : MonoBehaviour
 {
     [SerializeField]
@@ -23,10 +24,7 @@ public class hp : MonoBehaviour
         healthPoints = maxHealthPoints;
     }
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
 
     // Update is called once per frame
     void Update()
