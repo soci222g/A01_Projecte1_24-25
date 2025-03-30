@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4767236495405910450}
   - component: {fileID: 6823997886136384176}
   - component: {fileID: 4964667710907403912}
-  m_Layer: 9
+  m_Layer: 3
   m_Name: atak
   m_TagString: atk
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.33091253}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.468901, y: 0.43780196}
@@ -78,7 +78,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6120687, y: 1.441726}
+  m_Size: {x: 1.6120687, y: 2.1035519}
   m_EdgeRadius: 0
 --- !u!61 &4767236495405910450
 BoxCollider2D:
@@ -112,7 +112,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04583645, y: -0.22556907}
+  m_Offset: {x: 0.0037660599, y: -0.38215476}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.468901, y: 0.43780196}
@@ -123,7 +123,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.088512, y: 1.8950759}
+  m_Size: {x: 1.6101818, y: 2.2082462}
   m_EdgeRadius: 0
 --- !u!212 &6823997886136384176
 SpriteRenderer:
@@ -191,14 +191,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   latHitbox: {fileID: 3169499023096039314}
   downHitbox: {fileID: 4767236495405910450}
-  atackCooldown: 30
-  atackDuration: 26
+  atackCooldown: 35
+  atackDuration: 14
   onCooldown: 0
   animator: {fileID: 650167750993376912}
   playerSR: {fileID: 3252725902039710837}
   bounce: 750
   playerTR: {fileID: 2182073263094218293}
   playerRB: {fileID: 1409228932536560166}
+  offset: 1.3
 --- !u!1 &5121319973530832289
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +223,7 @@ GameObject:
   - component: {fileID: -8281634634580875070}
   - component: {fileID: 4014026342063916676}
   - component: {fileID: 2835598569221117758}
+  - component: {fileID: 3268844150605520920}
   m_Layer: 9
   m_Name: player
   m_TagString: player
@@ -243,7 +245,7 @@ Transform:
   m_Children:
   - {fileID: 4933408334937618117}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7298098943528611513
 MonoBehaviour:
@@ -399,7 +401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 650167750993376912}
-  speed: 5
+  speed: 8
 --- !u!114 &4737886206260372086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,5 +528,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02e3b484b1b0be84587c87da439ff1a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3268844150605520920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5121319973530832289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed49c318bd1be5c4f9b9c34039537645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
