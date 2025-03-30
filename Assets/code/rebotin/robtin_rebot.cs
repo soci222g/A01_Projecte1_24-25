@@ -11,6 +11,7 @@ public class robtin_rebot : MonoBehaviour
     GroundDetector gd;
     Animator animator;
     Rigidbody2D rb;
+    SpriteRenderer sr;
 
 
     // Start is called before the first frame update
@@ -19,6 +20,8 @@ public class robtin_rebot : MonoBehaviour
         gd = player.GetComponent<GroundDetector>();
         animator = GetComponent<Animator>();
         rb = player.GetComponent<Rigidbody2D>();
+        sr = player.GetComponent<SpriteRenderer>();
+
     }
 
     // Update is called once per frame
@@ -34,23 +37,40 @@ public class robtin_rebot : MonoBehaviour
         {
             animator.SetBool("rebot", true);
             float playerV = rb.velocity.y;
-            Debug.Log(rb.velocity.y);
             rb.velocity = new Vector2(rb.velocity.x, 0);
-            Debug.Log(rb.velocity.y);
-            rb.AddForce(transform.up * bounce );
-        }
 
+
+            if (!sr.flipX)
+            {
+                rb.AddForce(transform.up * bounce);
+            }
+            else
+            {
+                rb.AddForce(transform.up * -bounce);
+            }
+
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "atk" && !gd.GetGroundDetect())
         {
+
             animator.SetBool("bigRebot", true);
-            Debug.Log(rb.velocity.y);
             float playerV = rb.velocity.y;
             rb.velocity = new Vector2(rb.velocity.x, 0);
-            rb.AddForce(transform.up * bigBounce * -playerV);
+
+            if (!sr.flipX)
+            {
+                rb.AddForce(transform.up * bigBounce * -playerV);
+            }
+            else
+            {
+                rb.AddForce(transform.up * bigBounce * playerV);
+            }
+            
+            
         } 
     }
 
