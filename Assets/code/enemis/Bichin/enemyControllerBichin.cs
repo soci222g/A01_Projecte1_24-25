@@ -20,6 +20,10 @@ public class enemyControllerBichin : MonoBehaviour
     private bool onCooldown = false;
     [SerializeField] private float countCooldown;
     [SerializeField] private int collisionCooldown = 50;
+    private bool detected = false;
+    [SerializeField] private bool noPuedoPerseguirte = true;
+    [SerializeField] private float countCooldown2;
+    [SerializeField] private int perseguirCooldown = 400;
 
     private Rigidbody2D rb;
     private Animator animator;
@@ -46,15 +50,26 @@ public class enemyControllerBichin : MonoBehaviour
                 animator.SetBool("onColide", false);
             }
         }
+        if (noPuedoPerseguirte)
+        {
+            countCooldown2++;
+            if (countCooldown2 >= perseguirCooldown)
+            {
+                countCooldown2 = 0;
+                noPuedoPerseguirte = false;
+            }
+        }
         else
         {
-            if (distanceToPlayer < detectionRadius)
+            if (distanceToPlayer < detectionRadius && !noPuedoPerseguirte)
             {
                 PerseguirJugador();
+                detected = true;
             }
             else
             {
                 Patrullar();
+                Debug.Log("patrullando");
             }
         }
     }
@@ -68,6 +83,19 @@ public class enemyControllerBichin : MonoBehaviour
         if ((direction.x > 0 && !moviendoDerecha) || (direction.x < 0 && moviendoDerecha))
         {
             Girar();
+        }
+        
+        RaycastHit2D informacionSuelo = Physics2D.Raycast(controladorSuelo.position, Vector2.down, distanciaDeteccion, capaSuelo);
+        Debug.DrawRay(controladorSuelo.position, Vector2.down * distanciaDeteccion, Color.red);
+
+        Vector2 direccionPared = moviendoDerecha ? Vector2.right : Vector2.left;
+        RaycastHit2D informacionPared = Physics2D.Raycast(controladorPared.position, direccionPared, distanciaDeteccion, capaPared);
+        Debug.DrawRay(controladorPared.position, direccionPared * distanciaDeteccion, Color.green);
+
+        if (informacionSuelo.collider == null || informacionPared.collider != null)
+        {
+            Girar();
+            noPuedoPerseguirte = true;
         }
     }
 
