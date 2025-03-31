@@ -39,13 +39,14 @@ public class robtin_rebot : MonoBehaviour
             float playerV = rb.velocity.y;
             rb.velocity = new Vector2(rb.velocity.x, 0);
 
-
-            if (!sr.flipX)
+            if (!sr.flipY)
             {
+                Debug.Log("Si");
                 rb.AddForce(transform.up * bounce);
             }
             else
             {
+                Debug.Log("No");
                 rb.AddForce(transform.up * -bounce);
             }
 
