@@ -80,4 +80,12 @@ public class Fleep : MonoBehaviour
     {
         return flying;
     }
+    public void SetFleep()
+    {
+        fleep = true;
+        fleepControler = !fleepControler;
+        rb.gravityScale *= -1;
+        sr.flipY = !sr.flipY;
+        rb.velocity = new Vector2(rb.velocity.x, 0);
+    }
 }
