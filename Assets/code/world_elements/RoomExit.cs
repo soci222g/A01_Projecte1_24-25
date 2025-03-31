@@ -6,13 +6,15 @@ public class RoomExit : MonoBehaviour
 {
     [SerializeField]
     private camerabehavior cam;
-
+    [SerializeField]
     private bool DirectionRoom = true;
 
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "player")
+        Debug.Log(cam.gameObject.name);
+
+        if (collision.gameObject.tag == "player")
         {
             if (DirectionRoom) {
                 Debug.Log("cambiar escena: alante");

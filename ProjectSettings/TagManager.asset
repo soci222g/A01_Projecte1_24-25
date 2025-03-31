@@ -9,6 +9,8 @@ TagManager:
   - enemy
   - Enemy
   - bomb
+  - atk
+  - key
   layers:
   - Default
   - TransparentFX
@@ -16,6 +18,11 @@ TagManager:
   - Player
   - Water
   - UI
+  - Paredes
+  - Suelos
+  - 
+  - player
+  - enemy
   - 
   - 
   - 
@@ -34,13 +41,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - ColisionCamara
+  - Camara
   - 
   m_SortingLayers:
   - name: Default

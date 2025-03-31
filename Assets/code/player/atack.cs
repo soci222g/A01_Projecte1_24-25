@@ -6,39 +6,44 @@ public class atack : MonoBehaviour
 {
 
     [SerializeField]
-    private BoxCollider2D latHitbox; //prefab de la hitbox
+    private BoxCollider2D latHitbox;
     [SerializeField]
-    int atackCooldown = 5;
+    private BoxCollider2D downHitbox;
     [SerializeField]
+    int atackCooldown;
     int countCooldown;
     [SerializeField]
     int atackDuration;
-    [SerializeField]
     int atackDurationCounter;
     [SerializeField]
-    int atackDelay;
-    [SerializeField]
-    int atackDelayCounter;
-    [SerializeField]
     bool onCooldown;
-    [SerializeField]
-    SpriteRenderer hitbox;
     [SerializeField]
     private Animator animator;
     [SerializeField]
     SpriteRenderer playerSR;
+    GroundDetector gD;
+    [SerializeField] private float bounce;
+    [SerializeField]
+    Transform playerTR;
+    [SerializeField]
+    Rigidbody2D playerRB;
+    [SerializeField] float offset;
+    actionState state;
 
     // Start is called before the first frame update
     void Start()
     {
+        state = GetComponentInParent<actionState>();
+        gD = GetComponentInParent<GroundDetector>();
+        downHitbox.enabled = false;
         latHitbox.enabled = false;
         onCooldown = false;
-        hitbox.enabled = false;
     }
 
     private void FixedUpdate() // usamos FixedUpdate para que el tiempo del ataque sea consistente
     {
 
+        // make latHitbox face the same way as player
         if (playerSR.flipX == true)
         {
             latHitbox.offset = new Vector2(-1.3f, 0);
@@ -48,31 +53,14 @@ public class atack : MonoBehaviour
             latHitbox.offset = new Vector2(1.3f, 0);
         }
 
-        if (onCooldown) // Cooldown del ataque
+        //make downHitbox be under player
+        if (playerSR.flipY == true)
         {
-            countCooldown++;
-            atackDurationCounter++;
-            if (countCooldown == atackCooldown)
-            {
-                countCooldown = 0;
-                onCooldown = false;
-            }
-            if (atackDurationCounter >= atackDuration)
-            {
-                latHitbox.enabled = false;
-                hitbox.enabled = false;
-                animator.SetBool("IsAtack", false);
-            }
-            else
-            {
-                hitbox.enabled = true;
-                atackDelayCounter++;
-
-            }
-
-
-            
-
+            downHitbox.offset = new Vector2(0, offset);
+        }
+        else
+        {
+            downHitbox.offset = new Vector2(0, -offset);
         }
 
     }
@@ -80,25 +68,85 @@ public class atack : MonoBehaviour
     private void Update()
     {
     
-        if (Input.GetKeyDown("v") && !onCooldown) //si input de ataque y no esta en cooldown
+
+        if (Input.GetKeyDown("v") && !onCooldown && state.getActionState()) //check input and cooldown
         {
-            latHitbox.enabled = true;
-            Debug.Log("atacked");
+            state.startAction();
+
+            //check if on ground or air
+            if (gD.GetGroundDetect())
+            {
+                latHitbox.enabled = true;
+                animator.SetBool("IsAtack", true);
+            }
+            else
+            {
+                downHitbox.enabled = true;
+                animator.SetBool("IsAirAtack", true);
+            }
+
             onCooldown = true;
             atackDurationCounter = 0;
-            atackDelayCounter = 0;
-            animator.SetBool("IsAtack", true);
+            Debug.Log("atacked");
+
         }
+
+        
     }
-
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out EnemyHP enemyHp) && collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.TryGetComponent(out EnemyHP enemyHp) && collision.gameObject.tag == "enemy")
         {
             enemyHp.setHP(1);
+
+            Animator enemyAnim = collision.GetComponent<Animator>();
+
+            enemyAnim.SetBool("damage", true);
+
+            playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
+
+            Debug.Log(gD.GetGroundDetect());
+            if (gD.GetGroundDetect() == false)
+            {
+                Debug.Log("is falling");
+                if (!playerSR.flipY)
+                {
+                    Debug.Log("bouncing");
+                    playerRB.AddForce(transform.up * bounce);
+                }
+                else
+                {
+                    playerRB.AddForce(transform.up * -bounce);
+                }
+
+            }
         }
     }
 
+    public void lat_hitbox_deactivate()
+    {
+        latHitbox.enabled = false;
+    }
+
+    public void down_hitbox_deactivate()
+    {
+        downHitbox.enabled = false;
+    }
+
+    public void cooldown_off()
+    {
+        onCooldown = false;
+        state.endAction();
+    }
+
+    public void atk_anim()
+    {
+        animator.SetBool("IsAtack", false);
+    }
+
+    public void air_atk_anim()
+    {
+        animator.SetBool("IsAirAtack", false);
+    }
 }

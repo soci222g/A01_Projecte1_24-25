@@ -13,24 +13,43 @@ public class bombAbilityTrigger : MonoBehaviour
     private bool onCooldown;
     [SerializeField]
     private float countCooldown;
+    actionState state;
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         onCooldown = false;
+        state = GetComponent<actionState>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown("x") && !onCooldown)
+        if (Input.GetKeyDown("x") && !onCooldown && GetComponent<GroundDetector>().GetGroundDetect() && state.getActionState())
         {
-            if (sr.flipX)
+            if (sr.flipY)
             {
-                GameObject clone = Instantiate(bombExploat, transform.position - new Vector3(1.5f, 0.28f, 0), transform.rotation);
+                if (sr.flipX)
+                {
+                    GameObject clone = Instantiate(bombExploat, transform.position - new Vector3(1.5f, -0.28f, 0), transform.rotation);
+                    clone.GetComponent<SpriteRenderer>().flipY = true;
+
+                }
+                else
+                {
+                    GameObject clone = Instantiate(bombExploat, transform.position - new Vector3(-1.5f, -0.28f, 0), transform.rotation);
+                    clone.GetComponent<SpriteRenderer>().flipY = true;
+                }
             }
             else
             {
-                GameObject clone = Instantiate(bombExploat, transform.position - new Vector3(-1.5f, 0.28f, 0), transform.rotation);
+                if (sr.flipX)
+                {
+                    GameObject clone = Instantiate(bombExploat, transform.position - new Vector3(1.5f, 0.28f, 0), transform.rotation);
+                }
+                else
+                {
+                    GameObject clone = Instantiate(bombExploat, transform.position - new Vector3(-1.5f, 0.28f, 0), transform.rotation);
+                }
             }
             onCooldown = true;
         }
