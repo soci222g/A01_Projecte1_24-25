@@ -14,10 +14,16 @@ public class spikes : MonoBehaviour
        
         if (collision.gameObject.tag == "spikes")
         {
-            Debug.Log("me muero");
+           
             this.gameObject.GetComponent<hp>().setHP(1);
-            Debug.Log("me muero");
+          
+
             this.transform.position = resPown.position;
+
+            if(GetComponent<Fleep>().GetFleepControler() == false)
+            {
+                GetComponent<Fleep>().SetFleep();
+            }
         }
     }
 
