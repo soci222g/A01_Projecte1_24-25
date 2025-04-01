@@ -46,7 +46,7 @@ public class spikes : MonoBehaviour
        
         if (collision.gameObject.tag == "spikes")
         {
-           
+           if(this.tag == "player")
             this.gameObject.GetComponent<hp>().setHP(1);
           
 
