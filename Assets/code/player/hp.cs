@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class hp : MonoBehaviour
 {
     [SerializeField]
-    private int maxHealthPoints = 6;
+    private int maxHealthPoints = 10;
     [SerializeField]
     private int healthPoints;
 
