@@ -13,6 +13,7 @@ public class spikes : MonoBehaviour
 
     private movement MoveCode;
     private Fleep FleepCode;
+    private Animator Animator;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class spikes : MonoBehaviour
         TimerMovementPause = 1;
         MoveCode = GetComponent<movement>();
         FleepCode = GetComponent<Fleep>();
+        Animator = GetComponent<Animator>();
     }
 
 
@@ -30,11 +32,12 @@ public class spikes : MonoBehaviour
             MoveCode.enabled = false;
             FleepCode.enabled = false;
             CurrentTimePauseMovement -= Time.deltaTime;
+            Animator.SetBool("isDamaged", true);
         }
         else {
             MoveCode.enabled = true;
             FleepCode.enabled = true;
-            
+            Animator.SetBool("isDamaged", false);
         }
     }
 
