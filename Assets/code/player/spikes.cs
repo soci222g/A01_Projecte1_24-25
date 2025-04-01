@@ -7,7 +7,36 @@ public class spikes : MonoBehaviour
 
     [SerializeField]
     private Transform resPown;
-    
+
+    private float CurrentTimePauseMovement;
+    private int TimerMovementPause;
+
+    private movement MoveCode;
+    private Fleep FleepCode;
+
+    private void Awake()
+    {
+        CurrentTimePauseMovement = 0;
+        TimerMovementPause = 1;
+        MoveCode = GetComponent<movement>();
+        FleepCode = GetComponent<Fleep>();
+    }
+
+
+    private void FixedUpdate()
+    {
+        if (CurrentTimePauseMovement >= 0)
+        {
+            MoveCode.enabled = false;
+            FleepCode.enabled = false;
+            CurrentTimePauseMovement -= Time.deltaTime;
+        }
+        else {
+            MoveCode.enabled = true;
+            FleepCode.enabled = true;
+            
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,6 +53,9 @@ public class spikes : MonoBehaviour
             {
                 GetComponent<Fleep>().SetFleep();
             }
+            CurrentTimePauseMovement = TimerMovementPause;
+
+
         }
     }
 
