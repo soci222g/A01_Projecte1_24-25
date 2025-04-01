@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 4394608028966539125}
   - component: {fileID: 7460486228313371459}
   - component: {fileID: 2891868285622382466}
+  - component: {fileID: 7475092602193181299}
   m_Layer: 0
   m_Name: Chuck
   m_TagString: Untagged
@@ -296,3 +297,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7475092602193181299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8762786205812745278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd978b168e517ae42a6732a54fd465d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialeg: {fileID: 1554299892189346591}
+  detectionRadius: 5

@@ -29949,9 +29949,41 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7475092602193181299, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: chuck
+      value: 
+      objectReference: {fileID: 1012202467}
+    - target: {fileID: 7475092602193181299, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: dialeg
+      value: 
+      objectReference: {fileID: 1001270145}
+    - target: {fileID: 7475092602193181299, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2048066416}
+    - target: {fileID: 7475092602193181299, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: detectionRadius
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8762786205812745278, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: m_Name
       value: Chuck
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: BloqueTexto.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: BloqueTexto.Array.data[0]
+      value: Me cago en dios
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: BloqueTexto.Array.data[1]
+      value: Vale
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: BloqueTexto.Array.data[2]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32407,7 +32439,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742756703}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -32475,7 +32507,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742756703}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ea9976ce91ec5b24996874da0518f5f3, type: 2}
   m_CullingMode: 0
@@ -33090,6 +33122,11 @@ Transform:
   m_Father: {fileID: 539263008}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1001270145 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1554299892189346591, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+  m_PrefabInstance: {fileID: 401089952}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1001948963
 GameObject:
   m_ObjectHideFlags: 0
@@ -33121,6 +33158,11 @@ Transform:
   m_Father: {fileID: 503148782}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1012202467 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4394608028966539125, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+  m_PrefabInstance: {fileID: 401089952}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1019017036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37884,6 +37926,10 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7475092602193181299, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2048066416}
     - target: {fileID: 8762786205812745278, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: m_Name
       value: Chuck (2)
@@ -37945,6 +37991,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7475092602193181299, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2048066416}
     - target: {fileID: 8762786205812745278, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: m_Name
       value: Chuck (1)
