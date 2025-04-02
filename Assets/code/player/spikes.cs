@@ -15,6 +15,8 @@ public class spikes : MonoBehaviour
     private Fleep FleepCode;
     private Animator Animator;
 
+    private string spikeTag = "spikes";
+
     private void Awake()
     {
         CurrentTimePauseMovement = 0;
@@ -23,7 +25,14 @@ public class spikes : MonoBehaviour
         FleepCode = GetComponent<Fleep>();
         Animator = GetComponent<Animator>();
     }
+    private void Update()
+    {
 
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            spikeTag = "a";
+        }
+    }
 
     private void FixedUpdate()
     {
@@ -44,7 +53,7 @@ public class spikes : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
        
-        if (collision.gameObject.tag == "spikes")
+        if (collision.gameObject.tag == spikeTag)
         {
            if(this.tag == "player")
             this.gameObject.GetComponent<hp>().setHP(1);

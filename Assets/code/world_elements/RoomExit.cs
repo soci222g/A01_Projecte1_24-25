@@ -14,7 +14,7 @@ public class RoomExit : MonoBehaviour
     {
         Debug.Log(cam.gameObject.name);
 
-        if (collision.gameObject.tag == "player")
+        if (collision.gameObject.tag == "player" || collision.gameObject.tag == "Player")
         {
             if (DirectionRoom) {
                 Debug.Log("cambiar escena: alante");
