@@ -7,12 +7,14 @@ public class dropHeal : MonoBehaviour
 {
     [SerializeField]
     private Animator animator;
+    [SerializeField]
+    private hp hp;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "player")
         {
-            if (collision.gameObject.GetComponent<hp>().getHP() < 6) //canviar 6 per getmaxHP
+            if (collision.gameObject.GetComponent<hp>().getHP() < hp.getMaxHP())
             collision.gameObject.GetComponent<hp>().setHP(-1);
             animator.SetBool("IsGot", true);
             
