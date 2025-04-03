@@ -69,7 +69,7 @@ public class atack : MonoBehaviour
     {
     
 
-        if (Input.GetKeyDown("v") && !onCooldown && state.getActionState()) //check input and cooldown
+        if (Input.GetMouseButtonDown(0) && !onCooldown && state.getActionState()) //check input and cooldown
         {
             state.startAction();
 
