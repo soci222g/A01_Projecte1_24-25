@@ -17,8 +17,4 @@ public class rebotin_animation_controller : MonoBehaviour
         animator.SetBool("rebot", false);
     }
 
-    void rebotin_big_rebot()
-    {
-        animator.SetBool("bigRebot", false);
-    }
 }
