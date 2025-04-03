@@ -60,6 +60,11 @@ public class hp : MonoBehaviour
         return healthPoints;
     }
 
+    public int getMaxHP()
+    {
+        return maxHealthPoints;
+    }
+
     public void setHP(int perderVida)
     {
         healthPoints -= perderVida;
