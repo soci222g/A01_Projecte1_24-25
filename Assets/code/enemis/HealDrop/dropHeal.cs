@@ -14,11 +14,15 @@ public class dropHeal : MonoBehaviour
     {
         if (collision.gameObject.tag == "player")
         {
+            Debug.Log(hp.getMaxHP());
             if (collision.gameObject.GetComponent<hp>().getHP() < hp.getMaxHP())
-            collision.gameObject.GetComponent<hp>().setHP(-1);
-            animator.SetBool("IsGot", true);
-            
-            Destroy(this.gameObject,0.3f);
+            {
+                collision.gameObject.GetComponent<hp>().setHP(-1);
+                Debug.Log(collision.gameObject.GetComponent<hp>().getHP());
+                animator.SetBool("IsGot", true);
+
+                Destroy(this.gameObject, 0.3f);
+            }
 
         }
     }

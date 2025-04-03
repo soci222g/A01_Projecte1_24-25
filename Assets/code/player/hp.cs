@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class hp : MonoBehaviour
 {
     [SerializeField]
-    private int maxHealthPoints = 10;
+    private int maxHealthPoints;
     [SerializeField]
     private int healthPoints;
 
@@ -21,6 +21,7 @@ public class hp : MonoBehaviour
     private hpUI hpUI;
     private void Awake()
     {
+        maxHealthPoints = 10;
         healthPoints = maxHealthPoints;
     }
     // Start is called before the first frame update
