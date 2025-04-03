@@ -18,7 +18,7 @@ public class detection_Radius_Chuck : MonoBehaviour
     void FixedUpdate()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        Debug.Log(distanceToPlayer);
+        //Debug.Log(distanceToPlayer);
         if (distanceToPlayer < detectionRadius)
         {
             dialeg.SetActive(true);
