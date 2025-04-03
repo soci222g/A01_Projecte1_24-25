@@ -55,17 +55,20 @@ public class spikes : MonoBehaviour
        
         if (collision.gameObject.tag == spikeTag)
         {
-           if(this.tag == "player")
-            this.gameObject.GetComponent<hp>().setHP(1);
-          
 
-            this.transform.position = resPown.position;
-
-            if(GetComponent<Fleep>().GetFleepControler() == false)
+            if (collision.gameObject.GetComponent<SpikeCheck>().GetCheckPlayer())
             {
-                GetComponent<Fleep>().SetFleep();
+                this.gameObject.GetComponent<hp>().setHP(1);
+
+
+                this.transform.position = resPown.position;
+
+                if (GetComponent<Fleep>().GetFleepControler() == false)
+                {
+                    GetComponent<Fleep>().SetFleep();
+                }
+                CurrentTimePauseMovement = TimerMovementPause;
             }
-            CurrentTimePauseMovement = TimerMovementPause;
 
 
         }

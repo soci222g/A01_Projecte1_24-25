@@ -30105,6 +30105,7 @@ GameObject:
   - component: {fileID: 451675993}
   - component: {fileID: 451675992}
   - component: {fileID: 451675994}
+  - component: {fileID: 451675995}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: spikes
@@ -31902,6 +31903,18 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &451675995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451675990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b46ead278704e164cbd6913e3991b054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &472399033
 GameObject:
   m_ObjectHideFlags: 0
@@ -33953,7 +33966,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2650182419913892900, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4014026342063916676, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5121319973530832289, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
       propertyPath: m_Name
