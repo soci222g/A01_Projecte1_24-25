@@ -38219,34 +38219,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.size
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.data[0]
-      value: How good of a figther you are, my friend. I can see you are starting
-        to control your new power.
+      value: To continue exploring the cave I need to tell you about the Aerial Slash.
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.data[1]
-      value: To continue exploring the cave I need to tell you about de Aerial Slash.
+      value: While mid-air,  use your attack [LEFT-MOUSE] to perform the Aerial Slash.
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.data[2]
-      value: While in mid-air, thanks to your recently gotten power, use your attack
-        to perform the Aerial Slash.
+      value: You will need to time this attack in order to bounce above enemies.
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.data[3]
-      value: Then, you will need to time this attack in order to bounce above enemies.
-      objectReference: {fileID: 0}
-    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: BloqueTexto.Array.data[4]
       value: The best monster to use this attack on are BATS, like the one behind
         me.
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: BloqueTexto.Array.data[4]
+      value: Continue  exploring the cave carefully my firend.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.data[5]
-      value: Continue carefully exploring the cave with this new ability.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.data[6]
