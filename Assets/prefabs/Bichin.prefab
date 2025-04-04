@@ -39,7 +39,7 @@ Transform:
   - {fileID: 6329116005098674059}
   - {fileID: 5269963817360761896}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4726401223803964312
 SpriteRenderer:
@@ -164,7 +164,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6
 --- !u!95 &9167311104941621419
 Animator:
   serializedVersion: 5
@@ -208,13 +208,16 @@ MonoBehaviour:
   distanciaDeteccion: 0.5
   capaSuelo:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   controladorPared: {fileID: 6329116005098674059}
   capaPared:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   countCooldown: 0
   collisionCooldown: 50
+  noPuedoPerseguirte: 1
+  countCooldown2: 0
+  perseguirCooldown: 400
 --- !u!114 &4283673957522821156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc69e7ca48517f4387cdb19056ea445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFleep: 1
+  isFleep: 0
 --- !u!1 &2963024769960030121
 GameObject:
   m_ObjectHideFlags: 0
