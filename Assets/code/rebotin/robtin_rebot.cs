@@ -7,7 +7,6 @@ public class robtin_rebot : MonoBehaviour
 
     [SerializeField] private GameObject player;
     [SerializeField] private float bounce;
-    [SerializeField] private float bigBounce;
     GroundDetector gd;
     Animator animator;
     Rigidbody2D rb;
@@ -24,12 +23,6 @@ public class robtin_rebot : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -39,39 +32,18 @@ public class robtin_rebot : MonoBehaviour
             float playerV = rb.velocity.y;
             rb.velocity = new Vector2(rb.velocity.x, 0);
 
-
-            if (!sr.flipX)
+            if (!sr.flipY)
             {
+                Debug.Log("Si");
                 rb.AddForce(transform.up * bounce);
             }
             else
             {
+                Debug.Log("No");
                 rb.AddForce(transform.up * -bounce);
             }
 
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "atk" && !gd.GetGroundDetect())
-        {
-
-            animator.SetBool("bigRebot", true);
-            float playerV = rb.velocity.y;
-            rb.velocity = new Vector2(rb.velocity.x, 0);
-
-            if (!sr.flipX)
-            {
-                rb.AddForce(transform.up * bigBounce * -playerV);
-            }
-            else
-            {
-                rb.AddForce(transform.up * bigBounce * playerV);
-            }
-            
-            
-        } 
     }
 
 }

@@ -26,7 +26,7 @@ public class Dialogos_chuck : MonoBehaviour
         CurrentTimeText = 0;
         NextTextTime = 5;
         CurrentTextCount = 0;
-        _textMeshPro.SetText(BloqueTexto[0]);
+        _textMeshPro.SetText(BloqueTexto[CurrentTextCount]);
     }
 
     private void FixedUpdate()

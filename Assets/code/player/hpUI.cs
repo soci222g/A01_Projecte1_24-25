@@ -14,7 +14,7 @@ public class hpUI : MonoBehaviour
     private int hp;
 
     static int minHearts = 0;
-    static int maxHearts = 3;
+    static int maxHearts = 5;
 
     // Start is called before the first frame update
     void Start()
