@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu_code : MonoBehaviour
 {
+
     public void CanviarEscena(string name)
     {
         SceneManager.LoadScene(name);
