@@ -20,6 +20,7 @@ public class enemyControllerBichin : MonoBehaviour
     private bool onCooldown = false;
     [SerializeField] private float countCooldown;
     [SerializeField] private int collisionCooldown = 50;
+    private bool detected = false;
 
     private Rigidbody2D rb;
     private Animator animator;
@@ -46,16 +47,14 @@ public class enemyControllerBichin : MonoBehaviour
                 animator.SetBool("onColide", false);
             }
         }
+        if (distanceToPlayer < detectionRadius)
+        {
+            PerseguirJugador();
+            detected = true;
+        }
         else
         {
-            if (distanceToPlayer < detectionRadius)
-            {
-                PerseguirJugador();
-            }
-            else
-            {
-                Patrullar();
-            }
+            Patrullar();
         }
     }
 
@@ -69,6 +68,19 @@ public class enemyControllerBichin : MonoBehaviour
         {
             Girar();
         }
+
+        RaycastHit2D informacionSuelo = Physics2D.Raycast(controladorSuelo.position, Vector2.down, distanciaDeteccion, capaSuelo);
+        Debug.DrawRay(controladorSuelo.position, Vector2.down * distanciaDeteccion, Color.red);
+
+        Vector2 direccionPared = moviendoDerecha ? Vector2.right : Vector2.left;
+        RaycastHit2D informacionPared = Physics2D.Raycast(controladorPared.position, direccionPared, distanciaDeteccion, capaPared);
+        Debug.DrawRay(controladorPared.position, direccionPared * distanciaDeteccion, Color.green);
+
+        if (informacionSuelo.collider == null || informacionPared.collider != null)
+        {
+            Girar();
+            rb.velocity = new Vector2(0, 0);
+        }
     }
 
     private void Patrullar()
@@ -81,7 +93,7 @@ public class enemyControllerBichin : MonoBehaviour
         RaycastHit2D informacionPared = Physics2D.Raycast(controladorPared.position, direccionPared, distanciaDeteccion, capaPared);
         Debug.DrawRay(controladorPared.position, direccionPared * distanciaDeteccion, Color.green);
 
-
+        // Detectar el suelo o el techo según el estado
         if (GetComponent<grabityBichin>().getIsFleep())
         {
             RaycastHit2D informacionTecho = Physics2D.Raycast(controladorTecho.position, Vector2.up, distanciaDeteccion, capaSuelo);
@@ -100,11 +112,6 @@ public class enemyControllerBichin : MonoBehaviour
                 Girar();
             }
         }
-
-
-
-        // Si no hay suelo o hay una pared, girar
-       
     }
 
     private void Girar()
@@ -115,6 +122,7 @@ public class enemyControllerBichin : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.gameObject.name + this.name);
         if (collision.gameObject.CompareTag("player"))
         {
             onCooldown = true;
