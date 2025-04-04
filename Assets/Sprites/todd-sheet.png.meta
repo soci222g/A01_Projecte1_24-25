@@ -106,6 +106,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -116,7 +142,7 @@ TextureImporter:
         x: 32
         y: 640
         width: 16
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,7 +163,7 @@ TextureImporter:
         x: 80
         y: 640
         width: 16
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,7 +184,7 @@ TextureImporter:
         x: 128
         y: 640
         width: 16
-        height: 16
+        height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,7 +205,7 @@ TextureImporter:
         x: 176
         y: 640
         width: 16
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,7 +226,7 @@ TextureImporter:
         x: 224
         y: 640
         width: 16
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,7 +247,7 @@ TextureImporter:
         x: 272
         y: 640
         width: 16
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,7 +268,7 @@ TextureImporter:
         x: 320
         y: 640
         width: 16
-        height: 16
+        height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,7 +289,7 @@ TextureImporter:
         x: 368
         y: 640
         width: 16
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,7 +310,7 @@ TextureImporter:
         x: 32
         y: 592
         width: 16
-        height: 16
+        height: 14
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,7 +331,7 @@ TextureImporter:
         x: 73
         y: 592
         width: 23
-        height: 16
+        height: 14
       alignment: 9
       pivot: {x: 0.6086957, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,7 +415,7 @@ TextureImporter:
         x: 270
         y: 592
         width: 18
-        height: 16
+        height: 15
       alignment: 9
       pivot: {x: 0.5555556, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -683,7 +709,7 @@ TextureImporter:
         x: 32
         y: 448
         width: 16
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -704,7 +730,7 @@ TextureImporter:
         x: 80
         y: 448
         width: 16
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -767,7 +793,7 @@ TextureImporter:
         x: 224
         y: 448
         width: 18
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -788,7 +814,7 @@ TextureImporter:
         x: 272
         y: 448
         width: 16
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -809,7 +835,7 @@ TextureImporter:
         x: 32
         y: 400
         width: 16
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -935,7 +961,7 @@ TextureImporter:
         x: 32
         y: 352
         width: 16
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1061,7 +1087,7 @@ TextureImporter:
         x: 80
         y: 304
         width: 16
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1082,7 +1108,7 @@ TextureImporter:
         x: 128
         y: 304
         width: 16
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1103,7 +1129,7 @@ TextureImporter:
         x: 176
         y: 304
         width: 17
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1382,64 +1408,64 @@ TextureImporter:
     nameFileIdTable:
       todd-sheet_0: 335616030
       todd-sheet_1: 789078763
-      todd-sheet_10: 228616572
-      todd-sheet_11: -1343744784
-      todd-sheet_12: -1014502883
-      todd-sheet_13: 1958584208
-      todd-sheet_14: 149685851
-      todd-sheet_15: -1513124121
-      todd-sheet_16: -1564161438
-      todd-sheet_17: 381113070
-      todd-sheet_18: 809606116
-      todd-sheet_19: 957664635
-      todd-sheet_2: 2075429553
-      todd-sheet_20: 617342753
-      todd-sheet_21: 17930681
-      todd-sheet_22: 668560626
-      todd-sheet_23: -1094777662
-      todd-sheet_24: -402217541
-      todd-sheet_25: -773474689
-      todd-sheet_26: 1829308617
-      todd-sheet_27: -310560193
-      todd-sheet_28: -800828074
-      todd-sheet_29: 416572653
-      todd-sheet_3: -364690412
-      todd-sheet_30: 794961302
-      todd-sheet_31: -1889841795
-      todd-sheet_32: 380696716
-      todd-sheet_33: -1573403882
-      todd-sheet_34: 1226945237
-      todd-sheet_35: 1293064738
-      todd-sheet_36: 826542061
-      todd-sheet_37: -1367864366
-      todd-sheet_38: 9881921
-      todd-sheet_39: -1502771574
-      todd-sheet_4: 948485591
-      todd-sheet_40: -2065238516
-      todd-sheet_41: -1618212548
-      todd-sheet_42: -1566219100
-      todd-sheet_43: 2038430647
-      todd-sheet_44: 787752534
-      todd-sheet_45: 1979405498
-      todd-sheet_46: 988543876
-      todd-sheet_47: 1993068698
-      todd-sheet_48: 759405756
-      todd-sheet_49: 2016897688
-      todd-sheet_5: 623797652
-      todd-sheet_50: -1568736688
-      todd-sheet_51: 266214242
-      todd-sheet_52: -2012235754
-      todd-sheet_53: -1143294340
-      todd-sheet_54: 523689938
-      todd-sheet_55: -1670885974
-      todd-sheet_56: 746865288
-      todd-sheet_57: 1788897774
-      todd-sheet_58: -1652014011
-      todd-sheet_59: -1079168212
-      todd-sheet_6: -448596871
-      todd-sheet_7: -744173779
-      todd-sheet_8: -1521676672
-      todd-sheet_9: 143175842
+      todd-sheet_10: 2075429553
+      todd-sheet_11: -364690412
+      todd-sheet_12: 948485591
+      todd-sheet_13: 623797652
+      todd-sheet_14: -448596871
+      todd-sheet_15: -744173779
+      todd-sheet_16: -1521676672
+      todd-sheet_17: 143175842
+      todd-sheet_18: 228616572
+      todd-sheet_19: -1343744784
+      todd-sheet_2: -1014502883
+      todd-sheet_20: 1958584208
+      todd-sheet_21: 149685851
+      todd-sheet_22: -1513124121
+      todd-sheet_23: -1564161438
+      todd-sheet_24: 381113070
+      todd-sheet_25: 809606116
+      todd-sheet_26: 957664635
+      todd-sheet_27: 617342753
+      todd-sheet_28: 17930681
+      todd-sheet_29: 668560626
+      todd-sheet_3: -1094777662
+      todd-sheet_30: -402217541
+      todd-sheet_31: -773474689
+      todd-sheet_32: 1829308617
+      todd-sheet_33: -310560193
+      todd-sheet_34: -800828074
+      todd-sheet_35: 416572653
+      todd-sheet_36: 794961302
+      todd-sheet_37: -1889841795
+      todd-sheet_38: 380696716
+      todd-sheet_39: -1573403882
+      todd-sheet_4: 1226945237
+      todd-sheet_40: 1293064738
+      todd-sheet_41: 826542061
+      todd-sheet_42: -1367864366
+      todd-sheet_43: 9881921
+      todd-sheet_44: -1502771574
+      todd-sheet_45: -2065238516
+      todd-sheet_46: -1618212548
+      todd-sheet_47: -1566219100
+      todd-sheet_48: 2038430647
+      todd-sheet_49: 787752534
+      todd-sheet_5: 1979405498
+      todd-sheet_50: 988543876
+      todd-sheet_51: 1993068698
+      todd-sheet_52: 759405756
+      todd-sheet_53: 2016897688
+      todd-sheet_54: -1568736688
+      todd-sheet_55: 266214242
+      todd-sheet_56: -2012235754
+      todd-sheet_57: -1143294340
+      todd-sheet_58: 523689938
+      todd-sheet_59: -1670885974
+      todd-sheet_6: 746865288
+      todd-sheet_7: 1788897774
+      todd-sheet_8: -1652014011
+      todd-sheet_9: -1079168212
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

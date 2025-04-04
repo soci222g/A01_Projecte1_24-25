@@ -27,6 +27,7 @@ public class atack : MonoBehaviour
     Transform playerTR;
     [SerializeField]
     Rigidbody2D playerRB;
+    [SerializeField] float offset;
     actionState state;
 
     // Start is called before the first frame update
@@ -55,34 +56,11 @@ public class atack : MonoBehaviour
         //make downHitbox be under player
         if (playerSR.flipY == true)
         {
-            downHitbox.offset = new Vector2(0, 1.6f);
+            downHitbox.offset = new Vector2(0, offset);
         }
         else
         {
-            downHitbox.offset = new Vector2(0, -1.6f);
-        }
-        
-        if (onCooldown) // Cooldown del ataque
-        {
-
-            countCooldown++;
-            atackDurationCounter++;
-           
-            if (countCooldown == atackCooldown)
-            {
-                countCooldown = 0;
-                onCooldown = false;
-            }
-            if (atackDurationCounter >= atackDuration)
-            {
-                latHitbox.enabled = false;
-                downHitbox.enabled = false;
-                animator.SetBool("IsAtack", false);
-                state.endAction();
-            }
-
-            
-
+            downHitbox.offset = new Vector2(0, -offset);
         }
 
     }
@@ -91,7 +69,7 @@ public class atack : MonoBehaviour
     {
     
 
-        if (Input.GetKeyDown("v") && !onCooldown && state.getActionState()) //check input and cooldown
+        if (Input.GetMouseButtonDown(0) && !onCooldown && state.getActionState()) //check input and cooldown
         {
             state.startAction();
 
@@ -115,8 +93,6 @@ public class atack : MonoBehaviour
 
         
     }
-
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -148,6 +124,29 @@ public class atack : MonoBehaviour
         }
     }
 
+    public void lat_hitbox_deactivate()
+    {
+        latHitbox.enabled = false;
+    }
 
+    public void down_hitbox_deactivate()
+    {
+        downHitbox.enabled = false;
+    }
 
+    public void cooldown_off()
+    {
+        onCooldown = false;
+        state.endAction();
+    }
+
+    public void atk_anim()
+    {
+        animator.SetBool("IsAtack", false);
+    }
+
+    public void air_atk_anim()
+    {
+        animator.SetBool("IsAirAtack", false);
+    }
 }

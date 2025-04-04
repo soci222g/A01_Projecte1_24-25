@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - bomb
   - atk
+  - key
   layers:
   - Default
   - TransparentFX
@@ -40,8 +41,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - ColisionCamara
+  - Camara
   - 
   m_SortingLayers:
   - name: Default
