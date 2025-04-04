@@ -386,8 +386,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00000023841858, y: -0.11263442}
-  m_Size: {x: 1.4041591, y: 1.4041591}
+  m_Offset: {x: 0, y: -0.013391018}
+  m_Size: {x: 1.3810959, y: 1.3984869}
   m_Direction: 0
 --- !u!114 &6548420688412416596
 MonoBehaviour:
@@ -558,7 +558,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 536870912
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -572,9 +572,9 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00000023841858, y: -0.11263442}
-  m_Size: {x: 1.4041591, y: 1.4041591}
+  m_Offset: {x: 0, y: -0.013391018}
+  m_Size: {x: 1.3810959, y: 1.3984869}
   m_Direction: 0
