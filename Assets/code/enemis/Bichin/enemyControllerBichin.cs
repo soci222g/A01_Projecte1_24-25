@@ -22,6 +22,8 @@ public class enemyControllerBichin : MonoBehaviour
     [SerializeField] private int collisionCooldown = 50;
     private bool detected = false;
 
+    [SerializeField] private float knock = 1000;
+
     private Rigidbody2D rb;
     private Animator animator;
 
@@ -137,6 +139,12 @@ public class enemyControllerBichin : MonoBehaviour
         {
             animator.SetBool("onColide", false); // Volver a estado normal
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        rb.velocity = new Vector2(0, 0);
+        rb.AddForce(transform.right*5000);
     }
 
     void OnDrawGizmosSelected()
