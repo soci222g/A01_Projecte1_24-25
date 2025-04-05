@@ -34217,6 +34217,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6110573148030064707, guid: 188801015a014e84984c97087d9b0734, type: 3}
+      propertyPath: knock
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110573148030064707, guid: 188801015a014e84984c97087d9b0734, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 2048066416}

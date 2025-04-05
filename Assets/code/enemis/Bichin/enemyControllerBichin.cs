@@ -20,7 +20,11 @@ public class enemyControllerBichin : MonoBehaviour
     private bool onCooldown = false;
     [SerializeField] private float countCooldown;
     [SerializeField] private int collisionCooldown = 50;
+
+    private bool puedePerseguir = true;
+
     private bool detected = false;
+
 
     [SerializeField] private float knock = 1000;
 
@@ -62,6 +66,7 @@ public class enemyControllerBichin : MonoBehaviour
 
     private void PerseguirJugador()
     {
+        
         Vector2 direction = (player.position - transform.position).normalized;
         currentSpeed = Mathf.Lerp(currentSpeed, chaseSpeed, acceleration * Time.fixedDeltaTime);
         rb.velocity = new Vector2(direction.x * currentSpeed, rb.velocity.y);
@@ -129,22 +134,38 @@ public class enemyControllerBichin : MonoBehaviour
         {
             onCooldown = true;
             chaseSpeed = 0f;
-            animator.SetTrigger("onColide"); // Activar animación de colisión
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("player"))
-        {
-            animator.SetBool("onColide", false); // Volver a estado normal
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        rb.velocity = new Vector2(0, 0);
-        rb.AddForce(transform.right*5000);
+        chaseSpeed = 0f;
+        if(transform.position.x > player.position.x)
+        {
+            rb.AddForce(transform.right * knock);
+        }
+        else
+        {
+            rb.AddForce(transform.right * -knock);
+        }
+        
+        animator.SetTrigger("onColide"); // Activar animación de colisión
+        puedePerseguir = false;
+    }
+
+    void checkPersecution()
+    {
+        puedePerseguir = true;
+    }
+
+    void animationApagada()
+    {
+        animator.SetBool("onColide", false); // Volver a estado normal
+    }
+
+    void chaseSpeedReset()
+    {
+        chaseSpeed = 5f;
     }
 
     void OnDrawGizmosSelected()
