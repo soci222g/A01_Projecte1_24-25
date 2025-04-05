@@ -92,15 +92,15 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.5833333
-    functionName: cooldown_off
+  - time: 0.56666666
+    functionName: air_atk_anim
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.5833333
-    functionName: air_atk_anim
+  - time: 0.56666666
+    functionName: cooldown_off
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
