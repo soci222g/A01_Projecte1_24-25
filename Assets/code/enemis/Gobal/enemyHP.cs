@@ -62,7 +62,7 @@ public class EnemyHP : MonoBehaviour
         if (randNum < dropChance)
         {
             Debug.Log("Dropping heal item.");
-            Instantiate(dropHeal, transform.position - new Vector3(0, 0.5f, 0), transform.rotation);
+            Instantiate(dropHeal, transform.position - new Vector3(0, -0.3f, 0), transform.rotation);
         }
 
         // Esperar un frame para asegurar que la animación está activa antes de obtener su duración

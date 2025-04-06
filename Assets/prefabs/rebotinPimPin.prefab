@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5416603001517450582}
   - component: {fileID: 2310767670183655862}
   - component: {fileID: 8987172579097706783}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: rebotinPimPin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7771758230574770799
 SpriteRenderer:
@@ -198,4 +198,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   bounce: 750
-  bigBounce: 50
