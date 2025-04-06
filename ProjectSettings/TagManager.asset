@@ -3,14 +3,27 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - spikes
+  - player
+  - enemy
+  - Enemy
+  - bomb
+  - atk
+  - key
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
+  - Paredes
+  - Suelos
+  - 
+  - player
+  - enemy
+  - healDrop
   - 
   - 
   - 
@@ -28,14 +41,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - ColisionCamara
+  - Camara
   - 
   m_SortingLayers:
   - name: Default
