@@ -17,6 +17,7 @@ public class Pause_menu : MonoBehaviour
     {
         
         Pause_Canva.SetActive(false);
+        Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
     }
 

@@ -76,7 +76,7 @@ public class EnemyHP : MonoBehaviour
             }
             else
             {
-                Instantiate(dropHeal, transform.position - new Vector3(0, -0.5f, 0), transform.rotation);
+                Instantiate(dropHeal, transform.position - new Vector3(0, 0, 0), transform.rotation);
             }
             
         }
