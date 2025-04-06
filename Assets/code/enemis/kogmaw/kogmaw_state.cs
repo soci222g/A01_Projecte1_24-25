@@ -37,8 +37,6 @@ public class kogmaw_state : MonoBehaviour
         //calc player dist
         distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        Debug.Log(distanceToPlayer);
-
         if (state == kogmawState.Idle)
         {
             animator.SetBool("hide", false);

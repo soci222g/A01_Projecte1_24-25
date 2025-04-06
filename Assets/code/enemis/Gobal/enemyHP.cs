@@ -13,7 +13,7 @@ public class EnemyHP : MonoBehaviour
     private int HP;
 
 
-    private int dropChance = 60;
+    private int dropChance = 100;
 
     private Animator animator;
 
@@ -62,7 +62,23 @@ public class EnemyHP : MonoBehaviour
         if (randNum < dropChance)
         {
             Debug.Log("Dropping heal item.");
-            Instantiate(dropHeal, transform.position - new Vector3(0, -0.5f, 0), transform.rotation);
+            if (this.TryGetComponent<kogmaw_state>(out kogmaw_state state))
+            {
+                if (transform.rotation.z == 0)
+                {
+                    Instantiate(dropHeal, transform.position - new Vector3(0, -0.5f, 0), transform.rotation);
+                }
+                else
+                {
+                    Instantiate(dropHeal, transform.position - new Vector3(0, +0.5f, 0), transform.rotation);
+                }
+               
+            }
+            else
+            {
+                Instantiate(dropHeal, transform.position - new Vector3(0, -0.5f, 0), transform.rotation);
+            }
+            
         }
 
         // Esperar un frame para asegurar que la animación está activa antes de obtener su duración
