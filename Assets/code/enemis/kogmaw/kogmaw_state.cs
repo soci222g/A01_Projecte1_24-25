@@ -109,7 +109,7 @@ public class kogmaw_state : MonoBehaviour
 
     void kogmaw_die()
     {
-        animator.SetBool("muere", false);
+        hurtBox.enabled = true;
     }
 }
 
