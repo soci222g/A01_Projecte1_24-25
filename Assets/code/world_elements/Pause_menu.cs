@@ -9,32 +9,37 @@ public class Pause_menu : MonoBehaviour
     private GameObject Pause_Canva;
     [SerializeField]
     private GameObject HUD;
-
+    [SerializeField]
+    private atack atack;
 
     private bool isPaused;
     void Start()
     {
+        
         Pause_Canva.SetActive(false);
-      
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("escape") && isPaused == false)
+        if (Input.GetKeyDown("escape") )
         {
-            isPaused = true;
-            Time.timeScale = 0;
-            Pause_Canva.SetActive(true);
-            HUD.SetActive(false);
-
+            if (isPaused == false)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                isPaused = true;
+                Time.timeScale = 0f;
+                Pause_Canva.SetActive(true);
+                HUD.SetActive(false);
+                atack.enabled = false;
+            }
+            else
+            {
+                resumePause();
+            }
         }
-        else if(Input.GetKeyDown("escape") && isPaused == true)
-        {
-            resumePause();
-        }
-
-
+  
     }
 
     public void resumePause()
@@ -42,8 +47,9 @@ public class Pause_menu : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1;
         Pause_Canva.SetActive(false);
-        
+        Cursor.lockState = CursorLockMode.Locked;
         HUD.SetActive(true);
+        atack.enabled = true;
     }
 
     public void MainMenuScean()

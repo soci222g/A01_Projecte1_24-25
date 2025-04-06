@@ -21,6 +21,13 @@ public class enemyControllerBichin : MonoBehaviour
     [SerializeField] private float countCooldown;
     [SerializeField] private int collisionCooldown = 50;
 
+    private bool puedePerseguir = true;
+
+    private bool detected = false;
+
+
+    [SerializeField] private float knock = 1000;
+
     private Rigidbody2D rb;
     private Animator animator;
 
@@ -46,21 +53,20 @@ public class enemyControllerBichin : MonoBehaviour
                 animator.SetBool("onColide", false);
             }
         }
+        if (distanceToPlayer < detectionRadius)
+        {
+            PerseguirJugador();
+            detected = true;
+        }
         else
         {
-            if (distanceToPlayer < detectionRadius)
-            {
-                PerseguirJugador();
-            }
-            else
-            {
-                Patrullar();
-            }
+            Patrullar();
         }
     }
 
     private void PerseguirJugador()
     {
+        
         Vector2 direction = (player.position - transform.position).normalized;
         currentSpeed = Mathf.Lerp(currentSpeed, chaseSpeed, acceleration * Time.fixedDeltaTime);
         rb.velocity = new Vector2(direction.x * currentSpeed, rb.velocity.y);
@@ -68,6 +74,19 @@ public class enemyControllerBichin : MonoBehaviour
         if ((direction.x > 0 && !moviendoDerecha) || (direction.x < 0 && moviendoDerecha))
         {
             Girar();
+        }
+
+        RaycastHit2D informacionSuelo = Physics2D.Raycast(controladorSuelo.position, Vector2.down, distanciaDeteccion, capaSuelo);
+        Debug.DrawRay(controladorSuelo.position, Vector2.down * distanciaDeteccion, Color.red);
+
+        Vector2 direccionPared = moviendoDerecha ? Vector2.right : Vector2.left;
+        RaycastHit2D informacionPared = Physics2D.Raycast(controladorPared.position, direccionPared, distanciaDeteccion, capaPared);
+        Debug.DrawRay(controladorPared.position, direccionPared * distanciaDeteccion, Color.green);
+
+        if (informacionSuelo.collider == null || informacionPared.collider != null)
+        {
+            Girar();
+            rb.velocity = new Vector2(0, 0);
         }
     }
 
@@ -81,7 +100,7 @@ public class enemyControllerBichin : MonoBehaviour
         RaycastHit2D informacionPared = Physics2D.Raycast(controladorPared.position, direccionPared, distanciaDeteccion, capaPared);
         Debug.DrawRay(controladorPared.position, direccionPared * distanciaDeteccion, Color.green);
 
-
+        // Detectar el suelo o el techo según el estado
         if (GetComponent<grabityBichin>().getIsFleep())
         {
             RaycastHit2D informacionTecho = Physics2D.Raycast(controladorTecho.position, Vector2.up, distanciaDeteccion, capaSuelo);
@@ -100,11 +119,6 @@ public class enemyControllerBichin : MonoBehaviour
                 Girar();
             }
         }
-
-
-
-        // Si no hay suelo o hay una pared, girar
-       
     }
 
     private void Girar()
@@ -115,20 +129,43 @@ public class enemyControllerBichin : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.gameObject.name + this.name);
         if (collision.gameObject.CompareTag("player"))
         {
             onCooldown = true;
             chaseSpeed = 0f;
-            animator.SetTrigger("onColide"); // Activar animación de colisión
         }
     }
 
-    void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("player"))
+        chaseSpeed = 0f;
+        if(transform.position.x > player.position.x)
         {
-            animator.SetBool("onColide", false); // Volver a estado normal
+            rb.AddForce(transform.right * knock);
         }
+        else
+        {
+            rb.AddForce(transform.right * -knock);
+        }
+        
+        animator.SetTrigger("onColide"); // Activar animación de colisión
+        puedePerseguir = false;
+    }
+
+    void checkPersecution()
+    {
+        puedePerseguir = true;
+    }
+
+    void animationApagada()
+    {
+        animator.SetBool("onColide", false); // Volver a estado normal
+    }
+
+    void chaseSpeedReset()
+    {
+        chaseSpeed = 5f;
     }
 
     void OnDrawGizmosSelected()
