@@ -106,10 +106,8 @@ public class atack : MonoBehaviour
 
             playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
 
-            Debug.Log(gD.GetGroundDetect());
             if (gD.GetGroundDetect() == false)
             {
-                Debug.Log("is falling");
                 if (!playerSR.flipY)
                 {
                     Debug.Log("bouncing");
@@ -122,11 +120,30 @@ public class atack : MonoBehaviour
 
             }
         }
+        else if (collision.gameObject.tag == "bounce")
+        {
+            playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
+
+            if (!playerSR.flipY)
+            {
+                Debug.Log("bouncing");
+                playerRB.AddForce(transform.up * bounce);
+            }
+            else
+            {
+                playerRB.AddForce(transform.up * -bounce);
+            }
+        }
     }
 
     public void lat_hitbox_deactivate()
     {
         latHitbox.enabled = false;
+    }
+
+    public void down_hitbox_activate()
+    {
+        downHitbox.enabled = true;
     }
 
     public void down_hitbox_deactivate()
