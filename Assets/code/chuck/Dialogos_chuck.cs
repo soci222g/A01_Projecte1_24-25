@@ -18,6 +18,8 @@ public class Dialogos_chuck : MonoBehaviour
     [SerializeField]
     private bool ActivateTexT;
 
+    [SerializeField] private GameObject square;
+
 
     private void Awake()
     {
@@ -50,9 +52,11 @@ public class Dialogos_chuck : MonoBehaviour
             {
                 ActivateTexT = false;
                 CurrentTimeText += Time.deltaTime;
+                square.SetActive(false);
             }
             else{
                 CurrentTimeText += Time.deltaTime;
+                
             }
         }
 
