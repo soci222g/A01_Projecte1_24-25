@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7921485759184738381
 Transform:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 89295e23502ded6409667d245a775b71, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fabf7c82ecb21714e95a170aaf52d5e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,8 +121,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0302, y: -0.0699}
-  m_SizeDelta: {x: 7.892, y: 4.3794}
+  m_AnchoredPosition: {x: -0.0428, y: 0.22}
+  m_SizeDelta: {x: 15, y: 4.149}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &3150310774828980323
 MeshRenderer:
@@ -195,8 +195,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4282329925
+  m_fontColor: {r: 0.27058825, g: 0.16862746, b: 0.24705884, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -213,8 +213,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
+  m_fontSize: 6
+  m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.6162331, y: 0.65731585, z: 0.69839835, w: 0.5340694}
+  m_margin: {x: 4.1460533, y: 0.99338996, z: 4.230822, w: 0.2695825}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -270,7 +270,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994e695eb96928441b1669015c7523ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BloqueTexto: []
+  BloqueTexto:
+  - Hey, Todd. Finally awake. To move press [A] and [D].
+  - It seems like you have gotten a new power since the accident
+  - Press [SPACE] to activate it and travel through this caves.
+  - But be careful with Larry The Magician's minions, they are dangerous.
+  - To attack, press [LEFT-CLICK] and slash them in half.
   CurrentTextCount: 0
   CurrentTimeText: 0
   ActivateTexT: 0
@@ -353,7 +358,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -1025339395, guid: 93fe86ffcf0619a42bc5dd58b0474866, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.4, y: 1.9}
@@ -398,4 +403,4 @@ MonoBehaviour:
   player: {fileID: 0}
   dialeg: {fileID: 1554299892189346591}
   square: {fileID: 1537360787743946624}
-  detectionRadius: 5
+  detectionRadius: 14

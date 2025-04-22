@@ -30835,66 +30835,38 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1554299892189346591, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1558658987946893386, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 15
+      value: 10.5548
       objectReference: {fileID: 0}
     - target: {fileID: 1558658987946893386, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.1
+      propertyPath: m_SizeDelta.y
+      value: 4.0667
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558658987946893386, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 1558658987946893386, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057181752042177209, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: m_fontSize
-      value: 6
+      value: 0.61
       objectReference: {fileID: 0}
     - target: {fileID: 3057181752042177209, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: m_margin.w
-      value: 0.2695825
+      value: -0.15847814
       objectReference: {fileID: 0}
     - target: {fileID: 3057181752042177209, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: m_margin.x
-      value: 4.1460533
+      value: 2.5819838
       objectReference: {fileID: 0}
     - target: {fileID: 3057181752042177209, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: m_margin.y
-      value: 0.99338996
+      value: 0.69703996
       objectReference: {fileID: 0}
     - target: {fileID: 3057181752042177209, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: m_margin.z
-      value: 4.230822
+      value: 2.4856513
       objectReference: {fileID: 0}
-    - target: {fileID: 3057181752042177209, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057181752042177209, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -8073280672886927695, guid: 359af1e37010f714c90ef231dc01a79f, type: 2}
-    - target: {fileID: 3057181752042177209, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057181752042177209, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057181752042177209, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3150310774828980323, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: -8073280672886927695, guid: 359af1e37010f714c90ef231dc01a79f, type: 2}
     - target: {fileID: 4394608028966539125, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -30939,57 +30911,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7460486228313371459, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7475092602193181299, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: chuck
-      value: 
-      objectReference: {fileID: 1012202467}
-    - target: {fileID: 7475092602193181299, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: dialeg
-      value: 
-      objectReference: {fileID: 1001270145}
     - target: {fileID: 7475092602193181299, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1508450702}
-    - target: {fileID: 7475092602193181299, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: detectionRadius
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 8762786205812745278, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: m_Name
       value: Chuck
-      objectReference: {fileID: 0}
-    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: BloqueTexto.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: BloqueTexto.Array.data[0]
-      value: Hey, Todd. Finally awake. To move press [A] and [D].
-      objectReference: {fileID: 0}
-    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: BloqueTexto.Array.data[1]
-      value: It seems like you have gotten a new power since the accident
-      objectReference: {fileID: 0}
-    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: BloqueTexto.Array.data[2]
-      value: Press [SPACE] to activate it and travel through this caves.
-      objectReference: {fileID: 0}
-    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: BloqueTexto.Array.data[3]
-      value: But be careful with Larry The Magician's minions, they are dangerous.
-      objectReference: {fileID: 0}
-    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: BloqueTexto.Array.data[4]
-      value: To attack, press [LEFT-CLICK] and slash them in half.
-      objectReference: {fileID: 0}
-    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-      propertyPath: BloqueTexto.Array.data[5]
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34264,11 +34192,6 @@ Transform:
   m_Father: {fileID: 539263008}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1001270145 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1554299892189346591, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-  m_PrefabInstance: {fileID: 401089952}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1001948963
 GameObject:
   m_ObjectHideFlags: 0
@@ -34300,11 +34223,6 @@ Transform:
   m_Father: {fileID: 503148782}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1012202467 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4394608028966539125, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
-  m_PrefabInstance: {fileID: 401089952}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1037390956
 PrefabInstance:
   m_ObjectHideFlags: 0
