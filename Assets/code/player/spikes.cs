@@ -17,6 +17,9 @@ public class spikes : MonoBehaviour
 
     private string spikeTag = "spikes";
 
+    [SerializeField] GameObject SpawnPoint;
+    [SerializeField] private float speed;
+
     private void Awake()
     {
         CurrentTimePauseMovement = 0;
@@ -31,6 +34,7 @@ public class spikes : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.O))
         {
             spikeTag = "a";
+            
         }
     }
 
@@ -60,8 +64,11 @@ public class spikes : MonoBehaviour
             {
                 this.gameObject.GetComponent<hp>().setHP(1);
 
-
-                this.transform.position = resPown.position;
+                //if (muerto)
+                //{
+                //    this.transform.position = Vector3.MoveTowards(this.transform.position, SpawnPoint.transform.position, speed);
+                //}
+                
 
                 if (GetComponent<Fleep>().GetFleepControler() == false)
                 {
