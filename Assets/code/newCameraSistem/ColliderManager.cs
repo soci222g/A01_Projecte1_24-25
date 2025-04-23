@@ -16,18 +16,36 @@ public class ColliderManager : MonoBehaviour
     [SerializeField] private GameObject BackColliderForward;
     [SerializeField] private GameObject BackColliderBackwards;
 
-
-
-
+    [SerializeField] private GameObject DefoultCollider;
 
     private void Awake()
     {
+        if (NextColliderForward == null)
+        {
+            NextColliderForward = DefoultCollider;
+        }
+        if (NextColliderBackwards == null)
+        {
+            NextColliderBackwards = DefoultCollider;  
+        }
+        if (BackColliderForward == null)
+        {
+            BackColliderForward = DefoultCollider;
+        }
+        if (BackColliderBackwards == null)
+        {
+            BackColliderBackwards = DefoultCollider;
+        }
+
+        if (SelfcolliderForward == null)
+            SelfcolliderForward = DefoultCollider;
+        if (SelfColliderBackwards == null)
+            SelfColliderBackwards = DefoultCollider;
+
         if (SelfcolliderForward != null)
             SelfcolliderForward.SetActive(false);
         if(SelfColliderBackwards != null)
             SelfColliderBackwards.SetActive(false);
-
-
     }
 
     public void ActivateSelf()

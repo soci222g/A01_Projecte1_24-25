@@ -1526,6 +1526,7 @@ MonoBehaviour:
   NextColliderBackwards: {fileID: 0}
   BackColliderForward: {fileID: 0}
   BackColliderBackwards: {fileID: 0}
+  DefoultCollider: {fileID: 106551224}
 --- !u!114 &1392116503 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4964667710907403912, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
@@ -1585,9 +1586,10 @@ MonoBehaviour:
   SelfcolliderForward: {fileID: 0}
   SelfColliderBackwards: {fileID: 1162797651}
   NextColliderForward: {fileID: 0}
-  NextColliderBackwards: {fileID: 1970924158}
+  NextColliderBackwards: {fileID: 0}
   BackColliderForward: {fileID: 0}
   BackColliderBackwards: {fileID: 0}
+  DefoultCollider: {fileID: 106551224}
 --- !u!1 &1556005651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,6 +1749,7 @@ MonoBehaviour:
   NextColliderBackwards: {fileID: 1162797651}
   BackColliderForward: {fileID: 2132951284}
   BackColliderBackwards: {fileID: 0}
+  DefoultCollider: {fileID: 106551224}
 --- !u!1 &1970924158
 GameObject:
   m_ObjectHideFlags: 0
