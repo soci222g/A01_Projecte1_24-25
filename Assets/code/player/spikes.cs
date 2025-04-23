@@ -86,6 +86,8 @@ public class spikes : MonoBehaviour
                 FleepCode.enabled = false;
                 Animator.SetBool("pincho", true);
 
+                rb.velocity = new Vector2(0, 0);
+
                 Vector3 direction = this.transform.position - resPown.position;
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                 this.transform.rotation = Quaternion.Euler(0, 0, angle);
