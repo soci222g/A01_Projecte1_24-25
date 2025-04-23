@@ -22,15 +22,15 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -1564161438, guid: c184bf8f5f79768499fd1b52360f1ee0, type: 3}
-    - time: 0.11666667
+    - time: 0.083333336
       value: {fileID: 381113070, guid: c184bf8f5f79768499fd1b52360f1ee0, type: 3}
-    - time: 0.23333333
+    - time: 0.16666667
       value: {fileID: 809606116, guid: c184bf8f5f79768499fd1b52360f1ee0, type: 3}
-    - time: 0.35
+    - time: 0.28333333
       value: {fileID: 957664635, guid: c184bf8f5f79768499fd1b52360f1ee0, type: 3}
-    - time: 0.46666667
+    - time: 0.4
       value: {fileID: 617342753, guid: c184bf8f5f79768499fd1b52360f1ee0, type: 3}
-    - time: 0.5833333
+    - time: 0.51666665
       value: {fileID: 617342753, guid: c184bf8f5f79768499fd1b52360f1ee0, type: 3}
     attribute: m_Sprite
     path: 
@@ -65,7 +65,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.59999996
+    m_StopTime: 0.5333333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -85,21 +85,28 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.46666667
+  - time: 0.16666667
+    functionName: down_hitbox_activate
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.4
     functionName: down_hitbox_deactivate
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.56666666
+  - time: 0.5
     functionName: air_atk_anim
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.56666666
+  - time: 0.5
     functionName: cooldown_off
     data: 
     objectReferenceParameter: {fileID: 0}

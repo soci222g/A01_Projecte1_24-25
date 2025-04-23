@@ -86,6 +86,8 @@ public class Fleep : MonoBehaviour
         fleepControler = !fleepControler;
         rb.gravityScale *= -1;
         sr.flipY = !sr.flipY;
-        rb.velocity = new Vector2(rb.velocity.x, 0);
+        float newVerticalVelocity = rb.velocity.y * 0.1f;
+        Debug.Log(newVerticalVelocity);
+        rb.velocity = new Vector2(rb.velocity.x, newVerticalVelocity);
     }
 }

@@ -52,6 +52,14 @@ public class GroundDetector : MonoBehaviour
             {
                 count++;
 
+                if (hit.collider.tag == "movPlat")
+                {
+                    transform.parent = hit.transform;
+                }
+                else
+                {
+                    transform.parent = null;
+                }
 
             }
 

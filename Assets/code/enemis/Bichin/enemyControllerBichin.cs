@@ -21,6 +21,9 @@ public class enemyControllerBichin : MonoBehaviour
     [SerializeField] private float countCooldown;
     [SerializeField] private int collisionCooldown = 50;
 
+    [SerializeField] private float countCooldown2;
+    [SerializeField] private int Cooldown = 500;
+
     private bool puedePerseguir = true;
 
     private bool detected = false;
@@ -53,6 +56,20 @@ public class enemyControllerBichin : MonoBehaviour
                 animator.SetBool("onColide", false);
             }
         }
+        if (puedePerseguir == false)
+        {
+            countCooldown2++;
+            if (countCooldown2 >= Cooldown)
+            {
+                countCooldown2 = 0;
+                onCooldown = false;
+                chaseSpeed = 5f;
+            }
+            else
+            {
+                chaseSpeed = 0f;
+            }
+        }
         if (distanceToPlayer < detectionRadius)
         {
             PerseguirJugador();
@@ -76,17 +93,29 @@ public class enemyControllerBichin : MonoBehaviour
             Girar();
         }
 
-        RaycastHit2D informacionSuelo = Physics2D.Raycast(controladorSuelo.position, Vector2.down, distanciaDeteccion, capaSuelo);
-        Debug.DrawRay(controladorSuelo.position, Vector2.down * distanciaDeteccion, Color.red);
-
         Vector2 direccionPared = moviendoDerecha ? Vector2.right : Vector2.left;
         RaycastHit2D informacionPared = Physics2D.Raycast(controladorPared.position, direccionPared, distanciaDeteccion, capaPared);
         Debug.DrawRay(controladorPared.position, direccionPared * distanciaDeteccion, Color.green);
 
-        if (informacionSuelo.collider == null || informacionPared.collider != null)
+        if (GetComponent<grabityBichin>().getIsFleep())
         {
-            Girar();
-            rb.velocity = new Vector2(0, 0);
+            RaycastHit2D informacionTecho = Physics2D.Raycast(controladorTecho.position, Vector2.up, distanciaDeteccion, capaSuelo);
+            Debug.DrawRay(controladorTecho.position, Vector2.up * distanciaDeteccion, Color.red);
+            if (informacionTecho.collider == null || informacionPared.collider != null)
+            {
+                Girar();
+                rb.velocity = new Vector2(0, 0);
+            }
+        }
+        else
+        {
+            RaycastHit2D informacionSuelo = Physics2D.Raycast(controladorSuelo.position, Vector2.down, distanciaDeteccion, capaSuelo);
+            Debug.DrawRay(controladorSuelo.position, Vector2.down * distanciaDeteccion, Color.red);
+            if (informacionSuelo.collider == null || informacionPared.collider != null)
+            {
+                Girar();
+                rb.velocity = new Vector2(0, 0);
+            }
         }
     }
 
@@ -139,18 +168,34 @@ public class enemyControllerBichin : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        chaseSpeed = 0f;
-        if(transform.position.x > player.position.x)
+        if(collision.gameObject.tag == "atk")
         {
-            rb.AddForce(transform.right * knock);
-        }
-        else
-        {
-            rb.AddForce(transform.right * -knock);
-        }
-        
-        animator.SetTrigger("onColide"); // Activar animación de colisión
-        puedePerseguir = false;
+            if (GetComponent<grabityBichin>().getIsFleep())
+            {
+                if (transform.position.x < player.position.x)
+                {
+                    rb.AddForce(transform.right * -knock);
+                }
+                else
+                {
+                    rb.AddForce(transform.right * knock);
+                }
+            }
+            else
+            {
+                if (transform.position.x > player.position.x)
+                {
+                    rb.AddForce(transform.right * knock);
+                }
+                else
+                {
+                    rb.AddForce(transform.right * -knock);
+                }
+            }
+            chaseSpeed = 0f;
+            animator.SetTrigger("onColide"); // Activar animación de colisión
+            puedePerseguir = false;
+        } 
     }
 
     void checkPersecution()

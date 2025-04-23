@@ -27,6 +27,7 @@ public class camerabehavior : MonoBehaviour
         roomToGo = 0;
         currentRoom = 0;
         camera.transform.position = cameraPosition[0].position;
+        cameraPosition[0].GetComponent<ColliderManager>().ActivateSelf();
     }
 
     // Update is called once per frame
@@ -34,6 +35,7 @@ public class camerabehavior : MonoBehaviour
     {
         if (currentRoom != roomToGo)
         {
+            cameraPosition[roomToGo].GetComponent<ColliderManager>().ActivateSelf();
             Vector3 dir = cameraPosition[roomToGo].position - camera.transform.position;
             float distence = dir.magnitude;
             dir.Normalize();
@@ -44,6 +46,7 @@ public class camerabehavior : MonoBehaviour
             {
                 camera.transform.position = cameraPosition[roomToGo].position;
                 currentRoom = roomToGo;
+
                 
             }
         }

@@ -13,7 +13,7 @@ public class EnemyHP : MonoBehaviour
     private int HP;
 
 
-    private int dropChance = 60;
+    private int dropChance = 100;
 
     private Animator animator;
 
@@ -48,37 +48,53 @@ public class EnemyHP : MonoBehaviour
 
     void Die()
     {
-        if (isDead) return; // Evitar múltiples llamadas
+        if (isDead) return; // Evitar mï¿½ltiples llamadas
         isDead = true;
 
         Debug.Log("Enemy died, playing death animation.");
 
         int randNum = Random.Range(1, 100);
 
-        // Activar la animación de muerte
+        // Activar la animaciï¿½n de muerte
         animator.SetBool("muere", true);
 
-        // Dropear ítem si aplica
+        // Dropear ï¿½tem si aplica
         if (randNum < dropChance)
         {
             Debug.Log("Dropping heal item.");
-            Instantiate(dropHeal, transform.position - new Vector3(0, -0.5f, 0), transform.rotation);
+            if (this.TryGetComponent<kogmaw_state>(out kogmaw_state state))
+            {
+                if (transform.rotation.z == 0)
+                {
+                    Instantiate(dropHeal, transform.position - new Vector3(0, -0.5f, 0), transform.rotation);
+                }
+                else
+                {
+                    Instantiate(dropHeal, transform.position - new Vector3(0, +0.5f, 0), transform.rotation);
+                }
+               
+            }
+            else
+            {
+                Instantiate(dropHeal, transform.position - new Vector3(0, 0, 0), transform.rotation);
+            }
+            
         }
 
-        // Esperar un frame para asegurar que la animación está activa antes de obtener su duración
+        // Esperar un frame para asegurar que la animaciï¿½n estï¿½ activa antes de obtener su duraciï¿½n
         StartCoroutine(DestroyAfterAnimation());
     }
 
     IEnumerator DestroyAfterAnimation()
     {
-        // Esperar un frame para que el Animator procese la transición
+        // Esperar un frame para que el Animator procese la transiciï¿½n
         yield return null;
 
-        // Obtener la duración de la animación activa
+        // Obtener la duraciï¿½n de la animaciï¿½n activa
         float animDuration = animator.GetCurrentAnimatorStateInfo(0).length;
         Debug.Log(animator.GetCurrentAnimatorStateInfo(0).length);
 
-        // Destruir el objeto después de que termine la animación
+        // Destruir el objeto despuï¿½s de que termine la animaciï¿½n
         Destroy(gameObject, animDuration);
     }
 

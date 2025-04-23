@@ -11,6 +11,7 @@ TagManager:
   - bomb
   - atk
   - key
+  - movPlat
   layers:
   - Default
   - TransparentFX
