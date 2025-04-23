@@ -7,7 +7,7 @@ public class colliderFleep : MonoBehaviour
     [SerializeField]
     private bool CanFleep = true;
 
-    private float CanFleepTimer = 100;
+    private float CanFleepTimer = 5;
    
     private float FleepCurrentTimer = 0;
 
