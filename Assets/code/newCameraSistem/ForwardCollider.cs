@@ -14,17 +14,17 @@ public class ForwardCollider : MonoBehaviour
     {
         CollMan = GetComponentInParent<ColliderManager>();
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "player" || collision.gameObject.tag == "Player")
         {
-
             cam.setCurrenteRoom(1);
             cam.SetSpawnPoint(1);
             collision.gameObject.GetComponent<spikes>().SetSpawnPont(cam.GetSpawnPoint());
 
             CollMan.ActivateForward();
         }
+    
     }
+ 
 }

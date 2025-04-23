@@ -37,15 +37,19 @@ public class ColliderManager : MonoBehaviour
             BackColliderBackwards = DefoultCollider;
         }
 
-        if (SelfcolliderForward == null)
+        if( GetComponentInChildren<ForwardCollider>() != null)
+        SelfcolliderForward = GetComponentInChildren<ForwardCollider>().gameObject;
+        else
             SelfcolliderForward = DefoultCollider;
-        if (SelfColliderBackwards == null)
+        if (GetComponentInChildren<BackCameraCollider>() != null)
+            SelfColliderBackwards = GetComponentInChildren<BackCameraCollider>().gameObject;
+        else
             SelfColliderBackwards = DefoultCollider;
 
-        if (SelfcolliderForward != null)
-            SelfcolliderForward.SetActive(false);
-        if(SelfColliderBackwards != null)
-            SelfColliderBackwards.SetActive(false);
+
+        SelfcolliderForward.SetActive(false);
+        SelfColliderBackwards.SetActive(false);
+
     }
 
     public void ActivateSelf()
