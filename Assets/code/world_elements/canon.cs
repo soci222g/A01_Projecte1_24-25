@@ -14,14 +14,14 @@ public class canon : MonoBehaviour
     }
 
     [SerializeField] GameObject proj;
-    [SerializeField] private int counter;
+    [SerializeField] private int counter = 0;
     [SerializeField] private int shootTime;
     [SerializeField] shootDir dir;
 
 
     void Start()
     {
-        counter = 0;
+
     }
 
     // Update is called once per frame

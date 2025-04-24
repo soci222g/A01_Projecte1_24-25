@@ -38,8 +38,16 @@ public class proj : MonoBehaviour
    
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(gameObject);
+
+        hp hp;
+
+        if (collision.TryGetComponent<hp>(out hp))
+        {
+            hp.setHP(1);
+        }
     }
+
 }
