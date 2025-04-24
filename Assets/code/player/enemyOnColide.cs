@@ -36,6 +36,7 @@ public class enemyOnColide : MonoBehaviour
             Physics2D.IgnoreLayerCollision(9, 10);
             Debug.Log("ignaorar Colision");
             gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+           
         }
         else
         {
@@ -55,7 +56,7 @@ public class enemyOnColide : MonoBehaviour
             // collision.gameObject.GetComponent<Collider2D>().isTrigger = true;
             Physics2D.IgnoreLayerCollision(9,10);
             HP.setHP(1);
-
+            GetComponent<CameraShake>().ShakeCamera(0.2f, 0.2f);
 
         }
     }

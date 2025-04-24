@@ -4,48 +4,70 @@ using UnityEngine;
 
 public class ColliderManager : MonoBehaviour
 {
-    [Header("selfCollider")]
-    [SerializeField] private GameObject SelfcolliderForward;
-    [SerializeField] private GameObject SelfColliderBackwards;
+   
+     private GameObject SelfcolliderForward;
+     private GameObject SelfColliderBackwards;
 
     [Header("next Collider")]
-    [SerializeField] private GameObject NextColliderForward;
-    [SerializeField] private GameObject NextColliderBackwards;
+    [SerializeField] private GameObject NextParent;
+
+                       private GameObject NextColliderForward;
+                       private GameObject NextColliderBackwards;
 
     [Header("Back Collider")]
-    [SerializeField] private GameObject BackColliderForward;
-    [SerializeField] private GameObject BackColliderBackwards;
+    [SerializeField] private GameObject BackParent;
+
+    private GameObject BackColliderForward;
+    private GameObject BackColliderBackwards;
 
     [SerializeField] private GameObject DefoultCollider;
 
     private void Awake()
     {
-        if (NextColliderForward == null)
-        {
+        //referencia de los sigientes colliders
+        if (NextParent.GetComponentInChildren<ForwardCollider>() != null)
+            NextColliderForward = NextParent.GetComponentInChildren<ForwardCollider>().gameObject;
+        else
             NextColliderForward = DefoultCollider;
-        }
-        if (NextColliderBackwards == null)
-        {
-            NextColliderBackwards = DefoultCollider;  
-        }
-        if (BackColliderForward == null)
-        {
-            BackColliderForward = DefoultCollider;
-        }
-        if (BackColliderBackwards == null)
-        {
-            BackColliderBackwards = DefoultCollider;
-        }
 
-        if (SelfcolliderForward == null)
+
+        if (NextParent.GetComponentInChildren<BackCameraCollider>() != null)
+            NextColliderBackwards = NextParent.GetComponentInChildren<BackCameraCollider>().gameObject;
+        else
+            NextColliderBackwards = DefoultCollider;
+
+
+        //referencia a los anteriores colliders
+        if (BackParent.GetComponentInChildren<ForwardCollider>() != null)
+            BackColliderForward = BackParent.GetComponentInChildren<ForwardCollider>().gameObject;
+        else
+            BackColliderForward = DefoultCollider;
+
+
+        if (BackParent.GetComponentInChildren<BackCameraCollider>() != null)
+            BackColliderBackwards = BackParent.GetComponentInChildren<BackCameraCollider>().gameObject;
+        else
+            BackColliderBackwards = DefoultCollider;
+
+       //referencia a tus pripios colliders
+        if( GetComponentInChildren<ForwardCollider>() != null)
+        SelfcolliderForward = GetComponentInChildren<ForwardCollider>().gameObject;
+        else
             SelfcolliderForward = DefoultCollider;
-        if (SelfColliderBackwards == null)
+        if (GetComponentInChildren<BackCameraCollider>() != null)
+            SelfColliderBackwards = GetComponentInChildren<BackCameraCollider>().gameObject;
+        else
             SelfColliderBackwards = DefoultCollider;
 
-        if (SelfcolliderForward != null)
-            SelfcolliderForward.SetActive(false);
-        if(SelfColliderBackwards != null)
-            SelfColliderBackwards.SetActive(false);
+
+
+
+
+
+
+        SelfcolliderForward.SetActive(false);
+        SelfColliderBackwards.SetActive(false);
+
     }
 
     public void ActivateSelf()
@@ -72,10 +94,13 @@ public class ColliderManager : MonoBehaviour
         if (SelfcolliderForward != null)
             SelfcolliderForward.SetActive(false);
         if (SelfColliderBackwards != null)
-            SelfColliderBackwards.SetActive(false); 
+            SelfColliderBackwards.SetActive(false);
 
 
-            BackColliderForward.SetActive(true);
-            BackColliderBackwards.SetActive(true);
+        NextColliderForward.SetActive(false);
+        NextColliderBackwards.SetActive(false);
+
+        BackColliderForward.SetActive(true);
+        BackColliderBackwards.SetActive(true);
     }
 }
