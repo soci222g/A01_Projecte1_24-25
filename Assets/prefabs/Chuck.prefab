@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537360787743946624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.18, y: 4.62, z: 0.15}
+  m_LocalPosition: {x: 0.18, y: 4.62, z: 0.1}
   m_LocalScale: {x: 1.1411783, y: 1.1411783, z: 1.1411783}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fabf7c82ecb21714e95a170aaf52d5e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1b204a10c9b1e07448ce3d653a7e1df5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -112,7 +112,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554299892189346591}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 4.1460533, y: 0.99338996, z: 4.230822, w: 0.2695825}
+  m_margin: {x: 4.548453, y: 0.43003237, z: 4.364954, w: 0.2695825}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -270,12 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994e695eb96928441b1669015c7523ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BloqueTexto:
-  - Hey, Todd. Finally awake. To move press [A] and [D].
-  - It seems like you have gotten a new power since the accident
-  - Press [SPACE] to activate it and travel through this caves.
-  - But be careful with Larry The Magician's minions, they are dangerous.
-  - To attack, press [LEFT-CLICK] and slash them in half.
+  BloqueTexto: []
   CurrentTextCount: 0
   CurrentTimeText: 0
   ActivateTexT: 0
