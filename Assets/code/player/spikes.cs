@@ -24,6 +24,7 @@ public class spikes : MonoBehaviour
     private bool muerto = false;
 
     Rigidbody2D rb;
+    SpriteRenderer sr;
 
     [SerializeField] CapsuleCollider2D hb1;
     [SerializeField] CapsuleCollider2D hb2;
@@ -36,6 +37,7 @@ public class spikes : MonoBehaviour
         FleepCode = GetComponent<Fleep>();
         Animator = GetComponent<Animator>();
         rb = this.gameObject.GetComponent<Rigidbody2D>();
+        sr = this.gameObject.GetComponent<SpriteRenderer>();
     }
     private void Update()
     {
@@ -91,6 +93,8 @@ public class spikes : MonoBehaviour
                 Vector3 direction = this.transform.position - resPown.position;
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                 this.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+                this.sr.flipX = false;
 
                 if (GetComponent<Fleep>().GetFleepControler() == false)
                 {
