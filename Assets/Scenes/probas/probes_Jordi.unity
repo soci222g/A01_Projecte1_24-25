@@ -972,30 +972,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5121319973530832289, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1103854790}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
 --- !u!1 &1103854785 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5121319973530832289, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
   m_PrefabInstance: {fileID: 1103854784}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1103854790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103854785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 844a83a6d2e8cd243a6d1205c3676376, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 798532642}
-  Activate: 0
 --- !u!1 &1126611238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,7 +1520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d50af63533ae244b2181820a2f065a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextParent: {fileID: 0}
+  NextParent: {fileID: 1920729557}
   BackParent: {fileID: 0}
   DefoultCollider: {fileID: 106551224}
 --- !u!114 &1392116503 stripped
@@ -1597,7 +1580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextParent: {fileID: 0}
-  BackParent: {fileID: 0}
+  BackParent: {fileID: 1920729557}
   DefoultCollider: {fileID: 106551224}
 --- !u!1 &1556005651
 GameObject:
@@ -1752,8 +1735,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d50af63533ae244b2181820a2f065a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextParent: {fileID: 0}
-  BackParent: {fileID: 0}
+  NextParent: {fileID: 1431556260}
+  BackParent: {fileID: 1330596338}
   DefoultCollider: {fileID: 106551224}
 --- !u!1 &1970924158
 GameObject:
