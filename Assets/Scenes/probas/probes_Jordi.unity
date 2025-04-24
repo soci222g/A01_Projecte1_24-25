@@ -1520,12 +1520,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d50af63533ae244b2181820a2f065a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelfcolliderForward: {fileID: 2132951284}
-  SelfColliderBackwards: {fileID: 0}
-  NextColliderForward: {fileID: 836188033}
-  NextColliderBackwards: {fileID: 0}
-  BackColliderForward: {fileID: 0}
-  BackColliderBackwards: {fileID: 0}
+  NextParent: {fileID: 1920729557}
+  BackParent: {fileID: 0}
   DefoultCollider: {fileID: 106551224}
 --- !u!114 &1392116503 stripped
 MonoBehaviour:
@@ -1583,12 +1579,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d50af63533ae244b2181820a2f065a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelfcolliderForward: {fileID: 0}
-  SelfColliderBackwards: {fileID: 1162797651}
-  NextColliderForward: {fileID: 0}
-  NextColliderBackwards: {fileID: 0}
-  BackColliderForward: {fileID: 0}
-  BackColliderBackwards: {fileID: 0}
+  NextParent: {fileID: 0}
+  BackParent: {fileID: 1920729557}
   DefoultCollider: {fileID: 106551224}
 --- !u!1 &1556005651
 GameObject:
@@ -1743,12 +1735,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d50af63533ae244b2181820a2f065a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelfcolliderForward: {fileID: 836188033}
-  SelfColliderBackwards: {fileID: 1970924158}
-  NextColliderForward: {fileID: 0}
-  NextColliderBackwards: {fileID: 1162797651}
-  BackColliderForward: {fileID: 2132951284}
-  BackColliderBackwards: {fileID: 0}
+  NextParent: {fileID: 1431556260}
+  BackParent: {fileID: 1330596338}
   DefoultCollider: {fileID: 106551224}
 --- !u!1 &1970924158
 GameObject:
