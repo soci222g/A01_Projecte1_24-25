@@ -39,7 +39,7 @@ Transform:
   - {fileID: 6329116005098674059}
   - {fileID: 5269963817360761896}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4726401223803964312
 SpriteRenderer:
@@ -215,9 +215,10 @@ MonoBehaviour:
     m_Bits: 1
   countCooldown: 0
   collisionCooldown: 50
-  noPuedoPerseguirte: 1
   countCooldown2: 0
-  perseguirCooldown: 400
+  Cooldown: 500
+  knockbackDuration: 0.3
+  knockbackStrength: 15
 --- !u!114 &4283673957522821156
 MonoBehaviour:
   m_ObjectHideFlags: 0
