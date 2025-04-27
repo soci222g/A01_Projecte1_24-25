@@ -10,12 +10,15 @@ public class skeleLogic : MonoBehaviour
     private Transform player;
     [SerializeField]
     private Animator animator;
+    [SerializeField]
+    private float speed;
     private SpriteRenderer sr;
 
 
     void Start()
     {
         sr = gameObject.GetComponent<SpriteRenderer>(); 
+        animator.speed = speed;
     }
 
 

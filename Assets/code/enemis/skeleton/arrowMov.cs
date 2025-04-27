@@ -39,7 +39,7 @@ public class arrowMov : MonoBehaviour
             Debug.Log("loose HP");
             Destroy(gameObject);
         }
-        if (collision.gameObject.tag != "enemy")
+        if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "player")
         {
             Destroy(gameObject);
         }
