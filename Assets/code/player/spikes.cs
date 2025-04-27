@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class spikes : MonoBehaviour
 {
@@ -17,6 +19,16 @@ public class spikes : MonoBehaviour
 
     private string spikeTag = "spikes";
 
+    [SerializeField] private float speed;
+
+    private bool muerto = false;
+
+    Rigidbody2D rb;
+    SpriteRenderer sr;
+
+    [SerializeField] CapsuleCollider2D hb1;
+    [SerializeField] CapsuleCollider2D hb2;
+
     private void Awake()
     {
         CurrentTimePauseMovement = 0;
@@ -24,6 +36,8 @@ public class spikes : MonoBehaviour
         MoveCode = GetComponent<movement>();
         FleepCode = GetComponent<Fleep>();
         Animator = GetComponent<Animator>();
+        rb = this.gameObject.GetComponent<Rigidbody2D>();
+        sr = this.gameObject.GetComponent<SpriteRenderer>();
     }
     private void Update()
     {
@@ -36,17 +50,20 @@ public class spikes : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (CurrentTimePauseMovement >= 0)
+        if (muerto)
         {
-            MoveCode.enabled = false;
-            FleepCode.enabled = false;
-            CurrentTimePauseMovement -= Time.deltaTime;
-            Animator.SetBool("isDamaged", true);
-        }
-        else {
-            MoveCode.enabled = true;
-            FleepCode.enabled = true;
-            Animator.SetBool("isDamaged", false);
+            this.transform.position = Vector3.MoveTowards(this.transform.position, resPown.position, speed);
+            if(Vector2.Distance(this.transform.position, resPown.position) <= 0.3)
+            {
+                muerto = false;
+                rb.gravityScale = 4;
+                hb1.enabled = true;
+                hb2.enabled = true;
+                MoveCode.enabled = true;
+                FleepCode.enabled = true;
+                Animator.SetBool("pincho", false);
+                this.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
         }
     }
 
@@ -60,8 +77,24 @@ public class spikes : MonoBehaviour
             {
                 this.gameObject.GetComponent<hp>().setHP(1);
 
+                muerto = true;
 
-                this.transform.position = resPown.position;
+                rb.gravityScale = 0;
+
+                hb1.enabled = false;
+                hb2.enabled = false;
+
+                MoveCode.enabled = false;
+                FleepCode.enabled = false;
+                Animator.SetBool("pincho", true);
+
+                rb.velocity = new Vector2(0, 0);
+
+                Vector3 direction = this.transform.position - resPown.position;
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                this.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+                this.sr.flipX = false;
 
                 if (GetComponent<Fleep>().GetFleepControler() == false)
                 {
@@ -69,8 +102,6 @@ public class spikes : MonoBehaviour
                 }
                 CurrentTimePauseMovement = TimerMovementPause;
             }
-
-
         }
     }
 
