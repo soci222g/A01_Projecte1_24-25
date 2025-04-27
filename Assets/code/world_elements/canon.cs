@@ -15,6 +15,15 @@ public class canon : MonoBehaviour
 
     [SerializeField] GameObject proj;
     [SerializeField] shootDir dir;
+    [SerializeField] float speed;
+    Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+
+        animator.speed = speed;
+    }
 
     void shoot()
     {
