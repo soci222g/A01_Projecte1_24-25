@@ -4,24 +4,44 @@ using UnityEngine;
 
 public class skeleLogic : MonoBehaviour
 {
-    public GameObject arrow;
+    [SerializeField]
+    private GameObject arrow;
+    [SerializeField]
+    private Transform player;
     [SerializeField]
     private Animator animator;
+    private SpriteRenderer sr;
+
 
     void Start()
     {
-        
+        sr = gameObject.GetComponent<SpriteRenderer>(); 
     }
 
 
     void Update()
     {
-        
+        if (player.position.x <= gameObject.transform.position.x)
+        {
+            sr.flipX = true;
+        }
+        else
+        {
+            sr.flipX = false;
+        }
     }
 
 
     void spawnArrow()
     {
-        Instantiate(arrow, transform.position - new Vector3(-0.5f, 0.37f, 0), transform.rotation);
+        if (sr.flipX)
+        {
+            
+            Instantiate(arrow, transform.position - new Vector3(0.5f, 0.37f, 0), Quaternion.Euler(0, 0, 180));
+        }
+        else
+        {
+            Instantiate(arrow, transform.position - new Vector3(-0.5f, 0.37f, 0), transform.rotation);
+        }
     }
 }

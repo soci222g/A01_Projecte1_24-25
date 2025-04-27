@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4242396305540197505}
   - component: {fileID: 2151256734436984860}
   - component: {fileID: 5513483574198244917}
-  - component: {fileID: 803154697665432081}
   - component: {fileID: 1253973000643517451}
   - component: {fileID: 1974817983357747615}
   m_Layer: 0
@@ -161,22 +160,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5143161, y: 1.4678957}
   m_EdgeRadius: 0
---- !u!114 &803154697665432081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8908525035927961805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d982233c401c104983cf65a4307eca7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropHeal: {fileID: 73896145160197108, guid: 09a4d25576e3bb24baa358253cb97620, type: 3}
-  HP: 3
-  countCooldown: 0
-  deathCooldown: 0
 --- !u!95 &1253973000643517451
 Animator:
   serializedVersion: 5
@@ -211,4 +194,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 4533583631443405332, guid: c914d56f39039e3498de2266cb1c5a13, type: 3}
+  player: {fileID: 0}
   animator: {fileID: 1253973000643517451}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8208749158125101671}
   - component: {fileID: 6821810189938543750}
   - component: {fileID: 4220445250779641233}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Arrow
   m_TagString: bounce
   m_Icon: {fileID: 0}
