@@ -11,8 +11,16 @@ public class arrowMov : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        float angle = transform.rotation.eulerAngles.z;
         r = GetComponent<Rigidbody2D>();
-        r.AddForce(new Vector2(speed * 10000000, 0), ForceMode2D.Force);
+        if (Mathf.Approximately(angle, 0))
+        {
+            r.AddForce(new Vector2(speed * 10000000, 0), ForceMode2D.Force);
+        }
+        else if (Mathf.Approximately(angle, 180))
+        {
+            r.AddForce(new Vector2(speed * -10000000, 0), ForceMode2D.Force);
+        }
     }
 
     // Update is called once per frame

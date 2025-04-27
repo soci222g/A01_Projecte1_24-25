@@ -402,8 +402,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.013391018}
-  m_Size: {x: 1.3810959, y: 1.3984869}
+  m_Offset: {x: 0, y: -0.053896487}
+  m_Size: {x: 1.3810959, y: 1.4794978}
   m_Direction: 0
 --- !u!114 &6548420688412416596
 MonoBehaviour:
@@ -519,9 +519,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resPown: {fileID: 0}
-  speed: 0.4
-  hb1: {fileID: 5100497281371963983}
-  hb2: {fileID: 2616480212372789513}
+  speed: 0
+  hb1: {fileID: 0}
+  hb2: {fileID: 0}
 --- !u!114 &4014026342063916676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,6 +594,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.013391018}
-  m_Size: {x: 1.3810959, y: 1.3984869}
+  m_Offset: {x: 0, y: -0.05389625}
+  m_Size: {x: 1.3810959, y: 1.4794973}
   m_Direction: 0
