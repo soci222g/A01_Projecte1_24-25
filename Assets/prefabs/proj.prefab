@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 5817109948768627375}
   - component: {fileID: 66442188004408386}
   - component: {fileID: 669779602967703028}
-  m_Layer: 0
+  - component: {fileID: 2413751104482246379}
+  m_Layer: 29
   m_Name: proj
-  m_TagString: Untagged
+  m_TagString: spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +112,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -449957562, guid: 7d8e0160ab96e1a43848b9bae62de2e7, type: 3}
+  m_Sprite: {fileID: 1394354555, guid: a62dfa90f4e794e4b912b1323b934bb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -134,10 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de94dd2566d51694e85770637b201ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSr: {fileID: 0}
-  sr: {fileID: 5817109948768627375}
   speed: 7
-  player: {fileID: 0}
 --- !u!95 &669779602967703028
 Animator:
   serializedVersion: 5
@@ -159,3 +157,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &2413751104482246379
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4542111700049154386}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
