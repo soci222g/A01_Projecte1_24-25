@@ -40304,6 +40304,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1508450702}
+    - target: {fileID: 7475092602193181299, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: detectionRadius
+      value: 5.4
+      objectReference: {fileID: 0}
     - target: {fileID: 8762786205812745278, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: m_Name
       value: Chuck (2)
