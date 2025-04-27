@@ -30,13 +30,11 @@ public class enemyControllerBichin : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
 
-    // --- Variables nuevas para knockback smooth ---
     private bool isKnockbacked = false;
     private Vector2 knockbackDirection;
     private float knockbackTimer = 0f;
     [SerializeField] private float knockbackDuration = 0.3f; // Duración del knockback
     [SerializeField] private float knockbackStrength = 10f;  // Fuerza del knockback
-    // ------------------------------------------------
 
     void Start()
     {
