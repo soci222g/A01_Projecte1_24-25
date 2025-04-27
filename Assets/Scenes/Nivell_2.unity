@@ -10836,6 +10836,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8281634634580875070, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: hb1
+      value: 
+      objectReference: {fileID: 1269013515}
+    - target: {fileID: -8281634634580875070, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: hb2
+      value: 
+      objectReference: {fileID: 1269013522}
+    - target: {fileID: -8281634634580875070, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: speed
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8281634634580875070, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
       propertyPath: resPown
       value: 
       objectReference: {fileID: 510816149}
@@ -12187,6 +12199,16 @@ MonoBehaviour:
 --- !u!4 &1269013511 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2182073263094218293, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+  m_PrefabInstance: {fileID: 930179451}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &1269013515 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 2616480212372789513, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+  m_PrefabInstance: {fileID: 930179451}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &1269013522 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5100497281371963983, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
   m_PrefabInstance: {fileID: 930179451}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1275942841
