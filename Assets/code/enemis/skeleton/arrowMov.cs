@@ -29,6 +29,7 @@ public class arrowMov : MonoBehaviour
             //perderVida.setHP(1);
             collision.gameObject.GetComponent<hp>().setHP(1);
             Debug.Log("loose HP");
+            Destroy(gameObject);
         }
         if (collision.gameObject.tag != "enemy")
         {
