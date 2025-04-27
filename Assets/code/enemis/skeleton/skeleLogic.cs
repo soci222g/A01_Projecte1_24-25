@@ -13,15 +13,9 @@ public class skeleLogic : MonoBehaviour
         
     }
 
-
+    // Update is called once per frame
     void Update()
     {
         
-    }
-
-
-    void spawnArrow()
-    {
-        Instantiate(arrow, transform.position - new Vector3(-0.5f, 0.37f, 0), transform.rotation);
     }
 }
