@@ -12,6 +12,8 @@ TagManager:
   - atk
   - key
   - movPlat
+  - bounce
+  - ground
   layers:
   - Default
   - TransparentFX
