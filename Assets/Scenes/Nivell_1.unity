@@ -34994,6 +34994,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -5.99
       objectReference: {fileID: 0}
+    - target: {fileID: 8667883155628363137, guid: 5404f77e2270a6340a5b0555487dca86, type: 3}
+      propertyPath: newRoomName
+      value: Nivell_2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41001,7 +41005,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563215972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.58, y: -46.32, z: -0.2}
+  m_LocalPosition: {x: 53.43, y: -45.17, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
