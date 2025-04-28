@@ -111,7 +111,7 @@ public class kogmaw_state : MonoBehaviour
         state = kogmawState.dead;
         Debug.Log("muriendo");
         animator.SetBool("muere", false);
-        hurtBox.enabled = true;
+        hurtBox.enabled = false;
     }
 }
 
