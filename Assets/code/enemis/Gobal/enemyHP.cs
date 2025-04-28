@@ -82,7 +82,7 @@ public class EnemyHP : MonoBehaviour
             if (TryGetComponent<kogmaw_state>(out kogmaw_state state))
             {
                 if (transform.rotation.z == 0)
-                    dropPos += new Vector3(0, -0.5f, 0);
+                    dropPos += new Vector3(0, +0.5f, 0);
                 else
                     dropPos += new Vector3(0, +0.5f, 0);
             }
