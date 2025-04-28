@@ -30462,6 +30462,10 @@ PrefabInstance:
       propertyPath: hp
       value: 
       objectReference: {fileID: 1508450706}
+    - target: {fileID: 8735450955697132656, guid: 54862aedc38e6be4f8b8bd467e235b3f, type: 3}
+      propertyPath: deathDelay
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

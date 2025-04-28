@@ -46,12 +46,9 @@ public class EnemyHP : MonoBehaviour
 
         animator.SetBool("muere", true);
 
-        if (rb != null)
-        {
-            rb.velocity = Vector2.zero;
-            rb.angularVelocity = 0f;
-            rb.bodyType = RigidbodyType2D.Static;
-        }
+        rb.velocity = Vector2.zero;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        rb.simulated = false;
 
         if (TryGetComponent<Collider2D>(out Collider2D col))
         {
@@ -63,8 +60,11 @@ public class EnemyHP : MonoBehaviour
             movementScript.enabled = false;
         }
 
+        Debug.Log("Animator Current State: " + animator.GetCurrentAnimatorStateInfo(0).IsName("kogmaw_die"));
+
         Invoke(nameof(DestroyEnemy), deathDelay);
     }
+
 
     void DestroyEnemy()
     {

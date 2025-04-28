@@ -17,7 +17,8 @@ public class kogmaw_state : MonoBehaviour
         Idle,
         Hiding,
         Atacking,
-        Recovering
+        Recovering,
+        dead
     }
 
     [SerializeField] private kogmawState state;
@@ -107,6 +108,9 @@ public class kogmaw_state : MonoBehaviour
 
     void kogmaw_die()
     {
+        state = kogmawState.dead;
+        Debug.Log("muriendo");
+        animator.SetBool("muere", false);
         hurtBox.enabled = true;
     }
 }
