@@ -14,6 +14,8 @@ public class GroundDetector : MonoBehaviour
 
     private Fleep fleepSC;
     private Animator animator;
+
+    private Rigidbody2D rb;
     // Start is called before the first frame update
 
 
@@ -22,6 +24,7 @@ public class GroundDetector : MonoBehaviour
     {
         fleepSC = GetComponent<Fleep>();
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -55,12 +58,17 @@ public class GroundDetector : MonoBehaviour
                 if (hit.collider.tag == "movPlat")
                 {
                     transform.parent = hit.transform;
+                    
                 }
                 else
                 {
                     transform.parent = null;
                 }
 
+            }
+            else
+            {
+                transform.parent = null;
             }
 
 
