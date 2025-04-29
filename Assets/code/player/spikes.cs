@@ -61,15 +61,8 @@ public class spikes : MonoBehaviour
             this.transform.position = Vector3.MoveTowards(this.transform.position, resPown.position, speed);
             if(Vector2.Distance(this.transform.position, resPown.position) <= 0.3)
             {
-                Animator.SetBool("llegando", true);
-                muerto = false;
-                rb.gravityScale = 4;
-                hb1.enabled = true;
-                hb2.enabled = true;
-                hb3.SetActive(true);
-                MoveCode.enabled = true;
-                FleepCode.enabled = true;
                 this.transform.rotation = Quaternion.Euler(0, 0, 0);
+                Animator.SetBool("llegando", true);
             }
         }
     }
@@ -98,7 +91,11 @@ public class spikes : MonoBehaviour
 
                 Animator.SetBool("bolita1", true);
 
-                StartCoroutine(bolita1());
+                if(GetComponent<hp>().getHP() > 0)
+                {
+                    StartCoroutine(bolita1());
+                }
+                
             }
         }
     }
@@ -130,6 +127,18 @@ public class spikes : MonoBehaviour
     public void setAnimIdle()
     {
         Animator.Play("idle_anim");
+    }
+
+    void devolverValores()
+    {
+        muerto = false;
+        rb.gravityScale = 4;
+        hb1.enabled = true;
+        hb2.enabled = true;
+        hb3.SetActive(true);
+        MoveCode.enabled = true;
+        FleepCode.enabled = true;
+        
     }
 
     public void SetSpawnPont(Transform newPoint)
