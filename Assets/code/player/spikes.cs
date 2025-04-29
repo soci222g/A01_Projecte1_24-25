@@ -41,11 +41,12 @@ public class spikes : MonoBehaviour
     }
     private void Update()
     {
-
+/*
         if (Input.GetKeyDown(KeyCode.O))
         {
             spikeTag = "a";
         }
+*/
     }
 
     private void FixedUpdate()
