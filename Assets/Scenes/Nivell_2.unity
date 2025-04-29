@@ -10196,7 +10196,7 @@ PrefabInstance:
     - target: {fileID: 2428235139698414872, guid: d4e4360eb2b87294586541c00663af3c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 211220074038972845, guid: 90257067aedee1f4f96ce4075d1a5e4a, type: 3}
     - target: {fileID: 2428235139698414872, guid: d4e4360eb2b87294586541c00663af3c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MainMenuScean
@@ -10296,18 +10296,18 @@ PrefabInstance:
     - target: {fileID: 5434188706655919873, guid: d4e4360eb2b87294586541c00663af3c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 211220074038972845, guid: 90257067aedee1f4f96ce4075d1a5e4a, type: 3}
     - target: {fileID: 5434188706655919873, guid: d4e4360eb2b87294586541c00663af3c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5434188706655919873, guid: d4e4360eb2b87294586541c00663af3c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: resumePause
       objectReference: {fileID: 0}
     - target: {fileID: 5434188706655919873, guid: d4e4360eb2b87294586541c00663af3c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: 
+      value: Pause_menu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5434188706655919873, guid: d4e4360eb2b87294586541c00663af3c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -10315,7 +10315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5434188706655919873, guid: d4e4360eb2b87294586541c00663af3c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5715000872288038287, guid: d4e4360eb2b87294586541c00663af3c, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -10833,7 +10833,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1974817983357747615, guid: d4782ea8270c3464da8cb8931911e8ea, type: 3}
       propertyPath: speed
-      value: 1.5
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 1974817983357747615, guid: d4782ea8270c3464da8cb8931911e8ea, type: 3}
       propertyPath: player
@@ -12652,6 +12652,7 @@ Transform:
   - {fileID: 358069717}
   - {fileID: 2108833778}
   - {fileID: 522323248}
+  - {fileID: 1418969340}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12743,6 +12744,7 @@ MonoBehaviour:
   - {fileID: 9215487}
   - {fileID: 358069717}
   - {fileID: 2108833778}
+  - {fileID: 522323248}
   - {fileID: 522323248}
   roomToGo: 0
   currentRoom: 0
@@ -13478,6 +13480,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32f6f654e302aa84cb1a720746eeaaa1, type: 3}
+--- !u!1 &1418969339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1418969340}
+  m_Layer: 0
+  m_Name: sp13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1418969340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418969339}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -216.31, y: -52.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1133066517}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1425175645
 GameObject:
   m_ObjectHideFlags: 0
@@ -16799,11 +16832,21 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -132, y: -36, z: 0}
+  - first: {x: -133, y: -36, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 12
       m_TileSpriteIndex: 12
+      m_TileMatrixIndex: 2
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -132, y: -36, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 13
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 2
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -18687,7 +18730,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 02627cf1176333b4c8f53037487c6de6, type: 2}
   - m_RefCount: 17
     m_Data: {fileID: 11400000, guid: 40ea5adb78611c647bcd88a7e30219fa, type: 2}
-  - m_RefCount: 208
+  - m_RefCount: 209
     m_Data: {fileID: 11400000, guid: 651510e7dcf0ee847951559d08ff5468, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -18716,7 +18759,7 @@ Tilemap:
     m_Data: {fileID: 1638903221, guid: 35b2583b5b1f90c41a72ba43e0f335fd, type: 3}
   - m_RefCount: 17
     m_Data: {fileID: -1133433380, guid: 35b2583b5b1f90c41a72ba43e0f335fd, type: 3}
-  - m_RefCount: 208
+  - m_RefCount: 209
     m_Data: {fileID: -250961493, guid: 35b2583b5b1f90c41a72ba43e0f335fd, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 0
@@ -18755,7 +18798,7 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
-  - m_RefCount: 124
+  - m_RefCount: 125
     m_Data:
       e00: 1
       e01: 0
@@ -18792,7 +18835,7 @@ Tilemap:
       e32: 3.43e-43
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 246
+  - m_RefCount: 247
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -19438,7 +19481,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931388149}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.64, y: -21.71, z: -10}
+  m_LocalPosition: {x: -232.16, y: -50.77, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
