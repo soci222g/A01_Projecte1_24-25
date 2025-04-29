@@ -22,6 +22,8 @@ public class BackCameraCollider : MonoBehaviour
             collision.gameObject.GetComponent<spikes>().SetSpawnPont(cam.GetSpawnPoint());
 
             CollMan.ActivateBack();
+
+            cam.Safe_Velocity(collision.GetComponent<Rigidbody2D>().velocity);
         }
 
     }

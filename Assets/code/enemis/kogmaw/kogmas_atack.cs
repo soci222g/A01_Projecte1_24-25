@@ -36,6 +36,7 @@ public class kogmas_atack : MonoBehaviour
         Debug.Log("hit");
         if (collision.gameObject.tag == "player")
         {
+            collision.GetComponent<CameraShake>().ShakeCamera(0.2f, 0.2f);
             hp.setHP(1);
         }
     }
