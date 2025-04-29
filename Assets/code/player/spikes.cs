@@ -28,6 +28,7 @@ public class spikes : MonoBehaviour
 
     [SerializeField] CapsuleCollider2D hb1;
     [SerializeField] CapsuleCollider2D hb2;
+    [SerializeField] GameObject hb3;
 
     private void Awake()
     {
@@ -59,6 +60,7 @@ public class spikes : MonoBehaviour
                 rb.gravityScale = 4;
                 hb1.enabled = true;
                 hb2.enabled = true;
+                hb3.SetActive(true);
                 MoveCode.enabled = true;
                 FleepCode.enabled = true;
                 Animator.SetBool("pincho", false);
@@ -83,6 +85,7 @@ public class spikes : MonoBehaviour
 
                 hb1.enabled = false;
                 hb2.enabled = false;
+                hb3.SetActive(false);
 
                 MoveCode.enabled = false;
                 FleepCode.enabled = false;
