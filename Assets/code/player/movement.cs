@@ -29,8 +29,8 @@ public class movement : MonoBehaviour
         else if(horizontal < 0)
         {
             sr.flipX = true;
-            dust.Play();
         }
+        createDust();
     }
 
     void createDust()
