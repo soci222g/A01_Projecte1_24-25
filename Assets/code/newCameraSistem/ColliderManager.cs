@@ -11,8 +11,8 @@ public class ColliderManager : MonoBehaviour
     [Header("next Collider")]
     [SerializeField] private GameObject NextParent;
 
-                       private GameObject NextColliderForward;
-                       private GameObject NextColliderBackwards;
+    private GameObject NextColliderForward;
+    private GameObject NextColliderBackwards;
 
     [Header("Back Collider")]
     [SerializeField] private GameObject BackParent;
@@ -58,9 +58,6 @@ public class ColliderManager : MonoBehaviour
             SelfColliderBackwards = GetComponentInChildren<BackCameraCollider>().gameObject;
         else
             SelfColliderBackwards = DefoultCollider;
-
-
-
 
 
 

@@ -22,7 +22,11 @@ public class ForwardCollider : MonoBehaviour
             cam.SetSpawnPoint(1);
             collision.gameObject.GetComponent<spikes>().SetSpawnPont(cam.GetSpawnPoint());
 
+            cam.Safe_Velocity(collision.GetComponent<Rigidbody2D>().velocity);
+
             CollMan.ActivateForward();
+
+            
         }
     
     }
