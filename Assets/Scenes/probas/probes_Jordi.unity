@@ -729,7 +729,7 @@ GameObject:
   - component: {fileID: 836188034}
   - component: {fileID: 836188036}
   - component: {fileID: 836188035}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: forward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -793,7 +793,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.42591763, y: 4.9294195}
@@ -901,6 +901,10 @@ PrefabInstance:
       propertyPath: hpUI
       value: 
       objectReference: {fileID: 700028017}
+    - target: {fileID: 874321865828955649, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 798532642}
     - target: {fileID: 2182073263094218293, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -944,6 +948,10 @@ PrefabInstance:
     - target: {fileID: 2182073263094218293, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616480212372789513, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 536872960
       objectReference: {fileID: 0}
     - target: {fileID: 2949264438091636354, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
       propertyPath: m_Layer
@@ -1018,6 +1026,10 @@ MonoBehaviour:
   - {fileID: 72574632}
   - {fileID: 1556005652}
   - {fileID: 572348701}
+  roomToGo: 0
+  currentRoom: 0
+  safeVelocity: {x: 0, y: 0}
+  player: {fileID: 1103854785}
 --- !u!4 &1126611240
 Transform:
   m_ObjectHideFlags: 0
@@ -1349,7 +1361,7 @@ GameObject:
   - component: {fileID: 1162797652}
   - component: {fileID: 1162797654}
   - component: {fileID: 1162797653}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1413,7 +1425,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.42591763, y: 4.9294195}
@@ -1521,7 +1533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextParent: {fileID: 1920729557}
-  BackParent: {fileID: 0}
+  BackParent: {fileID: 106551224}
   DefoultCollider: {fileID: 106551224}
 --- !u!114 &1392116503 stripped
 MonoBehaviour:
@@ -1579,7 +1591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d50af63533ae244b2181820a2f065a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextParent: {fileID: 0}
+  NextParent: {fileID: 106551224}
   BackParent: {fileID: 1920729557}
   DefoultCollider: {fileID: 106551224}
 --- !u!1 &1556005651
@@ -1749,7 +1761,7 @@ GameObject:
   - component: {fileID: 1970924161}
   - component: {fileID: 1970924160}
   - component: {fileID: 1970924159}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1798,7 +1810,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.42591763, y: 4.9294195}
@@ -1822,7 +1834,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970924158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.56, y: -5.3, z: 0}
+  m_LocalPosition: {x: -14.7, y: -5.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2046,7 +2058,7 @@ GameObject:
   - component: {fileID: 2132951285}
   - component: {fileID: 2132951286}
   - component: {fileID: 2132951287}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: forward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2097,7 +2109,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.42591763, y: 4.9294195}
