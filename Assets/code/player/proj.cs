@@ -40,14 +40,20 @@ public class proj : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
 
         hp hp;
 
         if (collision.TryGetComponent<hp>(out hp))
         {
             hp.setHP(1);
+            
         }
+
+        if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "player")
+        {
+            Destroy(gameObject);
+        }
+
     }
 
 }
