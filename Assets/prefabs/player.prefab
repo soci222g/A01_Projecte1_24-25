@@ -5079,7 +5079,7 @@ Transform:
   - {fileID: 4933408334937618117}
   - {fileID: 5306465847152777268}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7298098943528611513
 MonoBehaviour:
@@ -5352,9 +5352,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resPown: {fileID: 0}
-  speed: 0
+  speed: 0.2
   hb1: {fileID: 0}
   hb2: {fileID: 0}
+  hb3: {fileID: 0}
 --- !u!114 &4014026342063916676
 MonoBehaviour:
   m_ObjectHideFlags: 0
