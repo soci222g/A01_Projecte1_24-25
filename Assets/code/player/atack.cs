@@ -106,6 +106,8 @@ public class atack : MonoBehaviour
 
             playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
 
+            GetComponentInParent<CameraShake>().ShakeCamera(0.1f, 0.05f);
+
             if (gD.GetGroundDetect() == false)
             {
                 if (!playerSR.flipY)
