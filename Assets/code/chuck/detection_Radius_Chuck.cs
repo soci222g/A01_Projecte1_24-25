@@ -22,6 +22,7 @@ public class detection_Radius_Chuck : MonoBehaviour
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         //Debug.Log(distanceToPlayer);
+
         if (distanceToPlayer < detectionRadius && startText == false)
         {
             startText = true;

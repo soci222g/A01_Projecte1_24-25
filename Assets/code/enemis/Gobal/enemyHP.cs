@@ -84,7 +84,7 @@ public class EnemyHP : MonoBehaviour
                 if (transform.rotation.z == 0)
                     dropPos += new Vector3(0, +0.5f, 0);
                 else
-                    dropPos += new Vector3(0, +0.5f, 0);
+                    dropPos += new Vector3(0, - 0.5f, 0);
             }
 
             Instantiate(dropHeal, dropPos, transform.rotation);
