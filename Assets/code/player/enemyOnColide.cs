@@ -8,56 +8,83 @@ public class enemyOnColide : MonoBehaviour
     private float InvFrames;
     [SerializeField]
     private float currentTimeInv = 0;
-    // Update is called once per frame
     private hp HP;
 
     private Collider2D coll;
 
+    [SerializeField]
+    private Animator animator;
 
+    [SerializeField] private float knockbackStrength = 10f;
+    [SerializeField] private float knockbackDuration = 0.2f;
+
+    private Rigidbody2D rb;
+    private float knockbackTimer = 0f;
+    private bool isKnockbacked = false;
+    private Vector2 knockbackDirection;
 
     private void Start()
     {
-
         coll = GetComponent<Collider2D>();
         HP = GetComponent<hp>();
-
+        rb = GetComponent<Rigidbody2D>();
     }
+
     void Update()
     {
         invMoments();
+    }
+
+    private void FixedUpdate()
+    {
+        if (isKnockbacked)
+        {
+            knockbackTimer += Time.fixedDeltaTime;
+            rb.velocity = Vector2.Lerp(knockbackDirection * knockbackStrength, Vector2.zero, knockbackTimer / knockbackDuration);
+
+            if (knockbackTimer >= knockbackDuration)
+            {
+                isKnockbacked = false;
+                rb.velocity = Vector2.zero;
+            }
+        }
     }
 
     private void invMoments()
     {
         if (currentTimeInv > 0) //timer del invultenrabilitat
         {
+            animator.SetBool("isDamaged", true);
             currentTimeInv -= Time.deltaTime;
             gameObject.tag = "Player";
             Physics2D.IgnoreLayerCollision(9, 10);
             Debug.Log("ignaorar Colision");
-            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-           
         }
         else
         {
-            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             gameObject.tag = "player";
-
+            animator.SetBool("isDamaged", false);
             Physics2D.IgnoreLayerCollision(9, 10, false);
-           
         }
     }
+
     //trigger ebter del enemi, tru vida i trau collisions durant un temps
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "enemy" && gameObject.tag == "player")
         {
             currentTimeInv = InvFrames;
-            // collision.gameObject.GetComponent<Collider2D>().isTrigger = true;
-            Physics2D.IgnoreLayerCollision(9,10);
+            Physics2D.IgnoreLayerCollision(9, 10);
             HP.setHP(1);
             GetComponent<CameraShake>().ShakeCamera(0.2f, 0.2f);
 
+            isKnockbacked = true;
+            knockbackTimer = 0f;
+
+            if (transform.position.x < collision.transform.position.x)
+                knockbackDirection = Vector2.left;
+            else
+                knockbackDirection = Vector2.right;
         }
     }
 }

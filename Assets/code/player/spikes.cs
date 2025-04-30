@@ -23,6 +23,10 @@ public class spikes : MonoBehaviour
 
     private bool muerto = false;
 
+    private bool isBeingStunned = false;
+
+    private bool spikeActivated = false;
+
     Rigidbody2D rb;
     SpriteRenderer sr;
 
@@ -57,32 +61,26 @@ public class spikes : MonoBehaviour
             this.transform.position = Vector3.MoveTowards(this.transform.position, resPown.position, speed);
             if(Vector2.Distance(this.transform.position, resPown.position) <= 0.3)
             {
-                muerto = false;
-                rb.gravityScale = 4;
-                hb1.enabled = true;
-                hb2.enabled = true;
-                hb3.SetActive(true);
-                MoveCode.enabled = true;
-                FleepCode.enabled = true;
-                Animator.SetBool("pincho", false);
                 this.transform.rotation = Quaternion.Euler(0, 0, 0);
+                Animator.SetBool("llegando", true);
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
+        if (spikeActivated) return;
+
         if (collision.gameObject.tag == spikeTag)
         {
-
             if (collision.gameObject.GetComponent<SpikeCheck>().GetCheckPlayer())
             {
+                spikeActivated = true;
+
                 this.gameObject.GetComponent<hp>().setHP(1);
 
-                muerto = true;
-
                 rb.gravityScale = 0;
+                rb.velocity = Vector2.zero;
 
                 hb1.enabled = false;
                 hb2.enabled = false;
@@ -90,23 +88,57 @@ public class spikes : MonoBehaviour
 
                 MoveCode.enabled = false;
                 FleepCode.enabled = false;
-                Animator.SetBool("pincho", true);
 
-                rb.velocity = new Vector2(0, 0);
+                Animator.SetBool("bolita1", true);
 
-                Vector3 direction = this.transform.position - resPown.position;
-                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                this.transform.rotation = Quaternion.Euler(0, 0, angle);
-
-                this.sr.flipX = false;
-
-                if (GetComponent<Fleep>().GetFleepControler() == false)
+                if(GetComponent<hp>().getHP() > 0)
                 {
-                    GetComponent<Fleep>().SetFleep();
+                    StartCoroutine(bolita1());
                 }
-                CurrentTimePauseMovement = TimerMovementPause;
+                
             }
         }
+    }
+
+    public IEnumerator bolita1()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        Animator.SetBool("bolita1", false);
+        Animator.SetBool("llegando", false);
+
+        muerto = true;
+
+        Vector3 direction = this.transform.position - resPown.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        this.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        this.sr.flipX = false;
+
+        if (GetComponent<Fleep>().GetFleepControler() == false)
+        {
+            GetComponent<Fleep>().SetFleep();
+        }
+        CurrentTimePauseMovement = TimerMovementPause;
+
+        spikeActivated = false;
+    }
+
+    public void setAnimIdle()
+    {
+        Animator.Play("idle_anim");
+    }
+
+    void devolverValores()
+    {
+        muerto = false;
+        rb.gravityScale = 4;
+        hb1.enabled = true;
+        hb2.enabled = true;
+        hb3.SetActive(true);
+        MoveCode.enabled = true;
+        FleepCode.enabled = true;
+        
     }
 
     public void SetSpawnPont(Transform newPoint)
