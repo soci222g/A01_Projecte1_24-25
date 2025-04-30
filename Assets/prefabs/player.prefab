@@ -5095,6 +5095,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InvFrames: 0.5
   currentTimeInv: 0
+  animator: {fileID: 650167750993376912}
+  knockbackStrength: 10
+  knockbackDuration: 0.2
 --- !u!114 &874321865828955649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5352,9 +5355,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resPown: {fileID: 0}
-  speed: 0
+  speed: 0.2
   hb1: {fileID: 0}
   hb2: {fileID: 0}
+  hb3: {fileID: 0}
 --- !u!114 &4014026342063916676
 MonoBehaviour:
   m_ObjectHideFlags: 0

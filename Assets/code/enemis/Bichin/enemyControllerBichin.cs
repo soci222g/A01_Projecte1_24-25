@@ -174,6 +174,7 @@ public class enemyControllerBichin : MonoBehaviour
         {
             onCooldown = true;
             chaseSpeed = 0f;
+            StartCoroutine(DelayedKnockbackFromHit(collision.transform));
         }
     }
 
@@ -230,5 +231,22 @@ public class enemyControllerBichin : MonoBehaviour
             Gizmos.color = Color.green;
             Gizmos.DrawLine(controladorPared.position, controladorPared.position + (moviendoDerecha ? Vector3.right : Vector3.left) * distanciaDeteccion);
         }
+    }
+
+    private IEnumerator DelayedKnockbackFromHit(Transform target)
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        isKnockbacked = true;
+        knockbackTimer = 0f;
+        puedePerseguir = false;
+        animator.SetTrigger("onColide");
+
+        if (transform.position.x < target.position.x)
+            knockbackDirection = Vector2.left;
+        else
+            knockbackDirection = Vector2.right;
+
+        rb.velocity = knockbackDirection * (knockbackStrength / 1.5f);
     }
 }

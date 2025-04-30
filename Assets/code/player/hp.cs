@@ -14,6 +14,7 @@ public class hp : MonoBehaviour
 
     [SerializeField]
     Sprite[] fullHP;
+    private Animator anim;
 
    // [SerializeField]
   //  SpriteRenderer spriteHP;
@@ -23,6 +24,7 @@ public class hp : MonoBehaviour
     {
         maxHealthPoints = 10;
         healthPoints = maxHealthPoints;
+        anim = GetComponent<Animator>();
     }
     // Start is called before the first frame update
    
@@ -38,7 +40,7 @@ public class hp : MonoBehaviour
 
         if (healthPoints <= 0)
         {
-            Die();
+            anim.Play("death_anim");
         }
     }
 

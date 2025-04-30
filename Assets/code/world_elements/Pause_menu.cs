@@ -28,12 +28,13 @@ public class Pause_menu : MonoBehaviour
         {
             if (isPaused == false)
             {
+                atack.enabled = false;
                 Cursor.lockState = CursorLockMode.None;
                 isPaused = true;
                 Time.timeScale = 0f;
                 Pause_Canva.SetActive(true);
                 HUD.SetActive(false);
-                atack.enabled = false;
+               
             }
             else
             {
@@ -45,12 +46,13 @@ public class Pause_menu : MonoBehaviour
 
     public void resumePause()
     {
+        atack.enabled = true;
         isPaused = false;
         Time.timeScale = 1;
         Pause_Canva.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         HUD.SetActive(true);
-        atack.enabled = true;
+       
     }
 
     public void MainMenuScean()
