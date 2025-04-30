@@ -9,6 +9,7 @@ public class movement : MonoBehaviour
     [SerializeField]
     private float speed = 5f;
     SpriteRenderer sr;
+    public ParticleSystem dust;
     // Update is called once per frame
     
     void Start()
@@ -29,5 +30,11 @@ public class movement : MonoBehaviour
         {
             sr.flipX = true;
         }
+        createDust();
+    }
+
+    void createDust()
+    {
+        dust.Play();
     }
 }

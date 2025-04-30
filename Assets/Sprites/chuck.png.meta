@@ -134,7 +134,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: chuck_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 24
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 500f5275ccab8244eaa38bf56a3a38f2
+      internalID: -1025339395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chuck_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 0
+        width: 24
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f3092f99d1a2945bfcd622764d9a4d
+      internalID: -1471307531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chuck_2
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 0
+        width: 24
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5, y: 0.055555556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270a0c01ddde5cd4d93a60f1ef639f6a
+      internalID: 282349632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chuck_3
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 0
+        width: 24
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5, y: 0.055555556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d22875d1a3f96541bff93dada2d38f8
+      internalID: 1439728139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chuck_4
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 0
+        width: 24
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416c68421e4db2840a5c5067e84500f6
+      internalID: 2123916675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chuck_5
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 0
+        width: 24
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2d6a69bb9ec9d429cc9662201a410d
+      internalID: 1289484780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chuck_6
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 0
+        width: 24
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5, y: 0.055555556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7be73a58fa9ec4a857bab2fe8e8e32
+      internalID: 1227659419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chuck_7
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 0
+        width: 24
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5, y: 0.055555556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377e3ce261e35f34a913cbdf4183f3f6
+      internalID: 871371007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +313,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      chuck_0: -1025339395
+      chuck_1: -1471307531
+      chuck_2: 282349632
+      chuck_3: 1439728139
+      chuck_4: 2123916675
+      chuck_5: 1289484780
+      chuck_6: 1227659419
+      chuck_7: 871371007
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

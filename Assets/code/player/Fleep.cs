@@ -19,9 +19,6 @@ public class Fleep : MonoBehaviour
     private float curentfleepTime;
     // Update is called once per frame
 
-
-
-
     void Start()
     {
         flying = false;
@@ -47,6 +44,11 @@ public class Fleep : MonoBehaviour
 
             fleep = true;
             fleepControler = !fleepControler;
+            if (GetComponentsInParent<movPlat_movment>() != null)
+            {
+                rb.velocity = new Vector2(0, rb.velocity.y);
+                Debug.Log("onMovePLatform");
+            }
 
         }
         else
@@ -58,6 +60,8 @@ public class Fleep : MonoBehaviour
         {
             rb.gravityScale *= -1;
             sr.flipY = !sr.flipY;
+
+          
             
         }
 
@@ -79,5 +83,15 @@ public class Fleep : MonoBehaviour
     public bool GetFlying()
     {
         return flying;
+    }
+    public void SetFleep()
+    {
+        fleep = true;
+        fleepControler = !fleepControler;
+        rb.gravityScale *= -1;
+        sr.flipY = !sr.flipY;
+        float newVerticalVelocity = rb.velocity.y * 0.1f;
+        Debug.Log(newVerticalVelocity);
+        rb.velocity = new Vector2(rb.velocity.x, newVerticalVelocity);
     }
 }

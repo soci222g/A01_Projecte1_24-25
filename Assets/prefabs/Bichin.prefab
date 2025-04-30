@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5502761497187186011}
   m_Layer: 0
   m_Name: Bichin
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,7 +164,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6
 --- !u!95 &9167311104941621419
 Animator:
   serializedVersion: 5
@@ -208,13 +208,17 @@ MonoBehaviour:
   distanciaDeteccion: 0.5
   capaSuelo:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   controladorPared: {fileID: 6329116005098674059}
   capaPared:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   countCooldown: 0
   collisionCooldown: 50
+  countCooldown2: 0
+  Cooldown: 500
+  knockbackDuration: 0.3
+  knockbackStrength: 15
 --- !u!114 &4283673957522821156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc69e7ca48517f4387cdb19056ea445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFleep: 1
+  isFleep: 0
 --- !u!1 &2963024769960030121
 GameObject:
   m_ObjectHideFlags: 0

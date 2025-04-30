@@ -17,10 +17,11 @@ public class kogmaw_state : MonoBehaviour
         Idle,
         Hiding,
         Atacking,
-        Recovering
+        Recovering,
+        dead
     }
 
-    [SerializeField] private kogmawState state; 
+    [SerializeField] private kogmawState state;
 
     // Start is called before the first frame update
     void Start()
@@ -37,8 +38,9 @@ public class kogmaw_state : MonoBehaviour
         //calc player dist
         distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        if (state == kogmawState.Idle) 
+        if (state == kogmawState.Idle)
         {
+            animator.SetBool("hide", false);
             if (distanceToPlayer <= 7.5f)
             {
                 state = kogmawState.Hiding;
@@ -48,15 +50,17 @@ public class kogmaw_state : MonoBehaviour
         else if (state == kogmawState.Hiding)
         {
             Debug.Log("hiding");
-            
+
 
             if (distanceToPlayer >= 7.5f)
             {
+                Debug.Log("reveal");
                 state = kogmawState.Idle;
                 animator.SetBool("reveal", true);
                 hurtBox.enabled = true;
 
-            }else if (distanceToPlayer <= 2.5f)
+            }
+            else if (distanceToPlayer <= 2.5f)
             {
                 animator.SetBool("atack", true);
                 state = kogmawState.Atacking;
@@ -88,7 +92,7 @@ public class kogmaw_state : MonoBehaviour
 
     void kogmaw_damage()
     {
-        animator.SetBool("damage", false) ;
+        animator.SetBool("damage", false);
         state = kogmawState.Idle;
     }
 
@@ -99,12 +103,15 @@ public class kogmaw_state : MonoBehaviour
 
     void kogmaw_disable_hurtBox()
     {
-        hurtBox.enabled = false ;
+        hurtBox.enabled = false;
     }
 
     void kogmaw_die()
     {
+        state = kogmawState.dead;
+        Debug.Log("muriendo");
         animator.SetBool("muere", false);
+        hurtBox.enabled = false;
     }
 }
 

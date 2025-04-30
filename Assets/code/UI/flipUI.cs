@@ -3,7 +3,8 @@ using UnityEngine.UI;
 
 public class flipUI : MonoBehaviour
 {
-    [SerializeField] private Fleep fleep;  
+    [SerializeField] private Fleep fleep;
+    [SerializeField] private GroundDetector detector;
     [SerializeField] private Image imageUI;
     [SerializeField] private Sprite spriteVacio;
     [SerializeField] private Sprite spriteLleno;
@@ -17,7 +18,7 @@ public class flipUI : MonoBehaviour
         }
 
         // Si el timer está activo (es decir, la habilidad está en cooldown)
-        if (fleep.GetTimer() > 0 || fleep.GetFlying())
+        if (detector.GetGroundDetect() == false)
         {
             imageUI.sprite = spriteVacio;  // Muestra el sprite vacío
         }
