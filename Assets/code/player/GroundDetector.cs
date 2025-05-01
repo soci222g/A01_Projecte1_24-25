@@ -7,6 +7,7 @@ public class GroundDetector : MonoBehaviour
 {
     [SerializeField]
     private bool groundDet;
+    private bool LastFrameGroundDetector;
     [SerializeField]
     private float DistansToGroudn = 0.85f;
     public LayerMask groundeMask;
@@ -18,7 +19,7 @@ public class GroundDetector : MonoBehaviour
     private Rigidbody2D rb;
     // Start is called before the first frame update
 
-
+    [SerializeField] private AudioSource fallAudio;
 
     void Start()
     {
@@ -32,6 +33,8 @@ public class GroundDetector : MonoBehaviour
     {
         GetectGround();
         fallingAnim();
+        playAudio();
+        LastFrameGroundDetector = groundDet;
     }
 
    private void GetectGround() {
@@ -83,6 +86,13 @@ public class GroundDetector : MonoBehaviour
         }
    }
 
+    private void playAudio()
+    {
+        if(groundDet && LastFrameGroundDetector == false)
+        {
+            fallAudio.Play();
+        }
+    }
     private void fallingAnim()
     {
         if(GetGroundDetect() == false)
