@@ -908,10 +908,34 @@ PrefabInstance:
       propertyPath: m_ExcludeLayers.m_Bits
       value: 536872960
       objectReference: {fileID: 0}
+    - target: {fileID: 2822494843325474011, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3628271332036391080, guid: 66617560c465465439c68de411078adf, type: 2}
     - target: {fileID: 2949264438091636354, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3289622854117649276, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3628271332036391080, guid: 66617560c465465439c68de411078adf, type: 2}
+    - target: {fileID: 3324728024498442042, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: Priority
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324728024498442042, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3628271332036391080, guid: 66617560c465465439c68de411078adf, type: 2}
+    - target: {fileID: 4187084066191599506, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: Priority
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187084066191599506, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3628271332036391080, guid: 66617560c465465439c68de411078adf, type: 2}
     - target: {fileID: 4536996995776339084, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
       propertyPath: HUD
       value: 
@@ -932,6 +956,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 5649626017832790258, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3628271332036391080, guid: 66617560c465465439c68de411078adf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1427,6 +1455,18 @@ PrefabInstance:
     - target: {fileID: 2385691535766396712, guid: 188801015a014e84984c97087d9b0734, type: 3}
       propertyPath: m_Name
       value: Bichin
+      objectReference: {fileID: 0}
+    - target: {fileID: 3871996115645406369, guid: 188801015a014e84984c97087d9b0734, type: 3}
+      propertyPath: Priority
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3871996115645406369, guid: 188801015a014e84984c97087d9b0734, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3628271332036391080, guid: 66617560c465465439c68de411078adf, type: 2}
+    - target: {fileID: 3871996115645406369, guid: 188801015a014e84984c97087d9b0734, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6110573148030064707, guid: 188801015a014e84984c97087d9b0734, type: 3}
       propertyPath: player

@@ -57,7 +57,7 @@ public class hp : MonoBehaviour
 
     private void Die()
     {
-        SceneManager.LoadScene(SceneManager.loadedSceneCount);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public int getHP()

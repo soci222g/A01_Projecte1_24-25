@@ -18,6 +18,7 @@ public class EnemyHP : MonoBehaviour
 
     [SerializeField] private float deathDelay = 1.2f; // tiempo que dura la animación de muerte
 
+    [SerializeField] private AudioSource DamageAudio;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -35,6 +36,7 @@ public class EnemyHP : MonoBehaviour
     void takeDamage(int dmg)
     {
         HP -= dmg;
+        DamageAudio.Play();
     }
 
     void Die()
@@ -95,5 +97,6 @@ public class EnemyHP : MonoBehaviour
     public void setHP(int dmg)
     {
         HP -= dmg;
+        DamageAudio.Play();
     }
 }
