@@ -15,10 +15,17 @@ public class skeleLogic : MonoBehaviour
     private SpriteRenderer sr;
 
 
+    private AudioSource audio;
+
+    [SerializeField] private int NumRoom;
+
+    [SerializeField] private camerabehavior cameraBehavior;
+
     void Start()
     {
         sr = gameObject.GetComponent<SpriteRenderer>(); 
         animator.speed = speed;
+        audio = GetComponent<AudioSource>();
     }
 
 
@@ -45,6 +52,11 @@ public class skeleLogic : MonoBehaviour
         else
         {
             Instantiate(arrow, transform.position - new Vector3(-0.5f, 0.37f, 0), transform.rotation);
+        }
+
+        if (cameraBehavior.getCurrentRoom() == NumRoom)
+        {
+            audio.Play();
         }
     }
 }

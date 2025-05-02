@@ -815,6 +815,10 @@ PrefabInstance:
       propertyPath: hpUI
       value: 
       objectReference: {fileID: 1390580100}
+    - target: {fileID: 874321865828955649, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 798532642}
     - target: {fileID: 2182073263094218293, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
       propertyPath: m_RootOrder
       value: 1

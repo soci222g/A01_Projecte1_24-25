@@ -13,16 +13,22 @@ public class canon : MonoBehaviour
         Down
     }
 
-    [SerializeField] GameObject proj;
-    [SerializeField] shootDir dir;
-    [SerializeField] float speed;
-    Animator animator;
+    [SerializeField] private GameObject proj;
+    [SerializeField] private shootDir dir;
+    [SerializeField] private float speed;
+    private Animator animator;
+    private AudioSource audio;
+
+    [SerializeField] private int NumRoom;
+
+    [SerializeField] private camerabehavior cameraBehavior;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
 
         animator.speed = speed;
+        audio = GetComponent<AudioSource>();
     }
 
     void shoot()
@@ -41,6 +47,11 @@ public class canon : MonoBehaviour
             case shootDir.Down:
                 Instantiate(proj, this.transform.position - new Vector3(0, 1, 1), Quaternion.Euler(0, 0, 270));
                 break;
+        }
+
+        if (cameraBehavior.getCurrentRoom() == NumRoom)
+        {
+            audio.Play();
         }
     }
 }
