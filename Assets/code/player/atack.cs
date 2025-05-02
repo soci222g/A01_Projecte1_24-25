@@ -30,6 +30,9 @@ public class atack : MonoBehaviour
     [SerializeField] float offset;
     actionState state;
 
+    [SerializeField] private AudioSource swingAudio;
+    [SerializeField] private AudioSource HitAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,6 +74,7 @@ public class atack : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && !onCooldown && state.getActionState()) //check input and cooldown
         {
+            swingAudio.Play();
             state.startAction();
 
             //check if on ground or air
@@ -98,6 +102,7 @@ public class atack : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out EnemyHP enemyHp) && collision.gameObject.tag == "enemy")
         {
+            HitAudio.Play();
             enemyHp.setHP(1);
 
             Animator enemyAnim = collision.GetComponent<Animator>();
@@ -136,6 +141,8 @@ public class atack : MonoBehaviour
             }
         }
     }
+
+    
 
     public void lat_hitbox_deactivate()
     {

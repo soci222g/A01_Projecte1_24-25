@@ -20,6 +20,8 @@ public class hp : MonoBehaviour
   //  SpriteRenderer spriteHP;
     [SerializeField]
     private hpUI hpUI;
+    [SerializeField]
+    private AudioSource toddDamage;
     private void Awake()
     {
         maxHealthPoints = 10;
@@ -55,7 +57,7 @@ public class hp : MonoBehaviour
 
     private void Die()
     {
-        SceneManager.LoadScene(SceneManager.loadedSceneCount);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public int getHP()
@@ -71,6 +73,11 @@ public class hp : MonoBehaviour
     public void setHP(int perderVida)
     {
         healthPoints -= perderVida;
+        if(perderVida > 0)
+        {
+            toddDamage.Play();
+        }
+
         hpUI.SetHP(healthPoints);
     }
 }

@@ -83,7 +83,9 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: e740f0be6d947ca4694b30079e4db9f4
   m_FloatValues:
-    5851fbd002dc86d40b8326e29d5b5923: -11.944499
+    70f3b7101284c104989d1e201f687d5f: -0.08374829
+    5851fbd002dc86d40b8326e29d5b5923: 0
+    d33ae205cda928942b3272252d4d92b5: 0
   m_TransitionOverrides: {}
 --- !u!244 &55880827063547977
 AudioMixerEffectController:
@@ -124,7 +126,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Pasos
+  m_Name: VFX
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: cb5e3710d53082f4a8d2105591a3e550
   m_Children: []
