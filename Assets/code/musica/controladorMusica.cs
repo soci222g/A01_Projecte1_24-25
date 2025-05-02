@@ -7,6 +7,7 @@ public class controladorMusica : MonoBehaviour
 {
     [SerializeField] private Slider VolumeSlider;
     [SerializeField] private string GrupName;
+    [SerializeField] private GameObject optionsParent;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,8 @@ public class controladorMusica : MonoBehaviour
             PlayerPrefs.SetFloat(GrupName, 1);
             LoadVolume();
         }
-    }
+        optionsParent.SetActive(false);
+    }   
 
     public void SetVolume()
     {

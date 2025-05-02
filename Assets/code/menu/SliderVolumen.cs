@@ -27,11 +27,7 @@ public class SliderVolumen : MonoBehaviour
 
     public void activateSound()
     {
-       
-       
-            
             Prueba.Play();
-        
     }
     private void Update()
     {
