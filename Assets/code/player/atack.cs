@@ -33,7 +33,11 @@ public class atack : MonoBehaviour
     [SerializeField] private AudioSource swingAudio;
     [SerializeField] private AudioSource HitAudio;
 
-    // Start is called before the first frame update
+
+    freeze frez;
+
+
+
     void Start()
     {
         state = GetComponentInParent<actionState>();
@@ -41,6 +45,7 @@ public class atack : MonoBehaviour
         downHitbox.enabled = false;
         latHitbox.enabled = false;
         onCooldown = false;
+        frez = GetComponentInParent<freeze>();
     }
 
     private void FixedUpdate() // usamos FixedUpdate para que el tiempo del ataque sea consistente
@@ -105,6 +110,8 @@ public class atack : MonoBehaviour
             HitAudio.Play();
             enemyHp.setHP(1);
 
+            frez.setDurationFreeze(0.1f);
+
             Animator enemyAnim = collision.GetComponent<Animator>();
 
             enemyAnim.SetBool("damage", true);
@@ -140,6 +147,9 @@ public class atack : MonoBehaviour
                 playerRB.AddForce(transform.up * -bounce);
             }
         }
+
+        
+
     }
 
     
