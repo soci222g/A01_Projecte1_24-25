@@ -28,6 +28,8 @@ public class camerabehavior : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
+    private atack Atack;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,8 @@ public class camerabehavior : MonoBehaviour
         currentRoom = 0;
         camera.transform.position = cameraPosition[0].position;
         cameraPosition[0].GetComponent<ColliderManager>().ActivateSelf();
+
+        Atack = player.GetComponentInChildren< atack>();
     }
 
     // Update is called once per frame
@@ -43,6 +47,8 @@ public class camerabehavior : MonoBehaviour
     {
         if (currentRoom != roomToGo)
         {
+
+            
             cameraPosition[roomToGo].GetComponent<ColliderManager>().ActivateSelf();
             Vector3 dir = cameraPosition[roomToGo].position - camera.transform.position;
             float distence = dir.magnitude;
@@ -53,6 +59,7 @@ public class camerabehavior : MonoBehaviour
             player.GetComponent<Rigidbody2D>().velocity = new Vector2(player.GetComponent<Rigidbody2D>().velocity.x, 0);
             player.GetComponent<movement>().enabled = false;
             // Time.timeScale = 0;  pause time (para el pause menu)
+            Atack.enabled = false;
             if (distence < 1f)
             {
                 camera.transform.position = cameraPosition[roomToGo].position;
@@ -60,6 +67,7 @@ public class camerabehavior : MonoBehaviour
 
                 player.GetComponent<Rigidbody2D>().velocity = safeVelocity;
                 player.GetComponent<movement>().enabled = true;
+                Atack.enabled = true;
             }
         }
        
