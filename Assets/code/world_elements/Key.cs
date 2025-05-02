@@ -6,6 +6,7 @@ public class Key : MonoBehaviour
 {
     private bool HaveKey = false;
     private Animator animator;
+    [SerializeField] private AudioSource Audio;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class Key : MonoBehaviour
         {
             Debug.Log("Llave detectada, activando animación.");
             HaveKey = true;
+            Audio.Play();
             animator.SetBool("HaveKey", true);
             animator.SetTrigger("PickUp");
 

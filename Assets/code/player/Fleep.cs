@@ -48,7 +48,7 @@ public class Fleep : MonoBehaviour
             createJumpPart();
             fleep = true;
             fleepControler = !fleepControler;
-            Audio.Play();
+            //Audio.Play();
             if (GetComponentsInParent<movPlat_movment>() != null)
             {
                 rb.velocity = new Vector2(0, rb.velocity.y);

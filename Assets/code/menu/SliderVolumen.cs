@@ -16,11 +16,22 @@ public class SliderVolumen : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI RefText;
 
+    [SerializeField]
+    private AudioSource Prueba;
+    
     private void Awake()
     {
         slider = GetComponent<Slider>();
+
     }
 
+    public void activateSound()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            Prueba.Play();
+        }
+    }
     private void Update()
     {
         int valiuSlide = (int)(slider.value * 100);

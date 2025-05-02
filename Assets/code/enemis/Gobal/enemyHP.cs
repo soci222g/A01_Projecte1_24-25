@@ -36,7 +36,9 @@ public class EnemyHP : MonoBehaviour
     void takeDamage(int dmg)
     {
         HP -= dmg;
-        DamageAudio.Play();
+        if(DamageAudio != null) 
+            DamageAudio.Play();
+
     }
 
     void Die()
@@ -97,6 +99,7 @@ public class EnemyHP : MonoBehaviour
     public void setHP(int dmg)
     {
         HP -= dmg;
-        DamageAudio.Play();
+        if (DamageAudio != null)
+            DamageAudio.Play();
     }
 }
