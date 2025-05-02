@@ -27,10 +27,11 @@ public class SliderVolumen : MonoBehaviour
 
     public void activateSound()
     {
-        if (Input.GetMouseButtonUp(0))
-        {
+       
+       
+            
             Prueba.Play();
-        }
+        
     }
     private void Update()
     {
@@ -39,6 +40,6 @@ public class SliderVolumen : MonoBehaviour
     }
     public void SetVolume()
     {
-        audioMixer.SetFloat(grup, slider.value);
+        audioMixer.SetFloat(grup, slider.value*100 - 80);
     }
 }
