@@ -86,5 +86,10 @@ public class camerabehavior : MonoBehaviour
         safeVelocity = velocity;
     }
 
+    public int getCurrentRoom()
+    {
+        return currentRoom;
+    }
+
 
 }
