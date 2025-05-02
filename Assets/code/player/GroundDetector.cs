@@ -31,9 +31,9 @@ public class GroundDetector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playAudio();
         GetectGround();
         fallingAnim();
-        playAudio();
         LastFrameGroundDetector = groundDet;
     }
 
