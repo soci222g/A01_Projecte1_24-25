@@ -9,8 +9,10 @@ public class movement : MonoBehaviour
     [SerializeField]
     private float speed = 5f;
     SpriteRenderer sr;
+    [SerializeField] private ParticleSystem dust;
+    [SerializeField] private ParticleSystem dustFlip;
     // Update is called once per frame
-    
+
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -29,5 +31,19 @@ public class movement : MonoBehaviour
         {
             sr.flipX = true;
         }
+        if (GetComponent<GroundDetector>().GetGroundDetect() == true && horizontal != 0 && !Input.GetKeyDown("space"))
+            createDust();
+    }
+
+    void createDust()
+    {
+        if (GetComponent<Fleep>().GetFleepControler() == false)
+        {
+            dustFlip.Play();
+        }
+        else
+        {
+            dust.Play();
+        } 
     }
 }

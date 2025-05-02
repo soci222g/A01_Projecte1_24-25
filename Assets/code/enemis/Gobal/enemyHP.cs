@@ -1,38 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyHP : MonoBehaviour
 {
-
     public GameObject dropHeal;
 
-
     [SerializeField]
-    private int HP;
-
+    private int HP = 10;
 
     private int dropChance = 100;
-
     private Animator animator;
-
-    private bool onCooldown = false;
-    [SerializeField] private float countCooldown;
-    [SerializeField] private int deathCooldown;
 
     private bool isDead = false;
 
-    // Start is called before the first frame update
+    private Rigidbody2D rb;
+
+    [SerializeField] private float deathDelay = 1.2f; // tiempo que dura la animaciÃ³n de muerte
+
+    [SerializeField] private AudioSource DamageAudio;
     void Start()
     {
-        
         animator = GetComponent<Animator>();
-        Debug.Log(animator.gameObject.name);
-
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (HP <= 0 && !isDead)
@@ -44,49 +36,70 @@ public class EnemyHP : MonoBehaviour
     void takeDamage(int dmg)
     {
         HP -= dmg;
+        if(DamageAudio != null) 
+            DamageAudio.Play();
+
     }
 
     void Die()
     {
-        if (isDead) return; // Evitar múltiples llamadas
+        if (isDead) return;
         isDead = true;
 
-        Debug.Log("Enemy died, playing death animation.");
+        Debug.Log("Enemy died, triggering death animation.");
 
-        int randNum = Random.Range(1, 100);
-
-        // Activar la animación de muerte
         animator.SetBool("muere", true);
 
-        // Dropear ítem si aplica
-        if (randNum < dropChance)
+        rb.velocity = Vector2.zero;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        rb.simulated = false;
+
+        if (TryGetComponent<Collider2D>(out Collider2D col))
         {
-            Debug.Log("Dropping heal item.");
-            Instantiate(dropHeal, transform.position - new Vector3(0, 0.5f, 0), transform.rotation);
+            col.enabled = false;
         }
 
-        // Esperar un frame para asegurar que la animación está activa antes de obtener su duración
-        StartCoroutine(DestroyAfterAnimation());
+        if (TryGetComponent<enemyControllerBichin>(out enemyControllerBichin movementScript))
+        {
+            movementScript.enabled = false;
+        }
+
+        Debug.Log("Animator Current State: " + animator.GetCurrentAnimatorStateInfo(0).IsName("kogmaw_die"));
+
+        Invoke(nameof(DestroyEnemy), deathDelay);
     }
 
-    IEnumerator DestroyAfterAnimation()
+
+    void DestroyEnemy()
     {
-        // Esperar un frame para que el Animator procese la transición
-        yield return null;
-
-        // Obtener la duración de la animación activa
-        float animDuration = animator.GetCurrentAnimatorStateInfo(0).length;
-        Debug.Log(animator.GetCurrentAnimatorStateInfo(0).length);
-
-        // Destruir el objeto después de que termine la animación
-        Destroy(gameObject, animDuration);
+        Destroy(gameObject);
     }
 
+    void DropItem()
+    {
+        int randNum = Random.Range(1, 100);
 
+        if (randNum < dropChance)
+        {
+            Vector3 dropPos = transform.position;
+
+            if (TryGetComponent<kogmaw_state>(out kogmaw_state state))
+            {
+                if (transform.rotation.z == 0)
+                    dropPos += new Vector3(0, +0.5f, 0);
+                else
+                    dropPos += new Vector3(0, - 0.5f, 0);
+            }
+
+            Instantiate(dropHeal, dropPos, transform.rotation);
+        }
+    }
 
     public int getHP() { return HP; }
-    public void setHP(int hp)
+    public void setHP(int dmg)
     {
-        HP -= hp;
+        HP -= dmg;
+        if (DamageAudio != null)
+            DamageAudio.Play();
     }
 }

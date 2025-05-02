@@ -10,6 +10,10 @@ TagManager:
   - Enemy
   - bomb
   - atk
+  - key
+  - movPlat
+  - bounce
+  - ground
   layers:
   - Default
   - TransparentFX
@@ -19,9 +23,10 @@ TagManager:
   - UI
   - Paredes
   - Suelos
-  - 
+  - spykes
   - player
   - enemy
+  - healDrop
   - 
   - 
   - 
@@ -39,9 +44,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - ColisionCamara
+  - Camara
   - 
   m_SortingLayers:
   - name: Default

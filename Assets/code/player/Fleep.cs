@@ -17,10 +17,11 @@ public class Fleep : MonoBehaviour
     private int fleepTime = 1;
     [SerializeField]
     private float curentfleepTime;
+    [SerializeField] private ParticleSystem jumpPart;
+    [SerializeField] private ParticleSystem jumpPartF;
     // Update is called once per frame
 
-
-
+    [SerializeField] private AudioSource Audio;
 
     void Start()
     {
@@ -44,9 +45,15 @@ public class Fleep : MonoBehaviour
     {
         if (Input.GetKeyDown("space") && GetComponent<GroundDetector>().GetGroundDetect())
         {
-
+            createJumpPart();
             fleep = true;
             fleepControler = !fleepControler;
+            //Audio.Play();
+            if (GetComponentsInParent<movPlat_movment>() != null)
+            {
+                rb.velocity = new Vector2(0, rb.velocity.y);
+                Debug.Log("onMovePLatform");
+            }
 
         }
         else
@@ -58,6 +65,8 @@ public class Fleep : MonoBehaviour
         {
             rb.gravityScale *= -1;
             sr.flipY = !sr.flipY;
+
+          
             
         }
 
@@ -65,6 +74,18 @@ public class Fleep : MonoBehaviour
     }
 
 
+
+    void createJumpPart()
+    {
+        if (fleepControler == true)
+        {
+            jumpPart.Play();
+        }
+        else
+        {
+            jumpPartF.Play();
+        }
+    }
 
     public bool GetFleepControler()
     {
@@ -79,5 +100,15 @@ public class Fleep : MonoBehaviour
     public bool GetFlying()
     {
         return flying;
+    }
+    public void SetFleep()
+    {
+        fleep = true;
+        fleepControler = !fleepControler;
+        rb.gravityScale *= -1;
+        sr.flipY = !sr.flipY;
+        float newVerticalVelocity = rb.velocity.y * 0.1f;
+        Debug.Log(newVerticalVelocity);
+        rb.velocity = new Vector2(rb.velocity.x, newVerticalVelocity);
     }
 }
