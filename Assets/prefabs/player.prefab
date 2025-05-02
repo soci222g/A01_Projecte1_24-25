@@ -14902,11 +14902,11 @@ GameObject:
   - component: {fileID: 874321865828955649}
   - component: {fileID: 3252725902039710837}
   - component: {fileID: 8543807098990344504}
+  - component: {fileID: 2309332269842010108}
   - component: {fileID: 1409228932536560166}
   - component: {fileID: 5100497281371963983}
   - component: {fileID: 6548420688412416596}
   - component: {fileID: 4737886206260372086}
-  - component: {fileID: 2309332269842010108}
   - component: {fileID: 650167750993376912}
   - component: {fileID: -4442595126761444244}
   - component: {fileID: -8281634634580875070}
@@ -15043,6 +15043,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canAct: 0
+--- !u!114 &2309332269842010108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5121319973530832289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efc3e8ef47843744ac425f22a8083ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundDet: 0
+  DistansToGroudn: 1.5
+  groundeMask:
+    serializedVersion: 2
+    m_Bits: 1
+  rays:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0.3, y: 0.1, z: 0}
+  - {x: -0.3, y: 0.1, z: 0}
+  fallAudio: {fileID: 2822494843325474011}
 --- !u!50 &1409228932536560166
 Rigidbody2D:
   serializedVersion: 4
@@ -15139,28 +15161,6 @@ MonoBehaviour:
   jumpPart: {fileID: 1326752506195214108}
   jumpPartF: {fileID: 4748034188111760269}
   Audio: {fileID: 3289622854117649276}
---- !u!114 &2309332269842010108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5121319973530832289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8efc3e8ef47843744ac425f22a8083ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundDet: 0
-  DistansToGroudn: 1.5
-  groundeMask:
-    serializedVersion: 2
-    m_Bits: 1
-  rays:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0.3, y: 0.1, z: 0}
-  - {x: -0.3, y: 0.1, z: 0}
-  fallAudio: {fileID: 2822494843325474011}
 --- !u!95 &650167750993376912
 Animator:
   serializedVersion: 5
