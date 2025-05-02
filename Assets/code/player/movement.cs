@@ -12,7 +12,11 @@ public class movement : MonoBehaviour
     [SerializeField] private ParticleSystem dust;
     [SerializeField] private ParticleSystem dustFlip;
 
+    actionState state;
+
     GroundDetector groundDetector;
+
+    atack atk;
 
     // Update is called once per frame
 
@@ -20,14 +24,27 @@ public class movement : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         groundDetector = GetComponent<GroundDetector>();
+        state = GetComponent<actionState>();
+        atk = GetComponentInChildren< atack>();
     }
     
     void FixedUpdate()
     {
 
+        if (!animator.GetBool("IsAirAtack") && !animator.GetBool("IsAtack") && !state.getActionState())
+        {
+            atk.cooldown_off();
+        }
+
         if (!groundDetector.GetGroundDetect())
         {
+            animator.SetBool("isGrounded", false);
+            animator.SetBool("IsAirAtack", false);
             speed = 8f;
+        }
+        else 
+        {
+            animator.SetBool("isGrounded", true);
         }
 
         float horizontal = Input.GetAxis("Horizontal");
