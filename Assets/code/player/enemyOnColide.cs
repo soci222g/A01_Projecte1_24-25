@@ -57,7 +57,7 @@ public class enemyOnColide : MonoBehaviour
             animator.SetBool("isDamaged", true);
             currentTimeInv -= Time.deltaTime;
             gameObject.tag = "Player";
-            Physics2D.IgnoreLayerCollision(9, 10);
+            Physics2D.IgnoreLayerCollision(9, 10, true);
             Debug.Log("ignaorar Colision");
         }
         else

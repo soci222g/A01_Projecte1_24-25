@@ -10,6 +10,10 @@ public class dropHeal : MonoBehaviour
     [SerializeField]
     private hp hp;
 
+    [SerializeField]
+    private AudioSource Audio;
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "player")
@@ -18,6 +22,7 @@ public class dropHeal : MonoBehaviour
             if (collision.gameObject.GetComponent<hp>().getHP() < hp.getMaxHP())
             {
                 collision.gameObject.GetComponent<hp>().setHP(-2);
+                Audio.Play();
                 Debug.Log(collision.gameObject.GetComponent<hp>().getHP());
                 animator.SetBool("IsGot", true);
 
