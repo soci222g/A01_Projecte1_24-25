@@ -11,15 +11,25 @@ public class movement : MonoBehaviour
     SpriteRenderer sr;
     [SerializeField] private ParticleSystem dust;
     [SerializeField] private ParticleSystem dustFlip;
+
+    GroundDetector groundDetector;
+
     // Update is called once per frame
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        groundDetector = GetComponent<GroundDetector>();
     }
     
     void FixedUpdate()
     {
+
+        if (!groundDetector.GetGroundDetect())
+        {
+            speed = 8f;
+        }
+
         float horizontal = Input.GetAxis("Horizontal");
         transform.position += new Vector3(horizontal * speed * Time.deltaTime, 0, 0);
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
@@ -45,5 +55,10 @@ public class movement : MonoBehaviour
         {
             dust.Play();
         } 
+    }
+
+    public void setSpeed(float newSpeed) 
+    {
+        speed = newSpeed; 
     }
 }

@@ -30,13 +30,12 @@ public class atack : MonoBehaviour
     [SerializeField] float offset;
     actionState state;
 
+    movement movement;
+
     [SerializeField] private AudioSource swingAudio;
     [SerializeField] private AudioSource HitAudio;
 
-
     freeze frez;
-
-
 
     void Start()
     {
@@ -46,6 +45,7 @@ public class atack : MonoBehaviour
         latHitbox.enabled = false;
         onCooldown = false;
         frez = GetComponentInParent<freeze>();
+        movement = GetComponentInParent<movement>();
     }
 
     private void FixedUpdate() // usamos FixedUpdate para que el tiempo del ataque sea consistente
@@ -87,6 +87,9 @@ public class atack : MonoBehaviour
             {
                 latHitbox.enabled = true;
                 animator.SetBool("IsAtack", true);
+                playerRB.velocity = Vector3.zero;
+                movement.setSpeed(1f);
+
             }
             else
             {
@@ -157,6 +160,7 @@ public class atack : MonoBehaviour
     public void lat_hitbox_deactivate()
     {
         latHitbox.enabled = false;
+        movement.setSpeed(8f);
     }
 
     public void down_hitbox_activate()
