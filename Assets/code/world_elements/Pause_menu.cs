@@ -41,6 +41,7 @@ public class Pause_menu : MonoBehaviour
             else
             {
                 resumePause();
+                atack.cooldown_off();
             }
         }
   

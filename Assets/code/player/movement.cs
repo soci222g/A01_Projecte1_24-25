@@ -36,16 +36,22 @@ public class movement : MonoBehaviour
             atk.cooldown_off();
         }
 
+
+
         if (!groundDetector.GetGroundDetect())
         {
             animator.SetBool("isGrounded", false);
-            animator.SetBool("IsAirAtack", false);
             speed = 8f;
         }
         else 
         {
             animator.SetBool("isGrounded", true);
             atk.down_hitbox_deactivate();
+            if (animator.GetBool("IsAirAtack"))
+            {
+                atk.cooldown_off();
+                animator.SetBool("IsAirAtack", false);
+            }
         }
 
         float horizontal = Input.GetAxis("Horizontal");
