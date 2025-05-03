@@ -23,11 +23,15 @@ public class enemyOnColide : MonoBehaviour
     private bool isKnockbacked = false;
     private Vector2 knockbackDirection;
 
+
+    private actionState state;
     private void Start()
     {
         coll = GetComponent<Collider2D>();
         HP = GetComponent<hp>();
         rb = GetComponent<Rigidbody2D>();
+        state = GetComponent<actionState>();
+
     }
 
     void Update()
@@ -54,6 +58,7 @@ public class enemyOnColide : MonoBehaviour
     {
         if (currentTimeInv > 0) //timer del invultenrabilitat
         {
+            state.startAction();
             animator.SetBool("isDamaged", true);
             currentTimeInv -= Time.deltaTime;
             gameObject.tag = "Player";
@@ -65,6 +70,7 @@ public class enemyOnColide : MonoBehaviour
             gameObject.tag = "player";
             animator.SetBool("isDamaged", false);
             Physics2D.IgnoreLayerCollision(9, 10, false);
+            state.endAction();
         }
     }
 
