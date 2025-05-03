@@ -2596,6 +2596,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 261800253334443975, guid: 5e08e36ed12e7834caf8b2c2db2de575, type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 4702924082078396063, guid: 5e08e36ed12e7834caf8b2c2db2de575, type: 3}
       propertyPath: m_Name
       value: colliderFleep
