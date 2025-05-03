@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 55294ec304ead1f49a4e037c34d53bc8
+guid: b0c6e450db404364ba6c1d506853f33a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bossDoor_0
+      name: bossDoor-export_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31bf51658e87810449fe9c85436482e6
-      internalID: -1952698897
+      spriteID: a959ae4518f49144a831969ee6f7b73d
+      internalID: -2034590985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bossDoor_1
+      name: bossDoor-export_1
       rect:
         serializedVersion: 2
         x: 38
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7b9bae039dbd89428450c74d5b95aba
-      internalID: -1554969315
+      spriteID: 5e5120f7f36f05a4a96a1fcf4c8b39fb
+      internalID: 1351350696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bossDoor_2
+      name: bossDoor-export_2
       rect:
         serializedVersion: 2
         x: 76
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d678677ab2186a4982af51345e43007
-      internalID: -2047610757
+      spriteID: 4d83fb9bb2a2a2e47aa3e726413f34a5
+      internalID: -1813672160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bossDoor_3
+      name: bossDoor-export_3
       rect:
         serializedVersion: 2
         x: 114
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41fdeca169db510478783411f24e12dc
-      internalID: 83103142
+      spriteID: 903cecbe93c233040b78af279bb7e229
+      internalID: 2120810309
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bossDoor_0: -1952698897
-      bossDoor_1: -1554969315
-      bossDoor_2: -2047610757
-      bossDoor_3: 83103142
+      bossDoor-export_0: -2034590985
+      bossDoor-export_1: 1351350696
+      bossDoor-export_2: -1813672160
+      bossDoor-export_3: 2120810309
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
