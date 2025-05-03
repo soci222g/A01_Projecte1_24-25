@@ -40,12 +40,12 @@ public class movement : MonoBehaviour
         {
             animator.SetBool("isGrounded", false);
             animator.SetBool("IsAirAtack", false);
-            atk.down_hitbox_deactivate();
             speed = 8f;
         }
         else 
         {
             animator.SetBool("isGrounded", true);
+            atk.down_hitbox_deactivate();
         }
 
         float horizontal = Input.GetAxis("Horizontal");
