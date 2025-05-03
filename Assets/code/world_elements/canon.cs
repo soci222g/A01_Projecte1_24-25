@@ -13,16 +13,22 @@ public class canon : MonoBehaviour
         Down
     }
 
-    [SerializeField] GameObject proj;
-    [SerializeField] shootDir dir;
-    [SerializeField] float speed;
-    Animator animator;
+    [SerializeField] private GameObject proj;
+    [SerializeField] private shootDir dir;
+    [SerializeField] private float speed;
+    private Animator animator;
+    private AudioSource audio;
+
+    [SerializeField] private int NumRoom;
+
+    [SerializeField] private camerabehavior cameraBehavior;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
 
         animator.speed = speed;
+        audio = GetComponent<AudioSource>();
     }
 
     void shoot()
@@ -30,17 +36,22 @@ public class canon : MonoBehaviour
         switch (dir)
         {
             case shootDir.Left:
-                Instantiate(proj, this.transform.position - new Vector3(1, 0, 0), Quaternion.Euler(0, 0, 180));
+                Instantiate(proj, this.transform.position - new Vector3(1, 0, -1), Quaternion.Euler(0, 0, 180));
                 break;
             case shootDir.Right:
-                Instantiate(proj, this.transform.position + new Vector3(1, 0, 0), Quaternion.Euler(0, 0, 0));
+                Instantiate(proj, this.transform.position + new Vector3(1, 0, 1), Quaternion.Euler(0, 0, 0));
                 break;
             case shootDir.Up:
-                Instantiate(proj, this.transform.position + new Vector3(0, 1, 0), Quaternion.Euler(0, 0, 90));
+                Instantiate(proj, this.transform.position + new Vector3(0, 1, 1), Quaternion.Euler(0, 0, 90));
                 break;
             case shootDir.Down:
-                Instantiate(proj, this.transform.position - new Vector3(0, 1, 0), Quaternion.Euler(0, 0, 270));
+                Instantiate(proj, this.transform.position - new Vector3(0, 1, 1), Quaternion.Euler(0, 0, 270));
                 break;
+        }
+
+        if (cameraBehavior.getCurrentRoom() == NumRoom)
+        {
+            audio.Play();
         }
     }
 }

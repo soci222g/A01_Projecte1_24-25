@@ -7,10 +7,16 @@ public class colliderFleep : MonoBehaviour
     [SerializeField]
     private bool CanFleep = true;
 
-    private float CanFleepTimer = 5;
+    [SerializeField] private float CanFleepTimer = 5;
+    private AudioSource Sound;
    
     private float FleepCurrentTimer = 0;
 
+
+    private void Awake()
+    {
+        Sound = GetComponent<AudioSource>();
+    }
     private void FixedUpdate()
     {
         if (!CanFleep){
@@ -34,6 +40,7 @@ public class colliderFleep : MonoBehaviour
         {
             collision.gameObject.GetComponent<Fleep>().SetFleep();
             CanFleep = false;
+            Sound.Play();
         }
     }
 }

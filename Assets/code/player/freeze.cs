@@ -31,7 +31,7 @@ public class freeze : MonoBehaviour
         float SafeTimeScale = Time.timeScale;
         Time.timeScale = 0;
 
-        yield return new WaitForSeconds(Duration);
+        yield return new WaitForSecondsRealtime(Duration);
 
         Time.timeScale = SafeTimeScale;
         currentDuration = 0;

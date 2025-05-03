@@ -6,33 +6,36 @@ using UnityEngine.UI;
 public class controladorMusica : MonoBehaviour
 {
     [SerializeField] private Slider VolumeSlider;
+    [SerializeField] private string GrupName;
+    [SerializeField] private GameObject optionsParent;
     // Start is called before the first frame update
     void Start()
     {
-        if(PlayerPrefs.HasKey("soundVolume"))
+        if(PlayerPrefs.HasKey(GrupName))
         {
             LoadVolume();
         }
         else
         {
-            PlayerPrefs.SetFloat("soundVolume", 1);
+            PlayerPrefs.SetFloat(GrupName, 1);
             LoadVolume();
         }
-    }
+        optionsParent.SetActive(false);
+    }   
 
     public void SetVolume()
     {
-        AudioListener.volume = VolumeSlider.value;
+        
         SaveVolume();
     }
 
     private void SaveVolume()
     {
-        PlayerPrefs.SetFloat("soundVolume", VolumeSlider.value);
+        PlayerPrefs.SetFloat(GrupName, VolumeSlider.value);
     }
 
     private void LoadVolume()
     {
-        VolumeSlider.value = PlayerPrefs.GetFloat("soundVolume");
+        VolumeSlider.value = PlayerPrefs.GetFloat(GrupName);
     }
 }

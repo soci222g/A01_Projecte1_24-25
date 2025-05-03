@@ -8,6 +8,8 @@ public class GroundDetector : MonoBehaviour
     [SerializeField]
     private bool groundDet;
     [SerializeField]
+    private bool LastFrameGroundDetector;
+    [SerializeField]
     private float DistansToGroudn = 0.85f;
     public LayerMask groundeMask;
     public List<Vector3> rays;
@@ -18,7 +20,7 @@ public class GroundDetector : MonoBehaviour
     private Rigidbody2D rb;
     // Start is called before the first frame update
 
-
+    [SerializeField] private AudioSource fallAudio;
 
     void Start()
     {
@@ -30,11 +32,23 @@ public class GroundDetector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         GetectGround();
+
+        if (groundDet && LastFrameGroundDetector == false)
+        {
+            fallAudio.Play();
+            Debug.Log("play Sound");
+        }
+
+
         fallingAnim();
+        LastFrameGroundDetector = groundDet;
     }
 
-   private void GetectGround() {
+ 
+
+    private void GetectGround() {
         int count = 0;
     
         for (int i = 0; i < rays.Count; i++)
@@ -55,14 +69,14 @@ public class GroundDetector : MonoBehaviour
             {
                 count++;
 
-                if (hit.collider.tag == "movPlat")
+                if (hit.collider.tag != "movPlat")
                 {
-                    transform.parent = hit.transform;
-                    
+                    transform.parent = null;
                 }
                 else
                 {
-                    transform.parent = null;
+                    transform.parent = hit.transform;
+
                 }
 
             }
@@ -70,19 +84,21 @@ public class GroundDetector : MonoBehaviour
             {
                 transform.parent = null;
             }
-
+            if (count > 0)
+            {
+                groundDet = true;
+            }
+            else
+            {
+                groundDet = false;
+            }
 
         }
-        if(count > 0)
-        {
-            groundDet = true;
-        }
-        else
-        {
-            groundDet = false;
-        }
-   }
 
+
+    }
+
+   
     private void fallingAnim()
     {
         if(GetGroundDetect() == false)

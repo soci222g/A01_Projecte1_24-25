@@ -9,16 +9,51 @@ public class movement : MonoBehaviour
     [SerializeField]
     private float speed = 5f;
     SpriteRenderer sr;
-    public ParticleSystem dust;
+    [SerializeField] private ParticleSystem dust;
+    [SerializeField] private ParticleSystem dustFlip;
+
+    actionState state;
+
+    GroundDetector groundDetector;
+
+    atack atk;
+
     // Update is called once per frame
-    
+
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        groundDetector = GetComponent<GroundDetector>();
+        state = GetComponent<actionState>();
+        atk = GetComponentInChildren< atack>();
     }
     
     void FixedUpdate()
     {
+
+        if (!animator.GetBool("IsAirAtack") && !animator.GetBool("IsAtack") && !state.getActionState())
+        {
+            atk.cooldown_off();
+        }
+
+
+
+        if (!groundDetector.GetGroundDetect())
+        {
+            animator.SetBool("isGrounded", false);
+            speed = 8f;
+        }
+        else 
+        {
+            animator.SetBool("isGrounded", true);
+            atk.down_hitbox_deactivate();
+            if (animator.GetBool("IsAirAtack"))
+            {
+                atk.cooldown_off();
+                animator.SetBool("IsAirAtack", false);
+            }
+        }
+
         float horizontal = Input.GetAxis("Horizontal");
         transform.position += new Vector3(horizontal * speed * Time.deltaTime, 0, 0);
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
@@ -30,11 +65,24 @@ public class movement : MonoBehaviour
         {
             sr.flipX = true;
         }
-        createDust();
+        if (GetComponent<GroundDetector>().GetGroundDetect() == true && horizontal != 0 && !Input.GetKeyDown("space"))
+            createDust();
     }
 
     void createDust()
     {
-        dust.Play();
+        if (GetComponent<Fleep>().GetFleepControler() == false)
+        {
+            dustFlip.Play();
+        }
+        else
+        {
+            dust.Play();
+        } 
+    }
+
+    public void setSpeed(float newSpeed) 
+    {
+        speed = newSpeed; 
     }
 }

@@ -36,6 +36,8 @@ public class enemyControllerBichin : MonoBehaviour
     [SerializeField] private float knockbackDuration = 0.3f; // Duración del knockback
     [SerializeField] private float knockbackStrength = 10f;  // Fuerza del knockback
 
+    [SerializeField] private AudioSource StartChase;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -87,12 +89,17 @@ public class enemyControllerBichin : MonoBehaviour
         }
         if (distanceToPlayer < detectionRadius)
         {
+            if(detected == false)
+            {
+                StartChase.Play();
+            }
             PerseguirJugador();
             detected = true;
         }
         else
         {
             Patrullar();
+            detected = false;
         }
     }
 

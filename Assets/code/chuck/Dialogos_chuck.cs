@@ -20,6 +20,8 @@ public class Dialogos_chuck : MonoBehaviour
 
     [SerializeField] private GameObject square;
 
+    [SerializeField]bool nextText = true;
+
 
     private void Awake()
     {
@@ -31,34 +33,42 @@ public class Dialogos_chuck : MonoBehaviour
         _textMeshPro.SetText(BloqueTexto[CurrentTextCount]);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
+        if (Input.GetMouseButtonUp(1))
+        {
+            nextText = true;
+        }
 
-        if (ActivateTexT) {
-            if (CurrentTimeText >= NextTextTime && CurrentTextCount <= BloqueTexto.Count)
+        if (ActivateTexT)
+        {
+            if (Input.GetMouseButtonDown(1) && nextText)
             {
-                CurrentTextCount++;
-                for (int i = 0; i < BloqueTexto.Count; i++)
+                nextText = false;
+                Debug.Log("yapyapyap");
+
+                if (CurrentTextCount <= BloqueTexto.Count)
                 {
-                    if(i == CurrentTextCount)
+                    CurrentTextCount++;
+                    for (int i = 0; i < BloqueTexto.Count; i++)
                     {
-                        _textMeshPro.SetText(BloqueTexto[i]);
-                        CurrentTimeText = 0;
-                    }
+                        if (i == CurrentTextCount)
+                        {
+                            _textMeshPro.SetText(BloqueTexto[i]);
+                        }
 
+                    }
                 }
-            }
-            else if(CurrentTextCount > BloqueTexto.Count)
-            {
-                ActivateTexT = false;
-                CurrentTimeText += Time.deltaTime;
-                square.SetActive(false);
-            }
-            else{
-                CurrentTimeText += Time.deltaTime;
-                
+                if (CurrentTextCount >= BloqueTexto.Count)
+                {
+                   
+                    ActivateTexT = false;
+                    square.SetActive(false);
+                }
+
             }
         }
+
 
 
     }

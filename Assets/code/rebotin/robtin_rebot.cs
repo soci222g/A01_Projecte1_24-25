@@ -12,6 +12,8 @@ public class robtin_rebot : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer sr;
 
+    private AudioSource sound;
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,7 @@ public class robtin_rebot : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = player.GetComponent<Rigidbody2D>();
         sr = player.GetComponent<SpriteRenderer>();
+        sound = GetComponent<AudioSource>();
 
     }
 
@@ -28,7 +31,9 @@ public class robtin_rebot : MonoBehaviour
 
         if (collision.gameObject.tag == "player")
         {
+
             animator.SetBool("rebot", true);
+            sound.Play();
             float playerV = rb.velocity.y;
             rb.velocity = new Vector2(rb.velocity.x, 0);
 
