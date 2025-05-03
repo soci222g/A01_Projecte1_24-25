@@ -7607,6 +7607,14 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5897427476560337076, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: m_PointLightInnerRadius
+      value: 2.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5897427476560337076, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 2.03
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
