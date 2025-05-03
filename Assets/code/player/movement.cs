@@ -11,15 +11,43 @@ public class movement : MonoBehaviour
     SpriteRenderer sr;
     [SerializeField] private ParticleSystem dust;
     [SerializeField] private ParticleSystem dustFlip;
+
+    actionState state;
+
+    GroundDetector groundDetector;
+
+    atack atk;
+
     // Update is called once per frame
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        groundDetector = GetComponent<GroundDetector>();
+        state = GetComponent<actionState>();
+        atk = GetComponentInChildren< atack>();
     }
     
     void FixedUpdate()
     {
+
+        if (!animator.GetBool("IsAirAtack") && !animator.GetBool("IsAtack") && !state.getActionState())
+        {
+            atk.cooldown_off();
+        }
+
+        if (!groundDetector.GetGroundDetect())
+        {
+            animator.SetBool("isGrounded", false);
+            animator.SetBool("IsAirAtack", false);
+            speed = 8f;
+        }
+        else 
+        {
+            animator.SetBool("isGrounded", true);
+            atk.down_hitbox_deactivate();
+        }
+
         float horizontal = Input.GetAxis("Horizontal");
         transform.position += new Vector3(horizontal * speed * Time.deltaTime, 0, 0);
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
@@ -45,5 +73,10 @@ public class movement : MonoBehaviour
         {
             dust.Play();
         } 
+    }
+
+    public void setSpeed(float newSpeed) 
+    {
+        speed = newSpeed; 
     }
 }
