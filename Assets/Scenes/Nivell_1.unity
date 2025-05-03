@@ -8754,16 +8754,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741826
-  - first: {x: 7, y: -36, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 12
-      m_TileSpriteIndex: 56
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741826
   - first: {x: 8, y: -36, z: 0}
     second:
       serializedVersion: 2
@@ -12059,16 +12049,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 12
       m_TileSpriteIndex: 64
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741826
-  - first: {x: 10, y: -31, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 12
-      m_TileSpriteIndex: 56
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -17449,16 +17429,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 12
       m_TileSpriteIndex: 67
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741826
-  - first: {x: 12, y: -20, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 12
-      m_TileSpriteIndex: 56
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -27129,16 +27099,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 11
       m_TileSpriteIndex: 40
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741826
-  - first: {x: 30, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 11
-      m_TileSpriteIndex: 36
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -38348,9 +38308,9 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 733
+  - m_RefCount: 732
     m_Data: {fileID: 11400000, guid: 15c162abf8bcb2b42b7897fc6eccb977, type: 2}
-  - m_RefCount: 2509
+  - m_RefCount: 2506
     m_Data: {fileID: 11400000, guid: 7ec3ea8cdc785d843b156cf11ababba2, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -38425,7 +38385,7 @@ Tilemap:
     m_Data: {fileID: -186812330, guid: 35b2583b5b1f90c41a72ba43e0f335fd, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 669764928, guid: 35b2583b5b1f90c41a72ba43e0f335fd, type: 3}
-  - m_RefCount: 7
+  - m_RefCount: 6
     m_Data: {fileID: 1841493778, guid: 35b2583b5b1f90c41a72ba43e0f335fd, type: 3}
   - m_RefCount: 11
     m_Data: {fileID: -943589782, guid: 35b2583b5b1f90c41a72ba43e0f335fd, type: 3}
@@ -38465,7 +38425,7 @@ Tilemap:
     m_Data: {fileID: 783152630, guid: 35b2583b5b1f90c41a72ba43e0f335fd, type: 3}
   - m_RefCount: 15
     m_Data: {fileID: 1338784978, guid: 35b2583b5b1f90c41a72ba43e0f335fd, type: 3}
-  - m_RefCount: 19
+  - m_RefCount: 16
     m_Data: {fileID: 1285292353, guid: 35b2583b5b1f90c41a72ba43e0f335fd, type: 3}
   - m_RefCount: 28
     m_Data: {fileID: 1859165161, guid: 35b2583b5b1f90c41a72ba43e0f335fd, type: 3}
@@ -38494,7 +38454,7 @@ Tilemap:
   - m_RefCount: 31
     m_Data: {fileID: -1535902082, guid: 35b2583b5b1f90c41a72ba43e0f335fd, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 3242
+  - m_RefCount: 3238
     m_Data:
       e00: 1
       e01: 0
@@ -38513,7 +38473,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 3242
+  - m_RefCount: 3238
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -44303,7 +44263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302459090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75.75, y: -18.63, z: -0.2}
+  m_LocalPosition: {x: 75.75, y: -19.65, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44764,19 +44724,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.data[0]
-      value: It seems like you have gotten a new power since the accident...
+      value: Hey Todd, finally awake!...
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.data[1]
-      value: Press [SPACE] to activate it and travel through this caves.
+      value: It seems like you have gotten a new power since the accident...
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.data[2]
-      value: But be careful with Larry The Magician's minions, they are dangerous.
+      value: Press [SPACE] to activate it and travel through this caves.
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.data[3]
@@ -46868,7 +46828,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472399033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.38, y: -4.54, z: -0.2}
+  m_LocalPosition: {x: 33.91, y: -7.29, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -62390,7 +62350,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711402401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.29, y: -46.4, z: -0.2}
+  m_LocalPosition: {x: 5.48, y: -48.65, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -85075,7 +85035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7754337580235051811, guid: 188801015a014e84984c97087d9b0734, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.782
+      value: -5.783
       objectReference: {fileID: 0}
     - target: {fileID: 7754337580235051811, guid: 188801015a014e84984c97087d9b0734, type: 3}
       propertyPath: m_LocalPosition.z
@@ -96629,7 +96589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.data[0]
@@ -96638,11 +96598,11 @@ PrefabInstance:
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.data[1]
       value: Now, you will need to get onto this bouncy YELLOW MUSHROOMS to continue
-        our journey.
+        our journey...
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.data[2]
-      value: Be careful although, we are entering the deep part of the cave.
+      value: But be careful, we're entering the deep part of the cave.
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.data[3]
@@ -101615,7 +101575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.data[0]
@@ -101627,7 +101587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.data[2]
-      value: You will need to time this attack in order to bounce above enemies...
+      value: You will need to time this attack in order to bounce above enemies.
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.data[3]
@@ -102208,7 +102168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532432538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.28, y: -27.14, z: -0.2}
+  m_LocalPosition: {x: 29.27, y: -29.66, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
