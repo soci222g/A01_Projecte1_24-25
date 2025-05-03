@@ -31,11 +31,30 @@ public class SliderVolumen : MonoBehaviour
     }
     private void Update()
     {
-        int valiuSlide = (int)(slider.value * 100);
-        RefText.text = valiuSlide.ToString();
+        int valiuSlide = (int)slider.value;
+        if(valiuSlide > -13)
+        {
+            RefText.text = "Very High";
+        }
+        else if( valiuSlide > -26 && valiuSlide < -13)
+        {
+            RefText.text = "High";
+        }
+        else if (valiuSlide > -39 && valiuSlide < -26)
+        {
+            RefText.text = "Normal";
+        }
+        else if (valiuSlide > -52 && valiuSlide < -39)
+        {
+            RefText.text = "Low";
+        }
+        else if (valiuSlide > -65 && valiuSlide < -52)
+        {
+            RefText.text = "Very Low";
+        }
     }
     public void SetVolume()
     {
-        audioMixer.SetFloat(grup, slider.value*100 - 80);
+        audioMixer.SetFloat(grup, slider.value);
     }
 }

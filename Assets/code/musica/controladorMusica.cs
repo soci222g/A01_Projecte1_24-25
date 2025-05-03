@@ -25,7 +25,7 @@ public class controladorMusica : MonoBehaviour
 
     public void SetVolume()
     {
-        AudioListener.volume = VolumeSlider.value;
+        
         SaveVolume();
     }
 
