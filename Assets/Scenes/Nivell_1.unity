@@ -5663,6 +5663,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8667b01f5f3b0e84fbff7ca7e7c8fbbc, type: 3}
+--- !u!114 &180690525 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7214751147932626375, guid: 8667b01f5f3b0e84fbff7ca7e7c8fbbc, type: 3}
+  m_PrefabInstance: {fileID: 180690524}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55e365fdb0a2354990a339c6ac24bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &180690526 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3727563710214660040, guid: 8667b01f5f3b0e84fbff7ca7e7c8fbbc, type: 3}
+  m_PrefabInstance: {fileID: 180690524}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55e365fdb0a2354990a339c6ac24bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &181969647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5786,6 +5808,22 @@ PrefabInstance:
     - target: {fileID: 1268808559623290666, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347558891607530268, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 180690525}
+    - target: {fileID: 1347558891607530268, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346913619110243848, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 180690526}
+    - target: {fileID: 4346913619110243848, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetVolume
       objectReference: {fileID: 0}
     - target: {fileID: 5716392656131326305, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
       propertyPath: m_Name

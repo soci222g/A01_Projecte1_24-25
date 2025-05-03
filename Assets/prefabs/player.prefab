@@ -15055,7 +15055,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8efc3e8ef47843744ac425f22a8083ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundDet: 0
+  groundDet: 1
+  LastFrameGroundDetector: 1
   DistansToGroudn: 1.5
   groundeMask:
     serializedVersion: 2

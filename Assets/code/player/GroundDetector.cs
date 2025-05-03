@@ -7,6 +7,7 @@ public class GroundDetector : MonoBehaviour
 {
     [SerializeField]
     private bool groundDet;
+    [SerializeField]
     private bool LastFrameGroundDetector;
     [SerializeField]
     private float DistansToGroudn = 0.85f;
