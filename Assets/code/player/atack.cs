@@ -93,7 +93,6 @@ public class atack : MonoBehaviour
             }
             else
             {
-                downHitbox.enabled = true;
                 animator.SetBool("IsAirAtack", true);
             }
 
@@ -124,9 +123,11 @@ public class atack : MonoBehaviour
 
             if (gD.GetGroundDetect() == false)
             {
+
+                downHitbox.enabled = false;
+
                 if (!playerSR.flipY)
                 {
-                    Debug.Log("bouncing");
                     playerRB.AddForce(transform.up * bounce);
                 }
                 else
