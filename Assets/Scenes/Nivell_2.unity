@@ -13836,6 +13836,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+--- !u!114 &930179452 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4442595126761444244, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+  m_PrefabInstance: {fileID: 930179451}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269013494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9909e92c3b263074fabd23a803628703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &950047842
 GameObject:
   m_ObjectHideFlags: 0
@@ -27387,6 +27398,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 305802757630993962, guid: 7696ecb0b0dbb8649a3986379336078c, type: 3}
+      propertyPath: hp
+      value: 
+      objectReference: {fileID: 930179452}
     - target: {fileID: 3437353955433321821, guid: 7696ecb0b0dbb8649a3986379336078c, type: 3}
       propertyPath: m_Name
       value: chitCode_level

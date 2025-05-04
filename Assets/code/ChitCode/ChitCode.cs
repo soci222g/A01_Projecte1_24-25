@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class ChitCode : MonoBehaviour
 {
 
+    [SerializeField] private hp hp;
+
     // Update is called once per frame
     void Update()
     {
@@ -16,7 +18,12 @@ public class ChitCode : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
         {
-            SceneManager.LoadScene("Nivell_2");
+            SceneManager.LoadScene("Nivell_1");
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            hp.setHP(-1000);
         }
     }
 }

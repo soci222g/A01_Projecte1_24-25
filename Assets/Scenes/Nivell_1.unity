@@ -74093,6 +74093,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 305802757630993962, guid: 7696ecb0b0dbb8649a3986379336078c, type: 3}
+      propertyPath: hp
+      value: 
+      objectReference: {fileID: 1508450706}
     - target: {fileID: 3437353955433321821, guid: 7696ecb0b0dbb8649a3986379336078c, type: 3}
       propertyPath: m_Name
       value: chitCode_level
