@@ -112,15 +112,16 @@ public class atack : MonoBehaviour
             HitAudio.Play();
             enemyHp.setHP(1);
 
-            frez.setDurationFreeze(0.1f);
-
             Animator enemyAnim = collision.GetComponent<Animator>();
 
             enemyAnim.SetBool("damage", true);
 
             playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
 
-
+            if(enemyHp.getHP() <= 0)
+            {
+                frez.setDurationFreeze(0.15f);
+            }
             if (gD.GetGroundDetect() == false)
             {
 
