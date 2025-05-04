@@ -9,6 +9,7 @@ public class Door : MonoBehaviour
     private Animator animator;
     [SerializeField]
     private string newRoomName;
+    [SerializeField] GameObject timeline;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -22,9 +23,9 @@ public class Door : MonoBehaviour
     }
 
     
-    void changeScene()
+    void inicioTimeline()
     {
-        SceneManager.LoadScene(newRoomName);
+        timeline.SetActive(true);
     }
 
 }
