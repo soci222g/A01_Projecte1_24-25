@@ -22,7 +22,7 @@ public class Dialogos_chuck : MonoBehaviour
 
     [SerializeField]bool nextText = true;
 
-
+    AudioSource yap;
     private void Awake()
     {
         ActivateTexT = false;
@@ -31,6 +31,7 @@ public class Dialogos_chuck : MonoBehaviour
         NextTextTime = 5;
         CurrentTextCount = 0;
         _textMeshPro.SetText(BloqueTexto[CurrentTextCount]);
+        yap = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -45,10 +46,10 @@ public class Dialogos_chuck : MonoBehaviour
             if (Input.GetMouseButtonDown(1) && nextText)
             {
                 nextText = false;
-                Debug.Log("yapyapyap");
 
                 if (CurrentTextCount <= BloqueTexto.Count)
                 {
+                    yap.Play();
                     CurrentTextCount++;
                     for (int i = 0; i < BloqueTexto.Count; i++)
                     {

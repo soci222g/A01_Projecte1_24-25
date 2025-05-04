@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-
+    [SerializeField]
+    private Animator animator;
     [SerializeField]
     private string newRoomName;
 
@@ -15,10 +16,15 @@ public class Door : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<Key>().GetKeyState())
             {
-                SceneManager.LoadScene(newRoomName);
+                animator.SetBool("open",true);      
             }
         }
     }
 
+    
+    void changeScene()
+    {
+        SceneManager.LoadScene(newRoomName);
+    }
 
 }
