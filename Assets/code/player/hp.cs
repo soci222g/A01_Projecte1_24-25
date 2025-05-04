@@ -34,12 +34,13 @@ public class hp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.P))
         {
             healthPoints = 1000;
             maxHealthPoints = 1000;
         }
-
+        */
         if (healthPoints <= 0)
         {
             anim.Play("death_anim");
