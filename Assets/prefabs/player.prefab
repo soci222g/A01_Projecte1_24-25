@@ -14958,7 +14958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859f7da0f31d57640b20a79b398c76fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InvFrames: 1
+  InvFrames: 0.4
   currentTimeInv: 0
   animator: {fileID: 650167750993376912}
   knockbackStrength: 10
