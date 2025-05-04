@@ -120677,7 +120677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8987172579097706783, guid: 0f293193e3cd10040b3bf66890fa921c, type: 3}
       propertyPath: bounce
-      value: 1000
+      value: 850
       objectReference: {fileID: 0}
     - target: {fileID: 8987172579097706783, guid: 0f293193e3cd10040b3bf66890fa921c, type: 3}
       propertyPath: player
