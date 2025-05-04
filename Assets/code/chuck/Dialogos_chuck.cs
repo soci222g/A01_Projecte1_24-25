@@ -22,6 +22,9 @@ public class Dialogos_chuck : MonoBehaviour
 
     [SerializeField]bool nextText = true;
 
+    [SerializeField] private camerabehavior cameraBehavior;
+    [SerializeField] private int roomNum;
+
     AudioSource yap;
     private void Awake()
     {
@@ -36,37 +39,41 @@ public class Dialogos_chuck : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(1))
-        {
-            nextText = true;
-        }
-
-        if (ActivateTexT)
-        {
-            if (Input.GetMouseButtonDown(1) && nextText)
+        if (cameraBehavior.getCurrentRoom() == roomNum)
+        {       
+            if (Input.GetMouseButtonUp(1))
             {
-                nextText = false;
 
-                if (CurrentTextCount <= BloqueTexto.Count)
+                nextText = true;
+
+            }
+            if (ActivateTexT)
+            {
+                if (Input.GetMouseButtonDown(1) && nextText)
                 {
-                    yap.Play();
-                    CurrentTextCount++;
-                    for (int i = 0; i < BloqueTexto.Count; i++)
+                    nextText = false;
+
+                    if (CurrentTextCount <= BloqueTexto.Count)
                     {
-                        if (i == CurrentTextCount)
+                        yap.Play();
+                        CurrentTextCount++;
+                        for (int i = 0; i < BloqueTexto.Count; i++)
                         {
-                            _textMeshPro.SetText(BloqueTexto[i]);
+                            if (i == CurrentTextCount)
+                            {
+                                _textMeshPro.SetText(BloqueTexto[i]);
+                            }
+
                         }
-
                     }
-                }
-                if (CurrentTextCount >= BloqueTexto.Count)
-                {
-                   
-                    ActivateTexT = false;
-                    square.SetActive(false);
-                }
+                    if (CurrentTextCount >= BloqueTexto.Count)
+                    {
 
+                        ActivateTexT = false;
+                        square.SetActive(false);
+                    }
+
+                }
             }
         }
 
