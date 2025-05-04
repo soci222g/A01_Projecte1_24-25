@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Efectes
+  m_text: Effects
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 32a599baab4a70f4ba9c78f8185213e8, type: 2}
   m_sharedMaterial: {fileID: -5083557435603818330, guid: 32a599baab4a70f4ba9c78f8185213e8, type: 2}
@@ -1821,7 +1821,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Musica
+  m_text: Music
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 32a599baab4a70f4ba9c78f8185213e8, type: 2}
   m_sharedMaterial: {fileID: -5083557435603818330, guid: 32a599baab4a70f4ba9c78f8185213e8, type: 2}
