@@ -8,6 +8,8 @@ public class movement : MonoBehaviour
     public Animator animator;
     [SerializeField]
     private float speed = 5f;
+
+    private float horizontal;
     SpriteRenderer sr;
     [SerializeField] private ParticleSystem dust;
     [SerializeField] private ParticleSystem dustFlip;
@@ -54,7 +56,7 @@ public class movement : MonoBehaviour
             }
         }
 
-        float horizontal = Input.GetAxis("Horizontal");
+        horizontal = Input.GetAxis("Horizontal");
         transform.position += new Vector3(horizontal * speed * Time.deltaTime, 0, 0);
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
         if (horizontal > 0)
@@ -84,5 +86,9 @@ public class movement : MonoBehaviour
     public void setSpeed(float newSpeed) 
     {
         speed = newSpeed; 
+    }
+    public Animator GetAnimatorPlayer()
+    {
+        return animator;
     }
 }

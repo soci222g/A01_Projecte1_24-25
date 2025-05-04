@@ -57,6 +57,7 @@ public class skeleLogic : MonoBehaviour
         if (cameraBehavior.getCurrentRoom() == NumRoom)
         {
             audio.Play();
+            
         }
     }
 }

@@ -11909,6 +11909,10 @@ PrefabInstance:
       value: Chuck
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: cameraBehavior
+      value: 
+      objectReference: {fileID: 1160991548}
+    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -15820,6 +15824,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chuck (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: roomNum
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: cameraBehavior
+      value: 
+      objectReference: {fileID: 1160991548}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.size
       value: 3
@@ -24202,6 +24214,14 @@ PrefabInstance:
       value: Chuck (2)
       objectReference: {fileID: 0}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: roomNum
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: cameraBehavior
+      value: 
+      objectReference: {fileID: 1160991548}
+    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -26455,6 +26475,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chuck (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: roomNum
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+      propertyPath: cameraBehavior
+      value: 
+      objectReference: {fileID: 1160991548}
     - target: {fileID: 8976018120177776063, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
       propertyPath: BloqueTexto.Array.size
       value: 2
