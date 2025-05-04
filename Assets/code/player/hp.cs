@@ -78,6 +78,11 @@ public class hp : MonoBehaviour
             toddDamage.Play();
         }
 
+        if(healthPoints > maxHealthPoints)
+        {
+            healthPoints = maxHealthPoints;
+        }
+
         hpUI.SetHP(healthPoints);
     }
 }
