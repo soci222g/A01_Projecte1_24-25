@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class Door : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class Door : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<Key>().GetKeyState())
             {
+                collision.GetComponent<movement>().GetAnimatorPlayer().SetFloat("Speed", 0);
+                collision.GetComponent<actionState>().startAction();
+                collision.GetComponent<movement>().enabled = false;
+                collision.GetComponent<Fleep>().enabled = false;
+                collision.GetComponentInChildren<atack>().enabled = false;
                 animator.SetBool("open",true);      
             }
         }
