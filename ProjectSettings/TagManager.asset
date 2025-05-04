@@ -11,6 +11,9 @@ TagManager:
   - bomb
   - atk
   - key
+  - movPlat
+  - bounce
+  - ground
   layers:
   - Default
   - TransparentFX
@@ -20,11 +23,11 @@ TagManager:
   - UI
   - Paredes
   - Suelos
-  - 
+  - spykes
   - player
   - enemy
   - healDrop
-  - 
+  - fleepCollider
   - 
   - 
   - 

@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class Door : MonoBehaviour
 {
-
+    [SerializeField]
+    private Animator animator;
     [SerializeField]
     private string newRoomName;
+    [SerializeField] GameObject timeline;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,10 +18,20 @@ public class Door : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<Key>().GetKeyState())
             {
-                SceneManager.LoadScene(newRoomName);
+                collision.GetComponent<movement>().GetAnimatorPlayer().SetFloat("Speed", 0);
+                collision.GetComponent<actionState>().startAction();
+                collision.GetComponent<movement>().enabled = false;
+                collision.GetComponent<Fleep>().enabled = false;
+                collision.GetComponentInChildren<atack>().enabled = false;
+                animator.SetBool("open",true);      
             }
         }
     }
 
+    
+    void inicioTimeline()
+    {
+        timeline.SetActive(true);
+    }
 
 }

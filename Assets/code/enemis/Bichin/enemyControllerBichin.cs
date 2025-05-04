@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class enemyControllerBichin : MonoBehaviour
 {
-    public Transform player; // Referencia al jugador
-    public float detectionRadius = 5.0f; // Radio de detección del jugador
-    [SerializeField] private float patrolSpeed = 2f; // Velocidad al patrullar
-    [SerializeField] private float chaseSpeed = 5f; // Velocidad máxima al perseguir
-    [SerializeField] private float acceleration = 5f; // Velocidad de aceleración
-    [SerializeField] private Transform controladorSuelo; // Punto de detección del suelo
-    [SerializeField] private Transform controladorTecho; // Punto de detección del techo
-    [SerializeField] private float distanciaDeteccion = 0.5f; // Distancia de detección del suelo
-    [SerializeField] private LayerMask capaSuelo; // Capa para detectar el suelo
-    [SerializeField] private Transform controladorPared; // Punto de detección de la pared
-    [SerializeField] private LayerMask capaPared; // Capa para detectar la pared
-    private bool moviendoDerecha = true; // Dirección inicial
-    private float currentSpeed; // Velocidad actual
+    public Transform player;
+    public float detectionRadius = 5.0f;
+    [SerializeField] private float patrolSpeed = 2f;
+    [SerializeField] private float chaseSpeed = 5f;
+    [SerializeField] private float acceleration = 5f;
+    [SerializeField] private Transform controladorSuelo;
+    [SerializeField] private Transform controladorTecho;
+    [SerializeField] private float distanciaDeteccion = 0.5f;
+    [SerializeField] private LayerMask capaSuelo;
+    [SerializeField] private Transform controladorPared;
+    [SerializeField] private LayerMask capaPared;
+    private bool moviendoDerecha = true;
+    private float currentSpeed;
     private bool onCooldown = false;
     [SerializeField] private float countCooldown;
     [SerializeField] private int collisionCooldown = 50;
@@ -25,24 +25,41 @@ public class enemyControllerBichin : MonoBehaviour
     [SerializeField] private int Cooldown = 500;
 
     private bool puedePerseguir = true;
-
     private bool detected = false;
-
-
-    [SerializeField] private float knock = 1000;
 
     private Rigidbody2D rb;
     private Animator animator;
+
+    private bool isKnockbacked = false;
+    private Vector2 knockbackDirection;
+    private float knockbackTimer = 0f;
+    [SerializeField] private float knockbackDuration = 0.3f; // Duración del knockback
+    [SerializeField] private float knockbackStrength = 10f;  // Fuerza del knockback
+
+    [SerializeField] private AudioSource StartChase;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        currentSpeed = patrolSpeed; // Iniciar con velocidad de patrullaje
+        currentSpeed = patrolSpeed;
     }
 
     void FixedUpdate()
     {
+        if (isKnockbacked)
+        {
+            knockbackTimer += Time.fixedDeltaTime;
+            rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, knockbackTimer / knockbackDuration);
+            if (knockbackTimer >= knockbackDuration)
+            {
+                isKnockbacked = false;
+                puedePerseguir = true;
+                chaseSpeed = 5f;
+            }
+            return;
+        }
+
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
         if (onCooldown)
@@ -72,18 +89,22 @@ public class enemyControllerBichin : MonoBehaviour
         }
         if (distanceToPlayer < detectionRadius)
         {
+            if(detected == false)
+            {
+                StartChase.Play();
+            }
             PerseguirJugador();
             detected = true;
         }
         else
         {
             Patrullar();
+            detected = false;
         }
     }
 
     private void PerseguirJugador()
     {
-        
         Vector2 direction = (player.position - transform.position).normalized;
         currentSpeed = Mathf.Lerp(currentSpeed, chaseSpeed, acceleration * Time.fixedDeltaTime);
         rb.velocity = new Vector2(direction.x * currentSpeed, rb.velocity.y);
@@ -124,12 +145,10 @@ public class enemyControllerBichin : MonoBehaviour
         currentSpeed = Mathf.Lerp(currentSpeed, patrolSpeed, acceleration * Time.fixedDeltaTime);
         rb.velocity = new Vector2((moviendoDerecha ? currentSpeed : -currentSpeed), rb.velocity.y);
 
-        // Detectar si hay pared adelante (dirección según el movimiento)
         Vector2 direccionPared = moviendoDerecha ? Vector2.right : Vector2.left;
         RaycastHit2D informacionPared = Physics2D.Raycast(controladorPared.position, direccionPared, distanciaDeteccion, capaPared);
         Debug.DrawRay(controladorPared.position, direccionPared * distanciaDeteccion, Color.green);
 
-        // Detectar el suelo o el techo según el estado
         if (GetComponent<grabityBichin>().getIsFleep())
         {
             RaycastHit2D informacionTecho = Physics2D.Raycast(controladorTecho.position, Vector2.up, distanciaDeteccion, capaSuelo);
@@ -158,44 +177,34 @@ public class enemyControllerBichin : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.name + this.name);
         if (collision.gameObject.CompareTag("player"))
         {
             onCooldown = true;
             chaseSpeed = 0f;
+            StartCoroutine(DelayedKnockbackFromHit(collision.transform));
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "atk")
+        if (collision.gameObject.tag == "atk")
         {
+            isKnockbacked = true;
+            knockbackTimer = 0f;
+            puedePerseguir = false;
+            animator.SetTrigger("onColide");
+
             if (GetComponent<grabityBichin>().getIsFleep())
             {
-                if (transform.position.x < player.position.x)
-                {
-                    rb.AddForce(transform.right * -knock);
-                }
-                else
-                {
-                    rb.AddForce(transform.right * knock);
-                }
+                knockbackDirection = (transform.position.x < player.position.x) ? Vector2.left : Vector2.right;
             }
             else
             {
-                if (transform.position.x > player.position.x)
-                {
-                    rb.AddForce(transform.right * knock);
-                }
-                else
-                {
-                    rb.AddForce(transform.right * -knock);
-                }
+                knockbackDirection = (transform.position.x > player.position.x) ? Vector2.right : Vector2.left;
             }
-            chaseSpeed = 0f;
-            animator.SetTrigger("onColide"); // Activar animación de colisión
-            puedePerseguir = false;
-        } 
+
+            rb.velocity = knockbackDirection * knockbackStrength;
+        }
     }
 
     void checkPersecution()
@@ -205,7 +214,7 @@ public class enemyControllerBichin : MonoBehaviour
 
     void animationApagada()
     {
-        animator.SetBool("onColide", false); // Volver a estado normal
+        animator.SetBool("onColide", false);
     }
 
     void chaseSpeedReset()
@@ -229,5 +238,22 @@ public class enemyControllerBichin : MonoBehaviour
             Gizmos.color = Color.green;
             Gizmos.DrawLine(controladorPared.position, controladorPared.position + (moviendoDerecha ? Vector3.right : Vector3.left) * distanciaDeteccion);
         }
+    }
+
+    private IEnumerator DelayedKnockbackFromHit(Transform target)
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        isKnockbacked = true;
+        knockbackTimer = 0f;
+        puedePerseguir = false;
+        animator.SetTrigger("onColide");
+
+        if (transform.position.x < target.position.x)
+            knockbackDirection = Vector2.left;
+        else
+            knockbackDirection = Vector2.right;
+
+        rb.velocity = knockbackDirection * (knockbackStrength / 1.5f);
     }
 }

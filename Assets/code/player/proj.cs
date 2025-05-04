@@ -5,45 +5,47 @@ using UnityEngine;
 public class proj : MonoBehaviour
 {
 
-    [SerializeField]
-    SpriteRenderer playerSr;
-    [SerializeField]
-    SpriteRenderer sr;
-    [SerializeField]
-    float speed;
-    public GameObject player;
+    [SerializeField] float speed;
     // Start is called before the first frame update
     void Start()
     {
-
-        player = GameObject.Find("player");
-
-        if (player.TryGetComponent(out SpriteRenderer playerSr))
-        {
-            if (playerSr.flipX)
-            {
-                speed = -speed;
-                sr.flipX = false;
-            }
-        }
-
 
     }
 
     private void FixedUpdate()
     {
-        transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
+
+        float angle = transform.rotation.eulerAngles.z;
+        
+        if (angle > 180) angle -= 360;
+        
+        if (Mathf.Approximately(angle, 0))
+        {
+            transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
+        }
+        else if (Mathf.Approximately(angle, 90) || Mathf.Approximately(angle, -270))
+        {
+            transform.position += new Vector3(0, speed * Time.deltaTime, 0);
+        }
+        else if (Mathf.Approximately(angle, 180) || Mathf.Approximately(angle, -180))
+        {
+            transform.position += new Vector3(-speed * Time.deltaTime, 0, 0);
+        }
+        else if (Mathf.Approximately(angle, 270) || Mathf.Approximately(angle, -90))
+        {
+            transform.position += new Vector3(0, -speed * Time.deltaTime, 0);
+        }
+   
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.gameObject.TryGetComponent(out EnemyHP enemyHp) && collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "player")
         {
-            enemyHp.setHP(3);
+            Destroy(gameObject);
         }
 
-        Destroy(gameObject);
-
     }
+
 }

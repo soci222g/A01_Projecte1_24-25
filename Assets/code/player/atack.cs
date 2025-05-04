@@ -30,7 +30,13 @@ public class atack : MonoBehaviour
     [SerializeField] float offset;
     actionState state;
 
-    // Start is called before the first frame update
+    movement movement;
+
+    [SerializeField] private AudioSource swingAudio;
+    [SerializeField] private AudioSource HitAudio;
+
+    freeze frez;
+
     void Start()
     {
         state = GetComponentInParent<actionState>();
@@ -38,6 +44,8 @@ public class atack : MonoBehaviour
         downHitbox.enabled = false;
         latHitbox.enabled = false;
         onCooldown = false;
+        frez = GetComponentInParent<freeze>();
+        movement = GetComponentInParent<movement>();
     }
 
     private void FixedUpdate() // usamos FixedUpdate para que el tiempo del ataque sea consistente
@@ -71,6 +79,7 @@ public class atack : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && !onCooldown && state.getActionState()) //check input and cooldown
         {
+            swingAudio.Play();
             state.startAction();
 
             //check if on ground or air
@@ -78,10 +87,12 @@ public class atack : MonoBehaviour
             {
                 latHitbox.enabled = true;
                 animator.SetBool("IsAtack", true);
+                playerRB.velocity = Vector3.zero;
+                movement.setSpeed(1f);
+
             }
             else
             {
-                downHitbox.enabled = true;
                 animator.SetBool("IsAirAtack", true);
             }
 
@@ -98,6 +109,7 @@ public class atack : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out EnemyHP enemyHp) && collision.gameObject.tag == "enemy")
         {
+            HitAudio.Play();
             enemyHp.setHP(1);
 
             Animator enemyAnim = collision.GetComponent<Animator>();
@@ -106,13 +118,17 @@ public class atack : MonoBehaviour
 
             playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
 
-            Debug.Log(gD.GetGroundDetect());
+            if(enemyHp.getHP() <= 0)
+            {
+                frez.setDurationFreeze(0.15f);
+            }
             if (gD.GetGroundDetect() == false)
             {
-                Debug.Log("is falling");
+
+                downHitbox.enabled = false;
+
                 if (!playerSR.flipY)
                 {
-                    Debug.Log("bouncing");
                     playerRB.AddForce(transform.up * bounce);
                 }
                 else
@@ -122,11 +138,36 @@ public class atack : MonoBehaviour
 
             }
         }
+        else if (collision.gameObject.tag == "bounce")
+        {
+            playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
+
+            if (!playerSR.flipY)
+            {
+                Debug.Log("bouncing");
+                playerRB.AddForce(transform.up * bounce);
+            }
+            else
+            {
+                playerRB.AddForce(transform.up * -bounce);
+            }
+        }
+
+        
+
     }
+
+    
 
     public void lat_hitbox_deactivate()
     {
         latHitbox.enabled = false;
+        movement.setSpeed(8f);
+    }
+
+    public void down_hitbox_activate()
+    {
+        downHitbox.enabled = true;
     }
 
     public void down_hitbox_deactivate()

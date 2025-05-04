@@ -16,10 +16,20 @@ public class camerabehavior : MonoBehaviour
     public List<Transform> SpawnPoints;
 
     private int spawnPointNum;
+    [SerializeField]
     private int roomToGo;
-
+    [SerializeField]
     private int currentRoom;
-    
+
+
+    [SerializeField]
+    private Vector2 safeVelocity;
+
+    [SerializeField]
+    private GameObject player;
+
+    private atack Atack;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +37,9 @@ public class camerabehavior : MonoBehaviour
         roomToGo = 0;
         currentRoom = 0;
         camera.transform.position = cameraPosition[0].position;
+        cameraPosition[0].GetComponent<ColliderManager>().ActivateSelf();
+
+        Atack = player.GetComponentInChildren< atack>();
     }
 
     // Update is called once per frame
@@ -34,17 +47,27 @@ public class camerabehavior : MonoBehaviour
     {
         if (currentRoom != roomToGo)
         {
+
+            
+            cameraPosition[roomToGo].GetComponent<ColliderManager>().ActivateSelf();
             Vector3 dir = cameraPosition[roomToGo].position - camera.transform.position;
             float distence = dir.magnitude;
             dir.Normalize();
+            
 
             camera.transform.position += dir * speed * Time.deltaTime;
-           // Time.timeScale = 0;  pause time (para el pause menu)
+            player.GetComponent<Rigidbody2D>().velocity = new Vector2(player.GetComponent<Rigidbody2D>().velocity.x, 0);
+            player.GetComponent<movement>().enabled = false;
+            // Time.timeScale = 0;  pause time (para el pause menu)
+            Atack.enabled = false;
             if (distence < 1f)
             {
                 camera.transform.position = cameraPosition[roomToGo].position;
                 currentRoom = roomToGo;
-                
+
+                player.GetComponent<Rigidbody2D>().velocity = safeVelocity;
+                player.GetComponent<movement>().enabled = true;
+                Atack.enabled = true;
             }
         }
        
@@ -65,4 +88,16 @@ public class camerabehavior : MonoBehaviour
     {
         roomToGo += num;
     }
+
+    public void Safe_Velocity(Vector2 velocity)
+    {
+        safeVelocity = velocity;
+    }
+
+    public int getCurrentRoom()
+    {
+        return currentRoom;
+    }
+
+
 }

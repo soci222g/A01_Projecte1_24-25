@@ -18,6 +18,11 @@ public class atack_stuff : MonoBehaviour
         atk.lat_hitbox_deactivate();
     }
 
+    void down_hitbox_activate()
+    {
+        atk.down_hitbox_activate();
+    }
+
     void down_hitbox_deactivate()
     {
         atk.down_hitbox_deactivate();

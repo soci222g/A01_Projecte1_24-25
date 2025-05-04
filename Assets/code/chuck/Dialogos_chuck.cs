@@ -18,7 +18,14 @@ public class Dialogos_chuck : MonoBehaviour
     [SerializeField]
     private bool ActivateTexT;
 
+    [SerializeField] private GameObject square;
 
+    [SerializeField]bool nextText = true;
+
+    [SerializeField] private camerabehavior cameraBehavior;
+    [SerializeField] private int roomNum;
+
+    AudioSource yap;
     private void Awake()
     {
         ActivateTexT = false;
@@ -27,34 +34,49 @@ public class Dialogos_chuck : MonoBehaviour
         NextTextTime = 5;
         CurrentTextCount = 0;
         _textMeshPro.SetText(BloqueTexto[CurrentTextCount]);
+        yap = GetComponent<AudioSource>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-
-        if (ActivateTexT) {
-            if (CurrentTimeText >= NextTextTime && CurrentTextCount <= BloqueTexto.Count)
+        if (cameraBehavior.getCurrentRoom() == roomNum)
+        {       
+            if (Input.GetMouseButtonUp(1))
             {
-                CurrentTextCount++;
-                for (int i = 0; i < BloqueTexto.Count; i++)
+
+                nextText = true;
+
+            }
+            if (ActivateTexT)
+            {
+                if (Input.GetMouseButtonDown(1) && nextText)
                 {
-                    if(i == CurrentTextCount)
+                    nextText = false;
+
+                    if (CurrentTextCount <= BloqueTexto.Count)
                     {
-                        _textMeshPro.SetText(BloqueTexto[i]);
-                        CurrentTimeText = 0;
+                        yap.Play();
+                        CurrentTextCount++;
+                        for (int i = 0; i < BloqueTexto.Count; i++)
+                        {
+                            if (i == CurrentTextCount)
+                            {
+                                _textMeshPro.SetText(BloqueTexto[i]);
+                            }
+
+                        }
+                    }
+                    if (CurrentTextCount >= BloqueTexto.Count)
+                    {
+
+                        ActivateTexT = false;
+                        square.SetActive(false);
                     }
 
                 }
             }
-            else if(CurrentTextCount > BloqueTexto.Count)
-            {
-                ActivateTexT = false;
-                CurrentTimeText += Time.deltaTime;
-            }
-            else{
-                CurrentTimeText += Time.deltaTime;
-            }
         }
+
 
 
     }

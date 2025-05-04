@@ -8,6 +8,8 @@ public class Pause_menu : MonoBehaviour
     [SerializeField]
     private GameObject Pause_Canva;
     [SerializeField]
+    private GameObject options_canvas;
+    [SerializeField]
     private GameObject HUD;
     [SerializeField]
     private atack atack;
@@ -28,16 +30,18 @@ public class Pause_menu : MonoBehaviour
         {
             if (isPaused == false)
             {
+                atack.enabled = false;
                 Cursor.lockState = CursorLockMode.None;
                 isPaused = true;
                 Time.timeScale = 0f;
                 Pause_Canva.SetActive(true);
                 HUD.SetActive(false);
-                atack.enabled = false;
+               
             }
             else
             {
                 resumePause();
+                atack.cooldown_off();
             }
         }
   
@@ -45,12 +49,14 @@ public class Pause_menu : MonoBehaviour
 
     public void resumePause()
     {
+        atack.enabled = true;
         isPaused = false;
         Time.timeScale = 1;
         Pause_Canva.SetActive(false);
+        options_canvas.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         HUD.SetActive(true);
-        atack.enabled = true;
+       
     }
 
     public void MainMenuScean()
