@@ -19,6 +19,8 @@ public class EnemyHP : MonoBehaviour
     [SerializeField] private float deathDelay = 1.2f; // tiempo que dura la animación de muerte
 
     [SerializeField] private AudioSource DamageAudio;
+
+    [SerializeField] private AudioSource DeadAudio;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -93,6 +95,11 @@ public class EnemyHP : MonoBehaviour
 
             Instantiate(dropHeal, dropPos, transform.rotation);
         }
+    }
+
+    void muertoSound()
+    {
+        DeadAudio.Play();
     }
 
     public int getHP() { return HP; }
