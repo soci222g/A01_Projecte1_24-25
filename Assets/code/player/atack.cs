@@ -137,6 +137,10 @@ public class atack : MonoBehaviour
                 }
 
             }
+            if (collision.GetComponent<DesactivarColliderTimer>() != null)
+            {
+                collision.GetComponent<DesactivarColliderTimer>().StartDeactivateCollider();
+            }
         }
         else if (collision.gameObject.tag == "bounce")
         {
@@ -151,6 +155,7 @@ public class atack : MonoBehaviour
             {
                 playerRB.AddForce(transform.up * -bounce);
             }
+           
         }
 
         

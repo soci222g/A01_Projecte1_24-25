@@ -10,7 +10,7 @@ public class enemyOnColide : MonoBehaviour
     private float currentTimeInv = 0;
     private hp HP;
 
-    private Collider2D coll;
+    
 
     [SerializeField]
     private Animator animator;
@@ -19,6 +19,7 @@ public class enemyOnColide : MonoBehaviour
     [SerializeField] private float knockbackDuration = 0.2f;
 
     private Rigidbody2D rb;
+    [SerializeField]
     private float knockbackTimer = 0f;
     private bool isKnockbacked = false;
     private Vector2 knockbackDirection;
@@ -27,7 +28,7 @@ public class enemyOnColide : MonoBehaviour
     private actionState state;
     private void Start()
     {
-        coll = GetComponent<Collider2D>();
+        
         HP = GetComponent<hp>();
         rb = GetComponent<Rigidbody2D>();
         state = GetComponent<actionState>();
@@ -92,5 +93,8 @@ public class enemyOnColide : MonoBehaviour
             else
                 knockbackDirection = Vector2.right;
         }
+       
     }
+
+   
 }
