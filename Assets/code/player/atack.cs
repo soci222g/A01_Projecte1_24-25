@@ -29,6 +29,10 @@ public class atack : MonoBehaviour
     Rigidbody2D playerRB;
     [SerializeField] float offset;
     actionState state;
+    [SerializeField]
+    float camShakeForce;
+    [SerializeField]
+    float camShakeTimer;
 
     movement movement;
 
@@ -117,8 +121,9 @@ public class atack : MonoBehaviour
             enemyAnim.SetBool("damage", true);
 
             playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
+            GetComponentInParent<CameraShake>().ShakeCamera(camShakeForce, camShakeTimer);
 
-            if(enemyHp.getHP() <= 0)
+            if (enemyHp.getHP() <= 0)
             {
                 frez.setDurationFreeze(0.15f);
             }
