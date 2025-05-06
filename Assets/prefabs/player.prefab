@@ -9864,6 +9864,8 @@ MonoBehaviour:
   playerTR: {fileID: 2182073263094218293}
   playerRB: {fileID: 1409228932536560166}
   offset: 1.47
+  camShakeForce: 0.07
+  camShakeTimer: 0.05
   swingAudio: {fileID: 3324728024498442042}
   HitAudio: {fileID: 4187084066191599506}
 --- !u!82 &3324728024498442042
