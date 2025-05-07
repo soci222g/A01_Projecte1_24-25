@@ -138,7 +138,6 @@ public class spikes : MonoBehaviour
         hb3.SetActive(true);
         MoveCode.enabled = true;
         FleepCode.enabled = true;
-        
     }
 
     public void SetSpawnPont(Transform newPoint)
