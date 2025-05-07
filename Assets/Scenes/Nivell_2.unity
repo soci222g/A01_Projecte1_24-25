@@ -13750,7 +13750,7 @@ PrefabInstance:
     - target: {fileID: -8281634634580875070, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
       propertyPath: hb1
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2077548647}
     - target: {fileID: -8281634634580875070, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
       propertyPath: hb2
       value: 
@@ -26104,6 +26104,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0baa457152cbc3b43a8b7b9315127114, type: 3}
+--- !u!70 &2077548647 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4759406579385093423, guid: 4620bf3e0c00bc74f9d596573a4f5976, type: 3}
+  m_PrefabInstance: {fileID: 930179451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2088377782
 PrefabInstance:
   m_ObjectHideFlags: 0
