@@ -69,12 +69,11 @@ public class spikes : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (spikeActivated) return;
-
+        if (spikeActivated) { return; }
+        
         if (collision.gameObject.tag == spikeTag)
         {
-            if (collision.gameObject.GetComponent<SpikeCheck>().GetCheckPlayer())
-            {
+           
                 spikeActivated = true;
 
                 this.gameObject.GetComponent<hp>().setHP(1);
@@ -95,9 +94,12 @@ public class spikes : MonoBehaviour
                 {
                     StartCoroutine(bolita1());
                 }
-                
-            }
+               
         }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        Debug.Log("inSpikes");
     }
 
     public IEnumerator bolita1()

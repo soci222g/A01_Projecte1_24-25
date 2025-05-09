@@ -68,10 +68,13 @@ public class enemyOnColide : MonoBehaviour
         }
         else
         {
+            
             gameObject.tag = "player";
             animator.SetBool("isDamaged", false);
             Physics2D.IgnoreLayerCollision(9, 10, false);
             state.endAction();
+            Debug.Log("reset Colision");
+
         }
     }
 
