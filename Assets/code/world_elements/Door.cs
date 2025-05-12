@@ -16,7 +16,7 @@ public class Door : MonoBehaviour
     {
         if (collision.gameObject.tag == "player")
         {
-            if (collision.gameObject.GetComponent<Key>().GetKeyState())
+            if (collision.gameObject.GetComponentInChildren<Key>().GetKeyState())
             {
                 collision.GetComponent<movement>().GetAnimatorPlayer().SetFloat("Speed", 0);
                 collision.GetComponent<actionState>().startAction();
