@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bossHp : MonoBehaviour
 {
-    private int hp = 3;
+    [SerializeField] private int hp = 3;
     BoxCollider2D hurtBox;
     bossState state;
     Animator animator;
@@ -29,6 +29,7 @@ public class bossHp : MonoBehaviour
         {
             hp--;
             animator.SetBool("isHurt", true);
+            animator.SetBool("isTired", false);
             //stateChange
         }
     }

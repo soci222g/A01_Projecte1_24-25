@@ -18,11 +18,13 @@ public class bossState : MonoBehaviour
     [SerializeField] private int actionCounter = 0;
     [SerializeField] private int actionTimer;
     private Animator animator;
+    private BoxCollider2D hurtBox;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        hurtBox = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
@@ -35,7 +37,7 @@ public class bossState : MonoBehaviour
             if(actions == 0)
             {
                 animator.SetBool("isTired", true);
-                //set hurtbox true
+                hurtBox.enabled = true;
                 actions = 5;
             }
         }
@@ -60,6 +62,11 @@ public class bossState : MonoBehaviour
     void actionSum()
     {
         actionCounter++;
+    }
+
+    void deactivateHurtBox()
+    {
+        hurtBox.enabled = false;
     }
 
 }
