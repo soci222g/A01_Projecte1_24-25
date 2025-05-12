@@ -5510,6 +5510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!61 &165802786
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -67651,6 +67652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!61 &788351163
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -68105,6 +68107,52 @@ MonoBehaviour:
   NextParent: {fileID: 2054886819}
   BackParent: {fileID: 932992016}
   DefoultCollider: {fileID: 1389701042}
+--- !u!1 &879621664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 879621666}
+  - component: {fileID: 879621665}
+  m_Layer: 0
+  m_Name: SavePlayerInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &879621665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879621664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697027c15b226f1478b78149db55e81d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 669823157}
+  Camera: {fileID: 2136018926}
+--- !u!4 &879621666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879621664}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 35.29809, y: -32.509415, z: -0.5940082}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 99
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &883905800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73687,6 +73735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!61 &1041431954
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -74333,6 +74382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!61 &1186581592
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -74469,6 +74519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!1 &1188668977
 GameObject:
   m_ObjectHideFlags: 0
@@ -79765,6 +79816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!61 &1207117249
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -80115,6 +80167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!61 &1265183358
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -85270,6 +85323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!61 &1301692677
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -85361,6 +85415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 879621665}
 --- !u!61 &1302186655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -110763,6 +110818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 879621665}
 --- !u!61 &1690383293
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -120696,6 +120752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 879621665}
 --- !u!61 &1745077456
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -120787,6 +120844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!61 &1750852602
 BoxCollider2D:
   m_ObjectHideFlags: 0
