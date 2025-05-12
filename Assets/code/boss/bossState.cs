@@ -33,6 +33,8 @@ public class bossState : MonoBehaviour
         {
             actionCounter = 0;
             actions--;
+
+            animator.SetBool("atack1", true);
             
             if(actions == 0)
             {
