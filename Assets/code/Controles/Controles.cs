@@ -53,6 +53,15 @@ public partial class @Controles: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Text"",
+                    ""type"": ""Button"",
+                    ""id"": ""9e2759a2-240a-4d44-8704-e72d2f425707"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -165,6 +174,28 @@ public partial class @Controles: IInputActionCollection2, IDisposable
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""95a6d8f8-2887-43f3-8797-5db9082bf696"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Text"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8fab8ba7-5797-48f2-9e27-8abf4c216d1a"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Text"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -224,6 +255,7 @@ public partial class @Controles: IInputActionCollection2, IDisposable
         m_Base_Mover = m_Base.FindAction("Mover", throwIfNotFound: true);
         m_Base_Flip = m_Base.FindAction("Flip", throwIfNotFound: true);
         m_Base_Attack = m_Base.FindAction("Attack", throwIfNotFound: true);
+        m_Base_Text = m_Base.FindAction("Text", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -292,6 +324,7 @@ public partial class @Controles: IInputActionCollection2, IDisposable
     private readonly InputAction m_Base_Mover;
     private readonly InputAction m_Base_Flip;
     private readonly InputAction m_Base_Attack;
+    private readonly InputAction m_Base_Text;
     public struct BaseActions
     {
         private @Controles m_Wrapper;
@@ -299,6 +332,7 @@ public partial class @Controles: IInputActionCollection2, IDisposable
         public InputAction @Mover => m_Wrapper.m_Base_Mover;
         public InputAction @Flip => m_Wrapper.m_Base_Flip;
         public InputAction @Attack => m_Wrapper.m_Base_Attack;
+        public InputAction @Text => m_Wrapper.m_Base_Text;
         public InputActionMap Get() { return m_Wrapper.m_Base; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -317,6 +351,9 @@ public partial class @Controles: IInputActionCollection2, IDisposable
             @Attack.started += instance.OnAttack;
             @Attack.performed += instance.OnAttack;
             @Attack.canceled += instance.OnAttack;
+            @Text.started += instance.OnText;
+            @Text.performed += instance.OnText;
+            @Text.canceled += instance.OnText;
         }
 
         private void UnregisterCallbacks(IBaseActions instance)
@@ -330,6 +367,9 @@ public partial class @Controles: IInputActionCollection2, IDisposable
             @Attack.started -= instance.OnAttack;
             @Attack.performed -= instance.OnAttack;
             @Attack.canceled -= instance.OnAttack;
+            @Text.started -= instance.OnText;
+            @Text.performed -= instance.OnText;
+            @Text.canceled -= instance.OnText;
         }
 
         public void RemoveCallbacks(IBaseActions instance)
@@ -406,6 +446,7 @@ public partial class @Controles: IInputActionCollection2, IDisposable
         void OnMover(InputAction.CallbackContext context);
         void OnFlip(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
+        void OnText(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
