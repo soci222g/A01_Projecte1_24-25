@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 293da65eea1f7894e86908cd79f90428
+guid: ddf8b2dc1cb4d70438c0efa5547d6723
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dash_back_0
+      name: buttonYanim_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 2
         y: 2
-        width: 60
-        height: 31
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 216bf6be52857a74893fc000c981aad9
-      internalID: -436366909
+      spriteID: 36b445e577bfc364194fa9f15f6942f0
+      internalID: -402810280
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dash_back_1
+      name: buttonYanim_1
       rect:
         serializedVersion: 2
-        x: 67
+        x: 18
         y: 2
-        width: 60
-        height: 31
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,71 +171,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0703a3b7ff3594546a9caaff0e76bbbd
-      internalID: -929990271
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dash_back_2
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 2
-        width: 60
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02218517f701dd547aa55db0ca8e8ae7
-      internalID: -367995576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dash_back_3
-      rect:
-        serializedVersion: 2
-        x: 193
-        y: 2
-        width: 59
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d8d404e44f70fab4cb5c6d1a357fd05e
-      internalID: 2006903826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dash_back_4
-      rect:
-        serializedVersion: 2
-        x: 260
-        y: 2
-        width: 60
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b6137118e2d85b47a25e681084e85cb
-      internalID: -907865930
+      spriteID: 2974b787cba0100499500f2b92560b0e
+      internalID: -1326628814
       vertices: []
       indices: 
       edges: []
@@ -251,11 +188,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dash_back_0: -436366909
-      dash_back_1: -929990271
-      dash_back_2: -367995576
-      dash_back_3: 2006903826
-      dash_back_4: -907865930
+      buttonYanim_0: -402810280
+      buttonYanim_1: -1326628814
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
