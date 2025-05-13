@@ -37,13 +37,11 @@ public class SavePositionGloval : MonoBehaviour
             newPositionSpawn.z = PlayerPrefs.GetFloat("Z");
         }
 
-
         if (PlayerPrefs.HasKey("CameraPosition"))
         {
             current_cameraPositio = PlayerPrefs.GetInt("CameraPosition");
             //Debug.Log("newCameraPosition");
         }
-
         player.transform.position = newPositionSpawn;
         //Debug.Log(newPositionSpawn);
 
@@ -79,10 +77,10 @@ public class SavePositionGloval : MonoBehaviour
 
     public void ResetSafe()
     {
-        PlayerPrefs.SetFloat("X", StartPosition.x);
-        PlayerPrefs.SetFloat("Y", StartPosition.y);
-        PlayerPrefs.SetFloat("Z", StartPosition.z);
-        PlayerPrefs.SetInt("CameraPosition", 0);
+        PlayerPrefs.DeleteKey("X");
+        PlayerPrefs.DeleteKey("Y");
+        PlayerPrefs.DeleteKey("Z");
+        PlayerPrefs.DeleteKey("CameraPosition");
     }
 
     public void SaveNewPosition(int NewCameraPosition, Vector3 PositionPlayer) 
@@ -91,7 +89,6 @@ public class SavePositionGloval : MonoBehaviour
         PlayerPrefs.SetFloat("Y", PositionPlayer.y);
         PlayerPrefs.SetFloat("Z", PositionPlayer.z);
 
-        Debug.Log(PositionPlayer);
 
         PlayerPrefs.SetInt("CameraPosition", NewCameraPosition + 1);
     }
