@@ -1,27 +1,43 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Fleep : MonoBehaviour
 {
-    SpriteRenderer sr;
-    Rigidbody2D rb;
+    private SpriteRenderer sr;
+    private Rigidbody2D rb;
+
     [SerializeField]
     private bool fleep;
+
     private bool fleepControler = true;
+
     [SerializeField]
     private bool flying;
-   
-    private int fleepTime = 1;
+
     [SerializeField]
     private float curentfleepTime;
+
     [SerializeField] private ParticleSystem jumpPart;
     [SerializeField] private ParticleSystem jumpPartF;
-    // Update is called once per frame
-
     [SerializeField] private AudioSource Audio;
+
+    private Controles controles;
+
+    void Awake()
+    {
+        controles = new Controles();
+        controles.Base.Flip.performed += ctx => OnFlipPressed();
+    }
+
+    void OnEnable()
+    {
+        controles.Base.Enable();
+    }
+
+    void OnDisable()
+    {
+        controles.Base.Disable();
+    }
 
     void Start()
     {
@@ -30,61 +46,37 @@ public class Fleep : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-
-
-        if (GetComponent<GroundDetector>().GetGroundDetect() == true)
-            ActivateGravity();
-        
+        if (GetComponent<GroundDetector>().GetGroundDetect())
+            fleep = false; // Resetea el fleep si estás en el suelo
     }
 
-
-    private void ActivateGravity()
+    private void OnFlipPressed()
     {
-        if (Input.GetKeyDown("space") && GetComponent<GroundDetector>().GetGroundDetect())
+        if (GetComponent<GroundDetector>().GetGroundDetect())
         {
             createJumpPart();
             fleep = true;
             fleepControler = !fleepControler;
-            //Audio.Play();
+
             if (GetComponentsInParent<movPlat_movment>() != null)
             {
                 rb.velocity = new Vector2(0, rb.velocity.y);
                 Debug.Log("onMovePLatform");
             }
 
-        }
-        else
-        {
-            fleep = false;
-
-        }
-        if (fleep == true)
-        {
             rb.gravityScale *= -1;
             sr.flipY = !sr.flipY;
-
-          
-            
         }
-
-
     }
-
-
 
     void createJumpPart()
     {
-        if (fleepControler == true)
-        {
+        if (fleepControler)
             jumpPart.Play();
-        }
         else
-        {
             jumpPartF.Play();
-        }
     }
 
     public bool GetFleepControler()
@@ -101,6 +93,7 @@ public class Fleep : MonoBehaviour
     {
         return flying;
     }
+
     public void SetFleep()
     {
         fleep = true;

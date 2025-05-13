@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 2218890945223518183}
   - component: {fileID: 7073481724562453088}
   - component: {fileID: 356209257197855345}
-  - component: {fileID: 1472438534545975592}
   - component: {fileID: 4028713624222788403}
-  m_Layer: 10
+  - component: {fileID: 4799137718084604572}
+  m_Layer: 13
   m_Name: bat
-  m_TagString: enemy
+  m_TagString: bounce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,7 +137,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.1924628, y: -0.20765713}
@@ -174,22 +174,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1472438534545975592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4742177329033386033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d982233c401c104983cf65a4307eca7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropHeal: {fileID: 73896145160197108, guid: 09a4d25576e3bb24baa358253cb97620, type: 3}
-  HP: 100000000
-  deathDelay: 1.2
-  DamageAudio: {fileID: 0}
 --- !u!50 &4028713624222788403
 Rigidbody2D:
   serializedVersion: 4
@@ -217,3 +201,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &4799137718084604572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4742177329033386033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22d4ec9fb2680f54e947db42c6c288f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeNoCollider: 0.4
+  currentTime: 0

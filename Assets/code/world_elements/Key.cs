@@ -10,7 +10,7 @@ public class Key : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInParent<Animator>();
         if (animator == null)
         {
             Debug.LogError("No se encontró un Animator en " + gameObject.name);
