@@ -9,8 +9,7 @@ public class BackCameraCollider : MonoBehaviour
 
     private ColliderManager CollMan;
 
-    [SerializeField]
-    private SavePositionGloval save;
+    
     private void Awake()
     {
         CollMan = GetComponentInParent<ColliderManager>();
@@ -26,16 +25,10 @@ public class BackCameraCollider : MonoBehaviour
             cam.SetSpawnPoint(-1);
             collision.gameObject.GetComponent<spikes>().SetSpawnPont(cam.GetSpawnPoint());
 
-            CollMan.ActivateBack();
-
+           
             cam.Safe_Velocity(collision.GetComponent<Rigidbody2D>().velocity);
 
-              if(save != null)
-            {
-                save.SaveNewPosition(cam.getCurrentRoom(),cam.GetSpawnPoint().position);
-                cam.setCurrentRoomSave(save.GetCameraNum());
-                cam.SetSpawnPointSave(save.GetCameraNum());
-            }
+            CollMan.ActivateBack();
         }
 
     }

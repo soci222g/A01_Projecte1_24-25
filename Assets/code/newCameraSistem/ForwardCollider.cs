@@ -31,8 +31,7 @@ public class ForwardCollider : MonoBehaviour
             if(save != null)
             {
                 save.SaveNewPosition(cam.getCurrentRoom(),cam.GetSpawnPoint().position);
-                cam.setCurrentRoomSave(save.GetCameraNum());
-                cam.SetSpawnPointSave(save.GetCameraNum());
+               
             }
 
             CollMan.ActivateForward();

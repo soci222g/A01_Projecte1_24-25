@@ -5,8 +5,14 @@ using UnityEngine;
 public class SavePositionGloval : MonoBehaviour
 {
 
-    private int current_cameraPositio;
+    private int current_cameraPositio = 0;
+    [SerializeField]
     private Vector3 newPositionSpawn;
+
+    [SerializeField]
+    private Vector3 StartPosition;
+    
+
 
     [SerializeField]
     private GameObject player;
@@ -23,12 +29,11 @@ public class SavePositionGloval : MonoBehaviour
         {
             newPositionSpawn.x = PlayerPrefs.GetFloat("X");
         }
-        else if (PlayerPrefs.HasKey("Y"))
+        if (PlayerPrefs.HasKey("Y"))
         {
-
             newPositionSpawn.y = PlayerPrefs.GetFloat("Y");
         }
-        else if (PlayerPrefs.HasKey("Z")) {
+        if (PlayerPrefs.HasKey("Z")) {
             newPositionSpawn.z = PlayerPrefs.GetFloat("Z");
         }
 
@@ -36,12 +41,14 @@ public class SavePositionGloval : MonoBehaviour
         if (PlayerPrefs.HasKey("CameraPosition"))
         {
             current_cameraPositio = PlayerPrefs.GetInt("CameraPosition");
-            Debug.Log("newCameraPosition");
+            //Debug.Log("newCameraPosition");
         }
 
         player.transform.position = newPositionSpawn;
+        //Debug.Log(newPositionSpawn);
 
         Camera.SetRoomOrigin(current_cameraPositio);
+       
 
     }
 
@@ -65,11 +72,26 @@ public class SavePositionGloval : MonoBehaviour
         return newPositionSpawn;
     }
 
+    public Vector3 GetStartPosition()
+    {
+        return StartPosition;
+    }
+
+    public void ResetSafe()
+    {
+        PlayerPrefs.SetFloat("X", StartPosition.x);
+        PlayerPrefs.SetFloat("Y", StartPosition.y);
+        PlayerPrefs.SetFloat("Z", StartPosition.z);
+        PlayerPrefs.SetInt("CameraPosition", 0);
+    }
+
     public void SaveNewPosition(int NewCameraPosition, Vector3 PositionPlayer) 
     {
         PlayerPrefs.SetFloat("X", PositionPlayer.x);
         PlayerPrefs.SetFloat("Y", PositionPlayer.y);
         PlayerPrefs.SetFloat("Z", PositionPlayer.z);
+
+        Debug.Log(PositionPlayer);
 
         PlayerPrefs.SetInt("CameraPosition", NewCameraPosition + 1);
     }

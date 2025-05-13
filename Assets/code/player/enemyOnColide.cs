@@ -64,7 +64,7 @@ public class enemyOnColide : MonoBehaviour
             currentTimeInv -= Time.deltaTime;
             gameObject.tag = "Player";
             Physics2D.IgnoreLayerCollision(9, 10, true);
-            Debug.Log("ignaorar Colision");
+            //Debug.Log("ignaorar Colision");
         }
         else
         {
@@ -73,7 +73,7 @@ public class enemyOnColide : MonoBehaviour
             animator.SetBool("isDamaged", false);
             Physics2D.IgnoreLayerCollision(9, 10, false);
             state.endAction();
-            Debug.Log("reset Colision");
+            //Debug.Log("reset Colision");
 
         }
     }

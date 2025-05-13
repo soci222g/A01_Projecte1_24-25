@@ -33,17 +33,14 @@ public class camerabehavior : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        spawnPointNum = 0;
-
-
-
-       
-
+         
         Atack = player.GetComponentInChildren<atack>();
     }
 
     private void Start()
     {
+         
+       
         camera.transform.position = cameraPosition[currentRoom].position;
         cameraPosition[currentRoom].GetComponent<ColliderManager>().ActivateSelf();
     }

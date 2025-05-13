@@ -431,6 +431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &9805903
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10486,6 +10487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &164481993
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10839,6 +10841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &240057132
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11016,6 +11019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &312444462
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11198,52 +11202,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0baa457152cbc3b43a8b7b9315127114, type: 3}
---- !u!1 &356030232
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 356030234}
-  - component: {fileID: 356030233}
-  m_Layer: 0
-  m_Name: MandoOTeclado
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &356030233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356030232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 681fb907735fdfc4ab31fdfe3438d56c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiTeclado: {fileID: 2007686214}
-  uiMando: {fileID: 272348707}
---- !u!4 &356030234
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356030232}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.9053, y: -1.5827469, z: -2.9213593}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 95
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &358069716
 GameObject:
   m_ObjectHideFlags: 0
@@ -11647,6 +11605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &416419204
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11854,6 +11813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &551823147
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12500,6 +12460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &689747473
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12591,6 +12552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &712502538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12910,6 +12872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &756831591
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13295,6 +13258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &844248904
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14277,6 +14241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &1006106086
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14491,6 +14456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &1038599553
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14691,6 +14657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &1062562684
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15011,6 +14978,7 @@ MonoBehaviour:
   - {fileID: 2108833778}
   - {fileID: 522323248}
   - {fileID: 1418969340}
+  spawnPointNum: 0
   roomToGo: 0
   currentRoom: 0
   safeVelocity: {x: 0, y: 0}
@@ -15385,6 +15353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &1218340820
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16333,6 +16302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &1425175648
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16635,6 +16605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &1474760825
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17237,6 +17208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &1511238402
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17409,6 +17381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &1531911157
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20263,6 +20236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &1702894829
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20428,6 +20402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &1726498172
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20550,6 +20525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &1738247559
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23817,6 +23793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &1785665581
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24885,6 +24862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &1942711363
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26296,6 +26274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1160991548}
+  save: {fileID: 0}
 --- !u!61 &2096348146
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27474,6 +27453,75 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &637770758506622456
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4718159285997809419, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_Name
+      value: MandoOTeclado
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540945706126680938, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: uiMando
+      value: 
+      objectReference: {fileID: 272348707}
+    - target: {fileID: 5540945706126680938, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: uiTeclado
+      value: 
+      objectReference: {fileID: 2007686214}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_RootOrder
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -25.9053
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5827469
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.9213593
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4483025787005364387d606248be57ae, type: 3}
 --- !u!1001 &6800191471521247745
 PrefabInstance:
   m_ObjectHideFlags: 0
