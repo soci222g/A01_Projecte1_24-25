@@ -23,7 +23,7 @@ public class bossAtacks : MonoBehaviour
 
     void atack1()
     {
-        int offset = Random.Range(3, 7);
+        int offset = 10;
         int dir = Random.Range(0, 1);
 
         if (dir == 0)
@@ -31,7 +31,16 @@ public class bossAtacks : MonoBehaviour
             offset *= -1;
         }
 
-        Instantiate(proj1, player.transform.position + new Vector3(offset, 0, 0), Quaternion.Euler(0, 0, 0));
+        if (player.transform.position.y > transform.position.y)
+        {
+            Instantiate(proj1, player.transform.position + new Vector3(offset, -1.5f, 0), Quaternion.Euler(0, 0, 0));
+        }
+        else
+        {
+            Instantiate(proj1, player.transform.position + new Vector3(offset, 1.5f, 0), Quaternion.Euler(0, 0, 0));
+        }
+
+        
     }
 
 }
