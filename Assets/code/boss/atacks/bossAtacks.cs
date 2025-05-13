@@ -43,4 +43,9 @@ public class bossAtacks : MonoBehaviour
         
     }
 
+    void atack2()
+    {
+
+    }
+
 }

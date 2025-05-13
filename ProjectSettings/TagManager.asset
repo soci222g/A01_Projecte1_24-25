@@ -14,6 +14,7 @@ TagManager:
   - movPlat
   - bounce
   - ground
+  - spikesBoss
   layers:
   - Default
   - TransparentFX
