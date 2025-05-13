@@ -5510,6 +5510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!61 &165802786
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44696,6 +44697,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &371224638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2236731295344255929, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+  m_PrefabInstance: {fileID: 401089952}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &397701245
 GameObject:
   m_ObjectHideFlags: 0
@@ -52502,6 +52508,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &574475966 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5848122128119218247, guid: 1b06fa849dadacb40a1c108aadc18470, type: 3}
+  m_PrefabInstance: {fileID: 401089952}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &588456965
 GameObject:
   m_ObjectHideFlags: 0
@@ -52553,7 +52564,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 97
+  m_RootOrder: 98
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &610296603
 GameObject:
@@ -67651,6 +67662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!61 &788351163
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -67770,7 +67782,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 98
+  m_RootOrder: 99
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &797139607
 PrefabInstance:
@@ -68105,6 +68117,54 @@ MonoBehaviour:
   NextParent: {fileID: 2054886819}
   BackParent: {fileID: 932992016}
   DefoultCollider: {fileID: 1389701042}
+--- !u!1 &879621664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 879621666}
+  - component: {fileID: 879621665}
+  m_Layer: 0
+  m_Name: SavePlayerInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &879621665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879621664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697027c15b226f1478b78149db55e81d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newPositionSpawn: {x: 0, y: 0, z: 0}
+  StartPosition: {x: -56.99, y: -2.2796829, z: -0.2}
+  player: {fileID: 669823157}
+  Camera: {fileID: 2136018926}
+--- !u!4 &879621666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879621664}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 35.29809, y: -32.509415, z: -0.5940082}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 100
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &883905800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73687,6 +73747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!61 &1041431954
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -74056,6 +74117,10 @@ PrefabInstance:
       value: -5.99
       objectReference: {fileID: 0}
     - target: {fileID: 8667883155628363137, guid: 5404f77e2270a6340a5b0555487dca86, type: 3}
+      propertyPath: save
+      value: 
+      objectReference: {fileID: 879621665}
+    - target: {fileID: 8667883155628363137, guid: 5404f77e2270a6340a5b0555487dca86, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 1107881145}
@@ -74101,6 +74166,75 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1001 &1122870786
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4718159285997809419, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_Name
+      value: MandoOTeclado
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540945706126680938, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: uiMando
+      value: 
+      objectReference: {fileID: 371224638}
+    - target: {fileID: 5540945706126680938, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: uiTeclado
+      value: 
+      objectReference: {fileID: 574475966}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_RootOrder
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -71.35726
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -15.296163
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.9213593
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471280211894446529, guid: 4483025787005364387d606248be57ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4483025787005364387d606248be57ae, type: 3}
 --- !u!1001 &1123180219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74333,6 +74467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!61 &1186581592
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -74469,6 +74604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!1 &1188668977
 GameObject:
   m_ObjectHideFlags: 0
@@ -79717,7 +79853,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 96
+  m_RootOrder: 97
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1207117246
 GameObject:
@@ -79765,6 +79901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!61 &1207117249
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -80115,6 +80252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!61 &1265183358
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -85270,6 +85408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!61 &1301692677
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -85361,6 +85500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 879621665}
 --- !u!61 &1302186655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -110763,6 +110903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 879621665}
 --- !u!61 &1690383293
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -120696,6 +120837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 879621665}
 --- !u!61 &1745077456
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -120787,6 +120929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2136018926}
+  save: {fileID: 0}
 --- !u!61 &1750852602
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -132058,6 +132201,7 @@ MonoBehaviour:
   - {fileID: 1054424253}
   - {fileID: 302459091}
   - {fileID: 2027328694}
+  spawnPointNum: 0
   roomToGo: 0
   currentRoom: 0
   safeVelocity: {x: 0, y: 0}

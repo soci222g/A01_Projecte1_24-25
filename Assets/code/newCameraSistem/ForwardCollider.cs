@@ -10,6 +10,9 @@ public class ForwardCollider : MonoBehaviour
     
     private ColliderManager CollMan;
 
+    [SerializeField]
+    private SavePositionGloval save;
+
     private void Awake()
     {
         CollMan = GetComponentInParent<ColliderManager>();
@@ -24,9 +27,16 @@ public class ForwardCollider : MonoBehaviour
 
             cam.Safe_Velocity(collision.GetComponent<Rigidbody2D>().velocity);
 
+            
+            if(save != null)
+            {
+                save.SaveNewPosition(cam.getCurrentRoom(),cam.GetSpawnPoint().position);
+               
+            }
+
             CollMan.ActivateForward();
 
-            
+
         }
     
     }

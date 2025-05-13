@@ -12,8 +12,11 @@ public class Door : MonoBehaviour
     private string newRoomName;
     [SerializeField] GameObject timeline;
 
+    [SerializeField]private SavePositionGloval save;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        save.ResetSafe();
         if (collision.gameObject.tag == "player")
         {
             if (collision.gameObject.GetComponentInChildren<Key>().GetKeyState())
