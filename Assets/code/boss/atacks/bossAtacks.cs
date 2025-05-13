@@ -7,7 +7,13 @@ public class bossAtacks : MonoBehaviour
 
     [SerializeField] private GameObject proj1;
 
+    [SerializeField] private GameObject spike;
+
+    [SerializeField] List<GameObject> pinchos = new List<GameObject>();
+
     private GameObject player;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +51,7 @@ public class bossAtacks : MonoBehaviour
 
     void atack2()
     {
-
+        Instantiate(spike, pinchos[0].transform);
     }
 
 }
