@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 734613183}
   m_Layer: 0
   m_Name: boss
-  m_TagString: Untagged
+  m_TagString: bounce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,7 +214,7 @@ MonoBehaviour:
   state: 0
   actions: 5
   actionCounter: 0
-  actionTimer: 3
+  actionTimer: 5
 --- !u!114 &734613179
 MonoBehaviour:
   m_ObjectHideFlags: 0

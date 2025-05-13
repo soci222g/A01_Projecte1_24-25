@@ -17,6 +17,7 @@ public class bossProj : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("player");
         rb = GetComponent<Rigidbody2D>();
+        Destroy(gameObject, 3f);
 
     }
 
@@ -55,5 +56,6 @@ public class bossProj : MonoBehaviour
         }
 
         Destroy(gameObject);
+
     }
 }
