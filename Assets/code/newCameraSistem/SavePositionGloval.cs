@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SavePositionGloval : MonoBehaviour
 {
@@ -46,8 +47,8 @@ public class SavePositionGloval : MonoBehaviour
         //Debug.Log(newPositionSpawn);
 
         Camera.SetRoomOrigin(current_cameraPositio);
-       
 
+        
     }
 
     // Update is called once per frame
@@ -83,12 +84,19 @@ public class SavePositionGloval : MonoBehaviour
         PlayerPrefs.DeleteKey("CameraPosition");
     }
 
+    public void ResetScean()
+    {
+        PlayerPrefs.DeleteKey("Secan");
+    }
+
     public void SaveNewPosition(int NewCameraPosition, Vector3 PositionPlayer) 
     {
         PlayerPrefs.SetFloat("X", PositionPlayer.x);
         PlayerPrefs.SetFloat("Y", PositionPlayer.y);
         PlayerPrefs.SetFloat("Z", PositionPlayer.z);
 
+
+        PlayerPrefs.SetString("Secan", SceneManager.GetActiveScene().name);
 
         PlayerPrefs.SetInt("CameraPosition", NewCameraPosition + 1);
     }

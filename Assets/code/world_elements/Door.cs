@@ -17,6 +17,8 @@ public class Door : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         save.ResetSafe();
+        if(SceneManager.GetActiveScene().name == "Nivell_2")
+
         if (collision.gameObject.tag == "player")
         {
             if (collision.gameObject.GetComponentInChildren<Key>().GetKeyState())
