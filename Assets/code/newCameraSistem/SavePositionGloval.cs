@@ -84,10 +84,11 @@ public class SavePositionGloval : MonoBehaviour
         PlayerPrefs.DeleteKey("CameraPosition");
     }
 
-    public void ResetScean()
+    public void SaveNextScean(string name)
     {
-        PlayerPrefs.DeleteKey("Secan");
+        PlayerPrefs.SetString("Secan", name);
     }
+    
 
     public void SaveNewPosition(int NewCameraPosition, Vector3 PositionPlayer) 
     {

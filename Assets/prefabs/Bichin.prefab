@@ -215,7 +215,7 @@ MonoBehaviour:
   controladorPared: {fileID: 6329116005098674059}
   capaPared:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 257
   countCooldown: 0
   collisionCooldown: 50
   countCooldown2: 0
