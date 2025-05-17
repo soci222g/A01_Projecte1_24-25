@@ -39,7 +39,7 @@ public class camerabehavior : MonoBehaviour
         camera.transform.position = cameraPosition[0].position;
         cameraPosition[0].GetComponent<ColliderManager>().ActivateSelf();
 
-        Atack = player.GetComponentInChildren< atack>();
+        Atack = player.GetComponentInChildren<atack>();
     }
 
     // Update is called once per frame
