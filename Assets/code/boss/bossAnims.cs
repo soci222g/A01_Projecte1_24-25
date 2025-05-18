@@ -38,4 +38,8 @@ public class bossAnims : MonoBehaviour
     {
         animator.SetBool("atack1", false);
     }
+    void atack2End()
+    {
+        animator.SetBool("atack2", false);
+    }
 }
