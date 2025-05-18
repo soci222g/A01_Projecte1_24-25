@@ -34,7 +34,25 @@ public class bossState : MonoBehaviour
             actionCounter = 0;
             actions--;
 
-            animator.SetBool("atack1", true);
+            switch(Random.Range(0,9))
+            {
+                case 0:
+                case 3:
+                case 6:
+                    animator.SetBool("atack1", true);
+                    break;
+                case 1:
+                case 4:
+                case 7:
+                    animator.SetBool("atack2", true);
+                    break;
+
+                case 2:
+                case 5:
+                case 8:
+                    animator.SetBool("atack3", true);
+                    break;
+            }
             
             if(actions == 0)
             {

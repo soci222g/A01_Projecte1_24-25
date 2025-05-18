@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: attackUp_boss
+  m_Name: attackUp_boss3
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -131,21 +131,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 1.75
-    functionName: atack1
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 3.05
-    functionName: atack1
+    functionName: atack3
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 3.0666666
-    functionName: atack1End
+    functionName: atack3End
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

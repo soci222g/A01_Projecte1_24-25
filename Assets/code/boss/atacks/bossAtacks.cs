@@ -9,6 +9,8 @@ public class bossAtacks : MonoBehaviour
 
     [SerializeField] private GameObject spike;
 
+    [SerializeField] private List<GameObject> rayosH = new List<GameObject>();
+
     [SerializeField] List<GameObject> pinchos = new List<GameObject>();
 
     private GameObject player;
@@ -55,5 +57,43 @@ public class bossAtacks : MonoBehaviour
         for (int i = 0; i < pinchos.Count; i++)
         Instantiate(spike, pinchos[i].transform.position, Quaternion.identity);
     }
+
+    void atack3()
+    {
+
+        float minDistToPlayer = 1000;
+        int target = 0;
+
+        for (int i = 0; i < rayosH.Count; i++)
+        {
+            float num = Mathf.Abs(player.transform.position.y - rayosH[i].transform.position.y);
+
+            if (num < minDistToPlayer)
+            {
+                minDistToPlayer = num;
+                target = i;
+            }
+        }
+
+        rayosH[target].SetActive(true);
+
+        int extra = Random.Range(1, 2);
+        int count = 0;
+
+        for (int i = 0; i < 3; i++)
+        {
+            if (i != target)
+            {
+                count++;
+                if (count == extra)
+                {
+                    rayosH[i].SetActive(true);
+                    break;
+                }
+            }
+        }
+
+    }
+
 
 }
