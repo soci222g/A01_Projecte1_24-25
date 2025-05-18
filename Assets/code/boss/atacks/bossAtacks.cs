@@ -15,6 +15,7 @@ public class bossAtacks : MonoBehaviour
 
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +52,8 @@ public class bossAtacks : MonoBehaviour
 
     void atack2()
     {
-        Instantiate(spike, pinchos[0].transform);
+        for (int i = 0; i < pinchos.Count; i++)
+        Instantiate(spike, pinchos[i].transform.position, Quaternion.identity);
     }
 
 }
