@@ -23,7 +23,7 @@ public class dropHeal : MonoBehaviour
             {
                 collision.gameObject.GetComponent<hp>().setHP(-2);
                 Audio.Play();
-                Debug.Log(collision.gameObject.GetComponent<hp>().getHP());
+               // Debug.Log(collision.gameObject.GetComponent<hp>().getHP());
                 animator.SetBool("IsGot", true);
 
                 Destroy(this.gameObject, 0.3f);

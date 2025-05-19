@@ -100,4 +100,6 @@ public class ColliderManager : MonoBehaviour
         BackColliderForward.SetActive(true);
         BackColliderBackwards.SetActive(true);
     }
+
+
 }
