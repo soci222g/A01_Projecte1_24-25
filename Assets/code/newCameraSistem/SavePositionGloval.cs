@@ -47,7 +47,7 @@ public class SavePositionGloval : MonoBehaviour
         //Debug.Log(newPositionSpawn);
 
         Camera.SetRoomOrigin(current_cameraPositio);
-
+        player.GetComponent<spikes>().SetSpawnPont(Camera.GetSpawnPoint()); 
         
     }
 
