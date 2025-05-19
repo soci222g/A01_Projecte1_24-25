@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ForwardCollider : MonoBehaviour
 {
@@ -31,6 +32,9 @@ public class ForwardCollider : MonoBehaviour
             if(save != null)
             {
                 save.SaveNewPosition(cam.getCurrentRoom(),cam.GetSpawnPoint().position);
+
+               
+                  save.SaveNextScean(SceneManager.GetActiveScene().name);
                
             }
 
