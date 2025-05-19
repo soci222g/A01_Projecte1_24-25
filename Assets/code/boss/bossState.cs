@@ -17,6 +17,7 @@ public class bossState : MonoBehaviour
     [SerializeField] private int actions;
     [SerializeField] private int actionCounter = 0;
     [SerializeField] private int actionTimer;
+    [SerializeField] private int phaseCounter = 0;
     private Animator animator;
     private BoxCollider2D hurtBox;
 
@@ -67,16 +68,25 @@ public class bossState : MonoBehaviour
 
     public void nextPhase()
     {
-        phase++;
+        phaseCounter++;
 
-        if (phase == 2)
+        if (phaseCounter == 3)
         {
-            state = bossStatus.second;
+            phase++;
+            if (phase == 2)
+            {
+                state = bossStatus.second;
+                animator.SetBool("1to2", true);
+            }
+            else
+            {
+                state = bossStatus.third;
+            }
+
+            phaseCounter = 0;
+
         }
-        else
-        {
-            state = bossStatus.third;
-        }
+        
     }
 
     void actionSum()

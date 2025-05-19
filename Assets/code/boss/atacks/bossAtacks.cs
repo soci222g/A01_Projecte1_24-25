@@ -9,6 +9,8 @@ public class bossAtacks : MonoBehaviour
 
     [SerializeField] private GameObject spike;
 
+    [SerializeField] GameObject rayoV;
+
     [SerializeField] private List<GameObject> rayosH = new List<GameObject>();
 
     [SerializeField] List<GameObject> pinchos = new List<GameObject>();
@@ -93,6 +95,12 @@ public class bossAtacks : MonoBehaviour
             }
         }
 
+    }
+
+
+    void phase2Atk()
+    {
+        rayoV.GetComponent<rayosV>().spawnOther();
     }
 
 

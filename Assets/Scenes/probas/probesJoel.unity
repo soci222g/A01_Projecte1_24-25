@@ -214,7 +214,8 @@ MonoBehaviour:
   state: 0
   actions: 5
   actionCounter: 0
-  actionTimer: 4
+  actionTimer: 3
+  phaseCounter: 0
 --- !u!114 &734613179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbad71a1fe40246802a7eb264a153f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 3
 --- !u!61 &734613180
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -387,6 +387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proj1: {fileID: 653838497797392961, guid: fcaf6236d2d6e77478f01a5cd7589ab2, type: 3}
   spike: {fileID: 0}
+  rayoV: {fileID: 5960746284737303839, guid: c9b55694172d7c946b714d3e81b3296a, type: 3}
   rayosH:
   - {fileID: 1924268717}
   - {fileID: 1950964518}

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class bossHp : MonoBehaviour
 {
-    [SerializeField] private int hp = 3;
     BoxCollider2D hurtBox;
     bossState state;
     Animator animator;
@@ -27,10 +26,8 @@ public class bossHp : MonoBehaviour
     {
         if (collision.gameObject.tag == "atk")
         {
-            hp--;
             animator.SetBool("isHurt", true);
             animator.SetBool("isTired", false);
-            //stateChange
         }
     }
 
