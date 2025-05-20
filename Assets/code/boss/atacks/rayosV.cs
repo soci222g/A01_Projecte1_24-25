@@ -24,26 +24,18 @@ public class rayosV : MonoBehaviour
 
     public void spawnOther()
     {
-        boss = GameObject.FindGameObjectWithTag("bounce");
 
-        float offset = Random.Range(3f, 10f);
-        int dir = Random.Range(0, 2);
+        int x = Random.Range(52, 73);
 
-        if (dir == 0)
-        {
-            Instantiate(gameObject, boss.transform.position + new Vector3(offset, 0, 0), Quaternion.Euler(0, 0, 0));
-        }
-        else
-        {
-            Instantiate(gameObject, boss.transform.position + new Vector3(-offset, 0, 0), Quaternion.Euler(0, 0, 0));
-        }
-        
+        transform.position = new Vector3(x ,transform.position.y, transform.position.z);
+
+        gameObject.SetActive(true);
 
     }
 
     void end()
     {
-        Destroy( gameObject );
+       gameObject.SetActive(false);
     }
 
     void hitboxDeactivete()
