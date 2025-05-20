@@ -13,11 +13,13 @@ public class bossAtacks : MonoBehaviour
 
     [SerializeField] private List<GameObject> rayosH = new List<GameObject>();
 
-    [SerializeField] List<GameObject> pinchos = new List<GameObject>();
+    [SerializeField] List<GameObject> pinchosSuelo = new List<GameObject>();
+
+    [SerializeField] List<GameObject> pinchosTecho = new List<GameObject>();
 
     private GameObject player;
 
-
+    int numAtack2 = 0;
 
 
     // Start is called before the first frame update
@@ -38,18 +40,26 @@ public class bossAtacks : MonoBehaviour
         int y = Random.Range(-11, -21);
 
         Instantiate(proj1, new Vector3(x, y, -1), Quaternion.Euler(0, 0, 0));
-        
     }
 
     void atack2()
     {
-        for (int i = 0; i < pinchos.Count; i++)
-        Instantiate(spike, pinchos[i].transform.position, Quaternion.identity);
+        int numAtack2 = Random.Range(1, 3);
+        if(numAtack2 == 1)
+        {
+            for (int i = 0; i < pinchosSuelo.Count; i++)
+            Instantiate(spike, pinchosSuelo[i].transform.position, Quaternion.identity);
+        }
+        else
+        {
+            for (int i = 0; i < pinchosTecho.Count; i++)
+            Instantiate(spike, pinchosTecho[i].transform.position, Quaternion.Euler(0, 0, 180));
+        }
+        
     }
 
     void atack3()
     {
-
         float minDistToPlayer = 1000;
         int target = 0;
 
@@ -66,7 +76,7 @@ public class bossAtacks : MonoBehaviour
 
         rayosH[target].SetActive(true);
 
-        int extra = Random.Range(1, 2);
+        int extra = Random.Range(1, 3);
         int count = 0;
 
         for (int i = 0; i < 3; i++)
@@ -81,7 +91,6 @@ public class bossAtacks : MonoBehaviour
                 }
             }
         }
-
     }
 
 
@@ -89,6 +98,4 @@ public class bossAtacks : MonoBehaviour
     {
         rayoV.GetComponent<rayosV>().spawnOther();
     }
-
-
 }
