@@ -17,6 +17,7 @@ public class bossState : MonoBehaviour
     [SerializeField] private int actions;
     [SerializeField] private int actionCounter = 0;
     [SerializeField] private int actionTimer;
+    [SerializeField] private int phaseCounter = 0;
     private Animator animator;
     private BoxCollider2D hurtBox;
 
@@ -33,11 +34,30 @@ public class bossState : MonoBehaviour
         {
             actionCounter = 0;
             actions--;
+
+            switch(Random.Range(0,9))
+            {
+                case 0:
+                case 3:
+                case 6:
+                    animator.SetBool("atack1", true);
+                    break;
+                case 1:
+                case 4:
+                case 7:
+                    animator.SetBool("atack2", true);
+                    break;
+
+                case 2:
+                case 5:
+                case 8:
+                    animator.SetBool("atack3", true);
+                    break;
+            }
             
             if(actions == 0)
             {
                 animator.SetBool("isTired", true);
-                hurtBox.enabled = true;
                 actions = 5;
             }
         }
@@ -47,16 +67,25 @@ public class bossState : MonoBehaviour
 
     public void nextPhase()
     {
-        phase++;
+        phaseCounter++;
 
-        if (phase == 2)
+        if (phaseCounter == 3)
         {
-            state = bossStatus.second;
+            phase++;
+            if (phase == 2)
+            {
+                state = bossStatus.second;
+                animator.SetBool("1to2", true);
+            }
+            else
+            {
+                state = bossStatus.third;
+            }
+
+            phaseCounter = 0;
+
         }
-        else
-        {
-            state = bossStatus.third;
-        }
+        
     }
 
     void actionSum()
@@ -67,6 +96,11 @@ public class bossState : MonoBehaviour
     void deactivateHurtBox()
     {
         hurtBox.enabled = false;
+    }
+
+    void activateHurtBox()
+    {
+        hurtBox.enabled = true;
     }
 
 }

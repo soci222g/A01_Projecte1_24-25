@@ -34,4 +34,22 @@ public class bossAnims : MonoBehaviour
         boxCollider.enabled = false;
     }
 
+    void atack1End()
+    {
+        animator.SetBool("atack1", false);
+    }
+    void atack2End()
+    {
+        animator.SetBool("atack2", false);
+    }
+
+    void atack3End()
+    {
+        animator.SetBool("atack3", false);
+    }
+
+    void phase1to2()
+    {
+        animator.SetBool("1to2", false);
+    }
 }
