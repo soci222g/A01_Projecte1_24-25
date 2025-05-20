@@ -42,4 +42,14 @@ public class bossAnims : MonoBehaviour
     {
         animator.SetBool("atack2", false);
     }
+
+    void atack3End()
+    {
+        animator.SetBool("atack3", false);
+    }
+
+    void phase1to2()
+    {
+        animator.SetBool("1to2", false);
+    }
 }
