@@ -3228,6 +3228,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 204709215715932031, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.5022888
+      objectReference: {fileID: 0}
     - target: {fileID: 658726973346961781, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3332,10 +3336,38 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1268808559623290666, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.5022888
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347558891607530268, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
+      propertyPath: m_Value
+      value: 0.778
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347558891607530268, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
+      propertyPath: m_MaxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347558891607530268, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
+      propertyPath: m_MinValue
+      value: 0.00001
+      objectReference: {fileID: 0}
     - target: {fileID: 1347558891607530268, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 56299568}
+    - target: {fileID: 4346913619110243848, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
+      propertyPath: m_Value
+      value: 0.778
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346913619110243848, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
+      propertyPath: m_MaxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346913619110243848, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
+      propertyPath: m_MinValue
+      value: 0.00001
+      objectReference: {fileID: 0}
     - target: {fileID: 4346913619110243848, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 

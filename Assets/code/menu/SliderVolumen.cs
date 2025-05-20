@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class SliderVolumen : MonoBehaviour
@@ -31,30 +32,30 @@ public class SliderVolumen : MonoBehaviour
     }
     private void Update()
     {
-        int valiuSlide = (int)slider.value;
-        if(valiuSlide > -13)
+        float valiuSlide = slider.value;
+        if(valiuSlide > 0.8f)
         {
             RefText.text = "Very High";
         }
-        else if( valiuSlide > -26 && valiuSlide < -13)
+        else if( valiuSlide > 0.6f && valiuSlide <= 0.8f)
         {
             RefText.text = "High";
         }
-        else if (valiuSlide > -39 && valiuSlide < -26)
+        else if (valiuSlide > 0.4 && valiuSlide <= 0.6)
         {
             RefText.text = "Normal";
         }
-        else if (valiuSlide > -52 && valiuSlide < -39)
+        else if (valiuSlide > 0.2 && valiuSlide <= 0.4)
         {
             RefText.text = "Low";
         }
-        else if (valiuSlide > -65 && valiuSlide < -52)
+        else if (valiuSlide > 0 && valiuSlide <= 0.2)
         {
             RefText.text = "Very Low";
         }
     }
     public void SetVolume()
-    {
-        audioMixer.SetFloat(grup, slider.value);
+    {       
+        audioMixer.SetFloat(grup, Mathf.Log10(slider.value) * 20f);
     }
 }
