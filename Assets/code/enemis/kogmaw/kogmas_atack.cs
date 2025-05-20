@@ -36,7 +36,7 @@ public class kogmas_atack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("hit");
+        //Debug.Log("hit");
         if (collision.gameObject.tag == "player")
         {
             

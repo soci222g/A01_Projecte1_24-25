@@ -12,6 +12,11 @@ public class Menu_code : MonoBehaviour
     public void CanviarEscena(string name)
     {
         SceneManager.LoadScene(name);
+
+        if (PlayerPrefs.HasKey("Secan"))
+        {
+            SceneManager.LoadScene(PlayerPrefs.GetString("Secan"));
+        }
     }
 
     public void Exit()
