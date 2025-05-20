@@ -28,7 +28,7 @@ public class ForwardCollider : MonoBehaviour
 
             cam.Safe_Velocity(collision.GetComponent<Rigidbody2D>().velocity);
 
-            
+            Debug.Log(cam.GetSpawnPoint());
             if(save != null)
             {
                 save.SaveNewPosition(cam.getCurrentRoom(),cam.GetSpawnPoint().position);

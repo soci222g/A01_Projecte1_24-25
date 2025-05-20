@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,12 +20,20 @@ public class SavePositionGloval : MonoBehaviour
     private GameObject player;
     [SerializeField]
     private camerabehavior Camera;
+   
 
     // Start is called before the first frame update
     private void Awake()
     {
+        
         current_cameraPositio = 0;
         newPositionSpawn = player.transform.position;
+
+
+        if (PlayerPrefs.GetInt("Key") == 1)
+        {
+            player.gameObject.GetComponentInChildren<Key>().SetKeyState(true);
+        }
 
         if (PlayerPrefs.HasKey("X"))
         {
@@ -57,7 +66,7 @@ public class SavePositionGloval : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G))
         {
-            SaveNewPosition(-1, player.transform.position);
+            ResetSafe();
         }
     }
 
@@ -81,7 +90,9 @@ public class SavePositionGloval : MonoBehaviour
         PlayerPrefs.DeleteKey("X");
         PlayerPrefs.DeleteKey("Y");
         PlayerPrefs.DeleteKey("Z");
-        PlayerPrefs.DeleteKey("CameraPosition");
+        PlayerPrefs.DeleteKey("CameraPosition"); 
+        PlayerPrefs.DeleteKey("Key");
+
     }
 
     public void SaveNextScean(string name)
@@ -100,5 +111,8 @@ public class SavePositionGloval : MonoBehaviour
         PlayerPrefs.SetString("Secan", SceneManager.GetActiveScene().name);
 
         PlayerPrefs.SetInt("CameraPosition", NewCameraPosition + 1);
+        int keyState = Convert.ToInt32(player.gameObject.GetComponentInChildren<Key>().GetKeyState());
+        Debug.Log(keyState);
+        PlayerPrefs.SetInt("Key", keyState);
     }
 }

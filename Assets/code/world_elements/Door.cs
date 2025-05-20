@@ -22,8 +22,12 @@ public class Door : MonoBehaviour
             if (collision.gameObject.GetComponentInChildren<Key>().GetKeyState())
             {
                 //save game
-                save.ResetSafe();
-                save.SaveNextScean(newRoomName);
+                if (save != null)
+                {
+                    save.ResetSafe();
+                    save.SaveNextScean(newRoomName);
+                }
+
                 if (GetComponent<deleteSaveScean>() != null)
                 {
                     GetComponent<deleteSaveScean>().ResetScean();

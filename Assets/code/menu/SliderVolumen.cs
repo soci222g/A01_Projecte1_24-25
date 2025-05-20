@@ -56,6 +56,6 @@ public class SliderVolumen : MonoBehaviour
     }
     public void SetVolume()
     {       
-        audioMixer.SetFloat(grup, Mathf.Log10(slider.value) * 20f);
+        audioMixer.SetFloat(grup, Mathf.Log10(slider.value) * 80f);
     }
 }
