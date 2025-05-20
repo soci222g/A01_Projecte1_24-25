@@ -17,7 +17,6 @@ public class bossProj : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("player");
         rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 3f);
 
     }
 
@@ -47,6 +46,9 @@ public class bossProj : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "movPlat")
+            return;
+
         rb.velocity = Vector2.zero;
 
         if (collision.gameObject.tag == "player")

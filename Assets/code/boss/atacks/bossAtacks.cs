@@ -34,23 +34,10 @@ public class bossAtacks : MonoBehaviour
 
     void atack1()
     {
-        int offset = 10;
-        int dir = Random.Range(0, 1);
+        int x = Random.Range(49, 76);
+        int y = Random.Range(-11, -21);
 
-        if (dir == 0)
-        {
-            offset *= -1;
-        }
-
-        if (player.transform.position.y > transform.position.y)
-        {
-            Instantiate(proj1, player.transform.position + new Vector3(offset, -1.5f, 0), Quaternion.Euler(0, 0, 0));
-        }
-        else
-        {
-            Instantiate(proj1, player.transform.position + new Vector3(offset, 1.5f, 0), Quaternion.Euler(0, 0, 0));
-        }
-
+        Instantiate(proj1, new Vector3(x, y, -1), Quaternion.Euler(0, 0, 0));
         
     }
 
