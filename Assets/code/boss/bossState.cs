@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class bossState : MonoBehaviour
@@ -20,6 +21,8 @@ public class bossState : MonoBehaviour
     [SerializeField] private int phaseCounter = 0;
     private Animator animator;
     private BoxCollider2D hurtBox;
+
+    [SerializeField] private GameObject CinematicaFinal;
 
     // Start is called before the first frame update
     void Start()
@@ -80,6 +83,7 @@ public class bossState : MonoBehaviour
             else
             {
                 state = bossStatus.third;
+                //CinematicaFinal.SetActive(true);
             }
 
             phaseCounter = 0;
