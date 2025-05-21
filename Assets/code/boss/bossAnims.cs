@@ -8,6 +8,7 @@ public class bossAnims : MonoBehaviour
 
     Animator animator;
     BoxCollider2D boxCollider;
+    [SerializeField] private GameObject shield;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,32 @@ public class bossAnims : MonoBehaviour
     {
      
         
+    }
+
+    void sUp()
+    {
+        shield.GetComponent<shieldAnims>().sUp();
+    }
+    void sIdle()
+    {
+        shield.GetComponent<shieldAnims>().sIdle();
+    }
+    void sDown()
+    {
+        shield.GetComponent<shieldAnims>().sDown();
+    }
+
+    void sUp2()
+    {
+        shield.GetComponent<shieldAnims>().sUp2();
+    }
+    void sIdle2()
+    {
+        shield.GetComponent<shieldAnims>().sIdle2();
+    }
+    void sDown2()
+    {
+        shield.GetComponent<shieldAnims>().sDown2();
     }
 
     void hurtAnim()
