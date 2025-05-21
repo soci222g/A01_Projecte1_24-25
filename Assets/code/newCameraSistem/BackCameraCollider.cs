@@ -8,6 +8,8 @@ public class BackCameraCollider : MonoBehaviour
     private camerabehavior cam;
 
     private ColliderManager CollMan;
+
+    
     private void Awake()
     {
         CollMan = GetComponentInParent<ColliderManager>();
@@ -17,13 +19,16 @@ public class BackCameraCollider : MonoBehaviour
     {
         if (collision.gameObject.tag == "player" || collision.gameObject.tag == "Player")
         {
+            
+
             cam.setCurrenteRoom(-1);
             cam.SetSpawnPoint(-1);
             collision.gameObject.GetComponent<spikes>().SetSpawnPont(cam.GetSpawnPoint());
 
-            CollMan.ActivateBack();
-
+           
             cam.Safe_Velocity(collision.GetComponent<Rigidbody2D>().velocity);
+
+            CollMan.ActivateBack();
         }
 
     }

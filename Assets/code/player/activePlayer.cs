@@ -6,6 +6,7 @@ public class activePlayer : MonoBehaviour
 {
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject HUD;
+    [SerializeField] private GameObject Music;
 
     public void ActivatePlayerElements()
     {
@@ -14,5 +15,6 @@ public class activePlayer : MonoBehaviour
         Player.GetComponent<GroundDetector>().enabled = true;
         Player.GetComponentInChildren<atack>().enabled = true;
         HUD.SetActive(true);
+        Music.SetActive(true);
     }
 }
