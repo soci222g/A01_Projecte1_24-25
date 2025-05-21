@@ -7,6 +7,8 @@ public class activePlayer : MonoBehaviour
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject HUD;
     [SerializeField] private GameObject Music;
+    [SerializeField] private GameObject pauseManager;
+
 
     public void ActivatePlayerElements()
     {
@@ -16,5 +18,7 @@ public class activePlayer : MonoBehaviour
         Player.GetComponentInChildren<atack>().enabled = true;
         HUD.SetActive(true);
         Music.SetActive(true);
+        pauseManager.SetActive(true);
+
     }
 }
