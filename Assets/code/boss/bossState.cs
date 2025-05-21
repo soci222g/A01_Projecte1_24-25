@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Tilemaps;
+//using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class bossState : MonoBehaviour
@@ -22,7 +22,7 @@ public class bossState : MonoBehaviour
     private Animator animator;
     private BoxCollider2D hurtBox;
 
-    [SerializeField] private GameObject CinematicaFinal;
+    //[SerializeField] private GameObject CinematicaFinal;
 
     // Start is called before the first frame update
     void Start()
