@@ -14,6 +14,7 @@ public class controladorMusica : MonoBehaviour
         if(PlayerPrefs.HasKey(GrupName))
         {
             LoadVolume();
+            Debug.Log("existeGuardado");
         }
         else
         {

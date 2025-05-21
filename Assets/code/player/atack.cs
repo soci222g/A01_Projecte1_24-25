@@ -148,6 +148,7 @@ public class atack : MonoBehaviour
     public void cooldown_off()
     {
         onCooldown = false;
+
         state.endAction();
     }
 

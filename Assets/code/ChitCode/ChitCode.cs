@@ -20,7 +20,10 @@ public class ChitCode : MonoBehaviour
         {
             SceneManager.LoadScene("Nivell_1");
         }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            SceneManager.LoadScene("BossFight");
+        }
 
-        
     }
 }
