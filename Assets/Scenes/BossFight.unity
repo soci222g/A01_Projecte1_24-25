@@ -1870,7 +1870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5716392656131326305, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
       propertyPath: m_Name
-      value: options (1)
+      value: options
       objectReference: {fileID: 0}
     - target: {fileID: 5716392656131326305, guid: a925fdc28d65582448c731f7f788fffc, type: 3}
       propertyPath: m_IsActive
@@ -2616,7 +2616,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2254465847869233129, guid: 8667b01f5f3b0e84fbff7ca7e7c8fbbc, type: 3}
       propertyPath: m_Name
-      value: OptionsControler (1)
+      value: OptionsControler
       objectReference: {fileID: 0}
     - target: {fileID: 2254465847869233129, guid: 8667b01f5f3b0e84fbff7ca7e7c8fbbc, type: 3}
       propertyPath: m_IsActive
@@ -4030,7 +4030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1291307325535499390, guid: d4e4360eb2b87294586541c00663af3c, type: 3}
       propertyPath: m_Name
-      value: PauseMenu (1)
+      value: PauseMenu
       objectReference: {fileID: 0}
     - target: {fileID: 1291307325535499390, guid: d4e4360eb2b87294586541c00663af3c, type: 3}
       propertyPath: m_IsActive
@@ -12245,7 +12245,7 @@ PrefabInstance:
       objectReference: {fileID: 1552650461}
     - target: {fileID: 1751341970512578703, guid: 90257067aedee1f4f96ce4075d1a5e4a, type: 3}
       propertyPath: m_Name
-      value: PauseManger (1)
+      value: PauseManger
       objectReference: {fileID: 0}
     - target: {fileID: 1751341970512578703, guid: 90257067aedee1f4f96ce4075d1a5e4a, type: 3}
       propertyPath: m_IsActive

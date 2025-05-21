@@ -45,6 +45,10 @@ public class Pause_menu : MonoBehaviour
                 atack.cooldown_off();
             }
         }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            MainMenuScean();
+        }
   
     }
 
