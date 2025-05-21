@@ -58,7 +58,6 @@ public class bossState : MonoBehaviour
             if(actions == 0)
             {
                 animator.SetBool("isTired", true);
-                hurtBox.enabled = true;
                 actions = 5;
             }
         }
@@ -97,6 +96,11 @@ public class bossState : MonoBehaviour
     void deactivateHurtBox()
     {
         hurtBox.enabled = false;
+    }
+
+    void activateHurtBox()
+    {
+        hurtBox.enabled = true;
     }
 
 }

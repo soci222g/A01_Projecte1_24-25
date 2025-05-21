@@ -7,6 +7,7 @@ public class Key : MonoBehaviour
     private bool HaveKey = false;
     private Animator animator;
     [SerializeField] private AudioSource Audio;
+    [SerializeField] private GameObject KeyScene;
 
     void Start()
     {
@@ -17,13 +18,13 @@ public class Key : MonoBehaviour
         }
         else
         {
-            Debug.Log("Animator encontrado en: " + gameObject.name);
+            //Debug.Log("Animator encontrado en: " + gameObject.name);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger con: " + collision.gameObject.name);
+        //Debug.Log("Trigger con: " + collision.gameObject.name);
 
         if (collision.gameObject.tag == "key")
         {
@@ -38,7 +39,14 @@ public class Key : MonoBehaviour
     }
 
 
-
+    public void SetKeyState(bool key)
+    {
+        HaveKey = key;
+        if(KeyScene != null)
+        {
+            KeyScene.SetActive(false);
+        }
+    }
     public bool GetKeyState() {
         return HaveKey;
     }

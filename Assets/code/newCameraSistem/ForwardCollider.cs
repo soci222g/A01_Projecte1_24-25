@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ForwardCollider : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class ForwardCollider : MonoBehaviour
 
     
     private ColliderManager CollMan;
+
+    [SerializeField]
+    private SavePositionGloval save;
 
     private void Awake()
     {
@@ -24,9 +28,19 @@ public class ForwardCollider : MonoBehaviour
 
             cam.Safe_Velocity(collision.GetComponent<Rigidbody2D>().velocity);
 
+            Debug.Log(cam.GetSpawnPoint());
+            if(save != null)
+            {
+                save.SaveNewPosition(cam.getCurrentRoom(),cam.GetSpawnPoint().position);
+
+               
+                  save.SaveNextScean(SceneManager.GetActiveScene().name);
+               
+            }
+
             CollMan.ActivateForward();
 
-            
+
         }
     
     }
