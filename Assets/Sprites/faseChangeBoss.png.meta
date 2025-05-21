@@ -1,0 +1,523 @@
+fileFormatVersion: 2
+guid: ae283430fffa1de45834e037c3845032
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: faseChangeBoss_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2
+        width: 60
+        height: 31
+      alignment: 9
+      pivot: {x: 0.48333335, y: 0.516129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257774d404ab3ad4280c807e6eda7f8e
+      internalID: -1963969914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faseChangeBoss_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1
+        width: 62
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5, y: 0.516129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe83eab42db94a468c9619081ebee46
+      internalID: 370952523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faseChangeBoss_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 2
+        width: 59
+        height: 62
+      alignment: 9
+      pivot: {x: 0.47457626, y: 0.2580645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f539f55e96e8f2144abfcfacd05b6ad5
+      internalID: 1228355155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faseChangeBoss_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 3
+        width: 49
+        height: 62
+      alignment: 9
+      pivot: {x: 0.36734694, y: 0.2580645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1163aa06f0f0d41a80a76c2f4117ec
+      internalID: -144771588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faseChangeBoss_4
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 4
+        width: 49
+        height: 65
+      alignment: 9
+      pivot: {x: 0.36734694, y: 0.23076923}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7590ffcdf178c5946917a1f843ecfe7b
+      internalID: -1113977730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faseChangeBoss_5
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 3
+        width: 49
+        height: 69
+      alignment: 9
+      pivot: {x: 0.36734694, y: 0.21739131}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f5d1428d045a34499b77a107eab95a
+      internalID: -1197126377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faseChangeBoss_6
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1
+        width: 49
+        height: 73
+      alignment: 9
+      pivot: {x: 0.36734694, y: 0.21917808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388d0fcecb255cc47ac7aa9d14e89b92
+      internalID: 595686361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faseChangeBoss_7
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 1
+        width: 49
+        height: 73
+      alignment: 9
+      pivot: {x: 0.36734694, y: 0.21917808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 517e9621079ef734d8dde511c2ecb54b
+      internalID: 483810764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faseChangeBoss_8
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 2
+        width: 49
+        height: 73
+      alignment: 9
+      pivot: {x: 0.36734694, y: 0.21917808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d35d282dc8581d4aa1c9fa024850bb4
+      internalID: 1498157073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faseChangeBoss_9
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 2
+        width: 49
+        height: 73
+      alignment: 9
+      pivot: {x: 0.36734694, y: 0.21917808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297d5181024997e4da25a27fd6d915d5
+      internalID: 634720334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faseChangeBoss_10
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 3
+        width: 49
+        height: 69
+      alignment: 9
+      pivot: {x: 0.36734694, y: 0.23188406}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2baae39762854b41b51003d579a414a
+      internalID: -1485399675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faseChangeBoss_11
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 3
+        width: 49
+        height: 67
+      alignment: 9
+      pivot: {x: 0.36734694, y: 0.23880596}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2391474ef1dcb4c9e656c857b17cc0
+      internalID: -1117597513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faseChangeBoss_12
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 3
+        width: 49
+        height: 64
+      alignment: 9
+      pivot: {x: 0.36734694, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b62617e54928cc4a80c8aaf9facc2b4
+      internalID: -1613403474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faseChangeBoss_13
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 3
+        width: 50
+        height: 62
+      alignment: 9
+      pivot: {x: 0.38, y: 0.2580645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde70dc19e88d1e43a85306c47d65135
+      internalID: -722310706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faseChangeBoss_14
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 3
+        width: 36
+        height: 62
+      alignment: 9
+      pivot: {x: 0.1388889, y: 0.2580645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53ae0bde5be53b4f911fe32d1e792a8
+      internalID: -1108240308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faseChangeBoss_15
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 3
+        width: 35
+        height: 62
+      alignment: 9
+      pivot: {x: 0.14285715, y: 0.2580645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 163935d7993a37741bf87ae23ccf7425
+      internalID: -854040174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faseChangeBoss_16
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 3
+        width: 58
+        height: 61
+      alignment: 9
+      pivot: {x: 0.5, y: 0.26229507}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87542577221f2d049b2c0a54015a7c5f
+      internalID: 1281449055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faseChangeBoss_17
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 2
+        width: 60
+        height: 31
+      alignment: 9
+      pivot: {x: 0.48333335, y: 0.516129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7800b4e3b3b617245ad2c7e65f412043
+      internalID: -1832907020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      faseChangeBoss_0: 722840698
+      faseChangeBoss_1: -1963969914
+      faseChangeBoss_10: 1498157073
+      faseChangeBoss_11: 634720334
+      faseChangeBoss_12: -1485399675
+      faseChangeBoss_13: -1117597513
+      faseChangeBoss_14: -1613403474
+      faseChangeBoss_15: -722310706
+      faseChangeBoss_16: -1108240308
+      faseChangeBoss_17: -854040174
+      faseChangeBoss_2: 370952523
+      faseChangeBoss_3: 1257496061
+      faseChangeBoss_4: 1228355155
+      faseChangeBoss_5: -144771588
+      faseChangeBoss_6: -1113977730
+      faseChangeBoss_7: -1197126377
+      faseChangeBoss_8: 595686361
+      faseChangeBoss_9: 483810764
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
