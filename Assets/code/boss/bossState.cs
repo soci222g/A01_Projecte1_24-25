@@ -22,7 +22,7 @@ public class bossState : MonoBehaviour
     private Animator animator;
     private BoxCollider2D hurtBox;
 
-    //[SerializeField] private GameObject CinematicaFinal;
+    [SerializeField] private GameObject CinematicaFinal;
 
     // Start is called before the first frame update
     void Start()
@@ -83,7 +83,7 @@ public class bossState : MonoBehaviour
             else
             {
                 state = bossStatus.third;
-                //CinematicaFinal.SetActive(true);
+                CinematicaFinal.SetActive(true);
             }
 
             phaseCounter = 0;
