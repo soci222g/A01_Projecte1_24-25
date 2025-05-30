@@ -21,6 +21,7 @@ public class bossState : MonoBehaviour
     [SerializeField] private int phaseCounter = 0;
     private Animator animator;
     private BoxCollider2D hurtBox;
+    private bossAtacks atacks;
 
     [SerializeField] private GameObject CinematicaFinal;
 
@@ -29,6 +30,7 @@ public class bossState : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         hurtBox = GetComponent<BoxCollider2D>();
+        atacks = GetComponent<bossAtacks>();
     }
 
     private void Update()
@@ -83,6 +85,8 @@ public class bossState : MonoBehaviour
             else
             {
                 state = bossStatus.third;
+                atacks.enabled = false;
+                this.enabled = false;
                 CinematicaFinal.SetActive(true);
             }
 
