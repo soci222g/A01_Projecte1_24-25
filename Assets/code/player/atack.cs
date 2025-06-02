@@ -1,41 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class atack : MonoBehaviour
 {
-
-    [SerializeField]
-    private BoxCollider2D latHitbox;
-    [SerializeField]
-    private BoxCollider2D downHitbox;
-    [SerializeField]
-    int atackCooldown;
-    int countCooldown;
-    [SerializeField]
-    int atackDuration;
-    int atackDurationCounter;
-    [SerializeField]
-    bool onCooldown;
-    [SerializeField]
-    private Animator animator;
-    [SerializeField]
-    SpriteRenderer playerSR;
-    GroundDetector gD;
+    [SerializeField] private BoxCollider2D latHitbox;
+    [SerializeField] private BoxCollider2D downHitbox;
+    [SerializeField] private int atackCooldown;
+    [SerializeField] private int atackDuration;
+    [SerializeField] private bool onCooldown;
+    [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer playerSR;
     [SerializeField] private float bounce;
-    [SerializeField]
-    Transform playerTR;
-    [SerializeField]
-    Rigidbody2D playerRB;
-    [SerializeField] float offset;
-    actionState state;
-
-    movement movement;
-
+    [SerializeField] private Transform playerTR;
+    [SerializeField] private Rigidbody2D playerRB;
+    [SerializeField] private float offset;
+    [SerializeField] private float camShakeForce;
+    [SerializeField] private float camShakeTimer;
     [SerializeField] private AudioSource swingAudio;
     [SerializeField] private AudioSource HitAudio;
 
-    freeze frez;
+    private int countCooldown;
+    private int atackDurationCounter;
+
+    private actionState state;
+    private GroundDetector gD;
+    private movement movement;
+    private freeze frez;
+    private Controles controles;
+
+    void Awake()
+    {
+        controles = new Controles();
+        controles.Base.Attack.performed += ctx => OnAttackPressed();
+    }
+
+    void OnEnable()
+    {
+        controles.Base.Enable();
+    }
+
+    void OnDisable()
+    {
+        controles.Base.Disable();
+    }
 
     void Start()
     {
@@ -48,116 +57,77 @@ public class atack : MonoBehaviour
         movement = GetComponentInParent<movement>();
     }
 
-    private void FixedUpdate() // usamos FixedUpdate para que el tiempo del ataque sea consistente
+    void FixedUpdate()
     {
-
-        // make latHitbox face the same way as player
-        if (playerSR.flipX == true)
-        {
-            latHitbox.offset = new Vector2(-1.3f, 0);
-        }
-        else
-        {
-            latHitbox.offset = new Vector2(1.3f, 0);
-        }
-
-        //make downHitbox be under player
-        if (playerSR.flipY == true)
-        {
-            downHitbox.offset = new Vector2(0, offset);
-        }
-        else
-        {
-            downHitbox.offset = new Vector2(0, -offset);
-        }
-
+        latHitbox.offset = new Vector2(playerSR.flipX ? -1.3f : 1.3f, 0);
+        downHitbox.offset = new Vector2(0, playerSR.flipY ? offset : -offset);
     }
 
-    private void Update()
+    private void OnAttackPressed()
     {
-    
+        if (onCooldown || !state.getActionState()) return;
 
-        if (Input.GetMouseButtonDown(0) && !onCooldown && state.getActionState()) //check input and cooldown
+        swingAudio.Play();
+        state.startAction();
+
+        if (gD.GetGroundDetect())
         {
-            swingAudio.Play();
-            state.startAction();
-
-            //check if on ground or air
-            if (gD.GetGroundDetect())
-            {
-                latHitbox.enabled = true;
-                animator.SetBool("IsAtack", true);
-                playerRB.velocity = Vector3.zero;
-                movement.setSpeed(1f);
-
-            }
-            else
-            {
-                animator.SetBool("IsAirAtack", true);
-            }
-
-            onCooldown = true;
-            atackDurationCounter = 0;
-            Debug.Log("atacked");
-
+            latHitbox.enabled = true;
+            animator.SetBool("IsAtack", true);
+            playerRB.velocity = Vector3.zero;
+            movement.setSpeed(1f);
+        }
+        else
+        {
+            animator.SetBool("IsAirAtack", true);
         }
 
-        
+        onCooldown = true;
+        atackDurationCounter = 0;
+        Debug.Log("Attack triggered");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out EnemyHP enemyHp) && collision.gameObject.tag == "enemy")
+        if (collision.CompareTag("enemy") && collision.TryGetComponent(out EnemyHP enemyHp))
         {
             HitAudio.Play();
             enemyHp.setHP(1);
-
             Animator enemyAnim = collision.GetComponent<Animator>();
-
             enemyAnim.SetBool("damage", true);
 
             playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
+            GetComponentInParent<CameraShake>().ShakeCamera(camShakeForce, camShakeTimer);
 
-            if(enemyHp.getHP() <= 0)
+            if (enemyHp.getHP() <= 0)
             {
                 frez.setDurationFreeze(0.15f);
             }
-            if (gD.GetGroundDetect() == false)
+
+            if (!gD.GetGroundDetect())
             {
-
                 downHitbox.enabled = false;
-
                 if (!playerSR.flipY)
-                {
                     playerRB.AddForce(transform.up * bounce);
-                }
                 else
-                {
                     playerRB.AddForce(transform.up * -bounce);
-                }
+            }
 
+            if (collision.GetComponent<DesactivarColliderTimer>() != null)
+            {
+                collision.GetComponent<DesactivarColliderTimer>().StartDeactivateCollider();
             }
         }
-        else if (collision.gameObject.tag == "bounce")
+        else if (collision.CompareTag("bounce"))
         {
             playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
 
             if (!playerSR.flipY)
-            {
-                Debug.Log("bouncing");
                 playerRB.AddForce(transform.up * bounce);
-            }
             else
-            {
                 playerRB.AddForce(transform.up * -bounce);
-            }
         }
-
-        
-
     }
-
-    
 
     public void lat_hitbox_deactivate()
     {
@@ -178,6 +148,7 @@ public class atack : MonoBehaviour
     public void cooldown_off()
     {
         onCooldown = false;
+
         state.endAction();
     }
 

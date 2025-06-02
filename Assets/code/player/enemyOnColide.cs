@@ -10,7 +10,7 @@ public class enemyOnColide : MonoBehaviour
     private float currentTimeInv = 0;
     private hp HP;
 
-    private Collider2D coll;
+    
 
     [SerializeField]
     private Animator animator;
@@ -19,6 +19,7 @@ public class enemyOnColide : MonoBehaviour
     [SerializeField] private float knockbackDuration = 0.2f;
 
     private Rigidbody2D rb;
+    [SerializeField]
     private float knockbackTimer = 0f;
     private bool isKnockbacked = false;
     private Vector2 knockbackDirection;
@@ -27,7 +28,7 @@ public class enemyOnColide : MonoBehaviour
     private actionState state;
     private void Start()
     {
-        coll = GetComponent<Collider2D>();
+        
         HP = GetComponent<hp>();
         rb = GetComponent<Rigidbody2D>();
         state = GetComponent<actionState>();
@@ -63,14 +64,17 @@ public class enemyOnColide : MonoBehaviour
             currentTimeInv -= Time.deltaTime;
             gameObject.tag = "Player";
             Physics2D.IgnoreLayerCollision(9, 10, true);
-            Debug.Log("ignaorar Colision");
+            //Debug.Log("ignaorar Colision");
         }
         else
         {
+            
             gameObject.tag = "player";
             animator.SetBool("isDamaged", false);
             Physics2D.IgnoreLayerCollision(9, 10, false);
             state.endAction();
+            //Debug.Log("reset Colision");
+
         }
     }
 
@@ -92,5 +96,8 @@ public class enemyOnColide : MonoBehaviour
             else
                 knockbackDirection = Vector2.right;
         }
+       
     }
+
+   
 }

@@ -14,7 +14,7 @@ public class camerabehavior : MonoBehaviour
 
     public List<Transform> cameraPosition;
     public List<Transform> SpawnPoints;
-
+    [SerializeField]
     private int spawnPointNum;
     [SerializeField]
     private int roomToGo;
@@ -31,15 +31,18 @@ public class camerabehavior : MonoBehaviour
     private atack Atack;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        spawnPointNum = 0;
-        roomToGo = 0;
-        currentRoom = 0;
-        camera.transform.position = cameraPosition[0].position;
-        cameraPosition[0].GetComponent<ColliderManager>().ActivateSelf();
+         
+        Atack = player.GetComponentInChildren<atack>();
+    }
 
-        Atack = player.GetComponentInChildren< atack>();
+    private void Start()
+    {
+         
+       
+        camera.transform.position = cameraPosition[currentRoom].position;
+        cameraPosition[currentRoom].GetComponent<ColliderManager>().ActivateSelf();
     }
 
     // Update is called once per frame
@@ -74,9 +77,19 @@ public class camerabehavior : MonoBehaviour
 
     }
 
+    public void SetSpawnPointSave(int num)
+    {
+        spawnPointNum = num;
+    }
+
     public void SetSpawnPoint(int num)
     {
         spawnPointNum += num;
+    }
+
+    public void setCurrentRoomSave(int num)
+    {
+        currentRoom += num;
     }
 
     public Transform GetSpawnPoint()
@@ -89,6 +102,11 @@ public class camerabehavior : MonoBehaviour
         roomToGo += num;
     }
 
+    public int GetSpawnNum()
+    {
+        return spawnPointNum;
+    }
+
     public void Safe_Velocity(Vector2 velocity)
     {
         safeVelocity = velocity;
@@ -97,6 +115,13 @@ public class camerabehavior : MonoBehaviour
     public int getCurrentRoom()
     {
         return currentRoom;
+    }
+
+    public void SetRoomOrigin(int newRoom)
+    {
+        currentRoom = newRoom;
+        roomToGo = newRoom;
+        spawnPointNum = newRoom;
     }
 
 

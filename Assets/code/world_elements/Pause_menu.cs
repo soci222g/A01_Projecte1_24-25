@@ -17,7 +17,7 @@ public class Pause_menu : MonoBehaviour
     private bool isPaused;
     void Start()
     {
-        
+        isPaused = false;
         Pause_Canva.SetActive(false);
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
@@ -41,8 +41,13 @@ public class Pause_menu : MonoBehaviour
             else
             {
                 resumePause();
+                
                 atack.cooldown_off();
             }
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            MainMenuScean();
         }
   
     }
