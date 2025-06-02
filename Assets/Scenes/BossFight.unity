@@ -5611,6 +5611,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 517302578}
     - target: {fileID: 8660482908383087562, guid: 899f591776a617a4ab719f360c7be5eb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1196416977}
+    - target: {fileID: 8660482908383087562, guid: 899f591776a617a4ab719f360c7be5eb, type: 3}
+      propertyPath: cinematicBoss
+      value: 
+      objectReference: {fileID: 1700985336}
+    - target: {fileID: 8660482908383087562, guid: 899f591776a617a4ab719f360c7be5eb, type: 3}
       propertyPath: CinematicaFinal
       value: 
       objectReference: {fileID: 1632524328}
@@ -5630,11 +5638,6 @@ PrefabInstance:
 --- !u!1 &1400928936 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9040398403165128793, guid: 899f591776a617a4ab719f360c7be5eb, type: 3}
-  m_PrefabInstance: {fileID: 1382761726}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1400928937 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6242823675323768278, guid: 899f591776a617a4ab719f360c7be5eb, type: 3}
   m_PrefabInstance: {fileID: 1382761726}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1407624918
@@ -11310,7 +11313,7 @@ PlayableDirector:
   - key: {fileID: 4870341313444084438, guid: 8c96151e775f5d14783ecf7f41e03422, type: 2}
     value: {fileID: 1701889028}
   - key: {fileID: -4820572471749280640, guid: 8c96151e775f5d14783ecf7f41e03422, type: 2}
-    value: {fileID: 1400928937}
+    value: {fileID: 1700985339}
   - key: {fileID: 8707406622408316941, guid: 8c96151e775f5d14783ecf7f41e03422, type: 2}
     value: {fileID: 1819864526}
   - key: {fileID: -1232162945377214154, guid: 8c96151e775f5d14783ecf7f41e03422, type: 2}

@@ -22,6 +22,12 @@ public class bossState : MonoBehaviour
     private Animator animator;
     private BoxCollider2D hurtBox;
     private bossAtacks atacks;
+    [SerializeField]
+    private GameObject player;
+    [SerializeField]
+    private GameObject cinematicBoss;
+
+
 
     [SerializeField] private GameObject CinematicaFinal;
 
@@ -85,9 +91,18 @@ public class bossState : MonoBehaviour
             else
             {
                 state = bossStatus.third;
+                atacks.GetRayoV().SetActive(false);
+                if (player.GetComponent<Fleep>().GetFleepControler() == false)
+                {
+                    player.GetComponent<Fleep>().SetFleep();
+                }
+                player.GetComponent<GroundDetector>().enabled = false;
                 atacks.enabled = false;
-                this.enabled = false;
+                cinematicBoss.SetActive(true);
                 CinematicaFinal.SetActive(true);
+                this.gameObject.SetActive(false);
+              
+               
             }
 
             phaseCounter = 0;

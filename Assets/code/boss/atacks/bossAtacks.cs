@@ -93,9 +93,17 @@ public class bossAtacks : MonoBehaviour
         }
     }
 
+    
 
     void phase2Atk()
     {
         rayoV.GetComponent<rayosV>().spawnOther();
+    
     }
+
+    public GameObject GetRayoV()
+    {
+        return rayoV;
+    }
+
 }
