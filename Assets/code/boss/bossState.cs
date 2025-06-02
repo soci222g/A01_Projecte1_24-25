@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+//using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class bossState : MonoBehaviour
@@ -20,12 +21,22 @@ public class bossState : MonoBehaviour
     [SerializeField] private int phaseCounter = 0;
     private Animator animator;
     private BoxCollider2D hurtBox;
+    private bossAtacks atacks;
+    [SerializeField]
+    private GameObject player;
+    [SerializeField]
+    private GameObject cinematicBoss;
+
+
+
+    [SerializeField] private GameObject CinematicaFinal;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         hurtBox = GetComponent<BoxCollider2D>();
+        atacks = GetComponent<bossAtacks>();
     }
 
     private void Update()
@@ -80,6 +91,18 @@ public class bossState : MonoBehaviour
             else
             {
                 state = bossStatus.third;
+                atacks.GetRayoV().SetActive(false);
+                if (player.GetComponent<Fleep>().GetFleepControler() == false)
+                {
+                    player.GetComponent<Fleep>().SetFleep();
+                }
+                player.GetComponent<GroundDetector>().enabled = false;
+                atacks.enabled = false;
+                cinematicBoss.SetActive(true);
+                CinematicaFinal.SetActive(true);
+                this.gameObject.SetActive(false);
+              
+               
             }
 
             phaseCounter = 0;

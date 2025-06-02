@@ -91,6 +91,7 @@ public class SavePositionGloval : MonoBehaviour
         PlayerPrefs.DeleteKey("Y");
         PlayerPrefs.DeleteKey("Z");
         PlayerPrefs.DeleteKey("CameraPosition");
+        PlayerPrefs.DeleteKey("Secan");
         PlayerPrefs.DeleteKey("Key");
         PlayerPrefs.DeleteKey("Secan");
 

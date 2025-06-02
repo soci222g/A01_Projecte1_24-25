@@ -8,6 +8,9 @@ public class bossProj : MonoBehaviour
     [SerializeField] float speedX;
     [SerializeField] float speedY;
 
+    Animator animator;
+    BoxCollider2D boxCollider;
+
     GameObject player;
     Rigidbody2D rb;
 
@@ -17,7 +20,9 @@ public class bossProj : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("player");
         rb = GetComponent<Rigidbody2D>();
-
+        animator = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        boxCollider .enabled = false;
     }
 
     // Update is called once per frame
@@ -60,5 +65,21 @@ public class bossProj : MonoBehaviour
 
         Destroy(gameObject);
 
+    }
+
+    void setSpeed()
+    {
+        speedX = 10;
+        speedY = 5;
+    }
+
+    void spawn()
+    {
+        animator.SetBool("idle", true);
+    }
+
+    void enableHitBox()
+    {
+        boxCollider.enabled = true;
     }
 }
